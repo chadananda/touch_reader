@@ -1,0 +1,101 @@
+
+.main_container{
+ 
+}
+
+
+.ownedbooklist{
+    
+}
+
+.ownedbooklist .ownedbook_img{
+   
+    text-align: center;
+}
+
+.ownedbooklist .ownedbook_img img{
+   height:120px;
+}
+
+.ownedbooklist .ownedbook_detail td{
+    padding-left: 20px;
+    padding-top:8px;
+    padding-bottom:8px;
+}
+
+.ownedbooklist .ownedbook_detail img{
+    padding-top:12px
+}
+.slider{
+    border:1px solid #ddd;
+    background-color:#fff; 
+}
+
+.slider_image{
+    border:1px solid #ddd;
+    padding:10px;    
+    margin: 10px 0px 10px 20px;
+}
+
+.slider_image:hover{
+    border-color:#85a319;
+    padding:10px;
+    margin: 10px 0px 10px 20px;
+    background: none repeat scroll 0 0 #f9f9f9;
+}
+/*
+.slider_image img{
+    box-shadow: 2px 2px 2px #4e4e4e;
+    margin:0px 10px 0px 10px;
+}
+*/
+
+.slider_image a img{
+    box-shadow: 2px 2px 2px #4e4e4e;
+    margin:0px 10px 0px 10px;
+}
+
+.bx-controls-direction {
+    right: 44px;
+    top: -46px;
+}
+
+.bx-controls-direction a {
+    height: 32px;
+    margin-top: -11px;
+    outline: 0 none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 32px;
+    z-index: 9999;
+}
+.bx-prev {
+    background: url("../images/controls.png") no-repeat scroll 0 -32px rgba(0, 0, 0, 0);
+    left: 10px;
+}
+.bx-prev {
+    left: 4px;
+}
+.bx-prev:hover {
+    background-position: 0 0;
+}
+
+.bx-next {
+    background: url("../images/controls.png") no-repeat scroll -43px -32px rgba(0, 0, 0, 0);
+    right: 10px;
+}
+.bx-next {
+    right: 4px;
+}
+.bx-next:hover {
+    background-position: -43px 0;
+}
+
+.slider_container{
+    border:1px solid #ddd;
+    margin: 0px 5px 0px 5px;
+    height: 400px; 
+}
+
+
