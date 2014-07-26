@@ -15,7 +15,7 @@ Ext.require(['book.store.SOwnedBookList'], function() {
             
                 '<table  width="100%">',
                     '<tr>',
-                        '<td width="10%" class="ownedbook_img">',
+                        '<td width="6%" class="ownedbook_img">',
                             '<img src="{url}">',
                         '</td>',
                         

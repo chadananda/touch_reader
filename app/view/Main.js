@@ -10,13 +10,20 @@ Ext.define('book.view.Main', {
         cls: 'main_container',
         items: [
             {
-                //cls: 'book_main',
-                height:232,
+            
+                xtype: 'librarybylanguage'
+            },
+            {
+             
+                xtype: 'recentlyreadtitle'
+            },            
+            {
+                height:191,
                 xtype: 'bookslidercontainer'
             },
             {
-                flex: 3,
-                xtype: 'ownedbooklist'
+             
+                xtype: 'maincontainer'
             }
         ]
     }

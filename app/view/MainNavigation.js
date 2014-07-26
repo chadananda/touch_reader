@@ -4,7 +4,7 @@ Ext.define('book.view.MainNavigation', {
     requires: [],
     
     config: {
-        //navigationBar: false,
+        navigationBar: false,
         type: 'card', 
         
         items:[{

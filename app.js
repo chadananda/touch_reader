@@ -14,7 +14,7 @@ Ext.application({
     name: 'book',
 
     requires: [
-        'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img'
+        'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList'
     ],
     
     controllers: [
@@ -22,15 +22,16 @@ Ext.application({
     ],
     
     models: [
-        'MOwnedBookList', 'MBookSlider'
+        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList'
     ],
     
     stores: [
-        'SOwnedBookList', 'SBookSlider'
+        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList'
     ],
 
     views: [
-        'TabPanel', 'MainNavigation', 'Main', 'BookSlider', 'OwnedBookList', 'BookSliderContainer'
+        'TabPanel', 'MainNavigation', 'Main', 'BookSlider', 'OwnedBookList', 'BookSliderContainer', 'LibrarybyLanguage', 'RecentlyReadTitle', 'SearchBooksView',
+        'CategoryMainContainer', 'RightSidebarContainer', 'AddBookView', 'MainContainer', 'RightSidebarContainer', 'CategoryAccordionList', 'RightCategoryTitle'
     ],
 
     icon: {
@@ -56,7 +57,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('book.view.TabPanel'));
+        Ext.Viewport.add(Ext.create('book.view.MainNavigation'));
     },
 
     onUpdated: function() {

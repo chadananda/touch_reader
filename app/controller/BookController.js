@@ -39,7 +39,7 @@ config: {
                 
                 var items = [];                        
                         Ext.each(response, function(rec, index) {
-                            items.push( {html: '<div class="slider_image"><a href="javascript:void(0)"><img  src="' + rec.url + '"></a></div>'} )
+                            items.push( {html: '<div class="slider_image"><a href="javascript:void(0)"><img  src="' + rec.url + '" height="140px"></a></div>'} )
                         })
                    
                 bookslider.setItems(items);

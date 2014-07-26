@@ -6,28 +6,32 @@ Ext.define('book.view.TabPanel', {
         'Ext.Video'
     ],
     config: { 
-        tabBarPosition: 'bottom',
-
+        tabBarPosition: 'top',
+        style: 'margin-top:10px',
         items: [
             {
                 title: 'Owned',
                 iconCls: 'home',
-                xtype: 'mainnavigation'
+                xtype: 'ownedbooklist',
+                badgeText: '580'
             },
             {
                 title: 'Bookstore',
                 iconCls: 'list',
-                html: 'Bookstore Tab'
+                html: 'Bookstore Tab',
+                badgeText: '256'
             },
             {
                 title: 'Free',
                 iconCls: 'action',
-                html: 'Free Tab'
+                html: 'Free Tab',
+                badgeText: '64'
             },
             {
                 title: 'Courses',
                 iconCls: 'info',
-                html: 'Courses Tab'
+                html: 'Courses Tab',
+                badgeText: '64'
             }
         ]
     }
