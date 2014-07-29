@@ -8,7 +8,7 @@ Ext.define('book.view.RecentlyReadTitle', {
         items: [
             {
              
-                html: 'Recently Read <span class="h-line"></span>',
+                html: 'Recent Read <span class="h-line"></span>',
             }
         ]
     }

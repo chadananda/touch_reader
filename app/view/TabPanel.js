@@ -22,9 +22,9 @@ Ext.define('book.view.TabPanel', {
                 badgeText: '256'
             },
             {
-                title: 'Free',
+                title: 'Library',
                 iconCls: 'action',
-                html: 'Free Tab',
+                html: 'Library Tab',
                 badgeText: '64'
             },
             {

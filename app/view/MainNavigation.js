@@ -7,9 +7,15 @@ Ext.define('book.view.MainNavigation', {
         navigationBar: false,
         type: 'card', 
         
-        items:[{
-            title: 'Owned',
-            xtype: 'main'
-        }]
+        items:[
+            {
+                title: 'Owned',
+                xtype: 'main'
+            }
+           // {
+           //     title: 'Owned',
+           //     xtype: 'mainbookcontainer'
+          //  }
+        ]
     }
 });

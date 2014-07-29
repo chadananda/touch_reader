@@ -9,13 +9,15 @@ Ext.define('book.view.MainContainer', {
         items: [
             
             {
-              flex:4,
+              flex:1,
               xtype: 'categorymaincontainer'
             },
+            /*
             {
               flex:1,
               xtype: 'rightsidebarcontainer'
             }
+            */
         ]
     }
 });

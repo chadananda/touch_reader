@@ -5,17 +5,40 @@ requires: [],
 config: {
     
     refs: {
-        'bookslider': 'bookslider'
+        'mainnavigation': 'mainnavigation',
+        'main': 'main',
+        'bookslider': 'bookslider',
+        'booktitlebar': 'booktitlebar',
+        'library_button': 'booktitlebar button[text=Library]',
+        'currentbook_button': 'booktitlebar #current_book',
+        'currentbookpopup': 'currentbookpopup',
+        popupView: {
+            autoCreate: true,
+            selector: '#popup',
+            xtype: 'currentbookpopup'
+        },
+        'readbookpagelist_slider': 'readbookpagelist sliderfield',
+        'readbookpagelist': 'readbookpagelist',
+        'readbookpagedataviewlist': 'readbookpagelist dataview'
     },
 
     control: {
+        'library_button': {
+            'tap': 'onLibraryButtonTap'
+        },
+        'button#current_book': {
+            'tap': 'onCurrentBookButtonTap'
+        },
+        'readbookpagelist_slider': {
+            //'change': 'onSliderChange'
+        }
        
     }    
 },
 
   launch : function(app) {
   
-    this.loadSliderImages()
+    this.loadSliderImages() 
   
   },
   
@@ -92,6 +115,41 @@ config: {
                 
             });
         }
-    }, 
+    },
+    
+    onLibraryButtonTap: function(button ,event){
+         var mainnavigation = this.getMainnavigation();
+         var main = this.getMain();
+         mainnavigation.push({xtype: 'main'});
+        // this.loadSliderImages() 
+    },
+    onCurrentBookButtonTap: function(button, e, options) {
+ 
+        var me = this;
+        var popup = me.getPopupView();
+        popup.showBy(button);
+ 
+    },
+    onSliderChange: function(slider, thumb, newVal, oldVal){
+    
+      // alert(11)
+      var readbookpagelist = this.getReadbookpagedataviewlist(); 
+      var store = Ext.getStore('SReadBookPageList');
+      console.log(store.data.items)
+      console.log(readbookpagelist)
+      var data = store.data.items;
+      //alert(data.length)
+      var count =0;
+     
+      for(var i=0; i<data.length;i++){
+        console.log(data[i].data)
+       
+        // if(count == data.length) {
+        readbookpagelist.setData(data[i].data);
+        
+      //  }
+      }  
+     
+    } 
        
 });

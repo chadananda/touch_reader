@@ -18,7 +18,7 @@ Ext.define('book.view.Main', {
                 xtype: 'recentlyreadtitle'
             },            
             {
-                height:191,
+                height:165,
                 xtype: 'bookslidercontainer'
             },
             {

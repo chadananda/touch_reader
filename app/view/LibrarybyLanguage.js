@@ -8,14 +8,15 @@ Ext.define('book.view.LibrarybyLanguage', {
        // flex: 0.2,
         items: [
             {
+                flex: 1,
                 xtype: 'spacer'
             },
             {
                 cls: 'select_backgnd',
-                flex: 1,
+                width:'100',
                 xtype: 'selectfield',
                 label: 'Select your Library by Language',
-                labelWidth: '55%',
+                labelWidth: '50',
                 options: [
                     {text: 'English',  value: 'english'},
                     {text: 'Franch', value: 'franch'},

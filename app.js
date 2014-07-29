@@ -14,7 +14,9 @@ Ext.application({
     name: 'book',
 
     requires: [
-        'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList'
+        'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList',
+        'Ext.field.Slider'
+        
     ],
     
     controllers: [
@@ -22,16 +24,17 @@ Ext.application({
     ],
     
     models: [
-        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList'
+        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList'
     ],
     
     stores: [
-        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList'
+        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList'
     ],
 
     views: [
         'TabPanel', 'MainNavigation', 'Main', 'BookSlider', 'OwnedBookList', 'BookSliderContainer', 'LibrarybyLanguage', 'RecentlyReadTitle', 'SearchBooksView',
-        'CategoryMainContainer', 'RightSidebarContainer', 'AddBookView', 'MainContainer', 'RightSidebarContainer', 'CategoryAccordionList', 'RightCategoryTitle'
+        'CategoryMainContainer', 'RightSidebarContainer', 'AddBookView', 'MainContainer', 'RightSidebarContainer', 'CategoryAccordionList', 'RightCategoryTitle',
+        'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList'
     ],
 
     icon: {

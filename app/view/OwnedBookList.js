@@ -1,34 +1,46 @@
 
 Ext.require(['book.store.SOwnedBookList'], function() {
     Ext.define('book.view.OwnedBookList', {
-        extend: 'Ext.dataview.List',
+        extend: 'Ext.Container',
         xtype: 'ownedbooklist',
        
         requires: [
             'Ext.TitleBar'
         ],     
+       
         config: {
-            flex:1,
-            cls: 'ownedbooklist',
-            disableSelection: true,     
-            itemTpl: [
+        //flex:1,
+        cls: 'ownedbooklist',
+        items: [
+            {
+                xtype: 'dataview', 
+                height: '100%',
+               // styleHtmlContent: true,
+                width: '100%',
+                
+                inline: {
+                    wrap: true
+                },
+                scrollable: {
+                    direction: 'vertical',
+                    directionLock: true
+                },
+                itemCls: 'dataview-item',
+                itemTpl: [
             
-                '<table  width="100%">',
+                '<table  >',
                     '<tr>',
-                        '<td width="6%" class="ownedbook_img">',
+                        '<td  class="ownedbook_img">',
                             '<img src="{url}">',
                         '</td>',
                         
-                        '<td width="50%" class="ownedbook_detail" valign="top">',    
+                        '<td  class="ownedbook_detail" valign="top">',    
                             '<table>',
                                 '<tr>',
-                                    '<td valign="top">{book_title}</td>',
+                                    '<td valign="top" style="color:#000;">{book_title}</td>',
                                 '</tr>',
                                 '<tr>',
-                                    '<td valign="top">{author_name}</td>',
-                                '</tr>',
-                                '<tr>',
-                                    '<td valign="top">{category_name}</td>',
+                                    '<td valign="top" style="font-size:12px;">{author_name}</td>',
                                 '</tr>',
                             '</table>',
                         '</td>',
@@ -37,12 +49,14 @@ Ext.require(['book.store.SOwnedBookList'], function() {
                         '</td>',
                        
                     '</tr>',
-                '</table>'
+                '</table>' 
             
             ],
             store: Ext.create('book.store.SOwnedBookList'),
-             
-        } 
+            }
+        ]
+    }
+         
         
     })
 })

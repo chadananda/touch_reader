@@ -11,13 +11,12 @@
     margin: 10px 20px 0px 20px;
 }
 .sel_lib_language{
-
+    height:50px;
 }
 .select_backgnd{
     border: 1px solid #ddd; 
-    height:60px;
     background: none repeat scroll 0 0 #efefef;
-    padding:10px 40px 10px 0px;
+    padding:5px 5px 5px 0px;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
@@ -28,6 +27,8 @@
 .select_backgnd .x-input-el {   
     min-height: 1.4em;
     border: 1px solid #d5d5d5;
+    width: 100px;
+   /*  padding: 0.2em; */
 }
 
 .select_backgnd .x-form-label {   
@@ -38,11 +39,18 @@
     background: #efefef;
 }
 
+.sel_lib_language .x-field:last-child {
+    border-bottom: 1px solid #ddd !important;
+}
+.x-webkit .x-selectmark-base, .x-webkit .x-field-select .x-component-outer:after, .x-field-select .x-webkit .x-component-outer:after{
+    right: 0.3em;
+}
+
 .recently_read{
     margin-top: 10px;
     border-bottom: 1px solid #d9d9d9;
     padding-bottom:5px;
-    font-size: 1.3em;
+    font-size: 1.3em; 
 
 }
 
@@ -67,10 +75,10 @@
 .search_book_container{
     margin-top: 10px;
     
-    height:60px;
+    height:50px;
     background: none repeat scroll 0 0 #efefef;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    padding:10px 20px 10px 20px;
+    padding:5px 20px 5px 20px;
     border: 1px solid #ddd;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
@@ -108,7 +116,8 @@
 
 .ownedbooklist{
    border: 1px solid #ddd; 
-   border-top: none; 
+   border-top: none;
+    
 }
 
 .ownedbooklist .ownedbook_img{   
@@ -117,22 +126,26 @@
 
 .ownedbooklist .ownedbook_img img{
    height:60px;
+   margin:5px;
 }
 
 .ownedbooklist .ownedbook_detail td{
-    padding-left: 10px;
-    padding-bottom:5px;
+   padding:10px 5px 0px 0px;
     font-size:14px;
+    width:200px;
 }
 
 .ownedbooklist .ownedbook_detail img{
-    padding-top:4px
+    padding-top:10px;
+    padding-right:5px;
 }
 
 .ownedbooklist.x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal {
     border-top: none;
     border-bottom: 1px solid #dedede;
 }
+
+
 
 .slider{
     border:1px solid #ddd;
@@ -145,28 +158,23 @@
    
 }
 
-.slider_image {
-    border:1px solid #ddd;
-    padding:10px;    
-    margin: 10px 0px 10px 19px;
+.slider_image { 
+    margin: 10px 0px 10px 11px;
    
 }
 .slider .x-innerhtml{
     border: 1px solid #fff;    
 }
 
-
 .slider_image:hover{
     border-color:#85a319;
-    padding:10px;
-    margin: 10px 0px 10px 19px;
+    margin: 10px 0px 10px 11px;
     background: none repeat scroll 0 0 #f9f9f9;
 }
 
 .slider_image a img{
     box-shadow: 2px 2px 2px #4e4e4e;
-    margin:0px 5px 0px 5px;
-    
+   
 }
 
 .bx-controls-direction {
@@ -278,7 +286,7 @@
     border-bottom: none;
 }
 .x-tab {
-    min-width: 8.3em; 
+    min-width: 8.4em; 
 }
 
 .category_accordion_list{
@@ -315,8 +323,8 @@
 
 .category_accordion_list .x-list .x-list-item.x-item-selected.x-list-item-tpl {
     background-image: none;
-     background-color: #f3f7f8; 
-     background-image: -webkit-linear-gradient(top, #f3f7f8, #f3f7f8 3%, #f3f7f8); 
+    background-color: #f3f7f8; 
+    background-image: -webkit-linear-gradient(top, #f3f7f8, #f3f7f8 3%, #f3f7f8); 
     background-image: -moz-linear-gradient(top, #f3f7f8, #f3f7f8 3%, #f3f7f8);
     background-image: -o-linear-gradient(top, #f3f7f8, #f3f7f8 3%, #f3f7f8);
     background-image: linear-gradient(top, #f3f7f8, #f3f7f8 3%, #f3f7f8);
@@ -328,8 +336,55 @@
     
 }
 
+.dataview-item{
+   width : 32%;
+   /*31.71%*/
+   height : 72px;
+   border: 1px solid #ddd;  
+   float:left;  
+  /* padding:2px; */
+   margin:10px 0px 0px 10px
+}
 
+/****************************************/
 
+.popup_panel .x-button{
+    border: 2px solid #909191;
+    margin-bottom: 5px;
+}
+.popup_panel .x-button-label {
+   
+    text-align: left;
+}
 
-
-
+.dataview-item-read{
+      width : 50%;
+   /*31.71%
+   height : 72px; */
+  
+   float:left;  
+  /* padding:2px; 
+   margin:10px 0px 0px 10px
+   
+   */
+   
+}
+.read_container{
+    text-align:justify;
+    color: #a9a9a8;
+    width:100%;
+    float:left;
+    padding:15px;    
+}
+.page_no{
+   
+    width:auto;
+    float:left;
+}
+.page_description{
+   
+    width:100%;
+    padding-left:25px;
+    padding-right:25px;    
+    
+}
