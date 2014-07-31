@@ -1,30 +1,32 @@
 Ext.define('book.view.BookTitlebar', {
-    extend: 'Ext.TitleBar',
+    extend: 'Ext.Toolbar',
     xtype: 'booktitlebar',
     requires: [],
     config: { 
         layout:'hbox',
-        xtype: 'titlebar',
+        xtype: 'toolbar',
+        cls:'my-titlebar',
         docked: 'top',
-        //title: 'Navigation',
-        ui: 'normal',
+        title: 'The Great Deformation, Robert Stockman',
+        ui: 'bluenav',
+       
         items: [
             {
                 iconCls: 'add',
                 align: 'left'
             },
             {
-                xtype: 'button',
+                //xtype: 'button',
                 text: 'Library',
                 align: 'left',
-                ui: 'round'
+                //ui: 'round'
             },
             
             {
                 iconCls: 'list',
                 align: 'left'
             },
-            {                
+           /* {                
                 
                 xtype: 'button',
                 text: 'Current Book Title, Authour Name',
@@ -34,6 +36,13 @@ Ext.define('book.view.BookTitlebar', {
                 iconAlign: 'right',
                 ui: 'round'
             }
+            */
+            {
+                cls: 'icon-setting',
+                iconCls: 'settings',
+                align: 'left'
+            },
+            
         ]
     }
 });

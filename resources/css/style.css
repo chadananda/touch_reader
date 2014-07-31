@@ -388,3 +388,18 @@
     padding-right:25px;    
     
 }
+.my-titlebar .x-title{
+  color:#607dd5;
+  text-transform:uppercase;  
+}
+
+.my-titlebar .x-title ::first-letter {  /* Use :first-letter if support for IE 8 or earlier is needed */
+  font-variant: small-caps;
+  font-size: 130%; 
+}
+
+.x-toolbar-bluenav .x-button{
+    color: #4298e1;
+}
+
+

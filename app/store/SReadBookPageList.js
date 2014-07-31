@@ -5,7 +5,7 @@ Ext.require(['book.model.MReadBookPageList'], function() {
             model: 'book.model.MReadBookPageList',
             proxy: {
                 type: 'ajax',
-                url : 'data/readbook.json',
+                url : lodreadpagedata,
                 reader: {
                     type: 'json'
                 }
