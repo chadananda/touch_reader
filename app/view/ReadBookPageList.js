@@ -11,15 +11,18 @@
         config: { 
         flex:1,
         cls: 'ownedbooklist',
-       
-        items: [
+        
+        //style: 'border: 1px solid red;',
+      items: [
             {
              
-                    
-                    xtype   : 'iframe',
-                    url: 'https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Shoghi%20Effendi%2C%20The%20Promised%20Day%20is%20Come%2C%20en.html',
+                   //flex:1,
+                   xtype   : 'iframe',
+                   //style: 'height:100%;border: 1px solid green;',
+                   //url: 'https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Abdu%27l-Baha%2C%20Tablets%20of%20the%20Divine%20Plan%2C%20en.html' 
              
             },
+            
            /* {
                 xtype: 'titlebar',
                 docked: 'bottom',
@@ -36,6 +39,7 @@
             }
             */
         ],
+        
         
     }
          

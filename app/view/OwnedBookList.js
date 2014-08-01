@@ -28,13 +28,13 @@ Ext.require(['book.store.SOwnedBookList'], function() {
                 itemCls: 'dataview-item',
                 itemTpl: [
             
-                '<table  >',
+                '<table>',
                     '<tr>',
-                        '<td  class="ownedbook_img">',
+                        '<td class="ownedbook_img">',
                             '<img src="{url}">',
                         '</td>',
                         
-                        '<td  class="ownedbook_detail" valign="top">',    
+                        '<td class="ownedbook_detail" valign="top">',    
                             '<table>',
                                 '<tr>',
                                     '<td valign="top" style="color:#000;">{book_title}</td>',
@@ -44,10 +44,6 @@ Ext.require(['book.store.SOwnedBookList'], function() {
                                 '</tr>',
                             '</table>',
                         '</td>',
-                        '<td valign="top" class="ownedbook_detail">',    
-                          '<img src="resources/images/download-icon.png">',  
-                        '</td>',
-                       
                     '</tr>',
                 '</table>' 
             

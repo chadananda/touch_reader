@@ -23,7 +23,9 @@ Ext.define('Ext.ux.Iframe', {
         var me = this;
         me.callParent();
 
+       // alert(this.getUrl())
         me.iframe = this.element.createChild({
+            id: 'book_iframe',
             tag   : 'iframe',
             src   : this.getUrl(),
             style : 'width: 100%; height: 100%;'

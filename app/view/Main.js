@@ -9,14 +9,16 @@ Ext.define('book.view.Main', {
         layout:'vbox',
         cls: 'main_container',
         items: [
-            {
+           /* {
             
                 xtype: 'librarybylanguage'
             },
+            
             {
              
                 xtype: 'recentlyreadtitle'
-            },            
+            },
+            */            
             {
                 height:165,
                 xtype: 'bookslidercontainer'

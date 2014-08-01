@@ -6,11 +6,15 @@ config: {
    // items1: '',
     refs: {
         'mainnavigation': 'mainnavigation',
+        'maintitlebar_showhide': 'main',
         'main': 'main',
         'bookslider': 'bookslider',
         'booktitlebar': 'booktitlebar',
-        'library_button': 'booktitlebar button[text=Library]',
-        'currentbook_button': 'booktitlebar #current_book',
+        'library_button': 'booktitlebar #lib_button',
+        'titlebar_dropdown': 'booktitlebar #current_book',
+        'list_button': 'booktitlebar #list_button',
+        'searchfield_button': 'booktitlebar #top_search_field',
+        'selectfield_button': 'booktitlebar #top_select_field',
         'currentbookpopup': 'currentbookpopup',
         popupView: {
             autoCreate: true,
@@ -19,8 +23,9 @@ config: {
         },
         'readbookpagelist_slider': 'readbookpagelist sliderfield',
         'readbookpagelist': 'readbookpagelist',
-        'mainbookcontainer': 'mainbookcontainer'
-        
+        'mainbookcontainer': 'mainbookcontainer',
+        'booktitlebar': 'booktitlebar',
+        'iframe': 'iframe',
     },
 
     control: {
@@ -29,9 +34,12 @@ config: {
         },
         'button#current_book': {
             'tap': 'onCurrentBookButtonTap'
-        },
+        },               
         'readbookpagelist_slider': {
             'change': 'onSliderChange'
+        },
+        'maintitlebar_showhide': {
+            'show': 'onShowMainHideShowIcon'
         }
        
     }    
@@ -40,14 +48,32 @@ config: {
   launch : function(app) {
   
     this.loadSliderImages()
-   this.onPageAjaxData() 
+   // this.onLoadBookData() 
   
+  },
+  
+  onShowMainHideShowIcon: function( view, eOpts){
+   // alert(view.xtype)
+    console.log(view.xtype);
+        var booktitlebar = this.getBooktitlebar();
+        booktitlebar.setTitle('');
+        /*** Nav TitleBar Library button Hidden ***/
+        this.getLibrary_button().setHidden(true);
+        /*** Nav TitleBar List button Hidden ***/
+        this.getList_button().setHidden(true);
+        /*** Nav TitleBar Search Field Hidden ***/
+        this.getSearchfield_button().setHidden(true);        
+        /*** Nav TitleBar Select Field Hidden ***/
+        this.getSelectfield_button().setHidden(false);
+        /*** Nav TitleBar Dropdown Field Hidden ***/
+        //this.getTitlebar_dropdown().setHidden(true);
+    
   },
   
   
   loadSliderImages: function(){
   
-    var url = lodsliderImages;
+        var url = lodsliderImages;
         var params = {};
             
         Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading gallery...' });
@@ -64,18 +90,22 @@ config: {
                 
                 var items = [];                        
                         Ext.each(response, function(rec, index) {
-                            items.push( {html: '<div class="slider_image" id="image_tap"><a href="javascript:void(0)"><img src="' + rec.url + '" height="140px"></a></div>'} )
+                            items.push( {html: '<div class="slider_image" id="image_tap_' + rec.img_id + '"><a href="javascript:void(0)"><img src="' + rec.url + '" height="140px"></a></div>'} )
                         })
                    
                 bookslider.setItems(items); 
                 
-                var domEl = Ext.get('image_tap');
-                if (domEl) {
-                    domEl.un('tap', this.onClickOpenReaderScreen) 
-                    domEl.on('tap', this.onClickOpenReaderScreen, this, [])
-                } else {      
-                }
                 
+                for(var i=0; i<response.length; i++){
+                    var img_id = response[i].img_id;
+                    var domEl = Ext.get('image_tap_' + response[i].img_id);
+                    if (domEl) {
+                        domEl.un('tap', this.onClickOpenReaderScreen) 
+                        domEl.on('tap', this.onClickOpenReaderScreen, this, [response[i].img_id, response[i].book_url])
+                    } else {      
+                    }
+                }
+               
             },
             
             failuer: function() {
@@ -98,9 +128,6 @@ config: {
         } else {      
         }
         
-        /*****  Trace Code FOr Reader Screen *****/
-          
-        /*****  End Reader Screen *****/
     } ,
     Bxnext: function(){
         var bookslider = this.getBookslider();
@@ -128,19 +155,40 @@ config: {
             });
         }
     },
-    onClickOpenReaderScreen: function(){        
+    
+    onClickOpenReaderScreen: function(event, obj, eOpts){        
         var mainnavigation = this.getMainnavigation();
         mainnavigation.push({xtype: 'mainbookcontainer'});
+        
+        var booktitlebar = this.getBooktitlebar();
+        booktitlebar.setTitle('The Great Deformation, Robert Stockman');
+        
+        /*** Nav TitleBar Library button Show ***/
+        this.getLibrary_button().setHidden(false);
+        /*** Nav TitleBar List button Show ***/
+        this.getList_button().setHidden(false);
+        /*** Nav TitleBar Search Field Show ***/
+        this.getSearchfield_button().setHidden(false);
+        /*** Nav TitleBar Select Field Hidden ***/
+        this.getSelectfield_button().setHidden(true);
+        
+        /*** Nav TitleBar Dropdown Field Show ***/
+        //this.getTitlebar_dropdown().setHidden(false);
+        
+        var img_id = eOpts[0];
+        var book_url = eOpts[1];
+       // alert(img_id) 
+        this.onLoadBookData(img_id, book_url);
+        
     },
     
     onLibraryButtonTap: function(button ,event){
          var mainnavigation = this.getMainnavigation();
-       //  var main = this.getMain();
-       
-         mainnavigation.push({xtype: 'main'});
+             mainnavigation.push({xtype: 'main'});
          this.loadSliderImages() 
          mainnavigation.reset();
     },
+    
     onCurrentBookButtonTap: function(button, e, options) {
  
         var me = this;
@@ -148,51 +196,28 @@ config: {
         popup.showBy(button);
  
     },
+    
     onSliderChange: function(slider, thumb, newVal, oldVal){
    
     },
-    onPageAjaxData: function(){
-   
-        var readbookpagelist = this.getReadbookpagelist(); 
-        
+    
+    onLoadBookData: function(img_id, book_url) {
+       // alert(book_url)   
+        var readbookpagelist = this.getReadbookpagelist();         
         var url = lodreadpagedata;
         var params = {};
             
-        Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading Book...' });
-        //Ext.data.JsonP.request({
-        Ext.Ajax.request({
-			url : url,
-            params: params,
-			success : function(response, options) {
-                Ext.Viewport.setMasked(false);
-                
-                
-                response = response.responseText;
-                response = Ext.JSON.decode(response);
-                
-                var items = [];                        
-                        Ext.each(response, function(rec, index) {
-                            items.push( {html: '<div style="height: 100%;"><iframe style="width:100%;height:550px;" src="'+rec.description+'">Your device does not support iframes.</iframe></div>'});
-                            
-                        })
-                      
-                   // this.setItems1(items)
-                  // readbookpagelist.setUrl(items);
-                  // readbookpagelist.getAt(0).setItems(items);                     
-                
-            },
-            
-            failuer: function() {
-              
-                Ext.Viewport.setMasked(false);
-            },
-            scope: this
-        })
+        var mainnavigation = this.getMainnavigation();
+        var iframe = readbookpagelist.down('iframe')
         
-      //   var book_items = this.getApplication().getController('BookController');
-        //        var book_items = book_items.getItems1();
-       //         
-      //   readbookpagelist.setHtml(book_items);   
+        iframe.setUrl(book_url);
+        mainnavigation.push(readbookpagelist);
+        
+        //var book_iframe = Ext.ComponentQuery.query('#book_iframe');
+        var book_iframe = document.getElementById('book_iframe');
+        console.log('book_iframe')
+        console.log(book_iframe)
+        book_iframe.src = book_url;
         
     },
     

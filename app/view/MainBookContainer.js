@@ -7,11 +7,6 @@ Ext.define('book.view.MainBookContainer', {
         //cls: 'search_book_container',
         //flex:1,
         items: [
-            
-            {
-                flex:1,
-                xtype: 'booktitlebar'
-            },
             {
                 flex:1,
                 xtype: 'readbookpagelist',

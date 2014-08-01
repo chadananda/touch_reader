@@ -2,7 +2,7 @@ Ext.define('book.model.MBookSlider', {
 	extend: 'Ext.data.Model',
 
 	config: {
-		fields: ['img_id', 'url']
+		fields: ['img_id', 'url', 'book_url']
 	}
 
 });

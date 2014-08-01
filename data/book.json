@@ -1,1 +1,47 @@
-[{"img_id":"1","url":"resources/images/slider-image-1.png"},{"img_id":"2","url":"resources/images/slider-image-2.png"},{"img_id":"3","url":"resources/images/slider-image-3.png"},{"img_id":"4","url":"resources/images/slider-image-4.png"},{"img_id":"5","url":"resources/images/slider-image-5.png"},{"img_id":"6","url":"resources/images/slider-image-6.png"},{"img_id":"7","url":"resources/images/slider-image-7.png"},{"img_id":"8","url":"resources/images/slider-image-8.png"},{"img_id":"9","url":"resources/images/slider-image-9.png"},{"img_id":"10","url":"resources/images/slider-image-10.png"},{"img_id":"11","url":"resources/images/slider-image-11.png"},{"img_id":"12","url":"resources/images/slider-image-12.png"},{"img_id":"13","url":"resources/images/slider-image-13.png"},{"img_id":"14","url":"resources/images/slider-image-14.png"},{"img_id":"15","url":"resources/images/slider-image-15.png"}]
+[
+    {
+        "img_id":"1","url":"resources/images/pt.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Abdu%27l-Baha%2C%20Paris%20Talks%2C%20en.html"
+    },
+    {
+        "img_id":"2","url":"resources/images/adj.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Shoghi%20Effendi%2C%20The%20Advent%20of%20Divine%20Justice%2C%20en.html"
+    },
+    {
+        "img_id":"3","url":"resources/images/ki.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Baha%27u%27llah%2C%20The%20Kitab-i-Iqan%2C%20en.html"
+    },
+    {
+        "img_id":"4","url":"resources/images/pdc.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Shoghi%20Effendi%2C%20The%20Promised%20Day%20is%20Come%2C%20en.html"
+    },
+    {
+        "img_id":"5","url":"resources/images/pup.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Abdu%27l-Baha%2C%20Promulgation%20of%20Universal%20Peace%2C%20en.html"
+    },
+    {
+        "img_id":"6","url":"resources/images/tdp.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Abdu%27l-Baha%2C%20Tablets%20of%20the%20Divine%20Plan%2C%20en.html"
+    },
+    {
+        "img_id":"7","url":"resources/images/adj.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Shoghi%20Effendi%2C%20The%20Promised%20Day%20is%20Come%2C%20en.html"
+    },
+    {
+        "img_id":"8","url":"resources/images/pt.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Abdu%27l-Baha%2C%20Paris%20Talks%2C%20en.html"
+    },
+    {
+        "img_id":"9","url":"resources/images/ki.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Baha%27u%27llah%2C%20The%20Kitab-i-Iqan%2C%20en.html"
+    },
+    {
+        "img_id":"10","url":"resources/images/pup.png", "book_url": "https://dl.dropboxusercontent.com/u/382588/JS/Projects/ilm_library_ocean/Library/Abdu%27l-Baha%2C%20Promulgation%20of%20Universal%20Peace%2C%20en.html"
+    },
+    {
+        "img_id":"11","url":"resources/images/tdp.png", "book_url": ""
+    },
+    {
+        "img_id":"12","url":"resources/images/adj.png", "book_url": ""
+    },
+    {
+        "img_id":"13","url":"resources/images/pup.png", "book_url": ""
+    },
+    {
+        "img_id":"14","url":"resources/images/pdc.png", "book_url": ""
+    },
+    {
+        "img_id":"15","url":"resources/images/ki.png", "book_url": ""
+    }
+]
