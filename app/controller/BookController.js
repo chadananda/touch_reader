@@ -26,6 +26,7 @@ config: {
         'mainbookcontainer': 'mainbookcontainer',
         'booktitlebar': 'booktitlebar',
         'iframe': 'iframe',
+        
     },
 
     control: {
@@ -40,6 +41,9 @@ config: {
         },
         'maintitlebar_showhide': {
             'show': 'onShowMainHideShowIcon'
+        },
+        'readbookpagelist': {
+           // 'show': 'ontapIframe'
         }
        
     }    
@@ -66,7 +70,7 @@ config: {
         /*** Nav TitleBar Select Field Hidden ***/
         this.getSelectfield_button().setHidden(false);
         /*** Nav TitleBar Dropdown Field Hidden ***/
-        //this.getTitlebar_dropdown().setHidden(true);
+        this.getTitlebar_dropdown().setHidden(true);
     
   },
   
@@ -101,7 +105,7 @@ config: {
                     var domEl = Ext.get('image_tap_' + response[i].img_id);
                     if (domEl) {
                         domEl.un('tap', this.onClickOpenReaderScreen) 
-                        domEl.on('tap', this.onClickOpenReaderScreen, this, [response[i].img_id, response[i].book_url])
+                        domEl.on('tap', this.onClickOpenReaderScreen, this, [response[i].img_id, response[i].book_url, response[i].book_title, response[i].author_name])
                     } else {      
                     }
                 }
@@ -161,8 +165,20 @@ config: {
         mainnavigation.push({xtype: 'mainbookcontainer'});
         
         var booktitlebar = this.getBooktitlebar();
-        booktitlebar.setTitle('The Great Deformation, Robert Stockman');
+       
+        var dropdown_title = this.getTitlebar_dropdown(); 
+        dropdown_title.setText('');
+       /* 
+        booktitlebar.element.on({
+		    tap: function() { 
+                   
+            }
+         
+        });
         
+        booktitlebar.setTitle('The Great Deformation, Robert Stockman');
+        */
+                
         /*** Nav TitleBar Library button Show ***/
         this.getLibrary_button().setHidden(false);
         /*** Nav TitleBar List button Show ***/
@@ -173,10 +189,15 @@ config: {
         this.getSelectfield_button().setHidden(true);
         
         /*** Nav TitleBar Dropdown Field Show ***/
-        //this.getTitlebar_dropdown().setHidden(false);
+        this.getTitlebar_dropdown().setHidden(false);
         
         var img_id = eOpts[0];
         var book_url = eOpts[1];
+        var book_title = eOpts[2];
+        var author_name = eOpts[3];
+        
+        var dropdown_title = this.getTitlebar_dropdown(); 
+            dropdown_title.setText('<div class="dropdown_title"><img src="resources/images/down_arrow.png">'+book_title+', '+author_name+'<img src="resources/images/down_arrow.png"></div>');
        // alert(img_id) 
         this.onLoadBookData(img_id, book_url);
         
@@ -186,7 +207,7 @@ config: {
          var mainnavigation = this.getMainnavigation();
              mainnavigation.push({xtype: 'main'});
          this.loadSliderImages() 
-         mainnavigation.reset();
+         mainnavigation.reset(); 
     },
     
     onCurrentBookButtonTap: function(button, e, options) {
@@ -204,9 +225,7 @@ config: {
     onLoadBookData: function(img_id, book_url) {
        // alert(book_url)   
         var readbookpagelist = this.getReadbookpagelist();         
-        var url = lodreadpagedata;
-        var params = {};
-            
+      
         var mainnavigation = this.getMainnavigation();
         var iframe = readbookpagelist.down('iframe')
         
@@ -218,9 +237,32 @@ config: {
         console.log('book_iframe')
         console.log(book_iframe)
         book_iframe.src = book_url;
+      
+    
+        
         
     },
+    ontapIframe: function(){
+    // alert(11)
     
-    
+      //var book_iframe = document.getElementById('book_iframe');
+    var el = Ext.get('book_iframe');
+    var panelsArray = Ext.ComponentQuery.query('iframe');
+       console.log(panelsArray)
+      // panelsArray.on('tap',function(){
+      //  	alert('tap')
+       // });
+       
+      //  panelsArray.on({
+	//	    click: function() { 
+       //       alert('tap')     
+     //      }
+         
+     //   });
+       
+       
+        
+    },
+   
        
 });

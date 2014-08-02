@@ -9,7 +9,7 @@ Ext.define('Ext.ux.Iframe', {
          * @cfg {String} url URL to load
          */
         url     : null,
-       style: 'height: 100%;', 
+       style: 'height: 100%; border:none', 
         /**
          * @cfg
          * @inheritdoc
@@ -28,10 +28,10 @@ Ext.define('Ext.ux.Iframe', {
             id: 'book_iframe',
             tag   : 'iframe',
             src   : this.getUrl(),
-            style : 'width: 100%; height: 100%;'
+            style : 'width: 100%; height: 100%;border:none'
         });
 
-        me.relayEvents(me.iframe, '*');
+        me.relayEvents(me.iframe, '*'); 
     }
     
     

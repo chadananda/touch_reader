@@ -10,7 +10,7 @@ Ext.define('book.view.MainNavigation', {
         items:[
             {
                 //title: 'Owned',
-                xtype: 'booktitlebar'
+                xtype: 'booktitlebar' 
             },
             {
                 title: 'Owned',

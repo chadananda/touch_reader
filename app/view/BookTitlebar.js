@@ -18,7 +18,7 @@ Ext.define('book.view.BookTitlebar', {
                 width:40,
                 height:40,
                 align: 'left',
-                style:'margin-right:20px;'
+                style:'margin-right:10px;'
             },
                 /** item[1]**/
             {
@@ -48,20 +48,19 @@ Ext.define('book.view.BookTitlebar', {
                 width:23,
                 height:23,
                 align: 'left',
-                style:'margin-left:20px;',
+                style:'margin-left:10px;',
                 hidden:false
             },
-          /*  {                
+            {                
                 
+                cls: 'dropdown_menu',
                 xtype: 'button',
-                text: 'Current Book Title, Authour Name',
+                text: '',
                 itemId: 'current_book',
-                align: 'center',
-                iconCls: 'arrow_down',
-                iconAlign: 'right',
+                align: 'left',
                 hidden:false
             },
-            */
+            
                 /** item[4]**/
             {
                 xtype: 'image',
@@ -79,7 +78,7 @@ Ext.define('book.view.BookTitlebar', {
                 width:30,
                 height:27,
                 align: 'right',
-                style:'margin-right:20px;',
+                style:'margin-right:10px;',
                 hidden:false
             },
                 /** item[6]**/
@@ -89,9 +88,11 @@ Ext.define('book.view.BookTitlebar', {
                 name: 'search',
                 itemId: 'top_search_field',
                 align: 'right',
-                hidden:false
+                hidden:false,
+                width:200,
             },
             {
+                 width:200,
                 align: 'right',                 
                 hidden:false,
                 itemId: 'top_select_field', 

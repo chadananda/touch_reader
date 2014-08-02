@@ -4,7 +4,7 @@ Ext.define('book.view.CurrentBookPopUp', {
     requires: [],
     config: {
        // height: '30%',
-        itemId: 'popup',
+        id: 'popup',
         left: '5%',
         padding: 10,
         top: '0%',
