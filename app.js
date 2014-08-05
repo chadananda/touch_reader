@@ -15,26 +15,27 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList',
-        'Ext.field.Slider', 'Ext.ux.Iframe'
+        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList'
         
     ],
     
     controllers: [
-        'BookController'
+        'BookController', 'BookRoutesController'
     ],
     
     models: [
-        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList'
+        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList', 'MSettingAccordionList'
     ],
     
     stores: [
-        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList'
+        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList', 'SSettingAccordionList'
     ],
 
     views: [
         'TabPanel', 'MainNavigation', 'Main', 'BookSlider', 'OwnedBookList', 'BookSliderContainer', 'LibrarybyLanguage', 'RecentlyReadTitle', 'SearchBooksView',
         'CategoryMainContainer', 'RightSidebarContainer', 'AddBookView', 'MainContainer', 'RightSidebarContainer', 'CategoryAccordionList', 'RightCategoryTitle',
-        'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList'
+        'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList', 'TopSearchField', 'TopSettingPopUp' , 'SettingAccordionList', 'ReadingConfigOptionsPopUp',
+        'StudyProjectNavBar', 'CurrentStudyProjectPopUp', 'CurrentOpenStudeyProjectList', 'CompletedStudeyProjectList'
     ],
 
     icon: {

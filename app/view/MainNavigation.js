@@ -13,6 +13,9 @@ Ext.define('book.view.MainNavigation', {
                 xtype: 'booktitlebar' 
             },
             {
+                xtype: 'studyprojectnavbar'
+            },
+            {
                 title: 'Owned',
                 xtype: 'main'
             }

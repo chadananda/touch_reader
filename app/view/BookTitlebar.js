@@ -26,31 +26,24 @@ Ext.define('book.view.BookTitlebar', {
                 html: 'Library',
                 align: 'left',
                 itemId: 'lib_button',
-                style:'margin-left:5px;color:#4298e1;font-weight:bold;',
+                style:'margin-left:5px;margin-right:5px;color:#fff;font-weight:bold;',
                 hidden:false
             },
                 /** item[2]**/
             {
-                xtype: 'image',
-                src: 'resources/images/list_icon.png',
-                width:29,
-                height:18,
+                xtype: 'button',
+               // src: 'resources/images/list_icon.png',
+                //width:29,
+               // height:18,
+                iconCls: 'list',
                 align: 'left',
                 itemId: 'list_button',
-                style:'margin-left:10px;',
+               
                 hidden:false
             },
             
                 /** item[3]**/
-            {
-                xtype: 'image',
-                src: 'resources/images/setting_icon.png',
-                width:23,
-                height:23,
-                align: 'left',
-                style:'margin-left:10px;',
-                hidden:false
-            },
+            
             {                
                 
                 cls: 'dropdown_menu',
@@ -68,7 +61,7 @@ Ext.define('book.view.BookTitlebar', {
                 width:30,
                 height:20,
                 align: 'right',
-                style:'margin-right:10px;',
+                style:'margin-right:20px;',
                 hidden:false
             },
                 /** item[5]**/
@@ -79,17 +72,25 @@ Ext.define('book.view.BookTitlebar', {
                 height:27,
                 align: 'right',
                 style:'margin-right:10px;',
+                hidden:false,
+            },
+            {
+                xtype: 'button',
+                iconCls: 'settings',
+                itemId: 'top_setting_field',
+                align: 'right',
                 hidden:false
             },
                 /** item[6]**/
             {
-               
-                xtype: 'searchfield',
-                name: 'search',
+             
+                xtype: 'button',
+                //src: 'resources/images/search_icon.png',
                 itemId: 'top_search_field',
+                iconCls: 'search',
                 align: 'right',
                 hidden:false,
-                width:200,
+                style:'margin-right:10px;',
             },
             {
                  width:200,

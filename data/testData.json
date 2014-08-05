@@ -1,36 +1,110 @@
 {
-    "items" : [{
-                "text" : "Category Name",
-                "items" : [{
-                            "text" : "Sub-Category", 
-                            "leaf" : true
-                        }, {
-                            "text" : "Sub-Category",
-                            "leaf" : true
-                        }, {
-                            "text" : "Sub-Category",
-                            "leaf" : true
-                        }]
-            }, {
-                "text" : "Category Name",
-                "items" : [{
-                            "text" : "Sub-Category",
-                            "leaf" : true
-                        }, {
-                            "text" : "Sub-Category",
-                            "leaf" : true
-                        }]
-            },  {
-                "text" : "Category Name",
-                "items" : [{
-                            "text" : "Sub-Category",
-                            "leaf" : true
-                        }, {
-                            "text" : "Sub-Category",
-                            "leaf" : true
-                        }, {
-                            "text" : "Sub-Category",
-                            "leaf" : true
-                        }]
-            }]
+    "items": [
+        {
+            "text": "About \"Stockman, The Great Deformation\"...",
+            "open_book_icon": "resources/images/book_open_icon.png",
+            "book_open_infoicon": "resources/images/book_open_infoicon.png",
+            "year": true,
+            "items": [
+                {
+                    "text": "Your Custom Study Guide",
+                    "open_book_icon": "resources/images/custom_study_icon.png",
+                    "items": [
+                        {
+                            "sales": "Bookmarks",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/bookmark_icon.png",
+                            "badgeText": "22"
+                        },
+                        {
+                            "sales": "Tags",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/tags_icon.png",
+                            "badgeText": "12"
+                        },
+                        {
+                            "sales": "Notes",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/notes_icon.png",
+                            "badgeText": "42"
+                        },
+                        {
+                            "sales": "Highlights",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/highlights_icon.png",
+                            "badgeText": "96"
+                        },
+                        {
+                            "sales": "Paragraph Summaries",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/paragraph_summaries_icon.png",
+                            "badgeText": "110"
+                        }
+                    ]
+                },
+                 {
+                    "text": "Dunbar, An Introduction to Money",
+                    "open_book_icon": "resources/images/custom_study_icon.png",
+                    "items": [
+                        {
+                            "sales": "Bookmarks",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/bookmark_icon.png",
+                        },
+                        {
+                            "sales": "Tags",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/tags_icon.png",
+                        },
+                        {
+                            "sales": "Notes",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/notes_icon.png",
+                        },
+                        {
+                            "sales": "Highlights",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/highlights_icon.png",
+                        },
+                        {
+                            "sales": "Paragraph Summaries",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/paragraph_summaries_icon.png",
+                        }
+                    ]
+                },
+                {
+                    "text": "Clinton, My Personal Stockman Notes",
+                    "open_book_icon": "resources/images/custom_study_icon.png",
+                    "items": [
+                        {
+                            "sales": "Bookmarks",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/bookmark_icon.png",
+                        },
+                        {
+                            "sales": "Tags",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/tags_icon.png",
+                        },
+                        {
+                            "sales": "Notes",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/notes_icon.png",
+                        },
+                        {
+                            "sales": "Highlights",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/highlights_icon.png",
+                        },
+                        {
+                            "sales": "Paragraph Summaries",
+                            "leaf": true,
+                            "open_book_icon": "resources/images/paragraph_summaries_icon.png",
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

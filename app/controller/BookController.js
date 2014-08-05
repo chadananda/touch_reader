@@ -15,17 +15,36 @@ config: {
         'list_button': 'booktitlebar #list_button',
         'searchfield_button': 'booktitlebar #top_search_field',
         'selectfield_button': 'booktitlebar #top_select_field',
+        'settingfield_button': 'booktitlebar #top_setting_field',
         'currentbookpopup': 'currentbookpopup',
         popupView: {
             autoCreate: true,
             selector: '#popup',
             xtype: 'currentbookpopup'
         },
-        'readbookpagelist_slider': 'readbookpagelist sliderfield',
+        SearchPopView: {
+            autoCreate: true,
+            selector: '#top_search',
+            xtype: 'topsearchfield'
+        },
+        settingPopView: {
+            autoCreate: true,
+            selector: '#top_setting',
+            xtype: 'settingaccordionlist'
+        },
+        //'readbookpagelist_slider': 'readbookpagelist sliderfield',
         'readbookpagelist': 'readbookpagelist',
         'mainbookcontainer': 'mainbookcontainer',
         'booktitlebar': 'booktitlebar',
         'iframe': 'iframe',
+        
+        'studyprojectnavbar': 'studyprojectnavbar',
+        'studyproject_dropdown': 'studyprojectnavbar #study_project_book',
+        currentProjectPopView: {
+            autoCreate: true,
+            selector: '#current_std_projct',
+            xtype: 'currentstudyprojectpopup'
+        },
         
     },
 
@@ -37,13 +56,24 @@ config: {
             'tap': 'onCurrentBookButtonTap'
         },               
         'readbookpagelist_slider': {
-            'change': 'onSliderChange'
+          //  'change': 'onSliderChange'
         },
         'maintitlebar_showhide': {
             'show': 'onShowMainHideShowIcon'
         },
         'readbookpagelist': {
            // 'show': 'ontapIframe'
+        },
+        'searchfield_button': {
+            'tap': 'onTapTopSearchIcon'
+        },
+        'settingfield_button': {
+            'tap': 'onTapSettingButton'
+        },
+        
+        // Current Study Project Nav Bar
+        'studyproject_dropdown': {
+            'tap': 'onCurrentStudyProjectTap' 
         }
        
     }    
@@ -71,7 +101,7 @@ config: {
         this.getSelectfield_button().setHidden(false);
         /*** Nav TitleBar Dropdown Field Hidden ***/
         this.getTitlebar_dropdown().setHidden(true);
-    
+        this.getStudyprojectnavbar().setHidden(true);
   },
   
   
@@ -175,7 +205,7 @@ config: {
             }
          
         });
-        
+       
         booktitlebar.setTitle('The Great Deformation, Robert Stockman');
         */
                 
@@ -190,6 +220,7 @@ config: {
         
         /*** Nav TitleBar Dropdown Field Show ***/
         this.getTitlebar_dropdown().setHidden(false);
+        this.getStudyprojectnavbar().setHidden(false);
         
         var img_id = eOpts[0];
         var book_url = eOpts[1];
@@ -218,9 +249,12 @@ config: {
  
     },
     
+    /*
     onSliderChange: function(slider, thumb, newVal, oldVal){
    
     },
+    
+    */
     
     onLoadBookData: function(img_id, book_url) {
        // alert(book_url)   
@@ -263,6 +297,28 @@ config: {
        
         
     },
+    
+    onTapTopSearchIcon: function(button, e, options){
+        var me = this;
+        var seach_field = me.getSearchPopView();
+        seach_field.showBy(button);
+    },
+    
+    onTapSettingButton: function(button, e, options){
+        var me = this;
+        var setting_field = me.getSettingPopView();
+        setting_field.showBy(button);
+       
+    },
+    
+    // Current Study Project Nav Bar
+    
+    onCurrentStudyProjectTap: function(button, e, options){
+        var me = this;
+        var curr_stdy_projct = me.getCurrentProjectPopView();
+        curr_stdy_projct.showBy(button);
+    
+    }
    
        
 });

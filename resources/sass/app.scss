@@ -15,7 +15,7 @@ $base-color: #b7c5e2 !default;
 
 @include sencha-button-ui('bluenav',#b7c5e2,'matte');
 
-@include sencha-toolbar-ui('bluenav', #b7c5e2,'matte');
+@include sencha-toolbar-ui('bluenav', #4c6aa1,'matte');
 .x-toolbar .x-toolbar-title {
     color: #607dd5;
 }
