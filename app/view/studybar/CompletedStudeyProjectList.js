@@ -1,4 +1,4 @@
-Ext.define('book.view.CompletedStudeyProjectList', {
+Ext.define('book.view.studybar.CompletedStudeyProjectList', {
     extend: 'Ext.List',
     xtype: 'completedstudeyprojectlist',
     requires: [],

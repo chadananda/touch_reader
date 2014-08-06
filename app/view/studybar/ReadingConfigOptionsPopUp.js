@@ -1,4 +1,4 @@
-Ext.define('book.view.ReadingConfigOptionsPopUp', {
+Ext.define('book.view.studybar.ReadingConfigOptionsPopUp', {
     extend: 'Ext.Panel',
     xtype: 'readingconfigpptionspopup',
     requires: [],

@@ -297,11 +297,9 @@
 
 .dataview-item{
    width : 23.77%;
-   /*31.71%*/
    height : 72px;
    border: 1px solid #ddd;  
    float:left;  
-  /* padding:2px; */
    margin:10px 0px 0px 10px
 }
 
@@ -345,6 +343,20 @@
 .my-titlebar .x-title ::first-letter {  
   font-variant: small-caps;
   font-size: 130%; 
+}
+.my-titlebar.x-toolbar .x-button .x-badge{
+
+    line-height: 1.2em;
+    font-size: 0.7em;
+    border-color: #790000;
+    background-color: #fe3f36;
+    background-image: -webkit-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+    background-image: -moz-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+    background-image: -o-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+    background-image: linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+}
+.my-titlebar .x-hasbadge .x-badge{
+    min-width: 1.0em;
 }
 
 .x-toolbar-bluenav .x-button{
@@ -396,12 +408,6 @@
     background:#fff !important;
 }
 
-.iframe_cls{
-    width:100%;
-    height:100%;
-    border: 1px solid red;
-}
-
 .x-toolbar-bluenav .dropdown_menu.x-button{
     background:none !important;
     background: transparent;
@@ -411,11 +417,10 @@
 
 .x-toolbar .x-button .x-button-label{
     font-size: 0.9em;
-    /*text-transform:uppercase; */
+    line-height: 1.2em;
     color:#607dd5; 
 }
-.top_search_panel .x-input-el{ 
- 
+.top_search_panel .x-input-el{  
     min-height: 2.0em !important;
     padding: 0.3em 0.3em 0.3em 1.0em;
 }
@@ -427,10 +432,9 @@
 }
 
 .category_accordion_list .x-list-normal .x-list-item.x-list-item-tpl {
- border-top: none;
- background: none;
- border-bottom : none; 
-    
+     border-top: none;
+    background: none;
+    border-bottom : none;     
 }
 .category_accordion_list .x-list .x-list-item.x-list-item-tpl .x-innerhtml{
     padding: 0px;
@@ -481,7 +485,6 @@
 }
 
 .reader_config{
-
     margin-top: 10px;
     margin-left: 20px;
     padding: 10px;    
@@ -500,8 +503,7 @@
 }
 .reader_config_slider .x-form-label span{
     font-size: 1.0em;
-    font-weight: normal !important;
-   
+    font-weight: normal !important;   
 }
 
 .projct_list{
@@ -511,15 +513,106 @@
     padding: 0px !important;
 }
 .projct_list.x-list-normal .x-list-item.x-list-item-tpl {
- border-top: none;
- background: none;
- border-bottom : none; 
-    
+    border-top: none;
+    background: none;
+    border-bottom : none;     
 }
-.x-toolbar .x-button.tab_mar_left {
-  
-    margin-left:50px;
+.study_project_titlebar{
+ 
+    padding:8px 5px 0px 5px;
+    background-color: #4c6aa1;
+    background-image: -webkit-linear-gradient(top, #7a92c0,#5776b0 3%,#445f90);
+    border-color: #000;
+    color:#fff;
+}
+.study_project_titlebar .dropdown_menu.x-button{
+    background:none !important;
+    background: transparent;
+    border: none;
+    margin-left: 0px;
+    color:#fff;
+    font-size: 0.9em;
 }
 
+.study_project_titlebar .x-button{
+    background:none;
+    border: none;
+    -webkit-text-fill-color:#fff;
+}
+.study_project_titlebar .x-button.x-button-pressing{
+    background:none;
+    border: none;
+}
+.study_project_titlebar .progress_assemnt{
+    font-size: 0.7em;   
+    margin-bottom:5px;
+}
 
+.study_project_titlebar .activities_btns .x-button{
+    font-size: 0.7em;
+    float:right;   
+    width:11.0em;    
+    margin:0px 0px 5px 10px
+}
+
+.study_project_titlebar .x-hasbadge .x-badge{
+    min-width: 2.0em;
+    line-height: 1.2em;
+    font-size: 0.9em;
+    border-color: #790000;
+    background-color: #fe3f36;
+    background-image: -webkit-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+    background-image: -moz-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+    background-image: -o-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+    background-image: linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
+}
+
+.info_screen_wrapper {
+    width:100%;
+}
+.info_screen_image{
+    width:10%;
+    float:left;
+}
+.info_screen_contnt{
+    width:90%;
+    float:right;
+    padding-left:10px;
+}
+.info_screen_contnt .stdy_projct_name{
+    font-weight: bold;
+}
+.info_screen_contnt .stdy_projct_desc{
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin-left: 15px;
+}
+.member_list_view{
+    margin-left: 70px;
+}
+.member_list_view.x-list .x-list-item.x-list-item-tpl{
+    border-bottom: 1px solid #dedede;
+    border-top: none;
+}
+
+.member_list_view.x-list{
+    background-color: #fff;
+}
+
+.member_list_wrapper{
+    width:100%;
+}
+.members_icon{
+    margin-right:10px;
+    float:left;
+}
+.members_title{
+   
+    float:left;
+}
+.memmsg_icon{
+   
+    float:right;
+    margin-right:20px;
+}
 

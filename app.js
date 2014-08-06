@@ -34,8 +34,9 @@ Ext.application({
     views: [
         'TabPanel', 'MainNavigation', 'Main', 'BookSlider', 'OwnedBookList', 'BookSliderContainer', 'LibrarybyLanguage', 'RecentlyReadTitle', 'SearchBooksView',
         'CategoryMainContainer', 'RightSidebarContainer', 'AddBookView', 'MainContainer', 'RightSidebarContainer', 'CategoryAccordionList', 'RightCategoryTitle',
-        'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList', 'TopSearchField', 'TopSettingPopUp' , 'SettingAccordionList', 'ReadingConfigOptionsPopUp',
-        'StudyProjectNavBar', 'CurrentStudyProjectPopUp', 'CurrentOpenStudeyProjectList', 'CompletedStudeyProjectList'
+        'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList', 'TopSearchField', 'TopSettingPopUp' , 'SettingAccordionList', 'book.view.studybar.ReadingConfigOptionsPopUp',
+        'book.view.studybar.StudyProjectNavBar', 'book.view.studybar.CurrentStudyProjectPopUp', 'book.view.studybar.CurrentOpenStudeyProjectList', 'book.view.studybar.CompletedStudeyProjectList',
+        'book.view.studybar.StudyProjectInfoScreen', 'book.view.studybar.MembersLinkList'
     ],
 
     icon: {

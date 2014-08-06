@@ -1,4 +1,4 @@
-Ext.define('book.view.CurrentStudyProjectPopUp', {
+Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
     extend: 'Ext.Panel',
     xtype: 'currentstudyprojectpopup',
     requires: [],
@@ -8,7 +8,7 @@ Ext.define('book.view.CurrentStudyProjectPopUp', {
         left: '5%',
         padding: 10,
         top: '0%',
-        width: '40%',
+        width: '50%',
         hideOnMaskTap: true,
         modal: true ,
          layout: 'vbox',

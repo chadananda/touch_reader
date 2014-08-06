@@ -7,7 +7,7 @@ Ext.define('book.view.TopSearchField', {
         id: 'top_search',
         left: '5%',
         top: '0%',
-        width: '30%',
+        width: '60%',
         hideOnMaskTap: true,
         modal: true ,
         cls: 'top_search_panel',

@@ -16,6 +16,10 @@ config: {
         'searchfield_button': 'booktitlebar #top_search_field',
         'selectfield_button': 'booktitlebar #top_select_field',
         'settingfield_button': 'booktitlebar #top_setting_field',
+        
+        'message_icon': 'booktitlebar #message_icon',
+        'chat_icon': 'booktitlebar #chat_icon',
+        
         'currentbookpopup': 'currentbookpopup',
         popupView: {
             autoCreate: true,
@@ -44,6 +48,12 @@ config: {
             autoCreate: true,
             selector: '#current_std_projct',
             xtype: 'currentstudyprojectpopup'
+        },
+        'studyinfobutton': 'studyprojectnavbar #info_screen_btn',
+        infoScreenPopView: {
+            autoCreate: true,
+            selector: '#info_screen',
+            xtype: 'studyprojectinfoscreen'
         },
         
     },
@@ -74,6 +84,12 @@ config: {
         // Current Study Project Nav Bar
         'studyproject_dropdown': {
             'tap': 'onCurrentStudyProjectTap' 
+        },
+        'booktitlebar': {
+            'initialize': 'onBookTitlebarShow'        
+        },
+        'studyinfobutton': {
+            'tap': 'onTapStudeyInfoButton'
         }
        
     }    
@@ -84,6 +100,23 @@ config: {
     this.loadSliderImages()
    // this.onLoadBookData() 
   
+  },
+  
+  onBookTitlebarShow: function(view, eOpts){
+         var message_icon = this.getMessage_icon();         
+            console.log(message_icon.getBadgeText());
+            if(message_icon.getBadgeText() != ''){
+                message_icon.setHtml('<img src="resources/images/message.png">');
+            }else {
+               message_icon.setHtml('<img src="resources/images/message_stamp_icon.png">');
+            }
+        
+        var chat_icon = this.getChat_icon();
+        if(chat_icon.getBadgeText() != ''){
+                chat_icon.setHtml('<img src="resources/images/chat.png">');
+            }else {
+               chat_icon.setHtml('<img src="resources/images/chat_stamp_icon.png">');
+            }
   },
   
   onShowMainHideShowIcon: function( view, eOpts){
@@ -318,6 +351,12 @@ config: {
         var curr_stdy_projct = me.getCurrentProjectPopView();
         curr_stdy_projct.showBy(button);
     
+    },
+    
+    onTapStudeyInfoButton: function(button, e, options){
+        var me = this;
+        var info_screen = me.getInfoScreenPopView();
+        info_screen.showBy(button);
     }
    
        

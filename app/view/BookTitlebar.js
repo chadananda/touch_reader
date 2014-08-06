@@ -11,7 +11,7 @@ Ext.define('book.view.BookTitlebar', {
         ui: 'bluenav',
        
         items: [
-                /** item[0]**/
+               
             {
                 xtype: 'image',
                 src: 'resources/images/full-logo-med.png',
@@ -20,7 +20,7 @@ Ext.define('book.view.BookTitlebar', {
                 align: 'left',
                 style:'margin-right:10px;'
             },
-                /** item[1]**/
+               
             {
                 xtype: 'image',
                 html: 'Library',
@@ -29,20 +29,14 @@ Ext.define('book.view.BookTitlebar', {
                 style:'margin-left:5px;margin-right:5px;color:#fff;font-weight:bold;',
                 hidden:false
             },
-                /** item[2]**/
+               
             {
                 xtype: 'button',
-               // src: 'resources/images/list_icon.png',
-                //width:29,
-               // height:18,
                 iconCls: 'list',
                 align: 'left',
-                itemId: 'list_button',
-               
+                itemId: 'list_button',               
                 hidden:false
             },
-            
-                /** item[3]**/
             
             {                
                 
@@ -53,26 +47,25 @@ Ext.define('book.view.BookTitlebar', {
                 align: 'left',
                 hidden:false
             },
-            
-                /** item[4]**/
+              
             {
-                xtype: 'image',
-                src: 'resources/images/message.png',
-                width:30,
-                height:20,
+                xtype: 'button',
+                html: '',
+                itemId: 'message_icon',
                 align: 'right',
-                style:'margin-right:20px;',
+                style:'margin:10px 10px 0px 0px;',
+                badgeText: '7',
                 hidden:false
             },
-                /** item[5]**/
+             
             {
-                xtype: 'image',
-                src: 'resources/images/chat.png',
-                width:30,
-                height:27,
+                xtype: 'button',
+                html: '',
+                itemId: 'chat_icon',                
                 align: 'right',
-                style:'margin-right:10px;',
+                style:'margin:10px 10px 0px 0px;',
                 hidden:false,
+                badgeText: '5',
             },
             {
                 xtype: 'button',

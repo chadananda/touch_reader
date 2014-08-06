@@ -13,7 +13,7 @@ Ext.define('book.view.SettingAccordionList', {
         left: '5%',
         padding: 10,
         top: '0%',
-        width: '50%',
+        width: '60%',
         hideOnMaskTap: true,
         modal: true ,
         //cls: 'popup_panel',
