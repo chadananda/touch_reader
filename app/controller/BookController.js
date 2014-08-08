@@ -55,6 +55,10 @@ config: {
             selector: '#info_screen',
             xtype: 'studyprojectinfoscreen'
         },
+        'topsearchfield': 'topsearchfield accordionlist',
+        'searchresult': 'topsearchfield #search_result',
+        'topsearchfieldpopup': 'topsearchfield'
+        
         
     },
 
@@ -90,6 +94,10 @@ config: {
         },
         'studyinfobutton': {
             'tap': 'onTapStudeyInfoButton'
+        },
+        'topsearchfield searchfield[itemId=searchBox]' : {
+            clearicontap : 'onClearSearch',
+            keyup: 'onSearchKeyUp'
         }
        
     }    
@@ -357,7 +365,33 @@ config: {
         var me = this;
         var info_screen = me.getInfoScreenPopView();
         info_screen.showBy(button);
-    }
+    },
+    
+    onSearchKeyUp: function(searchField) {
+      
+        var seach_field = this.getSearchPopView();    
+            seach_field.setHeight('60%');
+        this.getTopsearchfield().setHeight('78%');        
+        var store = this.getTopsearchfield().getStore();      
+        store.removeAll();
+        this.getSearchresult().setHtml('<div class="search_result"> 10 Matching Sentences from 3 Books</div>');
+        store.load({
+            callback: function(records, operation, success) {
+                console.log(records);
+            },
+            scope: this
+        });
+    },
+    
+    onClearSearch: function() {
+    
+        var store = this.getTopsearchfield().getStore();
+            store.removeAll();
+        this.getSearchresult().setHtml('');
+        this.getTopsearchfield().setHeight('');
+        var seach_field = this.getSearchPopView();    
+        seach_field.setHeight('');
+    },
    
        
 });
