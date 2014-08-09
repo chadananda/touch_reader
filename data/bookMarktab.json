@@ -1,0 +1,37 @@
+{
+    "items": [
+        {
+            "title": "The Great Deformation",
+            "book_img": "resources/images/tab_bookmark_icon.png",
+            "author_name": "by David Stockman",
+            "book_chapter": [
+                {
+                    "chapter_title": "Chapter 4, The Reagan Revolution: Repudiations and Deformations",
+                    "paragraph": [
+                        {
+                         "paragraph_no": "4.8 \"Yet the real culprit behind the fiscal profligacy which descended...\"",
+                        },
+                        {
+                         "paragraph_no": "4.14 \"The first spell of false prosperity was the unacknowledged yet...\"",
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Chapter 5, Triumph of the Warfare State: How the Budget Battle was Lost",
+                    "paragraph": [
+                        {
+                         "paragraph_no": "5.2 \"This massive injection of fiscal firepower nearly tripled the annual...\"",
+                        },
+                        {
+                         "paragraph_no": "5.18 \"No fresh start or strategically coherent defense plan was ever...\"",
+                        },
+                        {
+                         "paragraph_no": "5.37 \"By the Pentagon’s own reckoning there were never more than a few...\"",
+                        }
+                    ]
+                }
+            ]
+            
+        }
+    ]
+}

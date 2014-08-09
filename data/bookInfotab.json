@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "title": "The Great Deformation",
+            "book_img": "resources/images/book_info_image.png",
+            "author_name": "David Stockman <br>89,200 words, difficulty: 3.5",
+            "description": "America's macroeconomic policy raised up this spectacular suburban edifice and then promptly whacked it in the face with a folding chair. David A. Stockman brings us the story in one battleship of a book. Polemical? Yes. Righteous? Yes. Objective,well, not really, but the author’s take on the whole concussed,black-eyed, nosebleeding mess that is America makes this an alarming, unputdownable blockbuster.",
+            
+            "contents": [
+                {
+                    "table_of_contents": "Chapter 1. -- American Pie!"
+                },
+                {
+                    "table_of_contents": "Chapter 2. -- The Monetary Winners"
+                },
+                {
+                    "table_of_contents": "Chapter 3. -- Collusion for the Spoils!"
+                },
+                {
+                    "table_of_contents": "Chapter 4. -- Bringing Home the Bacon"
+                },
+                {
+                    "table_of_contents": "Chapter 5. -- The Mock Debate"
+                }
+            ]
+            
+        }
+    ]
+}

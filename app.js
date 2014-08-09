@@ -24,11 +24,11 @@ Ext.application({
     ],
     
     models: [
-        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList', 'MSettingAccordionList', 'MSearchScreen'
+        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList', 'MSettingAccordionList', 'MSearchScreen', 'MBookInfoTab'
     ],
     
     stores: [
-        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList', 'SSettingAccordionList', 'SSearchScreen'
+        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList', 'SSettingAccordionList', 'SSearchScreen', 'SBookInfoTab'
     ],
 
     views: [
@@ -36,7 +36,8 @@ Ext.application({
         'CategoryMainContainer', 'RightSidebarContainer', 'AddBookView', 'MainContainer', 'RightSidebarContainer', 'CategoryAccordionList', 'RightCategoryTitle',
         'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList', 'TopSearchField', 'TopSettingPopUp' , 'SettingAccordionList', 'book.view.studybar.ReadingConfigOptionsPopUp',
         'book.view.studybar.StudyProjectNavBar', 'book.view.studybar.CurrentStudyProjectPopUp', 'book.view.studybar.CurrentOpenStudeyProjectList', 'book.view.studybar.CompletedStudeyProjectList',
-        'book.view.studybar.StudyProjectInfoScreen', 'book.view.studybar.MembersLinkList'
+        'book.view.studybar.StudyProjectInfoScreen', 'book.view.studybar.MembersLinkList', 'book.view.bookinfoscreen.BookInformationScreen', 'book.view.bookinfoscreen.BookInfoTab',
+        'book.view.bookinfoscreen.BookmarkTab'
     ],
 
     icon: {

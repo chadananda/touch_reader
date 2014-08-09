@@ -19,10 +19,6 @@ Ext.define('book.view.MainNavigation', {
                 title: 'Owned',
                 xtype: 'main'
             }
-           // {
-           //     title: 'Owned',
-           //     xtype: 'mainbookcontainer'
-           // }
         ]
     }
 });

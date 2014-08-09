@@ -12,7 +12,7 @@ config: {
         'booktitlebar': 'booktitlebar',
         'library_button': 'booktitlebar #lib_button',
         'titlebar_dropdown': 'booktitlebar #current_book',
-        'list_button': 'booktitlebar #list_button',
+        'list_button': 'booktitlebar #list_nav',
         'searchfield_button': 'booktitlebar #top_search_field',
         'selectfield_button': 'booktitlebar #top_select_field',
         'settingfield_button': 'booktitlebar #top_setting_field',
@@ -234,7 +234,7 @@ config: {
     onClickOpenReaderScreen: function(event, obj, eOpts){        
         var mainnavigation = this.getMainnavigation();
         mainnavigation.push({xtype: 'mainbookcontainer'});
-        
+       
         var booktitlebar = this.getBooktitlebar();
        
         var dropdown_title = this.getTitlebar_dropdown(); 
@@ -311,33 +311,40 @@ config: {
         var book_iframe = document.getElementById('book_iframe');
         console.log('book_iframe')
         console.log(book_iframe)
-        book_iframe.src = book_url;
+        book_iframe.src = book_url; 
       
     
         
         
     },
-    ontapIframe: function(){
-    // alert(11)
+    ontapIframe: function(view, eOpts){
+     alert(view.xtype)
     
-      //var book_iframe = document.getElementById('book_iframe');
-    var el = Ext.get('book_iframe');
-    var panelsArray = Ext.ComponentQuery.query('iframe');
-       console.log(panelsArray)
-      // panelsArray.on('tap',function(){
-      //  	alert('tap')
-       // });
+    var readbookpagelist = this.getReadbookpagelist();           
+       console.log(readbookpagelist)
+       console.log(eOpts)
        
-      //  panelsArray.on({
-	//	    click: function() { 
-       //       alert('tap')     
-     //      }
-         
-     //   });
-       
-       
+        var els = Ext.select("#ext-iframe-1");
+        console.log(els)
+        
+        els.on('tap', function(ev) { 
+              console.log(ev)
+              
+              //var elm = ev.target || ev.srcElement;
+              //elm is the element that was clicked
+            });
+     
+     // var el = Ext.get('some-el');
+    //  el.select('div.some-class');
+ 
+      //els.hide(true);
+  
+       // var book_iframe = document.getElementById('book_iframe');
+      // console.log(book_iframe)
+      
         
     },
+  
     
     onTapTopSearchIcon: function(button, e, options){
         var me = this;

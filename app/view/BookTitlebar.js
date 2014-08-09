@@ -4,7 +4,7 @@ Ext.define('book.view.BookTitlebar', {
     requires: ['Ext.Img'],
     config: { 
         layout:'hbox',
-        xtype: 'titlebar',
+        //xtype: 'titlebar',
         cls:'my-titlebar',
         docked: 'top',
         title: '',
@@ -34,7 +34,7 @@ Ext.define('book.view.BookTitlebar', {
                 xtype: 'button',
                 iconCls: 'list',
                 align: 'left',
-                itemId: 'list_button',               
+                itemId: 'list_nav',               
                 hidden:false
             },
             

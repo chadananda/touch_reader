@@ -78,6 +78,10 @@
         {
             "path": "resources/css/style.css",
             "update": "delta"
+        },
+        {
+            "path": "resources/css/slidenav.css",
+            "update": "delta"
         }
     ],
 

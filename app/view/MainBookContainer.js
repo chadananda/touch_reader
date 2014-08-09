@@ -3,13 +3,13 @@ Ext.define('book.view.MainBookContainer', {
     xtype: 'mainbookcontainer',
     requires: [],
     config: { 
-        layout:'vbox',
+        layout:'vbox', 
         //cls: 'search_book_container',
         //flex:1,
         items: [
             {
                 flex:1,
-                xtype: 'readbookpagelist',
+                xtype: 'readbookpagelist', 
             }
         ]
     }

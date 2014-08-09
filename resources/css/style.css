@@ -657,3 +657,80 @@
 .top_search_panel .search_result{
     margin: 0em 0em 0.3em 0.4em;
 }
+
+.book_info{
+    margin:0px 10px;
+    width:50%;
+}
+
+.book_info .x-tab{
+    min-width: 3.5em;
+    width:15%;
+}
+.book_info_tab{
+    border: 1px solid #ddd;
+}
+
+/************ Book Info Tab **********/
+.bookinfo_tab {
+    border: 1px solid #ddd;
+    
+}
+.bookinfo_tab_table .title{
+    padding:5px 10px;
+    border-bottom: 1px solid #ddd;
+}
+.bookinfo_tab_table .book_title{
+    font-size: 0.9em;
+    text-align:center;
+}
+.bookinfo_tab_table .book_title i{  
+    font-size: 1.5em; 
+}
+.bookinfo_tab_table td{
+    font-size: 0.9em;
+    padding:5px 10px;
+}
+.bookinfo_tab_table .description{
+    
+    border-bottom: 1px solid #ddd;
+    padding:5px 10px;
+    font-size: 0.7em;
+}
+.bookinfo_tab_table .table_of_contents{
+     padding:5px 10px;
+}
+/************ BookMark Tab **********/
+.bookmark_tab {
+    border: 1px solid #ddd;
+    padding:10px 0px 10px 10px;    
+}
+
+.bookmark_tab_table .paragraph_title{
+    font-size: 0.9em;
+    text-align:left;
+}
+.bookmark_tab_table .paragraph_title i{  
+    font-size: 1.5em;
+}
+.bookmark_tab_table td{
+    font-size: 0.9em;
+    padding:5px 0px;
+}
+.bookmark_tab_table .paragraph_no {   
+    width:100%;
+}
+.bookmark_tab_table .paragraph_no .paragraph_image{ 
+    padding-left:10px;
+    padding-right:5px;
+    float:left;
+    width:5%;     
+}
+.bookmark_tab_table .paragraph_no .paragraph_contnt{
+    float:left;
+    padding-left:10px;
+    padding-right:5px;
+    width:95%;      
+}
+
+
