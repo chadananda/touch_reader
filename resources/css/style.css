@@ -659,7 +659,7 @@
 }
 
 .book_info{
-    margin:0px 10px;
+    margin:0px 10px 0px 0px;
     width:50%;
 }
 
@@ -733,4 +733,130 @@
     width:95%;      
 }
 
+ /*************** Named Tages Tag ******************/
 
+.namedtags_tab {
+    border: 1px solid #ddd;
+    padding:10px 0px 10px 10px;    
+}
+.namedtag_tab_table .paragraph_title{
+    font-size: 0.9em;
+    text-align:left;
+}
+.namedtag_tab_table .paragraph_title{  
+    font-size: 1.3em;
+}
+.namedtag_tab_table .paragraph_title i{  
+    font-size: 0.7em;
+}
+.namedtag_tab_table .tag_title{
+    padding:10px 0px;   
+}
+.namedtag_tab_table .tag_title img{
+    padding-right:10px;
+}
+.namedtag_tab_table td{
+    font-size: 0.9em;
+    padding:5px 0px;
+}
+.namedtag_tab_table .paragraph_no {   
+    width:100%;
+}
+.namedtag_tab_table .paragraph_no .paragraph_image{ 
+    padding-left:10px;
+    padding-right:5px;
+    float:left;
+    width:5%;     
+}
+.namedtag_tab_table .paragraph_no .paragraph_contnt{
+    float:left;
+    padding-left:10px;
+    padding-right:5px;
+    width:95%;      
+}
+
+/*************** Notes Tag ******************/
+
+.notes_tab {
+    border: 1px solid #ddd;
+    padding:10px 0px 10px 10px;    
+}
+.notes_tab_table .paragraph_title{
+    font-size: 0.9em;
+    text-align:left;
+}
+.notes_tab_table .paragraph_title{  
+    font-size: 1.3em;
+}
+.notes_tab_table .paragraph_title i{  
+    font-size: 0.7em;
+}
+.notes_tab_table .tag_title{
+    padding:10px 0px;
+   
+}
+.notes_tab_table .tag_title img{
+    padding-right:10px;
+}
+.notes_tab_table td{
+    font-size: 0.9em;
+    padding:5px 0px;
+}
+.notes_tab_table .paragraph_no {   
+    width:100%;
+}
+.notes_tab_table .paragraph_no .paragraph_contnt{
+    float:left;
+    padding-left:10px;
+    padding-right:5px;
+    width:95%;      
+}
+.notes_tab_table .notes_desc {   
+    width:100%;
+     padding:10px 0px 10px 25px;
+}
+.notes_tab_table .notes_desc .paragraph_image{ 
+    padding-right:5px;
+    float:left;
+    width:5%;     
+}
+.notes_tab_table .notes_desc .paragraph_contnt{
+    float:left;
+    padding-left:10px;
+    padding-right:5px;
+    width:95%;      
+}
+
+  
+/*************** Summaries Tag ******************/
+
+.summaries_tab {
+    border: 1px solid #ddd;
+    padding:10px 0px 10px 10px;    
+}
+.summaries_tab_table .paragraph_title{
+    font-size: 0.9em;
+    text-align:left;
+}
+.summaries_tab_table .paragraph_title{  
+    font-size: 1.3em;
+}
+.summaries_tab_table .paragraph_title span{  
+    font-size: 0.7em;
+}
+.summaries_tab_table .paragraph_title i{  
+    font-size: 0.7em;
+}
+.summaries_tab_table .tag_title{
+    padding:10px 0px;   
+}
+.summaries_tab_table td{
+    font-size: 0.9em;
+    padding:5px 0px;
+}
+.summaries_tab_table .paragraph_no .paragraph_contnt{
+    float:left;
+    padding-left:10px;
+    padding-right:5px;
+   
+}

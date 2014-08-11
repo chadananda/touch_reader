@@ -12,7 +12,11 @@ Ext.define('book.controller.BookRoutesController', {
             'readingconfigpptionspopup': 'readingconfigpptionspopup',
             'bookinformationscreen': 'bookinformationscreen',
             'bookinfotab': 'bookinfotab',
-            'bookmarktab': 'bookmarktab'    
+            'bookmarktab': 'bookmarktab',
+            'namedtagstab' : 'namedtagstab',
+            'notestab' : 'notestab',
+            'coloredhighlightstab': 'coloredhighlightstab',
+            'paragraphsummariestab': 'paragraphsummariestab'    
         },
     
         control: {
@@ -21,7 +25,19 @@ Ext.define('book.controller.BookRoutesController', {
             },
             'bookmarktab': {
                 'show': 'onBookmarktabshow'
-            }  
+            },
+            'namedtagstab': {
+                'show': 'onNamedtagstabshow'
+            },
+            'notestab': {
+                'show': 'onNotestabshow'
+            },
+            'coloredhighlightstab': {
+                'show': 'onColoredhighlightstabhow'
+            }, 
+            'paragraphsummariestab': {
+                'show': 'onParagraphsummariestabshow'
+            }    
         },
         
         routes: {
@@ -42,11 +58,7 @@ Ext.define('book.controller.BookRoutesController', {
 	},
     
     showConfigOption: function(){
-      // alert('Config Option');
-       //var booktitlebar = this.getBooktitlebar();
-       //booktitlebar.getTitle();
-       //console.log(booktitlebar)
-       
+     
        var mainnavigation = this.getMainnavigation(); 
         mainnavigation.push({xtype: 'readingconfigpptionspopup'});
        
@@ -62,12 +74,12 @@ Ext.define('book.controller.BookRoutesController', {
       var url = bookInfotabdata;
         var params = {};
             
-        Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading Book Info...' });
+        //Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading Book Info...' });
         Ext.Ajax.request({
 			url : url,
             params: params,
 			success : function(response, options) {
-                Ext.Viewport.setMasked(false);
+                //Ext.Viewport.setMasked(false);
                
                 response = response.responseText;
                 response = Ext.JSON.decode(response);               
@@ -76,7 +88,7 @@ Ext.define('book.controller.BookRoutesController', {
             
             failuer: function() {
               
-                Ext.Viewport.setMasked(false);
+                //Ext.Viewport.setMasked(false);
             },
             scope: this
         })
@@ -86,12 +98,12 @@ Ext.define('book.controller.BookRoutesController', {
       var url = bookmarktabdata;
         var params = {};
             
-        Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading BookMark...' });
+        //Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading BookMark...' });
         Ext.Ajax.request({
 			url : url,
             params: params,
 			success : function(response, options) {
-                Ext.Viewport.setMasked(false);
+                //Ext.Viewport.setMasked(false);
                
                 response = response.responseText;
                 response = Ext.JSON.decode(response);               
@@ -100,7 +112,110 @@ Ext.define('book.controller.BookRoutesController', {
             
             failuer: function() {
               
-                Ext.Viewport.setMasked(false);
+                //Ext.Viewport.setMasked(false);
+            },
+            scope: this
+        })
+   
+    },
+    
+    onNamedtagstabshow: function(){
+      var url = namedtagstabdata;
+        var params = {};
+            
+        //Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading NamedTags...' });
+        Ext.Ajax.request({
+			url : url,
+            params: params,
+			success : function(response, options) {
+               // Ext.Viewport.setMasked(false);
+               
+                response = response.responseText;
+                response = Ext.JSON.decode(response);  
+                console.log(response)             
+                this.getNamedtagstab().setData(response.items[0]);                 
+            },
+            
+            failuer: function() {
+              
+               // Ext.Viewport.setMasked(false);
+            },
+            scope: this
+        })
+   
+    },
+    onNotestabshow: function(){
+      var url = notestabdata;
+        var params = {};
+            
+        //Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading Notes...' });
+        Ext.Ajax.request({
+			url : url,
+            params: params,
+			success : function(response, options) {
+                //Ext.Viewport.setMasked(false);
+               
+                response = response.responseText;
+                response = Ext.JSON.decode(response);  
+                console.log(response)             
+                this.getNotestab().setData(response.items[0]);                 
+            },
+            
+            failuer: function() {
+              
+                //Ext.Viewport.setMasked(false);
+            },
+            scope: this
+        })
+   
+    },
+    
+    onColoredhighlightstabhow: function(){
+      var url = coloredhighlightstab;
+        var params = {};
+            
+        //Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading Paragraph Colored Highlights...' });
+        Ext.Ajax.request({
+			url : url,
+            params: params,
+			success : function(response, options) {
+               // Ext.Viewport.setMasked(false);
+               
+                response = response.responseText;
+                response = Ext.JSON.decode(response);  
+                console.log(response)             
+                this.getColoredhighlightstab().setData(response.items[0]);                 
+            },
+            
+            failuer: function() {
+              
+                //Ext.Viewport.setMasked(false);
+            },
+            scope: this
+        })
+   
+    },
+    
+    onParagraphsummariestabshow: function(){
+      var url = paragraphsummariestabdata;
+        var params = {};
+            
+        //Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading Paragraph Summaries...' });
+        Ext.Ajax.request({
+			url : url,
+            params: params,
+			success : function(response, options) {
+               // Ext.Viewport.setMasked(false);
+               
+                response = response.responseText;
+                response = Ext.JSON.decode(response);  
+                console.log(response)             
+                this.getParagraphsummariestab().setData(response.items[0]);                 
+            },
+            
+            failuer: function() {
+              
+               // Ext.Viewport.setMasked(false);
             },
             scope: this
         })

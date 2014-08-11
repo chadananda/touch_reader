@@ -1,10 +1,7 @@
 Ext.define('book.view.bookinfoscreen.BookInformationScreen', {
     extend: 'Ext.tab.Panel',
     xtype: 'bookinformationscreen',
-    requires: [
-        'Ext.TitleBar',
-        'Ext.Video'
-    ],
+    requires: [],
     config: { 
         tabBarPosition: 'top',
         cls: 'book_info',
@@ -19,23 +16,19 @@ Ext.define('book.view.bookinfoscreen.BookInformationScreen', {
             },
             {
                 title: '<img src="resources/images/tabs_tags_icon.png">',
-                //iconCls: 'action',
-                html: 'Library Tab'
+                xtype: 'namedtagstab'
             },
             {
                 title: '<img src="resources/images/tab_notes_icon.png">',
-                //iconCls: 'info',
-                html: 'Courses Tab'
+                xtype: 'notestab'
             },
             {
                 title: '<img src="resources/images/tab_highlights_icon.png">',
-                //iconCls: 'info',
-                html: 'Courses Tab'
+                xtype: 'coloredhighlightstab'
             },
             {
                 title: '<img src="resources/images/tab_paragraph_icon.png">',
-                //iconCls: 'info',
-                html: 'Courses Tab'
+                xtype: 'paragraphsummariestab'
             }
         ]
     }

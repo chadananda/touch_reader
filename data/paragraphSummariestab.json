@@ -1,0 +1,36 @@
+{
+    "items": [
+        {
+            "title": "The Great Deformation",
+            "book_img": "resources/images/tab_paragraph_icon.png",
+            "author_name": "by David Stockman",
+            "chapter": [
+               
+                {
+                    "chapter_title": "Chapter 8, New Deal Myths of Recovery",
+                    "paragraph": [
+                        {
+                            "paragraph_no": "8.1 \"The New Deal did not end the Great Depression\""
+                        },
+                        {
+                            "paragraph_no": "8.2 \"The New Deal introduced economic nationalism\""
+                        },
+                        {
+                            "paragraph_no": "8.3 \"FDR failed to understand the cause of the Depression\""
+                        },
+                        {
+                            "paragraph_no": "8.4 \"The stock market crash dried up export financing crashing exports\""
+                        },
+                        {
+                            "paragraph_no": "8.5 \"The US needed to fix the export market by eliminating tariffs\""
+                        },
+                        {
+                            "paragraph_no": "8.6 \"Washington should have canceled war debt to France and England\""
+                        }
+                    ]
+                }
+            ]
+            
+        }
+    ]
+}

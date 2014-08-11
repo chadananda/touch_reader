@@ -57,7 +57,11 @@ config: {
         },
         'topsearchfield': 'topsearchfield accordionlist',
         'searchresult': 'topsearchfield #search_result',
-        'topsearchfieldpopup': 'topsearchfield'
+        'topsearchfieldpopup': 'topsearchfield',
+        
+        'mainbookcontainer': 'mainbookcontainer',
+        'readbookpagelistiframe': 'readbookpagelist #iframe',
+        'readbookpagelisttoggle': 'readbookpagelist #toggle',
         
         
     },
@@ -98,6 +102,9 @@ config: {
         'topsearchfield searchfield[itemId=searchBox]' : {
             clearicontap : 'onClearSearch',
             keyup: 'onSearchKeyUp'
+        },
+        'list_button': {
+            'tap': 'toggleNav'
         }
        
     }    
@@ -232,13 +239,15 @@ config: {
     },
     
     onClickOpenReaderScreen: function(event, obj, eOpts){        
-        var mainnavigation = this.getMainnavigation();
-        mainnavigation.push({xtype: 'mainbookcontainer'});
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'mainbookcontainer'}); 
        
         var booktitlebar = this.getBooktitlebar();
        
         var dropdown_title = this.getTitlebar_dropdown(); 
         dropdown_title.setText('');
+        panel = this.getReadbookpagelisttoggle();
+        panel.setHidden(true); 
        /* 
         booktitlebar.element.on({
 		    tap: function() { 
@@ -312,6 +321,10 @@ config: {
         console.log('book_iframe')
         console.log(book_iframe)
         book_iframe.src = book_url; 
+        
+        var width = this.getReadbookpagelistiframe().element.getWidth(); 
+        book_iframe.width = width;
+        //book_iframe.width = height
       
     
         
@@ -399,6 +412,25 @@ config: {
         var seach_field = this.getSearchPopView();    
         seach_field.setHeight('');
     },
+    
+    toggleNav: function(btn){
+        panel = this.getReadbookpagelisttoggle();
+    
+        if (panel.getHidden()=== true) {
+            panel.show();
+            panel.setWidth('49.44%');
+            var book_iframe = document.getElementById('book_iframe');
+            var width = this.getReadbookpagelistiframe().element.getWidth(); 
+            book_iframe.width = width;
+        } else {
+            panel.hide();
+            panel.setWidth('')
+            var book_iframe = document.getElementById('book_iframe');
+            var width = this.getReadbookpagelistiframe().element.getWidth(); 
+            book_iframe.width = width;
+        }
+        
+    }
    
        
 });

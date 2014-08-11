@@ -1,0 +1,58 @@
+{
+    "items": [
+        {
+            "title": "Named Tags: \"The Great Deformation\"",
+            "book_img": "resources/images/tabs_tags_icon.png",
+            "tag_desc": "327 Tagged phrases with 12 Distinct Tags",
+            "tag": [
+                {
+                    "tag_title": "regulatory capture",
+                    "paragraph": [
+                        {
+                         "paragraph_no": "4.8 \"Yet the real culprit behind the fiscal profligacy which descended...\"",
+                        },
+                        {
+                         "paragraph_no": "4.14 \"The first spell of false prosperity was the unacknowledged yet...\"",
+                        },
+                        {
+                         "paragraph_no": "5.2 \"This massive injection of fiscal firepower nearly tripled the annual...\"",
+                        },
+                        {
+                         "paragraph_no": "5.18 \"No fresh start or strategically coherent defense plan was ever...\"",
+                        },
+                        {
+                         "paragraph_no": "5.37 \"By the Pentagon’s own reckoning there were never more than a...\"",
+                        },
+                        {
+                         "paragraph_no": "6.7 \"In fact, while the Reagan White House and practical Republican...\"",
+                        }
+                    ]
+                },
+                {
+                    "tag_title": "new deal",
+                    "paragraph": [
+                        {
+                         "paragraph_no": "8.8 \"The United States needed to take bold action to rejuvenate its...\"",
+                        },
+                        {
+                         "paragraph_no": "8.19 \"In truth, the New Deal was a Chinese menu with little rhyme or...\"",
+                        },
+                        {
+                         "paragraph_no": "8.27 \"High tariffs and trade subsidies, state-dominated recovery...\"",
+                        },
+                        {
+                         "paragraph_no": "8.34 \"The trouble was that prosperity was neither organic nor sustain-...\"",
+                        },
+                        {
+                         "paragraph_no": "8.52 \"The Hoover recovery has largely been omitted from history books...\"",
+                        },
+                        {
+                         "paragraph_no": "10.11 \"The New Deal’s ad-hoc statism was eventually superseded by...\"",
+                        }
+                    ]
+                }
+            ]
+            
+        }
+    ]
+}
