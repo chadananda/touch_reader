@@ -19,3 +19,5 @@ $base-color: #b7c5e2 !default;
 .x-toolbar .x-toolbar-title {
     color: #607dd5;
 }
+
+@include sencha-button-ui('segment', #1a1a1a, matte);

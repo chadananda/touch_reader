@@ -860,3 +860,9 @@
     padding-right:5px;
    
 }
+
+.sharesub_Menu .x-button{
+    border-radius: 0px;
+    border: none;
+    border-top-color: none;
+}

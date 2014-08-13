@@ -13,6 +13,13 @@ Ext.define('book.view.ReadBookPageList', {
         layout: 'hbox',
         
         items: [
+            /*
+            {
+                xtype: 'sidebarmenu',
+                //hidden: true
+            },
+            */
+                        
             {            
                 xtype: 'bookinformationscreen',
                 itemId: 'toggle',
@@ -20,14 +27,9 @@ Ext.define('book.view.ReadBookPageList', {
                     type: 'slide',
                     direction: 'right',
                     duration: 600
-                },
-                /*hideAnimation: {
-                    type: 'slide',
-                    direction: 'left',
-                    duration: 400
-                },
-                */
+                }, 
             },
+            
             {
                 xtype   : 'iframe',
                 flex:1,

@@ -25,18 +25,28 @@ Ext.define('Ext.ux.Iframe', {
         me.callParent();
 
        // alert(this.getUrl())
-        me.iframe = this.element.createChild({
+        
+        var iframe = this.element.createChild({
             id: 'book_iframe',
             tag   : 'iframe',
+            //src   : this.getUrl(),
             src   : this.getUrl(),
             style : 'height: 100%;border:none',
-            width:this.getWidth()
-        });
+            width : this.getWidth()
+        })
+        /*
+        iframe.on('tap', function() {
+            alert('iframe tap')
+        })
+        */
+        
+                 
+        me.iframe = iframe;
 
-        me.relayEvents(me.iframe, '*'); 
-    }
-    
-    
+        me.relayEvents(me.iframe, '*');
+        
+    },
+   
     
     
 });

@@ -38,7 +38,7 @@ Ext.application({
         'book.view.studybar.StudyProjectNavBar', 'book.view.studybar.CurrentStudyProjectPopUp', 'book.view.studybar.CurrentOpenStudeyProjectList', 'book.view.studybar.CompletedStudeyProjectList',
         'book.view.studybar.StudyProjectInfoScreen', 'book.view.studybar.MembersLinkList', 'book.view.bookinfoscreen.BookInformationScreen', 'book.view.bookinfoscreen.BookInfoTab',
         'book.view.bookinfoscreen.BookmarkTab', 'book.view.bookinfoscreen.NamedTagsTab', 'book.view.bookinfoscreen.NotesTab', 'book.view.bookinfoscreen.ParagraphSummariesTab',
-        'book.view.bookinfoscreen.ColoredHighlightsTab'
+        'book.view.bookinfoscreen.ColoredHighlightsTab', 'book.view.book.SelectionMenu', 'book.view.book.ExtractMenu', 'book.view.book.ShareSubMenu', 'book.view.book.CompileSubMenu'
     ],
 
     icon: {

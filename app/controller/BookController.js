@@ -16,7 +16,7 @@ config: {
         'searchfield_button': 'booktitlebar #top_search_field',
         'selectfield_button': 'booktitlebar #top_select_field',
         'settingfield_button': 'booktitlebar #top_setting_field',
-        
+                        
         'message_icon': 'booktitlebar #message_icon',
         'chat_icon': 'booktitlebar #chat_icon',
         
@@ -63,6 +63,9 @@ config: {
         'readbookpagelistiframe': 'readbookpagelist #iframe',
         'readbookpagelisttoggle': 'readbookpagelist #toggle',
         
+        'selectionmenu': 'selectionmenu',
+        'extractmenu': 'extractmenu'
+        
         
     },
 
@@ -80,7 +83,7 @@ config: {
             'show': 'onShowMainHideShowIcon'
         },
         'readbookpagelist': {
-           // 'show': 'ontapIframe'
+            'show': 'ontapIframe'
         },
         'searchfield_button': {
             'tap': 'onTapTopSearchIcon'
@@ -113,6 +116,7 @@ config: {
   launch : function(app) {
   
     this.loadSliderImages()
+    
    // this.onLoadBookData() 
   
   },
@@ -248,6 +252,7 @@ config: {
         dropdown_title.setText('');
         panel = this.getReadbookpagelisttoggle();
         panel.setHidden(true); 
+       
        /* 
         booktitlebar.element.on({
 		    tap: function() { 
@@ -292,7 +297,7 @@ config: {
     },
     
     onCurrentBookButtonTap: function(button, e, options) {
- 
+        
         var me = this;
         var popup = me.getPopupView();
         popup.showBy(button);
@@ -324,40 +329,124 @@ config: {
         
         var width = this.getReadbookpagelistiframe().element.getWidth(); 
         book_iframe.width = width;
-        //book_iframe.width = height
+        //book_iframe.width = height   
       
     
         
         
     },
     ontapIframe: function(view, eOpts){
-     alert(view.xtype)
-    
-    var readbookpagelist = this.getReadbookpagelist();           
-       console.log(readbookpagelist)
-       console.log(eOpts)
-       
-        var els = Ext.select("#ext-iframe-1");
-        console.log(els)
+          
+        var readbookpagelist = this.getReadbookpagelist();
         
-        els.on('tap', function(ev) { 
-              console.log(ev)
-              
-              //var elm = ev.target || ev.srcElement;
-              //elm is the element that was clicked
-            });
-     
-     // var el = Ext.get('some-el');
-    //  el.select('div.some-class');
- 
-      //els.hide(true);
-  
-       // var book_iframe = document.getElementById('book_iframe');
-      // console.log(book_iframe)
+         if (Ext.isDefined(this.selectionmenu) == false) {
+            this.selectionmenu = Ext.create('book.view.book.SelectionMenu');
+         }         
+         var selectionmenu = this.selectionmenu;
+         
+         if (Ext.isDefined(this.extractmenu) == false) {
+            this.extractmenu = Ext.create('book.view.book.ExtractMenu');
+         }         
+         var extractmenu = this.extractmenu;
+         
+         if (Ext.isDefined(this.sharesubmenu) == false) {
+            this.sharesubmenu = Ext.create('book.view.book.ShareSubMenu');
+         }         
+         var sharesubmenu = this.sharesubmenu;
+         
+         if (Ext.isDefined(this.compilesubmenu) == false) {
+            this.compilesubmenu = Ext.create('book.view.book.CompileSubMenu');
+         }         
+         var compilesubmenu = this.compilesubmenu;   
+         
+        var me = this; 
+       
+        var iframe = document.getElementById("book_iframe");
+        var selText = '';
+                 
+       setTimeout(function() {
+    
+            document.getElementById("book_iframe").contentDocument.addEventListener('click', function(event) {
+                     
+                selText = me.getIframeSelectionText(iframe);
+                
+                if (selText != '') {
+                    selectionmenu.show();
+                   
+                    selectionmenu.on({
+            		    toggle: function(segBtn, btn, isPressed) { 
+                          var txt = btn.getText();
+                          if(txt == 'Extract'){
+                            extractmenu.showBy(btn);
+                            
+                            extractmenu.on({
+                                toggle: function(segBtn, btn, isPressed) { 
+                                    var txt = btn.getText();
+                                        if(txt == 'Share'){
+                                            sharesubmenu.showBy(btn);
+                                            compilesubmenu.hide();
+                                            
+                                        } else if(txt == 'Copy'){
+                                            sharesubmenu.showBy(btn);
+                                            compilesubmenu.hide();
+                                             
+                                        } else if(txt == 'Compile') {
+                                            compilesubmenu.showBy(btn);
+                                          
+                                            compilesubmenu.on({
+                                              itemtap: function(list, index, item, e) {
+                                                   console.log(index);
+                                                   var store = compilesubmenu.getStore();
+                                                   
+                                                   var records = ({title: '<img src="resources/images/compile_sub_icon.png"> Compilation #'+[index+1]+' Name' });
+                                                   store.insert( index, records )
+                                                   compilesubmenu.element.setHeight(compilesubmenu.element.getHeight()*2.1 -230)
+                                                }
+                                            });
+                                            sharesubmenu.hide();
+                                        }
+                                }
+                            })
+                            
+                          }   
+                        }
+                     
+                    });
+                }                                 
+                                                        
+            }, false);
+        
+            
+        
+        }, 100 )
       
         
     },
   
+    getIframeSelectionText: function(iframe) {
+        var win = iframe.contentWindow;
+        var doc = win.document;
+        
+        if (win.getSelection) { 
+           
+            /*
+            console.log('111111111')
+            console.log( win.getSelection() )
+            var anchorNode = win.getSelection().anchorNode.parentElement.id;
+            console.log( anchorNode )
+            
+            var extEl = doc.getElementById(anchorNode);
+            console.log( extEl )
+            console.log( 'style' )
+            
+            console.log( extEl.style.top )
+            */
+            return win.getSelection().toString();
+        } else if (doc.selection && doc.selection.createRange) {
+            
+            return doc.selection.createRange().text;
+        }
+    },
     
     onTapTopSearchIcon: function(button, e, options){
         var me = this;
@@ -413,24 +502,25 @@ config: {
         seach_field.setHeight('');
     },
     
-    toggleNav: function(btn){
+    toggleNav: function(btn) {
+        
+         
         panel = this.getReadbookpagelisttoggle();
     
         if (panel.getHidden()=== true) {
             panel.show();
+            //panel.getEl().toggle();
             panel.setWidth('49.44%');
             var book_iframe = document.getElementById('book_iframe');
             var width = this.getReadbookpagelistiframe().element.getWidth(); 
-            book_iframe.width = width;
+            //book_iframe.width = width;
         } else {
             panel.hide();
+            //panel.getEl().toggle();
             panel.setWidth('')
             var book_iframe = document.getElementById('book_iframe');
             var width = this.getReadbookpagelistiframe().element.getWidth(); 
-            book_iframe.width = width;
-        }
-        
+            //book_iframe.width = width;
+        }  
     }
-   
-       
 });
