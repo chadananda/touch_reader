@@ -43,7 +43,15 @@ Ext.define('book.controller.BookRoutesController', {
         routes: {
             'reading_configuration_options/:2.2.1.2': 'showConfigOption',
             
-            'book_information_screen/:2.2.7': 'showBookInforationScreen'
+            'book_information_screen/:2.2.7': 'showBookInforationScreen',
+            
+            'memorization_deck_clearing_drill/:2.3.2.1': 'showMemorizationDeckClearingDrill',
+            
+            'vocabulary_assessment/:2.3.2.3': 'showVocabularyAssessment',
+            
+            'assessment_quiz_screen/:2.3.1.4.1': 'showAssessmentQuizScreen',
+            
+            'writing_journaling_assignment/:2.3.2.2': 'showWritingJournalingAssignment'
                       
         }
         
@@ -220,6 +228,32 @@ Ext.define('book.controller.BookRoutesController', {
             scope: this
         })
    
+    },
+    showMemorizationDeckClearingDrill: function(){
+        //alert('memorization_deck_clearing_drill/:2.3.2.1')
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'memorizationdeckcontainer'});
+    
+    },
+    showVocabularyAssessment: function(){
+            this.getBooktitlebar().setHidden(true);
+            var mainnavigation = this.getMainnavigation(); 
+            mainnavigation.push({xtype: 'vocabularyassessmentContainer'});
+    },
+    
+    showAssessmentQuizScreen: function(){
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'assessmentquizcontainer'});
+    
+    },
+    
+    showWritingJournalingAssignment: function(){
+    
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'jaournalingassignmentcontainer'});
     }
     
     

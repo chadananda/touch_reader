@@ -19,10 +19,9 @@ Ext.define('book.view.SearchBooksView', {
                 ]
             },
             {
-                flex: 2,
+                flex: 1.5,
                 cls: 'search_field',
                 xtype: 'searchfield',
-                //label: 'Query',
                 placeHolder: 'Text Field',
                 name: 'query',
             },
@@ -38,10 +37,21 @@ Ext.define('book.view.SearchBooksView', {
                 ]
             },
             {
-               flex: 0.2,
+               flex: 0.3,
                html : '/page',
-               style: 'margin:8px 20px 0px 20px;'
+               style: 'margin:8px 20px 0px 0px;'
             },
+            {
+                    
+                flex: 1,
+                itemId: 'top_select_field', 
+                xtype: 'selectfield',
+                options: [
+                    {text: 'English',  value: 'english'},
+                    {text: 'Franch', value: 'franch'},
+                    {text: 'Spanish',  value: 'spanish'}
+                ]
+            }
         ]
     }
 });

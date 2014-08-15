@@ -9,7 +9,7 @@ Ext.define('book.view.book.SelectionMenu', {
         //allowMultiple: true,
         width:150,
         height: 50,
-        top: 200,
+        top: 130,
         left: 200,
         modal:true,
         hideOnMaskTap: true,

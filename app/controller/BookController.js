@@ -115,7 +115,7 @@ config: {
 
   launch : function(app) {
   
-    this.loadSliderImages()
+    this.loadSliderImages() 
     
    // this.onLoadBookData() 
   
@@ -148,9 +148,9 @@ config: {
         /*** Nav TitleBar List button Hidden ***/
         this.getList_button().setHidden(true);
         /*** Nav TitleBar Search Field Hidden ***/
-        this.getSearchfield_button().setHidden(true);        
+        this.getSearchfield_button().setHidden(false);        
         /*** Nav TitleBar Select Field Hidden ***/
-        this.getSelectfield_button().setHidden(false);
+        //this.getSelectfield_button().setHidden(false);
         /*** Nav TitleBar Dropdown Field Hidden ***/
         this.getTitlebar_dropdown().setHidden(true);
         this.getStudyprojectnavbar().setHidden(true);
@@ -271,7 +271,7 @@ config: {
         /*** Nav TitleBar Search Field Show ***/
         this.getSearchfield_button().setHidden(false);
         /*** Nav TitleBar Select Field Hidden ***/
-        this.getSelectfield_button().setHidden(true);
+        //this.getSelectfield_button().setHidden(true);
         
         /*** Nav TitleBar Dropdown Field Show ***/
         this.getTitlebar_dropdown().setHidden(false);
@@ -357,7 +357,37 @@ config: {
          if (Ext.isDefined(this.compilesubmenu) == false) {
             this.compilesubmenu = Ext.create('book.view.book.CompileSubMenu');
          }         
-         var compilesubmenu = this.compilesubmenu;   
+         var compilesubmenu = this.compilesubmenu; 
+         
+         if (Ext.isDefined(this.annotationmenu) == false) {
+            this.annotationmenu = Ext.create('book.view.book.AnnotationMenu');
+         }         
+         var annotationmenu = this.annotationmenu;
+         
+         if (Ext.isDefined(this.marksubmenu) == false) {
+            this.marksubmenu = Ext.create('book.view.book.MarkSubMenu');
+         }         
+         var marksubmenu = this.marksubmenu;
+         
+         if (Ext.isDefined(this.tagsubmenu) == false) {
+            this.tagsubmenu = Ext.create('book.view.book.TagSubMenu');
+         }         
+         var tagsubmenu = this.tagsubmenu;
+         
+         if (Ext.isDefined(this.notesubmenu) == false) {
+            this.notesubmenu = Ext.create('book.view.book.NoteSubMenu');
+         }         
+         var notesubmenu = this.notesubmenu;
+         
+         if (Ext.isDefined(this.lookupmenu) == false) {
+            this.lookupmenu = Ext.create('book.view.book.LookupMenu');
+         }         
+         var lookupmenu = this.lookupmenu;
+         
+         if (Ext.isDefined(this.discussmenu) == false) {
+            this.discussmenu = Ext.create('book.view.book.DiscussMenu');
+         }         
+         var discussmenu = this.discussmenu;      
          
         var me = this; 
        
@@ -372,13 +402,16 @@ config: {
                 
                 if (selText != '') {
                     selectionmenu.show();
-                   
+                    //Ext.Viewport.add(selectionmenu);
+                    
                     selectionmenu.on({
             		    toggle: function(segBtn, btn, isPressed) { 
                           var txt = btn.getText();
                           if(txt == 'Extract'){
                             extractmenu.showBy(btn);
-                            
+                            annotationmenu.hide();
+                            lookupmenu.hide();
+                            discussmenu.hide();
                             extractmenu.on({
                                 toggle: function(segBtn, btn, isPressed) { 
                                     var txt = btn.getText();
@@ -395,9 +428,7 @@ config: {
                                           
                                             compilesubmenu.on({
                                               itemtap: function(list, index, item, e) {
-                                                   console.log(index);
-                                                   var store = compilesubmenu.getStore();
-                                                   
+                                                   var store = compilesubmenu.getStore();                                                   
                                                    var records = ({title: '<img src="resources/images/compile_sub_icon.png"> Compilation #'+[index+1]+' Name' });
                                                    store.insert( index, records )
                                                    compilesubmenu.element.setHeight(compilesubmenu.element.getHeight()*2.1 -230)
@@ -408,7 +439,48 @@ config: {
                                 }
                             })
                             
-                          }   
+                          }else if(txt == 'Note'){
+                            annotationmenu.showBy(btn);
+                            extractmenu.hide();
+                            lookupmenu.hide();
+                            discussmenu.hide();
+                            annotationmenu.on({
+                                toggle: function(segBtn, btn, isPressed) { 
+                                    var txt = btn.getText();
+                                        if(txt == 'Mark'){
+                                            marksubmenu.showBy(btn);
+                                            extractmenu.hide();
+                                            tagsubmenu.hide();
+                                            notesubmenu.hide();
+                                        }else if(txt == 'Tag') {
+                                            tagsubmenu.showBy(btn);
+                                           /* tagsubmenu.on({
+                                              itemtap: function(list, index, item, e) {
+                                                  
+                                                }
+                                            });
+                                            */
+                                            marksubmenu.hide();
+                                            notesubmenu.hide();
+                                        }else if(txt == 'Note'){
+                                            notesubmenu.showBy(btn);
+                                            marksubmenu.hide();
+                                            tagsubmenu.hide();
+                                        }
+                                }
+                            })
+                          }else if(txt == 'Lookup'){
+                            lookupmenu.showBy(btn);  
+                            extractmenu.hide();
+                            annotationmenu.hide();
+                            discussmenu.hide();
+                          }else if(txt == 'Discuss'){
+                            discussmenu.showBy(btn);
+                            
+                            extractmenu.hide();
+                            annotationmenu.hide();
+                            lookupmenu.hide();
+                          }    
                         }
                      
                     });
@@ -429,21 +501,8 @@ config: {
         
         if (win.getSelection) { 
            
-            /*
-            console.log('111111111')
-            console.log( win.getSelection() )
-            var anchorNode = win.getSelection().anchorNode.parentElement.id;
-            console.log( anchorNode )
-            
-            var extEl = doc.getElementById(anchorNode);
-            console.log( extEl )
-            console.log( 'style' )
-            
-            console.log( extEl.style.top )
-            */
             return win.getSelection().toString();
         } else if (doc.selection && doc.selection.createRange) {
-            
             return doc.selection.createRange().text;
         }
     },

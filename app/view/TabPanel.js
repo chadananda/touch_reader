@@ -7,7 +7,7 @@ Ext.define('book.view.TabPanel', {
     ],
     config: { 
         tabBarPosition: 'top',
-        style: 'margin-top:10px',
+        style: 'margin-top:10px', 
         items: [
             {
                 title: 'Owned',
@@ -22,15 +22,9 @@ Ext.define('book.view.TabPanel', {
                 badgeText: '256'
             },
             {
-                title: 'Library',
+                title: 'Free',
                 iconCls: 'action',
-                html: 'Library Tab',
-                badgeText: '64'
-            },
-            {
-                title: 'Courses',
-                iconCls: 'info',
-                html: 'Courses Tab',
+                html: 'Free Book',
                 badgeText: '64'
             }
         ]

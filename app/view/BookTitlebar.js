@@ -37,9 +37,15 @@ Ext.define('book.view.BookTitlebar', {
                 itemId: 'list_nav',               
                 hidden:false
             },
+            {
+                xtype: 'button',
+                iconCls: 'settings',
+                itemId: 'top_setting_field',
+                align: 'left',
+                hidden:false
+            },
             
-            {                
-                
+            {                                
                 cls: 'dropdown_menu',
                 xtype: 'button',
                 text: '',
@@ -67,39 +73,16 @@ Ext.define('book.view.BookTitlebar', {
                 hidden:false,
                 badgeText: '5',
             },
-            {
-                xtype: 'button',
-                iconCls: 'settings',
-                itemId: 'top_setting_field',
-                align: 'right',
-                hidden:false
-            },
-                /** item[6]**/
+            
             {
              
                 xtype: 'button',
-                //src: 'resources/images/search_icon.png',
                 itemId: 'top_search_field',
                 iconCls: 'search',
                 align: 'right',
                 hidden:false,
                 style:'margin-right:10px;',
-            },
-            {
-                 width:200,
-                align: 'right',                 
-                hidden:false,
-                itemId: 'top_select_field', 
-                xtype: 'selectfield',
-                //label: 'Select your Library by Language',
-                //labelWidth: '50',
-                options: [
-                    {text: 'English',  value: 'english'},
-                    {text: 'Franch', value: 'franch'},
-                    {text: 'Spanish',  value: 'spanish'}
-                ]
             }
-            
         ]
     }
 });

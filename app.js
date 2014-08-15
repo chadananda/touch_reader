@@ -9,13 +9,15 @@
     changes and its generated code, it will produce a "merge conflict" that you
     will need to resolve manually.
 */
+
+
  
 Ext.application({
     name: 'book',
 
     requires: [
         'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList',
-        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList', 'book.store.SSearchScreen'
+        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList', 'book.store.SSearchScreen', 'book.store.SDiscussMenu'
         
     ],
     
@@ -38,7 +40,11 @@ Ext.application({
         'book.view.studybar.StudyProjectNavBar', 'book.view.studybar.CurrentStudyProjectPopUp', 'book.view.studybar.CurrentOpenStudeyProjectList', 'book.view.studybar.CompletedStudeyProjectList',
         'book.view.studybar.StudyProjectInfoScreen', 'book.view.studybar.MembersLinkList', 'book.view.bookinfoscreen.BookInformationScreen', 'book.view.bookinfoscreen.BookInfoTab',
         'book.view.bookinfoscreen.BookmarkTab', 'book.view.bookinfoscreen.NamedTagsTab', 'book.view.bookinfoscreen.NotesTab', 'book.view.bookinfoscreen.ParagraphSummariesTab',
-        'book.view.bookinfoscreen.ColoredHighlightsTab', 'book.view.book.SelectionMenu', 'book.view.book.ExtractMenu', 'book.view.book.ShareSubMenu', 'book.view.book.CompileSubMenu'
+        'book.view.bookinfoscreen.ColoredHighlightsTab', 'book.view.book.SelectionMenu', 'book.view.book.ExtractMenu', 'book.view.book.ShareSubMenu', 'book.view.book.CompileSubMenu',
+        'book.view.book.AnnotationMenu', 'book.view.book.MarkSubMenu', 'book.view.book.TagSubMenu', 'book.view.book.NoteSubMenu', 'book.view.book.LookupMenu', 'book.view.book.DiscussMenu',
+        'book.view.book.ListItem', 'book.view.memorization.MemorizationDeck', 'book.view.memorization.MemorizationDeckContainer', 'book.view.vocabularyassessment.VocabularyAssessmentContainer',
+        'book.view.vocabularyassessment.VocabularyAssessment', 'book.view.quizscreen.AssessmentQuizContainer', 'book.view.quizscreen.AssessmentQuiz', 'book.view.journal.JournalingAssignmentContainer',
+        'book.view.journal.JournalingAssignment'
     ],
 
     icon: {

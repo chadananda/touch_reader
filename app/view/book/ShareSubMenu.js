@@ -7,7 +7,7 @@ Ext.define('book.view.book.ShareSubMenu', {
     
     config: { 
         //allowMultiple: true,
-        width:100,
+        width:70,
         height: 150,
         top: 450,
         left: 200,
