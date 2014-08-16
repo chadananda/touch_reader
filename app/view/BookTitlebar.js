@@ -22,11 +22,20 @@ Ext.define('book.view.BookTitlebar', {
             },
                
             {
-                xtype: 'image',
+                xtype: 'button',
                 html: 'Library',
                 align: 'left',
                 itemId: 'lib_button',
-                style:'margin-left:5px;margin-right:5px;color:#fff;font-weight:bold;',
+                style:'margin:2px 5px 0px 5px;color:#fff;font-weight:bold;',
+                hidden:false
+            },
+            {
+                xtype: 'button',
+                html: 'Resume',
+                style:'margin:2px 5px 0px 5px;color:#fff;font-weight:bold;',
+                //iconCls: 'settings',
+                itemId: 'resume',
+                align: 'left',
                 hidden:false
             },
                

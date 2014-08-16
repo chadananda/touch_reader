@@ -336,7 +336,7 @@
     padding-right:25px;        
 }
 .my-titlebar .x-title{
-  color:#607dd5;
+  /*color:#607dd5; */
   text-transform:uppercase;  
 }
 
@@ -646,7 +646,7 @@
 
 .book_info{
     margin:0px 10px 0px 0px;
-    width:50%;
+    width:100%;
 }
 
 .book_info .x-tab{
@@ -1139,7 +1139,7 @@
 
 /***************  JournalingAssignment  ***************/
 
-.jaournal_panel{
+.jaournal_panel .assignment_cntnr{
     width:300px;
     height:100px;
     margin-top:5%;
@@ -1167,9 +1167,31 @@
 }
 .jaournal_panel .assignment_cntnr .assignment_txt{
     float:left;
-    padding-left:20px;
+    padding-left:30px;
     padding-top:10px;
     width: 85%;
     text-align:left;
     font-size: 0.7em;   
+}
+
+.jaournal_panel .journal_editor{
+    width:400px;
+    height:500px;
+    margin-top:5%;
+    border: 2px solid #ddd;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important; 
+
+}
+.jaournal_panel .journal_bottom.x-toolbar .x-button{
+    border: 1px solid #999;
+    border-top-color: #a6a6a6;
+    background-color: #ccc;
+    color: #000;
+    -webkit-text-fill-color: #000;
+    margin:6px .2em;
+    padding: 0 .6em;
 }

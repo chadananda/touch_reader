@@ -22,7 +22,7 @@ Ext.application({
     ],
     
     controllers: [
-        'BookController', 'BookRoutesController'
+        'BookController', 'BookRoutesController', 'BookTimer'
     ],
     
     models: [
@@ -44,7 +44,7 @@ Ext.application({
         'book.view.book.AnnotationMenu', 'book.view.book.MarkSubMenu', 'book.view.book.TagSubMenu', 'book.view.book.NoteSubMenu', 'book.view.book.LookupMenu', 'book.view.book.DiscussMenu',
         'book.view.book.ListItem', 'book.view.memorization.MemorizationDeck', 'book.view.memorization.MemorizationDeckContainer', 'book.view.vocabularyassessment.VocabularyAssessmentContainer',
         'book.view.vocabularyassessment.VocabularyAssessment', 'book.view.quizscreen.AssessmentQuizContainer', 'book.view.quizscreen.AssessmentQuiz', 'book.view.journal.JournalingAssignmentContainer',
-        'book.view.journal.JournalingAssignment'
+        'book.view.journal.JournalingAssignment', 'ListPopUp'
     ],
 
     icon: {

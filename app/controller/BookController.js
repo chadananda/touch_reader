@@ -4,6 +4,7 @@ extend: 'Ext.app.Controller',
 requires: [],
 config: {
    // items1: '',
+   book_title: '',
     refs: {
         'mainnavigation': 'mainnavigation',
         'maintitlebar_showhide': 'main',
@@ -16,6 +17,13 @@ config: {
         'searchfield_button': 'booktitlebar #top_search_field',
         'selectfield_button': 'booktitlebar #top_select_field',
         'settingfield_button': 'booktitlebar #top_setting_field',
+        'resume_button': 'booktitlebar #resume',
+        listPopUpView: {
+            autoCreate: true,
+            selector: '#list_popup',
+            xtype: 'listpopup'
+        },
+        
                         
         'message_icon': 'booktitlebar #message_icon',
         'chat_icon': 'booktitlebar #chat_icon',
@@ -64,7 +72,8 @@ config: {
         'readbookpagelisttoggle': 'readbookpagelist #toggle',
         
         'selectionmenu': 'selectionmenu',
-        'extractmenu': 'extractmenu'
+        'extractmenu': 'extractmenu',
+        'bookinformationscreen': 'bookinformationscreen'
         
         
     },
@@ -108,20 +117,21 @@ config: {
         },
         'list_button': {
             'tap': 'toggleNav'
+        },
+        'resume_button': {
+            'tap': 'onTapRsumebtn'
         }
        
     }    
 },
 
-  launch : function(app) {
-  
-    this.loadSliderImages() 
+    launch : function(app) {
+        this.loadSliderImages(); 
     
-   // this.onLoadBookData() 
+    },
+    
   
-  },
-  
-  onBookTitlebarShow: function(view, eOpts){
+    onBookTitlebarShow: function(view, eOpts){
          var message_icon = this.getMessage_icon();         
             console.log(message_icon.getBadgeText());
             if(message_icon.getBadgeText() != ''){
@@ -136,7 +146,7 @@ config: {
             }else {
                chat_icon.setHtml('<img src="resources/images/chat_stamp_icon.png">');
             }
-  },
+    },
   
   onShowMainHideShowIcon: function( view, eOpts){
    // alert(view.xtype)
@@ -146,14 +156,15 @@ config: {
         /*** Nav TitleBar Library button Hidden ***/
         this.getLibrary_button().setHidden(true);
         /*** Nav TitleBar List button Hidden ***/
-        this.getList_button().setHidden(true);
+        this.getList_button().setHidden(false);
         /*** Nav TitleBar Search Field Hidden ***/
         this.getSearchfield_button().setHidden(false);        
         /*** Nav TitleBar Select Field Hidden ***/
         //this.getSelectfield_button().setHidden(false);
         /*** Nav TitleBar Dropdown Field Hidden ***/
-        this.getTitlebar_dropdown().setHidden(true);
+        this.getTitlebar_dropdown().setHidden(false);
         this.getStudyprojectnavbar().setHidden(true);
+        this.getResume_button().setHidden(true);
   },
   
   
@@ -276,15 +287,20 @@ config: {
         /*** Nav TitleBar Dropdown Field Show ***/
         this.getTitlebar_dropdown().setHidden(false);
         this.getStudyprojectnavbar().setHidden(false);
+         this.getResume_button().setHidden(true);
         
         var img_id = eOpts[0];
         var book_url = eOpts[1];
         var book_title = eOpts[2];
         var author_name = eOpts[3];
         
+        this.setBook_title(book_title);
+        
         var dropdown_title = this.getTitlebar_dropdown(); 
             dropdown_title.setText('<div class="dropdown_title"><img src="resources/images/down_arrow.png">'+book_title+', '+author_name+'<img src="resources/images/down_arrow.png"></div>');
-       // alert(img_id) 
+       // alert(img_id)
+        var booktitlebar = this.getBooktitlebar();
+        booktitlebar.setTitle('') 
         this.onLoadBookData(img_id, book_url);
         
     },
@@ -294,6 +310,12 @@ config: {
              mainnavigation.push({xtype: 'main'});
          this.loadSliderImages() 
          mainnavigation.reset(); 
+         
+        var booktitlebar = this.getBooktitlebar();
+        var dropdown_title = this.getTitlebar_dropdown();
+        var title = this.getBook_title();
+        //booktitlebar.setTitle(title);
+        this.getResume_button().setHidden(false);
     },
     
     onCurrentBookButtonTap: function(button, e, options) {
@@ -384,21 +406,24 @@ config: {
          }         
          var lookupmenu = this.lookupmenu;
          
-         if (Ext.isDefined(this.discussmenu) == false) {
+        if (Ext.isDefined(this.discussmenu) == false) {
             this.discussmenu = Ext.create('book.view.book.DiscussMenu');
-         }         
-         var discussmenu = this.discussmenu;      
+        }         
+        var discussmenu = this.discussmenu;      
          
         var me = this; 
        
         var iframe = document.getElementById("book_iframe");
         var selText = '';
-                 
-       setTimeout(function() {
+                
+                         
+        setTimeout(function() {
     
             document.getElementById("book_iframe").contentDocument.addEventListener('click', function(event) {
                      
                 selText = me.getIframeSelectionText(iframe);
+                
+                me.getApplication().getController('BookTimer').showToolbar();
                 
                 if (selText != '') {
                     selectionmenu.show();
@@ -490,7 +515,7 @@ config: {
         
             
         
-        }, 100 )
+        }, 1200)
       
         
     },
@@ -564,7 +589,7 @@ config: {
     toggleNav: function(btn) {
         
          
-        panel = this.getReadbookpagelisttoggle();
+    /*    panel = this.getReadbookpagelisttoggle();
     
         if (panel.getHidden()=== true) {
             panel.show();
@@ -580,6 +605,13 @@ config: {
             var book_iframe = document.getElementById('book_iframe');
             var width = this.getReadbookpagelistiframe().element.getWidth(); 
             //book_iframe.width = width;
-        }  
+        } */
+         
+            var me = this;
+            var list = me.getListPopUpView();
+            list.showBy(btn);
+    },
+    onTapRsumebtn:function(){
+       
     }
 });

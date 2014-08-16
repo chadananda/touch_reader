@@ -25,22 +25,7 @@ Ext.define('book.view.SearchBooksView', {
                 placeHolder: 'Text Field',
                 name: 'query',
             },
-            {
-                flex: 1,
-                xtype: 'selectfield',
-                label: 'show',
-                labelWidth: '10',
-                options: [
-                    {text: '69',  value: 'show69'},
-                    {text: '100', value: 'show100'},
-                    {text: '200',  value: 'show200'}
-                ]
-            },
-            {
-               flex: 0.3,
-               html : '/page',
-               style: 'margin:8px 20px 0px 0px;'
-            },
+            
             {
                     
                 flex: 1,
