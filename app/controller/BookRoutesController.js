@@ -63,7 +63,9 @@ Ext.define('book.controller.BookRoutesController', {
             
             'memorization_engine_popup_drilling_screen/:2.3.1.5.1': 'showMemorizationEnginePopupDrillingScreen',
             
-            'micro_journaling/:2.3.1.7': 'showMicroJournaling'
+            'micro_journaling/:2.3.1.7': 'showMicroJournaling',
+            'book_detail/:id': 'bookDetail'
+                        
                       
         }
         
@@ -72,10 +74,17 @@ Ext.define('book.controller.BookRoutesController', {
     
     
 	launch : function(app) {
-      
         this.setHistory(this.getApplication().getHistory());
-               
 	},
+    
+    bookDetail: function(book_id) {
+        
+        var BookController = this.getApplication().getController('BookController');
+         
+        var slider_images = BookController.getSlider_images();
+        console.log(book_id);
+        console.log(slider_images)
+    },
     
     showConfigOption: function(){
      

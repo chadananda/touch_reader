@@ -5,6 +5,7 @@ requires: [],
 config: {
    // items1: '',
    book_title: '',
+   slider_images:[],
     refs: {
         'mainnavigation': 'mainnavigation',
         'maintitlebar_showhide': 'main',
@@ -75,7 +76,6 @@ config: {
         'extractmenu': 'extractmenu',
         'bookinformationscreen': 'bookinformationscreen'
         
-        
     },
 
     control: {
@@ -120,6 +120,9 @@ config: {
         },
         'resume_button': {
             'tap': 'onTapRsumebtn'
+        },
+        'mainnavigation': {
+            'push': 'mainnavigationPush'
         }
        
     }    
@@ -168,7 +171,7 @@ config: {
   },
   
   
-  loadSliderImages: function(){
+  loadSliderImages: function() {
   
         var url = lodsliderImages;
         var params = {};
@@ -186,14 +189,19 @@ config: {
                 response = Ext.JSON.decode(response);
                 
                 var items = [];                        
-                        Ext.each(response, function(rec, index) {
-                            items.push( {html: '<div class="slider_image" id="image_tap_' + rec.img_id + '"><a href="javascript:void(0)"><img src="' + rec.url + '" height="140px"></a></div>'} )
-                        })
+
+                var slider_images = this.getSlider_images();
+
+                Ext.each(response, function(rec, index) {
+                    console.log(rec)
+                    slider_images.push(rec);
+                    items.push( {html: '<div class="slider_image" id="image_tap_' + rec.img_id + '"><a href="javascript:void(0)"><img src="' + rec.url + '" height="140px"></a></div>'} )
+                })
                    
                 bookslider.setItems(items); 
                 
                 
-                for(var i=0; i<response.length; i++){
+                for(var i=0; i<response.length; i++) {
                     var img_id = response[i].img_id;
                     var domEl = Ext.get('image_tap_' + response[i].img_id);
                     if (domEl) {
@@ -253,8 +261,10 @@ config: {
         }
     },
     
-    onClickOpenReaderScreen: function(event, obj, eOpts){        
+    onClickOpenReaderScreen: function(event, obj, eOpts) {
+                
         var mainnavigation = this.getMainnavigation(); 
+        
         mainnavigation.push({xtype: 'mainbookcontainer'}); 
        
         var booktitlebar = this.getBooktitlebar();
@@ -264,17 +274,6 @@ config: {
         panel = this.getReadbookpagelisttoggle();
         panel.setHidden(true); 
        
-       /* 
-        booktitlebar.element.on({
-		    tap: function() { 
-                   
-            }
-         
-        });
-       
-        booktitlebar.setTitle('The Great Deformation, Robert Stockman');
-        */
-                
         /*** Nav TitleBar Library button Show ***/
         this.getLibrary_button().setHidden(false);
         /*** Nav TitleBar List button Show ***/
@@ -287,7 +286,7 @@ config: {
         /*** Nav TitleBar Dropdown Field Show ***/
         this.getTitlebar_dropdown().setHidden(false);
         this.getStudyprojectnavbar().setHidden(false);
-         this.getResume_button().setHidden(true);
+        this.getResume_button().setHidden(true);
         
         var img_id = eOpts[0];
         var book_url = eOpts[1];
@@ -305,11 +304,14 @@ config: {
         
     },
     
-    onLibraryButtonTap: function(button ,event){
-         var mainnavigation = this.getMainnavigation();
-             mainnavigation.push({xtype: 'main'});
-         this.loadSliderImages() 
-         mainnavigation.reset(); 
+    onLibraryButtonTap: function(button ,event) {
+        
+        var mainnavigation = this.getMainnavigation();
+        
+        mainnavigation.push({xtype: 'main'});
+             
+        this.loadSliderImages() 
+        mainnavigation.reset(); 
          
         var booktitlebar = this.getBooktitlebar();
         var dropdown_title = this.getTitlebar_dropdown();
@@ -587,31 +589,23 @@ config: {
     },
     
     toggleNav: function(btn) {
-        
-         
-    /*    panel = this.getReadbookpagelisttoggle();
-    
-        if (panel.getHidden()=== true) {
-            panel.show();
-            //panel.getEl().toggle();
-            panel.setWidth('49.44%');
-            var book_iframe = document.getElementById('book_iframe');
-            var width = this.getReadbookpagelistiframe().element.getWidth(); 
-            //book_iframe.width = width;
-        } else {
-            panel.hide();
-            //panel.getEl().toggle();
-            panel.setWidth('')
-            var book_iframe = document.getElementById('book_iframe');
-            var width = this.getReadbookpagelistiframe().element.getWidth(); 
-            //book_iframe.width = width;
-        } */
-         
+
             var me = this;
             var list = me.getListPopUpView();
             list.showBy(btn);
     },
     onTapRsumebtn:function(){
        
+    },
+    
+    mainnavigationPush: function(cmp, view, eOpts) {
+                
+        if(view.xtype == 'main') {
+            this.getApplication().getController('BookTimer').stopTimer();
+        } else if (view.xtype == 'mainbookcontainer') {
+            //this.getApplication().getController('BookTimer').startTimer();
+        } else if (view.xtype == 'readbookpagelist') {
+            this.getApplication().getController('BookTimer').startTimer();
+        }    
     }
 });

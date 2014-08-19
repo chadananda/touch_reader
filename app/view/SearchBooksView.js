@@ -6,7 +6,7 @@ Ext.define('book.view.SearchBooksView', {
         layout:'hbox',
         cls: 'search_book_container',
         items: [
-            
+            /*
             {
                 flex: 2,
                 xtype: 'selectfield',
@@ -18,6 +18,7 @@ Ext.define('book.view.SearchBooksView', {
                     {text: 'Category',  value: 'category3'}
                 ]
             },
+            */
             {
                 flex: 1.5,
                 cls: 'search_field',

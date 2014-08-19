@@ -2,9 +2,10 @@ Ext.define('book.controller.BookTimer', {
     extend: 'Ext.app.Controller',
     requires: [],
     config: {
-       book_title: '',
-       defaultTimeout: 20,
-       counter: 0,
+        book_title: '',
+        defaultTimeout: 20,
+        timer: '',
+        counter: 0,
         refs: {
             'booktitlebar': 'booktitlebar'        
         },
@@ -16,12 +17,16 @@ Ext.define('book.controller.BookTimer', {
     launch : function(app) {
         var booktitlebar = this.getBooktitlebar();
         document.addEventListener('click',this.documentClickHandler.bind(this), false);
-        
+        //this.startTimer();
         //console.log('counter=');
+    
+    },
+    
+    startTimer: function() {
         var me = this;
         var intervalID = window.setInterval(function() {
             
-            //console.log(me.getCounter());
+            console.log(me.getCounter());
             
             var defaultTimeout = me.getDefaultTimeout();
             var counter = me.getCounter();
@@ -32,7 +37,13 @@ Ext.define('book.controller.BookTimer', {
                 
         }, 1000);           
     
+        this.setTimer(intervalID);
     
+    },
+    
+    stopTimer: function() {
+        //var intervalID = this.getTimer();    
+        clearInterval(this.getTimer());
     },
 
     incrementCounter: function() {

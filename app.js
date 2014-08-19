@@ -47,7 +47,7 @@ Ext.application({
         'book.view.journal.JournalingAssignment', 'ListPopUp', 'book.view.audiovideo.AudioVideoLectureContainer', 'book.view.audiovideo.AudioVideoLecture', 'book.view.exerciseindicator.DiscussionQueExerciseContainer',
         'book.view.exerciseindicator.DiscussionQueExercise', 'book.view.exerciseindicator.AssessmentQuizExerciseContainer', 'book.view.exerciseindicator.AssessmentQuizExercise',
         'book.view.exerciseindicator.MemorizationAssignmentContainer', 'book.view.exerciseindicator.MemorizationAssignment', 'book.view.memorization.MemorizationEnginePopupDrillingScreenContainer',
-        'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling'
+        'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling', 'book.view.BookSliderItem'
     ],
 
     icon: {

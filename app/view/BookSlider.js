@@ -9,8 +9,6 @@ Ext.define('book.view.BookSlider', {
         scrollable: {
             direction: 'horizontal',
             directionLock: true
-       },
-       
-
+       }
     }
 });
