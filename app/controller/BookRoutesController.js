@@ -51,7 +51,19 @@ Ext.define('book.controller.BookRoutesController', {
             
             'assessment_quiz_screen/:2.3.1.4.1': 'showAssessmentQuizScreen',
             
-            'writing_journaling_assignment/:2.3.2.2': 'showWritingJournalingAssignment'
+            'writing_journaling_assignment/:2.3.2.2': 'showWritingJournalingAssignment',
+            
+            'audio_video_inline_mini_lecture/:2.3.1.2': 'showAudioVideoInlineMiniLecture',            
+            
+            'discussion_questions_inline_exercise_indicator/:2.3.1.3': 'showDiscussionQuestionsInlineExerciseIndicator',
+            
+            'assessment_inline_exercise_indicator/:2.3.1.4': 'showAssessmenInlineExerciseIndicator',
+            
+            'inline_memorization_assignment/:2.3.1.5': 'showInlineMemorizationAssignment',
+            
+            'memorization_engine_popup_drilling_screen/:2.3.1.5.1': 'showMemorizationEnginePopupDrillingScreen',
+            
+            'micro_journaling/:2.3.1.7': 'showMicroJournaling'
                       
         }
         
@@ -254,6 +266,49 @@ Ext.define('book.controller.BookRoutesController', {
         this.getBooktitlebar().setHidden(true);
         var mainnavigation = this.getMainnavigation(); 
         mainnavigation.push({xtype: 'jaournalingassignmentcontainer'});
+    },
+    
+    showAudioVideoInlineMiniLecture: function(){
+    
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'audiovideolecturecontainer'});
+    },
+    
+    showDiscussionQuestionsInlineExerciseIndicator: function(){
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'discussionqueexercisecontainer'});
+    
+    },
+    
+    showAssessmenInlineExerciseIndicator: function(){
+    
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'assessmentquizexercisecontainer'});
+    },
+    
+    showInlineMemorizationAssignment: function(){
+    
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'memorizationassignmentcontainer'});
+    
+    },
+    
+    showMemorizationEnginePopupDrillingScreen: function(){
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'memorizationpopupdrillingscreencontainer'});
+    
+    },
+    
+    showMicroJournaling: function(){
+        this.getBooktitlebar().setHidden(true);
+        var mainnavigation = this.getMainnavigation(); 
+        mainnavigation.push({xtype: 'microjournalingcontainer'});
+    
     }
     
     

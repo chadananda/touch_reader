@@ -17,7 +17,7 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList',
-        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList', 'book.store.SSearchScreen', 'book.store.SDiscussMenu'
+        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList', 'book.store.SSearchScreen', 'book.store.SDiscussMenu', 'Ext.ux.AudioPlayer'
         
     ],
     
@@ -44,7 +44,10 @@ Ext.application({
         'book.view.book.AnnotationMenu', 'book.view.book.MarkSubMenu', 'book.view.book.TagSubMenu', 'book.view.book.NoteSubMenu', 'book.view.book.LookupMenu', 'book.view.book.DiscussMenu',
         'book.view.book.ListItem', 'book.view.memorization.MemorizationDeck', 'book.view.memorization.MemorizationDeckContainer', 'book.view.vocabularyassessment.VocabularyAssessmentContainer',
         'book.view.vocabularyassessment.VocabularyAssessment', 'book.view.quizscreen.AssessmentQuizContainer', 'book.view.quizscreen.AssessmentQuiz', 'book.view.journal.JournalingAssignmentContainer',
-        'book.view.journal.JournalingAssignment', 'ListPopUp'
+        'book.view.journal.JournalingAssignment', 'ListPopUp', 'book.view.audiovideo.AudioVideoLectureContainer', 'book.view.audiovideo.AudioVideoLecture', 'book.view.exerciseindicator.DiscussionQueExerciseContainer',
+        'book.view.exerciseindicator.DiscussionQueExercise', 'book.view.exerciseindicator.AssessmentQuizExerciseContainer', 'book.view.exerciseindicator.AssessmentQuizExercise',
+        'book.view.exerciseindicator.MemorizationAssignmentContainer', 'book.view.exerciseindicator.MemorizationAssignment', 'book.view.memorization.MemorizationEnginePopupDrillingScreenContainer',
+        'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling'
     ],
 
     icon: {
