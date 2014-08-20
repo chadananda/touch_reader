@@ -3,7 +3,7 @@ Ext.define('book.controller.BookTimer', {
     requires: [],
     config: {
         book_title: '',
-        defaultTimeout: 10,
+        defaultTimeout: 20,
         timer: '',
         counter: 0,
         refs: {
