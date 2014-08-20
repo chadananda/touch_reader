@@ -6,27 +6,24 @@ Ext.define('book.view.SearchBooksView', {
         layout:'hbox',
         cls: 'search_book_container',
         items: [
-            /*
             {
                 flex: 2,
                 xtype: 'selectfield',
-                label: 'Filter books by',
+                label: '&nbsp;',
                 labelWidth: '20',
                 options: [
-                    {text: 'Category',  value: 'category1'},
-                    {text: 'Category', value: 'category2'},
-                    {text: 'Category',  value: 'category3'}
+                    {text: 'category',  value: 'category'},
+                    {text: 'title', value: 'title'},
+                    {text: 'author',  value: 'author'}
                 ]
             },
-            */
             {
                 flex: 1.5,
                 cls: 'search_field',
                 xtype: 'searchfield',
                 placeHolder: 'Text Field',
                 name: 'query',
-            },
-            
+            },            
             {
                     
                 flex: 1,

@@ -3,11 +3,12 @@ Ext.define('book.controller.BookTimer', {
     requires: [],
     config: {
         book_title: '',
-        defaultTimeout: 20,
+        defaultTimeout: 10,
         timer: '',
         counter: 0,
         refs: {
-            'booktitlebar': 'booktitlebar'        
+            'booktitlebar': 'booktitlebar',
+            'studyprojectnavbar': 'studyprojectnavbar'        
         },
         control: {
         
@@ -56,13 +57,17 @@ Ext.define('book.controller.BookTimer', {
     
     showToolbar: function() {
         var booktitlebar = this.getBooktitlebar();
+        var studyprojectnavbar = this.getStudyprojectnavbar();
         booktitlebar.show();
+        studyprojectnavbar.show();
         this.resetTimeoutCounter();
     },
     
     hideToolbar: function() {
         var booktitlebar = this.getBooktitlebar();
+        var studyprojectnavbar = this.getStudyprojectnavbar();
         booktitlebar.hide();
+        studyprojectnavbar.hide();
     },
     
     documentClickHandler: function() {

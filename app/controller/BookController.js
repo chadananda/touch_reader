@@ -418,16 +418,22 @@ config: {
         var iframe = document.getElementById("book_iframe");
         var selText = '';
                 
+        console.log('it is in ontapIframe');
                          
         setTimeout(function() {
-    
-            document.getElementById("book_iframe").contentDocument.addEventListener('click', function(event) {
-                     
+            console.log('it is in setTimeout function');
+            var myiframe = document.getElementById("book_iframe");
+            var doc = myiframe.contentDocument || myiframe.contentWindow.document;
+             
+            doc.addEventListener('click', function(event) {
+                
+                console.log('it is addEventListener click function ');
                 selText = me.getIframeSelectionText(iframe);
                 
                 me.getApplication().getController('BookTimer').showToolbar();
                 
                 if (selText != '') {
+                    console.log('selText = ' + selText);
                     selectionmenu.show();
                     //Ext.Viewport.add(selectionmenu);
                     
@@ -517,7 +523,7 @@ config: {
         
             
         
-        }, 1200)
+        }, 1500)
       
         
     },
