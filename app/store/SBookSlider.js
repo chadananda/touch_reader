@@ -1,7 +1,7 @@
 Ext.require(['book.model.MBookSlider'], function() {
     Ext.define('book.store.SBookSlider', {
     	extend: 'Ext.data.Store',
-        config: {
+       /* config: {
             model: 'book.model.MBookSlider',
             proxy: {
                 type: 'jsonp',
@@ -10,8 +10,20 @@ Ext.require(['book.model.MBookSlider'], function() {
                     type: 'json'
                 }
             },
-            autoLoad: false
+            autoLoad: true
         }
+        */
+        config : {
+            model : 'book.model.MBookSlider',
+            defaultRootProperty: 'items',
+            proxy: {
+                type: 'ajax',
+                url: lodsliderImages
+            },
+            autoLoad: true
+        }
+        
+        
     });
 
 })

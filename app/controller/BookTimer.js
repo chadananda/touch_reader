@@ -8,7 +8,8 @@ Ext.define('book.controller.BookTimer', {
         counter: 0,
         refs: {
             'booktitlebar': 'booktitlebar',
-            'studyprojectnavbar': 'studyprojectnavbar'        
+            'studyprojectnavbar': 'studyprojectnavbar',
+            'mainnavigation': 'mainnavigation'        
         },
         control: {
         
@@ -20,7 +21,6 @@ Ext.define('book.controller.BookTimer', {
         document.addEventListener('click',this.documentClickHandler.bind(this), false);
         //this.startTimer();
         //console.log('counter=');
-    
     },
     
     startTimer: function() {
@@ -59,7 +59,14 @@ Ext.define('book.controller.BookTimer', {
         var booktitlebar = this.getBooktitlebar();
         var studyprojectnavbar = this.getStudyprojectnavbar();
         booktitlebar.show();
-        studyprojectnavbar.show();
+        
+        var mainnavigation = this.getMainnavigation();
+        var view = mainnavigation.getActiveItem();
+        if (view.xtype == 'readbookpagelist') {
+            studyprojectnavbar.show();
+        }
+        
+        
         this.resetTimeoutCounter();
     },
     

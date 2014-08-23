@@ -20,7 +20,7 @@ Ext.define('book.view.ReadBookPageList', {
             },
             */
                         
-            {            
+          /*  {            
                 xtype: 'bookinformationscreen',
                 itemId: 'toggle',
                 showAnimation: {
@@ -29,7 +29,7 @@ Ext.define('book.view.ReadBookPageList', {
                     duration: 600
                 }, 
             },
-            
+            */
             {
                 xtype   : 'iframe',
                 flex:1,

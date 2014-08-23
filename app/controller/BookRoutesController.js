@@ -16,7 +16,10 @@ Ext.define('book.controller.BookRoutesController', {
             'namedtagstab' : 'namedtagstab',
             'notestab' : 'notestab',
             'coloredhighlightstab': 'coloredhighlightstab',
-            'paragraphsummariestab': 'paragraphsummariestab'    
+            'paragraphsummariestab': 'paragraphsummariestab',
+            'bookslider': 'bookslider dataview',
+            'resume_button': 'booktitlebar #resume',
+            'studyprojectnavbar': 'studyprojectnavbar',    
         },
     
         control: {
@@ -64,8 +67,8 @@ Ext.define('book.controller.BookRoutesController', {
             'memorization_engine_popup_drilling_screen/:2.3.1.5.1': 'showMemorizationEnginePopupDrillingScreen',
             
             'micro_journaling/:2.3.1.7': 'showMicroJournaling',
-            'book_detail/:id': 'bookDetail'
-                        
+            'book_detail/:id': 'bookDetail',
+            '': 'defaultRoute'            
                       
         }
         
@@ -78,12 +81,45 @@ Ext.define('book.controller.BookRoutesController', {
 	},
     
     bookDetail: function(book_id) {
-        
+        //alert(book_id) 
         var BookController = this.getApplication().getController('BookController');
-         
-        var slider_images = BookController.getSlider_images();
-        console.log(book_id);
-        console.log(slider_images)
+        var booksliderDataView = this.getBookslider()
+        
+        
+        var store = booksliderDataView.getStore();
+        
+        
+        var data = store.getData();
+
+        var rec = {};
+        var items = data.items;
+        
+        for(var i=0; i<items.length; i++ ) {
+            var el = items[i].data;
+
+            if (el.img_id == book_id) {
+                rec = el;
+            }       
+        }
+        /*        
+        rec = {
+            author_name: "Abdul-Baha",
+            book_title: "Paris Talks",
+            book_url: "resources/Library/Abdu%27l-Baha%2C%20Paris%20Talks%2C%20en.html",
+            img_id: "1",
+            url: "resources/images/pt.png"        
+        }
+        */
+        
+        BookController.loadBook(rec); 
+    },
+    
+    defaultRoute: function() {
+       
+        var mainnavigation = this.getMainnavigation();
+            mainnavigation.reset();
+            this.getStudyprojectnavbar().setHidden(true);
+            this.getResume_button().setHidden(true);
     },
     
     showConfigOption: function(){
