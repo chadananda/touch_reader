@@ -1,125 +1,94 @@
 Ext.define('book.view.studybar.StudyProjectNavBar', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.TitleBar',
     xtype: 'studyprojectnavbar',
     requires: ['Ext.Img'],
     config: { 
         
-        layout:'hbox',        
-        docked: 'top',    
-        hidden:false,
-       
-        cls: 'study_project_titlebar',
+        layout:'hbox',
+        //xtype: 'titlebar',
+        cls:'study-titlebar',
+        docked: 'top',
+        title: '',
+        ui: 'bluenav',
         items: [
                 
             {
-               flex:1,
-               layout:'vbox',
-               items:[
-                  
-                    {
-                        layout: 'hbox',
-                        items:[{
-                            xtype: 'image',
-                            src: 'resources/images/study_course_icon.png',
-                            width:40,
-                            height:38,
-                            align: 'left',
-                            style:'margin-right:10px;'
-                        },{                
-                    
-                            cls: 'dropdown_menu',
-                            xtype: 'button',
-                            text: 'Current Study Project Title <img src="resources/images/down_arrow.png">',
-                            itemId: 'study_project_book',
-                            align: 'left'
-                        },
-                        {               
-                            xtype: 'button',
-                            iconCls: 'info',
-                            itemId: 'info_screen_btn',
-                            align: 'left',
-                            style:'margin-left:10px;'          
-                        }]
-                    },
-                    {
-                    layout: 'hbox',
-                        cls: 'progress_assemnt',
-                        items:[{               
-                   
-                           html:'Score: 325/500, 87%',
-                           align: 'right',
-                           style:'margin-left:60px;' 
-                      
-                        },
-                        
-                        {               
-                            html:'Progress: 14.2%',
-                            align: 'right',
-                            style:'margin-left:20px;' 
-                      
-                        }]
-                    }                   
-               ]
+                xtype: 'button',
+                html: '<img src="resources/images/course_logo.png">',
+                align: 'left',
+                style:'border-left: none;'
             },
-           // {
-           //  xtype: 'spacer'
-           // },
             {
-               flex:1,
-               layout:'vbox',
-               cls: 'activities_btns',
-               items:[
-                  
-                    {
-                            layout: 'hbox',
-                            items:[{               
-                                xtype: 'button',                
-                                text: '<img src="resources/images/memorize_icon.png"> Memorize',
-                                align: 'left',
-                                ui: 'round',
-                                badgeText: '12'
-                          
-                            },
-                            
-                            {               
-                                xtype: 'button',                
-                                text: '<img src="resources/images/vocab_quiz_icon.png"> Vocab Quiz',
-                                align: 'left',
-                                ui: 'round',
-                                badgeText: '1'
-                          
-                            }]
-                    },
-                    {
-                        layout: 'hbox',
-                        items:[{               
-                            xtype: 'button',                
-                            text: '<img src="resources/images/discuss_icon.png"> Discuss',
-                            align: 'right',
-                            ui: 'round',
-                            badgeText: '10'
-                      
-                        },
-                        
-                        {               
-                            xtype: 'button',                
-                            text: '<img src="resources/images/assignment_icon.png"> Assignment',
-                            align: 'right',
-                            ui: 'round',
-                            badgeText: '1'
-                      
-                        }]
-                    }                   
-               ]
+                xtype: 'button',
+                text: '',               
+                align: 'left',
+                style:'padding:0px;'
             },
+            {                
+                    
+                cls:'resume',
+                xtype: 'button',
+                text: 'Current Study Project Title',
+                itemId: 'study_project_book',
+                align: 'left',
+                ui: 'bluenav', 
+            },
+            {               
+                cls:'study_info',
+                xtype: 'button',
+                iconCls: 'info',
+                itemId: 'info_screen_btn',
+                align: 'left',
+                style:'border-left: none;'         
+            },
+            {               
+               cls: 'progress_assemnt',    
+               html:'Score: 325/500, 87%<br>Progress: 14.2%',
+               align: 'left',
+               style:'border-left: none;'
+          
+            },
+            {               
+                xtype: 'button',                
+                html: '<div class="main_btn"><div class="image"><img src="resources/images/memorize_icon.png"></div><div class="text">Memorize</div></div>',
+                align: 'left',
+                ui: 'study',
+                badgeText: '12'
+          
+            },
+            
+            {               
+                xtype: 'button',
+                html: '<div class="main_btn"><div class="image"><img src="resources/images/vocab_quiz_icon.png"></div><div class="text">Vocab Quiz</div></div>',
+                align: 'left',
+                ui: 'study',
+                badgeText: '2'
+          
+            },
+            {               
+                xtype: 'button',
+                html: '<div class="main_btn"><div class="image"><img src="resources/images/discuss_icon.png"></div><div class="text">Discuss</div></div>',
+                align: 'left',
+                ui: 'study',
+                badgeText: '10'
+          
+            },
+            
+            
+            {               
+                xtype: 'button',
+                html: '<div class="main_btn"><div class="image"><img src="resources/images/assignment_icon.png"></div><div class="text">Assignment</div></div>',
+                align: 'left',
+                ui: 'study',
+                badgeText: '1'
+          
+            },
+            
             {
                 xtype: 'button',                
-                text: 'Resume',
-                iconCls:'arrow_right',
-                iconAlign: 'right'  
-            }             
+                html: '<div class="resume"><div class="resume_img"><img src="resources/images/resume_icon.png"></div><div class="resume_text">Resume</div></div>',
+                align: 'left',
+            } 
         ]
     }
 });
-// JavaScript Document
-

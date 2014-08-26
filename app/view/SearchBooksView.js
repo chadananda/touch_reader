@@ -9,7 +9,7 @@ Ext.define('book.view.SearchBooksView', {
             {
                 flex: 2,
                 xtype: 'selectfield',
-                label: '&nbsp;',
+                //label: '&nbsp;',
                 labelWidth: '20',
                 options: [
                     {text: 'category',  value: 'category'},

@@ -4,18 +4,7 @@ Ext.define('book.view.BookSlider', {
     extend: 'Ext.Container',
     xtype: 'bookslider',
     requires: [],
-    /*config: { 
-       
-        cls: 'slider',
-        layout: 'hbox',
-        scrollable: {
-            direction: 'horizontal',
-            directionLock: true
-       }
-    }
-    */
-    
-    
+   
     config: {
         layout: 'fit',
         flex:1,
@@ -23,7 +12,6 @@ Ext.define('book.view.BookSlider', {
         items: [{
             xtype: 'dataview',
             scrollable: 'horizontal',
-            //cls: 'dataview-horizontal',
             inline: {
                 wrap: false
             },

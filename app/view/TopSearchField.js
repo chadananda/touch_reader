@@ -5,15 +5,19 @@ Ext.define('book.view.TopSearchField', {
     xtype: 'topsearchfield',
     requires: ['Ext.ux.AccordionList'],
     config: {
-        height: '',
-        id: 'top_search',
-        left: '5%',
-        top: '0%',
-        width: '50%',
+       
+        floating: true,
+        zIndex: 10000,
+        cls: 'top_search_panel',        
+        id: 'top_search',              
+        width: 500,
+        height: 60,
+        //centered: true,
+        modal: true,
+        hideMode: 'close',
         hideOnMaskTap: true,
-        modal: true ,
-        cls: 'top_search_panel',
-        //flex:1,
+        layout: 'vbox',
+        
         items: [
            
             {
@@ -64,6 +68,18 @@ Ext.define('book.view.TopSearchField', {
                 //emptyText: '<div style="margin-top: 20px; text-align: center">No Search Found</div>',
               
             }
+        ],
+        showAnimation: {
+            type: 'slide',
+            duration: 1,
+            direction: 'up',
+        },
+        plugins: [new Ext.create('book.ux.PanelAction',{
+            iconClass: 'x-panel-action-icon-close',
+            iconPressedClass: '',
+            position: 'tl',
+            actionMethod: ['hide'] 
+        })
         ]
     }
 })

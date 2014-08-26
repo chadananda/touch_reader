@@ -2,7 +2,19 @@
 // a new theme, remove them and the add your own CSS on top of the base CSS (which
 // is already included in your app.json file).
 
-$base-color: #b7c5e2 !default;
+$base-color: #d6decf !default;
+$list-bg-color: #d6decf;
+$page-bg-color: #e5eae1 !default;
+$page-border-color: #c2cfb6;
+$green-font-color: #637254;
+$white-font-color: #ffffff;
+$white-bg-color: #ffffff;
+$tab-icon-color: #808d74;
+$tab-badge-color: #fe3f36;
+$list-select-color: #768963;
+$btn-border-color: #768963;
+$btn-bottom-border-color:#63784d;
+//$study-btn-color: #9aad86;
 
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
@@ -13,11 +25,143 @@ $base-color: #b7c5e2 !default;
 // Examples of using the icon mixin:
 // @include icon('user');
 
-@include sencha-button-ui('bluenav',#b7c5e2,'matte');
-
-@include sencha-toolbar-ui('bluenav', #4c6aa1,'matte');
+@include sencha-toolbar-ui('bluenav', #aebf9d,'flat');
 .x-toolbar .x-toolbar-title {
-    color: #607dd5;
+    color: $white-font-color;
+}
+
+.x-panel.x-floating .x-panel-inner{
+    background-color: $page-bg-color;
+}
+
+.x-scroll-indicator.rounded>:nth-child(2){
+    background: $list-select-color;
+    content: "";
+}
+.x-scroll-indicator.rounded>*{
+    background: $list-select-color;
 }
 
 @include sencha-button-ui('segment', #1a1a1a, matte);
+@include sencha-button-ui('study',#9aad86,'flat');
+@include sencha-button-ui('bluenav',#768963,'flat');
+
+
+.my-titlebar.x-toolbar .x-button{ 
+     
+    border: none;    
+    border-left: 1px solid $btn-border-color;   
+}
+
+.my-titlebar.x-toolbar .resume.x-button{
+     border:none;
+    border-bottom: 3px solid $btn-bottom-border-color;
+     @include border-radius(5px);     
+}
+
+.study-titlebar.x-toolbar .x-button{
+   
+    border: none;    
+    border-left: 1px solid $btn-border-color;   
+}
+
+.study-titlebar.x-toolbar .resume.x-button{
+     border:none;
+    border-bottom: 3px solid $btn-bottom-border-color;
+     @include border-radius(5px);     
+}
+
+.slider {
+    background-color : $page-bg-color;
+    border-bottom:3px solid $page-border-color;
+    @include border-radius(5px); 
+}
+.slider .slider_image {    
+    border-right: 2px solid $page-border-color;       
+}
+
+.search_book_container {
+    background: none repeat scroll 0 0 $page-bg-color;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-bottom:3px solid $page-border-color;
+    @include border-radius(5px); 
+}
+
+.search_book_container .x-field {
+    background: $page-bg-color;
+}
+
+.search_book_container .x-input-el {   
+    border: 1px solid $page-border-color;   
+}
+
+.search_book_container .search_field .x-input-el {   
+    border: 1px solid $page-border-color;
+}
+
+.ownedbooklist{
+    border-bottom:3px solid $page-border-color;
+    @include border-radius(5px);
+}
+
+.ownedbooklist.x-layout-card-item{
+    background: $page-bg-color;
+}
+.ownedbooklist .dataview-item{
+    border-bottom:3px solid $page-border-color;
+    @include border-radius(5px);
+    background: $white-bg-color;
+    color: $green-font-color;    
+}
+
+.ownedbooklist .ownedbook_detail td{
+   color: $green-font-color; 
+}
+
+.x-tabbar-dark {    
+    border-top-color: $page-bg-color;
+    border-bottom-color: $page-bg-color;
+    background-image: none;
+    background-color: $white-bg-color;      
+}
+
+.x-toolbar.x-docked-top{
+    border-bottom: 1px solid #768963; 
+}
+
+.x-tabbar-dark.x-docked-top .x-tab-active {
+    color: $page-border-color;
+    background-color:$page-bg-color;
+    background-image: -webkit-linear-gradient(top, $page-bg-color, $page-bg-color 10%, $page-bg-color 65%, $page-bg-color);
+    border: none !important;   
+}
+
+.x-tabbar-dark .x-tab-active .x-button-icon:before {
+    color: $tab-icon-color;
+}
+
+.x-tabbar.x-docked-top .x-tab {
+    color: $green-font-color;
+    border: 1px solid $page-border-color;
+    border-bottom: none;
+    @include border-radius(0em !important);
+}
+
+.x-hasbadge .x-badge {
+    color: $white-font-color;
+    background-image: none;
+    background-color: $tab-badge-color;
+    border-color: $tab-badge-color;   
+}
+
+.x-list .x-list-item.x-item-selected.x-list-item-tpl {
+    background-color:$list-select-color; 
+    background-image: none;
+    background-image: -webkit-linear-gradient(top, $list-select-color,$list-select-color 3%,$list-select-color);
+    color:$white-font-color; 
+}
+
+.x-list-normal .x-list-item.x-item-selected.x-list-item-tpl{
+    border-top-color: $list-select-color;
+}
+

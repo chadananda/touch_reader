@@ -7,7 +7,7 @@ Ext.define('book.view.TabPanel', {
     ],
     config: { 
         tabBarPosition: 'top',
-        style: 'margin-top:10px', 
+        style: 'margin-top:10px',
         items: [
             {
                 title: 'Owned',

@@ -36,35 +36,21 @@
 
 
 .search_book_container{
-    margin-top: 10px;
-    
-    height:50px;
-    background: none repeat scroll 0 0 #efefef;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    padding:5px 10px 5px 0px;
-    border: 1px solid #ddd;
-    border-radius: 5px !important;
-    -webkit-border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
-    -ms-border-radius: 5px !important;
-    -o-border-radius: 5px !important; 
+    margin-top: 10px;    
+    height:52px;
+    padding:5px 10px 5px 10px;
 }
 .search_book_container .x-input-el {   
-    min-height: 1.5em;
-    border: 1px solid #d5d5d5;   
+    min-height: 1.5em;  
 }
 
 .search_field .x-input-el {   
     min-height: 1.5em;
-    border: 1px solid #d5d5d5;
     width:90%;   
 }
 .search_book_container .x-form-label {   
     padding: 0.4em; 
     background-color: #efefef;  
-}
-.search_book_container .x-field {    
-    background: #efefef;
 }
 
 .search_book_container .x-field-search .x-field-input:before {
@@ -72,10 +58,9 @@
     left: 85%;    
 }
 
-
 .ownedbooklist{
-   border: 1px solid #ddd; 
-   border-top: none;    
+   border-top: none;
+   margin-bottom:0px;    
 }
 
 .ownedbooklist .ownedbook_img{   
@@ -103,31 +88,13 @@
     border-bottom: 1px solid #dedede;
 }
 
-.slider{
-    border:1px solid #ddd;
-    background-color:#fff;
-     border-radius: 5px !important;
-    -webkit-border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
-    -ms-border-radius: 5px !important;
-    -o-border-radius: 5px !important;    
-}
-
-.slider_image { 
-    margin: 10px 0px 10px 11px;   
-}
 .slider .x-innerhtml{
     border: 1px solid #fff;    
 }
 
-.slider_image:hover{
-    border-color:#85a319;
-    margin: 10px 0px 10px 11px;
-    background: none repeat scroll 0 0 #f9f9f9;
-}
-
 .slider_image a img{
-    box-shadow: 2px 2px 2px #4e4e4e;   
+    box-shadow: 2px 2px 2px #4e4e4e;
+    margin: 10px 15px 10px 11px;   
 }
 
 .bx-controls-direction {
@@ -171,67 +138,39 @@
     margin-top: 10px;
     height: 400px; 
 }
+/****** mainui_tab ********/
 
 .x-tabbar-dark {
-    
-    border-top-color: #0b3c5e;
-    border-bottom-color: #ddd;
-    background-image: none;
-    background-color: #f9f9f9;
-    background-image: -webkit-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #f9f9f9);
-    background-image: -moz-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #f9f9f9);
-    background-image: -o-linear-gradient(top, #1676b9, #11598c 3%, #f9f9f9);
-    background-image: linear-gradient(top, #f9f9f9, #f9f9f9 3%, #f9f9f9);    
+   margin-left: 10px; 
 }
 .x-tabbar.x-docked-top .x-tab {
-    color: #999;
     height: 100%;
-    border: 1px solid #cccccc;
-    border-radius: 0em !important;
-    -webkit-border-radius: 0em !important;
-    -moz-border-radius: 0em !important;
-    -ms-border-radius: 0em !important;
-    -o-border-radius: 0em !important;   
+    margin-left:10px;    
 }
 .x-tabbar.x-docked-top {
-    padding: 0 0;    
+    padding: 0 0;
+    border-bottom-width: 0px;    
 }
-.x-tabbar-dark.x-docked-top .x-tab-active {
-     color: #333;
-    background-color:#ccc !important;
-    background-image: -webkit-linear-gradient(top, #fff, #fff 10%, #fff 65%, #fff);
-    border-top: 3px solid #abc550;
-    border-bottom: none;    
-}
+
 .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label {
     top: 0.12em;
 }
-.x-tabbar-dark .x-tab{
-    color: #333333;
-}
 
 .x-hasbadge .x-badge {
-    border-color: #006600;
-    color: #fff;
-    background-image: none;
-    background-color: #5cb85c;
-    background-image: -webkit-linear-gradient(top, #5cb85c, #5cb85c 3%, #5cb85c);
-    background-image: -moz-linear-gradient(top, #5cb85c, #5cb85c 3%, #5cb85c);
-    background-image: -o-linear-gradient(top, #5cb85c, #5cb85c 3%, #5cb85c);
-    background-image: linear-gradient(top, #5cb85c, #5cb85c 3%, #5cb85c);    
+    min-width:3em;
+    right:0.5em;   
 }
-.x-tabbar-dark .x-tab-active .x-button-icon:before {
-    color: #333;
+.x-tabbar.x-docked-top .x-tab.x-tab-icon .x-badge {
+    top:1.2em;
 }
+
 .x-tabbar-dark .x-tab-active {
     border-bottom: none;
 }
 .x-tab {
-    min-width: 8.4em; 
+    min-width: 9em; 
 }
-.x-toolbar.x-docked-top{
-    border-bottom: none;
-}
+
 .x-title{
     font-size:0.9em;
 }
@@ -243,7 +182,6 @@
 }
 
 .category_accordion_list{
-    margin-top:10px;
     border: 1px solid #ddd;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
@@ -256,7 +194,6 @@
     position: relative;
     width: 40px;
     height: none;
- 
     border-left-color: #999;
     top: 2px;
     margin-right: 0.4em;
@@ -266,15 +203,13 @@
 .x-accordion-list .down {
     position: relative;
     width: 40px;
-    height: none;
-  
+    height: none;  
     border-top-color: #999;
     top: 4px;
     margin-right: 0.4em;
     float:left;
 }
-.setting_text img{
-   
+.setting_text img{  
     float:right;
 }
 .setting_text{ 
@@ -298,7 +233,6 @@
 .dataview-item{
    width : 23.77%;
    height : 72px;
-   border: 1px solid #ddd;  
    float:left;  
    margin:10px 0px 0px 10px
 }
@@ -309,8 +243,7 @@
     border: 2px solid #909191;
     margin-bottom: 5px;
 }
-.popup_panel .x-button-label {
-   
+.popup_panel .x-button-label {  
     text-align: left;
 }
 
@@ -335,8 +268,9 @@
     padding-left:25px;
     padding-right:25px;        
 }
+/******** Start my-titlebar ************/
+
 .my-titlebar .x-title{
-  /*color:#607dd5; */
   text-transform:uppercase;  
 }
 
@@ -345,26 +279,28 @@
   font-size: 130%; 
 }
 .my-titlebar.x-toolbar .x-button .x-badge{
-
     line-height: 1.2em;
     font-size: 0.7em;
-    border-color: #790000;
-    background-color: #fe3f36;
-    background-image: -webkit-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
-    background-image: -moz-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
-    background-image: -o-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
-    background-image: linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
 }
 .my-titlebar .x-hasbadge .x-badge{
     min-width: 1.0em;
+    right: 1.4em;
+    top:0.2em;
 }
 
-.x-toolbar-bluenav .x-button{
+/*.x-toolbar-bluenav .x-button{
     color: #4298e1;
 }
-
-.x-toolbar-bluenav .icon-setting.x-button{
+*/
+.x-toolbar-bluenav .x-button.top_setting_field{
     color: #fff;
+}
+
+.x-toolbar-bluenav .x-button.top_search_field{
+    color: #fff;
+}
+.x-toolbar-bluenav .x-button.list_nav{
+    color: #637254;
 }
 
 .x-toolbar .x-field-search .x-component-outer {
@@ -379,13 +315,7 @@
 }
 
 
-.x-toolbar .x-button{
-    background:none;
-    border: none;
-    -webkit-text-fill-color:#fff !important;
-    padding-left:0.2em;
-    padding-right:0.2em;
-}
+
 .x-toolbar .x-button.x-button-pressing{
     background:none;
     border: none;
@@ -402,10 +332,12 @@
 }
 
 .x-toolbar .x-button .x-button-label{
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1.2em;
-    color:#607dd5; 
+    color:#fff; 
 }
+/******** End Of my-titlebar ************/
+
 .top_search_panel .x-field .x-input-el{  
     min-height: 2.0em !important;
     padding: 0.3em 0.3em 0.3em 2.0em;
@@ -515,55 +447,7 @@
     background: none;
     border-bottom : none;     
 }
-.study_project_titlebar{
- 
-    padding:8px 5px 0px 5px;
-    background-color: #4c6aa1;
-    background-image: -webkit-linear-gradient(top, #7a92c0,#5776b0 3%,#445f90);
-    border-color: #000;
-    color:#fff;
-}
-.study_project_titlebar .dropdown_menu.x-button{
-    background:none !important;
-    background: transparent;
-    border: none;
-    margin-left: 0px;
-    color:#fff;
-    font-size: 0.9em;
-}
 
-.study_project_titlebar .x-button{
-    background:none;
-    border: none;
-    -webkit-text-fill-color:#fff;
-}
-.study_project_titlebar .x-button.x-button-pressing{
-    background:none;
-    border: none;
-}
-.study_project_titlebar .progress_assemnt{
-    font-size: 0.7em;   
-    margin-bottom:5px;
-}
-
-.study_project_titlebar .activities_btns .x-button{
-    font-size: 0.7em;
-    float:right;   
-    width:11.0em;    
-    margin:0px 0px 5px 10px
-}
-
-.study_project_titlebar .x-hasbadge .x-badge{
-    min-width: 2.0em;
-    line-height: 1.2em;
-    font-size: 0.9em;
-    border-color: #790000;
-    background-color: #fe3f36;
-    background-image: -webkit-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
-    background-image: -moz-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
-    background-image: -o-linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
-    background-image: linear-gradient(top, #fe3f36, #fe3f36 3%, #fe3f36);
-}
 
 .info_screen_wrapper {
     width:100%;
@@ -987,10 +871,10 @@
     -o-border-radius: 5px !important;     
 }
 
-.x-toolbar .x-button{
+/*.x-toolbar .x-button{
     -webkit-text-fill-color: #000000;
 }
-
+*/
 .card_question{
     padding:20px 0px 10px 10px;
 }
@@ -1388,4 +1272,126 @@
     -webkit-text-fill-color: #000;
     margin:6px .2em;
     padding: 0 .6em;
+}
+
+.my-titlebar.x-toolbar .x-button{ 
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border-radius: 0px; 
+    padding: 0px 20px;
+    min-height:2.6em;
+    margin: 6px 0.0em;
+   
+}
+/************* my_titlebar *****************/
+.x-toolbar .x-button{
+   background:none;
+}
+
+.my-titlebar{
+    padding-left:0px;
+}
+
+.my-titlebar.x-toolbar .resume.x-button{
+    margin-left:20px;
+    margin-right:20px;  
+    min-height:1.9em;
+    text-transform:uppercase; 
+}
+
+/************* study_project_titlebar *****************/
+
+.study-titlebar.x-toolbar .x-button{ 
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border-radius: 0px;
+    padding: 0em 0.5em;
+    min-height:2.6em;
+    margin: 6em 0.0em;
+}
+
+.study-titlebar{
+    padding-left:0px;
+}
+.study-titlebar .x-button-label{
+    font-weight:normal;
+}
+
+.study-titlebar.x-toolbar .resume.x-button{
+    min-height:1.9em;
+    text-transform:uppercase;
+    margin: 6em 0.2em;
+}
+
+.study-titlebar .progress_assemnt{
+    font-size: 0.8em;   
+    margin-bottom:5px;    
+}
+
+.x-toolbar .progress_assemnt.x-button .x-button-label{
+    color:#000;
+}
+.study-titlebar.x-toolbar .x-button .main_btn{   
+    float:left;
+}
+.study-titlebar.x-toolbar .x-button .image{   
+    float:left;
+    margin-top:5px;    
+}
+.study-titlebar.x-toolbar .x-button .text{ 
+     margin-top:8px;
+     margin-left:5px;
+     float:right;    
+}
+
+.study-titlebar.x-toolbar .x-button .resume{   
+    float:left;   
+}
+.study-titlebar.x-toolbar .x-button .resume_img{   
+    float:left;
+    margin-top:5px;    
+}
+.study-titlebar.x-toolbar .x-button .resume_text{ 
+     margin-top:5px;
+     margin-left:5px;
+     float:right; 
+     color:#637254   
+}
+
+.study-titlebar .x-hasbadge .x-badge{
+    min-width: 2em;
+    line-height: 1.2em;
+    font-size: 0.7em;
+    right: 6.5em;
+    left:1.25em;
+    top:0.4em;
+}
+
+.x-toolbar .x-button.x-button-study.x-button-pressing{
+    border:none;
+    border-bottom: 3px solid #63784d;
+    background-color: #768963;
+    background-image:none;
+}
+
+.study-titlebar.x-toolbar .x-button.study_info{
+    -webkit-text-fill-color: #fff;
+    padding:0px;
+    top:-12px;
+    left:-5px;
+}
+
+.popup_panel .recent_open_book{
+    margin:10px 20px;    
+}
+
+.book_list{   
+    float:left;   
+}
+.book_icon{   
+    float:left;        
+}
+.book_text{      
+     margin-left:10px;
+     float:right;         
 }

@@ -70,9 +70,7 @@ Ext.define('book.controller.BookRoutesController', {
             'book_detail/:id': 'bookDetail',
             '': 'defaultRoute'            
                       
-        }
-        
-    
+        }            
     },
     
     
@@ -81,14 +79,10 @@ Ext.define('book.controller.BookRoutesController', {
 	},
     
     bookDetail: function(book_id) {
-        //alert(book_id) 
+    
         var BookController = this.getApplication().getController('BookController');
-        var booksliderDataView = this.getBookslider()
-        
-        
+        var booksliderDataView = this.getBookslider()        
         var store = booksliderDataView.getStore();
-        
-        
         var data = store.getData();
 
         var rec = {};
@@ -101,16 +95,6 @@ Ext.define('book.controller.BookRoutesController', {
                 rec = el;
             }       
         }
-        /*        
-        rec = {
-            author_name: "Abdul-Baha",
-            book_title: "Paris Talks",
-            book_url: "resources/Library/Abdu%27l-Baha%2C%20Paris%20Talks%2C%20en.html",
-            img_id: "1",
-            url: "resources/images/pt.png"        
-        }
-        */
-        
         BookController.loadBook(rec); 
     },
     

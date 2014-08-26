@@ -15,6 +15,7 @@ Ext.define('book.view.studybar.StudyProjectInfoScreen', {
         cls: 'popup_panel',
         items: [
             {
+                //style:'border: 1px solid red;background:#fff !important;',
                 html: [
                     '<div class="info_screen_wrapper">',
                         '<div class="info_screen_image">',

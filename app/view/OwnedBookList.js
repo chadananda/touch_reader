@@ -37,7 +37,7 @@ Ext.require(['book.store.SOwnedBookList'], function() {
                         '<td class="ownedbook_detail" valign="top">',    
                             '<table>',
                                 '<tr>',
-                                    '<td valign="top" style="color:#000;">{book_title}</td>',
+                                    '<td valign="top">{book_title}</td>',
                                 '</tr>',
                                 '<tr>',
                                     '<td valign="top" style="font-size:12px;">{author_name}</td>',

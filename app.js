@@ -17,7 +17,7 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList',
-        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList', 'book.store.SSearchScreen', 'book.store.SDiscussMenu', 'Ext.ux.AudioPlayer'
+        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList', 'book.store.SSearchScreen', 'book.store.SDiscussMenu', 'Ext.ux.AudioPlayer', 'book.ux.PanelAction'
         
     ],
     

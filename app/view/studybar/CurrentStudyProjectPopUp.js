@@ -3,19 +3,23 @@ Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
     xtype: 'currentstudyprojectpopup',
     requires: [],
     config: {
-        height: '60%',
-        id: 'current_std_projct',
-        left: '5%',
-        padding: 10,
-        top: '0%',
-        width: '50%',
+        
+        floating: true,
+        zIndex: 10000,
+        cls: 'popup_panel',        
+        id: 'current_std_projct',              
+        width: 450,
+        height: 350,
+        //centered: true,
+        modal: true,
+        hideMode: 'close',
         hideOnMaskTap: true,
-        modal: true ,
-         layout: 'vbox',
-        cls: 'popup_panel',
+        layout: 'vbox',
+        
         items: [
             {
-                html: '<div style="text-align:center;margin:10px 0px 10px 0px;">---------------current---------------</div>'
+                height:40,
+                html: '<div class="recent_open_book">CURRENT</div>'
             },
             {
                 
@@ -25,7 +29,8 @@ Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
             },
            
             {
-                html: '<div style="text-align:center;margin:10px 0px 10px 0px;">---------------completed---------------</div>'
+                height:40,
+                html: '<div class="recent_open_book"> COMPLETED</div>'
             },
             {
                 
@@ -34,6 +39,18 @@ Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
                 xtype: 'completedstudeyprojectlist'
             },
           
-        ]
+        ],
+            showAnimation: {
+                type: 'slide',
+                duration: 1,
+                direction: 'up',
+            },
+            plugins: [new Ext.create('book.ux.PanelAction',{
+                iconClass: 'x-panel-action-icon-close',
+                iconPressedClass: '',
+                position: 'tr',
+                actionMethod: ['hide'] 
+            })
+            ]
     }
 });

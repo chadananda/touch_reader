@@ -9,66 +9,77 @@ Ext.define('book.view.BookTitlebar', {
         docked: 'top',
         title: '',
         ui: 'bluenav',
-       
         items: [
                
             {
-                xtype: 'image',
-                src: 'resources/images/full-logo-med.png',
-                width:40,
-                height:40,
+                xtype: 'button',
+                html: '<img src="resources/images/logo.png">',               
                 align: 'left',
-                style:'margin-right:10px;'
+                style:'border-left: none;padding:0px 10px;'
             },
-               
             {
+                xtype: 'button',
+                text: '',               
+                align: 'left',
+                style:'padding:0px;'
+            },
+            {
+                
+                cls:'resume',
                 xtype: 'button',
                 html: 'Library',
                 align: 'left',
                 itemId: 'lib_button',
-                style:'margin:2px 5px 0px 5px;color:#fff;font-weight:bold;',
+                ui: 'bluenav',
                 hidden:false
             },
             {
+                cls:'resume',
                 xtype: 'button',
                 html: 'Resume',
-                style:'margin:2px 5px 0px 5px;color:#fff;font-weight:bold;',
+               // style:'margin:2px 5px 0px 5px;color:#fff;font-weight:bold;',
+                //style:'border:1px solid red;',
                 //iconCls: 'settings',
                 itemId: 'resume',
                 align: 'left',
-                hidden:false
+                hidden:false,
+                ui: 'bluenav'
             },
                
             {
+                cls: 'list_nav',
                 xtype: 'button',
                 iconCls: 'list',
                 align: 'left',
                 itemId: 'list_nav',               
-                hidden:false
-            },
-            {
-                xtype: 'button',
-                iconCls: 'settings',
-                itemId: 'top_setting_field',
-                align: 'left',
-                hidden:false
+                hidden:false,
+                
             },
             
+            {
+                xtype: 'button',
+                text: '',               
+                align: 'left',
+                style:'padding:0px;'
+            },
             {                                
-                cls: 'dropdown_menu',
+                cls:'resume',
+                //cls: 'dropdown_menu',
                 xtype: 'button',
                 text: '',
                 itemId: 'current_book',
                 align: 'left',
-                hidden:false
+                hidden:false,
+                ui: 'bluenav',
             },
               
             {
+                cls:'message_icon',
                 xtype: 'button',
                 html: '',
                 itemId: 'message_icon',
                 align: 'right',
-                style:'margin:10px 10px 0px 0px;',
+                //style:'margin:10px 10px 0px 0px;',
                 badgeText: '7',
                 hidden:false
             },
@@ -78,20 +89,29 @@ Ext.define('book.view.BookTitlebar', {
                 html: '',
                 itemId: 'chat_icon',                
                 align: 'right',
-                style:'margin:10px 10px 0px 0px;',
+                //style:'margin:10px 10px 0px 0px;',
                 hidden:false,
                 badgeText: '5',
+            },
+            {
+                cls:'top_setting_field',
+                xtype: 'button',
+                html: '<img src="resources/images/setting_icon.png">',
+                itemId: 'top_setting_field',
+                align: 'right',
+                hidden:false
             },
             
             {
              
+                cls:'top_search_field',
                 xtype: 'button',
                 itemId: 'top_search_field',
-                iconCls: 'search',
+                html: '<img src="resources/images/search_icon.png">',
                 align: 'right',
                 hidden:false,
                 style:'margin-right:10px;',
-            }
+            } 
         ]
     }
 });

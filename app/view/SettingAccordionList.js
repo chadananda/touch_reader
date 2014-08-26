@@ -7,18 +7,19 @@ Ext.define('book.view.SettingAccordionList', {
         'Ext.ux.AccordionList'
     ],     
     config: {
-        height: '50%',
-        flex:1,
-        id: 'top_setting',
-        left: '5%',
-        padding: 10,
-        top: '0%',
-        width: '60%',
+     
+        floating: true,
+        zIndex: 10000,
+        cls: 'category_accordion_list',        
+        id: 'top_setting',              
+        width: 500,
+        height: 310,
+        //centered: true,
+        modal: true,
+        hideMode: 'close',
         hideOnMaskTap: true,
-        modal: true ,
-        //cls: 'popup_panel',
         layout: 'vbox',
-        cls: 'category_accordion_list',
+        padding:10,
            
         items: [
             
@@ -63,7 +64,19 @@ Ext.define('book.view.SettingAccordionList', {
                             }
                         }
            
-        }]
+        }],
+        showAnimation: {
+            type: 'slide',
+            duration: 1,
+            direction: 'up',
+        },
+        plugins: [new Ext.create('book.ux.PanelAction',{
+            iconClass: 'x-panel-action-icon-close',
+            iconPressedClass: '',
+            position: 'tl',
+            actionMethod: ['hide'] 
+        })
+        ]
     }
         
 })

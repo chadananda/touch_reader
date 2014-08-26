@@ -82,6 +82,10 @@
         {
             "path": "resources/css/slidenav.css",
             "update": "delta"
+        },
+        {
+            "path": "resources/css/Ext.ux.PanelAction.css",
+            "update": "delta"
         }
     ],
 

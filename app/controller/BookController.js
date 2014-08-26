@@ -140,7 +140,7 @@ config: {
          var message_icon = this.getMessage_icon();         
             console.log(message_icon.getBadgeText());
             if(message_icon.getBadgeText() != ''){
-                message_icon.setHtml('<img src="resources/images/message.png">');
+                message_icon.setHtml('<img src="resources/images/message_icon.png">');
             }else {
                message_icon.setHtml('<img src="resources/images/message_stamp_icon.png">');
             }
@@ -167,7 +167,9 @@ config: {
         //this.getSelectfield_button().setHidden(false);
         /*** Nav TitleBar Dropdown Field Hidden ***/
         
-        this.getTitlebar_dropdown().setHidden(false);
+        this.getTitlebar_dropdown().setHidden(false); 
+        this.getTitlebar_dropdown().setUi('');
+        this.getTitlebar_dropdown().setCls('');        
         //this.getStudyprojectnavbar().setHidden(true);
         
         this.getResume_button().setHidden(true);
@@ -204,6 +206,8 @@ config: {
     onLibraryButtonTap: function(button, event) {
         this.redirectTo(''); 
         this.getResume_button().setHidden(false);
+        this.getTitlebar_dropdown().setUi('bluenav');
+        this.getTitlebar_dropdown().setCls('resume');
        
     },
     
@@ -439,8 +443,7 @@ config: {
         });
     },
     
-    onClearSearch: function() {
-    
+    onClearSearch: function() {    
         var store = this.getTopsearchfield().getStore();
             store.removeAll();
         this.getSearchresult().setHtml('');
@@ -450,7 +453,6 @@ config: {
     },
     
     toggleNav: function(btn) {
-
         var me = this;
         var list = me.getListPopUpView();
         list.showBy(btn);
@@ -510,7 +512,8 @@ config: {
         
         /*** Nav TitleBar Dropdown Field Show ***/
         this.getTitlebar_dropdown().setHidden(false);
-        
+        this.getTitlebar_dropdown().setUi('bluenav');
+        this.getTitlebar_dropdown().setCls('resume');
         //this.getStudyprojectnavbar().setHidden(false);
         
         this.getResume_button().setHidden(true);
@@ -523,7 +526,7 @@ config: {
         this.setBook_title(book_title);
         
         var dropdown_title = this.getTitlebar_dropdown(); 
-            dropdown_title.setText('<div class="dropdown_title"><img src="resources/images/down_arrow.png">'+book_title+', '+author_name+'<img src="resources/images/down_arrow.png"></div>');
+            dropdown_title.setText(book_title, author_name);
         var booktitlebar = this.getBooktitlebar();
             booktitlebar.setTitle('') 
             
