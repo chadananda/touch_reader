@@ -7,15 +7,16 @@
             "tag": [
                 {
                     "tag_title": "regulatory capture",
+                    "tag_color": "resources/images/tag_yellow.png",
                     "paragraph": [
                         {
-                         "paragraph_no": "4.8 \"Yet the real culprit behind the fiscal profligacy which descended...\"",
+                         "paragraph_no": "4.8 \"Yet the real <span style=\"background-color:#f2ee7b;\">culprit behind</span> the fiscal profligacy which descended...\"",
                         },
                         {
                          "paragraph_no": "4.14 \"The first spell of false prosperity was the unacknowledged yet...\"",
                         },
                         {
-                         "paragraph_no": "5.2 \"This massive injection of fiscal firepower nearly tripled the annual...\"",
+                         "paragraph_no": "5.2 \"This massive injection of <span style=\"background-color:#f2ee7b;\">fiscal firepower</span> nearly tripled the annual...\"",
                         },
                         {
                          "paragraph_no": "5.18 \"No fresh start or strategically coherent defense plan was ever...\"",
@@ -30,15 +31,16 @@
                 },
                 {
                     "tag_title": "new deal",
+                    "tag_color": "resources/images/tag_red.png",
                     "paragraph": [
                         {
-                         "paragraph_no": "8.8 \"The United States needed to take bold action to rejuvenate its...\"",
+                         "paragraph_no": "8.8 \"The <span style=\"background-color:#f10e34;color:#fff;\">United States</span> needed to take bold action to rejuvenate its...\"",
                         },
                         {
                          "paragraph_no": "8.19 \"In truth, the New Deal was a Chinese menu with little rhyme or...\"",
                         },
                         {
-                         "paragraph_no": "8.27 \"High tariffs and trade subsidies, state-dominated recovery...\"",
+                         "paragraph_no": "8.27 \"High tariffs and trade <span style=\"background-color:#f10e34;color:#fff;\">subsidies</span>, state-dominated recovery...\"",
                         },
                         {
                          "paragraph_no": "8.34 \"The trouble was that prosperity was neither organic nor sustain-...\"",

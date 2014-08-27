@@ -3,22 +3,40 @@ Ext.define('book.view.ListPopUp', {
     xtype: 'listpopup',
     requires: [],
     config: {
-        height: '70%',
-        id: 'list_popup',
+        
+        floating: true,
+        zIndex: 10000,
+        cls: 'popup_panel',        
+        id: 'list_popup',              
+        width: 500,
+        height: 400,
+        //padding: 10,
         left: '5%',
-        padding: 10,
         top: '0%',
-        width: '40%',
+        //centered: true,
+        modal: true,
+        hideMode: 'close',
         hideOnMaskTap: true,
-        modal: true ,
-        cls: 'popup_panel',
-        layout:'vbox',
-        //flex:1,
+        layout: 'vbox',
+        
+        
         items: [
             {
                 flex:1,
                 xtype: 'bookinformationscreen'
             }
+        ],
+        showAnimation: {
+            type: 'slide',
+            duration: 1,
+            direction: 'up',
+        },
+        plugins: [new Ext.create('book.ux.PanelAction',{
+            iconClass: 'x-panel-action-icon-close',
+            iconPressedClass: '',
+            position: 'tr',
+            actionMethod: ['hide'] 
+        })
         ]
     }
 });

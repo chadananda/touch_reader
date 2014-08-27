@@ -11,7 +11,7 @@ Ext.define('book.view.TopSearchField', {
         cls: 'top_search_panel',        
         id: 'top_search',              
         width: 500,
-        height: 60,
+        height: 48,
         //centered: true,
         modal: true,
         hideMode: 'close',

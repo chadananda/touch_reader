@@ -22,12 +22,12 @@ Ext.define('book.view.bookinfoscreen.BookInformationScreen', {
                 title: '<img src="resources/images/tab_notes_icon.png">',
                 xtype: 'notestab'
             },
+           // {
+           //     title: '<img src="resources/images/tab_highlights_icon.png">',
+           //     xtype: 'coloredhighlightstab'
+           // },
             {
                 title: '<img src="resources/images/tab_highlights_icon.png">',
-                xtype: 'coloredhighlightstab'
-            },
-            {
-                title: '<img src="resources/images/tab_paragraph_icon.png">',
                 xtype: 'paragraphsummariestab'
             }
         ]

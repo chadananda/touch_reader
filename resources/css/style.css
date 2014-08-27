@@ -1,9 +1,9 @@
 
-.x-layout-card-item{
+.main_container.x-layout-card-item{
     background: #ffffff;
 }
 .main_container{   
-    margin: 0px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 .x-webkit .x-selectmark-base, .x-webkit .x-field-select .x-component-outer:after, .x-field-select .x-webkit .x-component-outer:after{
@@ -17,7 +17,7 @@
     font-size: 1.3em; 
 }
 
-.h-line {
+/*.h-line {
     background: none repeat scroll 0 0 #1abc9c;
     bottom: -2px;
     height: 3px;
@@ -25,7 +25,7 @@
     position: absolute;
     width: 50px;
 }
-
+*/
 .right_cat_title{
     margin-top: 10px;
     border-bottom: 1px solid #d9d9d9;
@@ -528,9 +528,20 @@
     margin: 0em 0em 0.3em 0.4em;
 }
 
+/************** BOOK INFO TAB **********/
+ 
+.book_info .x-tabbar.x-docked-top .x-tab {
+    
+    margin-left:0px;
+    margin-right:5px;     
+}  
+
 .book_info{
     margin:0px 10px 0px 0px;
     width:100%;
+}
+.book_info .x-tabbar-dark {
+   margin-left: 0px; 
 }
 
 .book_info .x-tab{
@@ -541,201 +552,398 @@
     border: 1px solid #ddd;
 }
 
+/**************  END OF BOOK INFO TAB **********/
+
 /************ Book Info Tab **********/
 .bookinfo_tab {
-    border: 1px solid #ddd;
-    
-}
-.bookinfo_tab_table .title{
-    padding:5px 10px;
-    border-bottom: 1px solid #ddd;
-}
-.bookinfo_tab_table .book_title{
-    font-size: 0.9em;
-    text-align:center;
-}
-.bookinfo_tab_table .book_title i{  
-    font-size: 1.5em; 
-}
-.bookinfo_tab_table td{
-    font-size: 0.9em;
-    padding:5px 10px;
-}
-.bookinfo_tab_table .description{
-    
-    border-bottom: 1px solid #ddd;
-    padding:5px 10px;
-    font-size: 0.7em;
-}
-.bookinfo_tab_table .table_of_contents{
-     padding:5px 10px;
-}
-/************ BookMark Tab **********/
-.bookmark_tab {
-    border: 1px solid #ddd;
-    padding:10px 0px 10px 10px;    
+   margin: 5px 10px 10px 10px; 
 }
 
-.bookmark_tab_table .paragraph_title{
+.bookinfo_tab .bookinfo_wrapper {
+    float:left;
+    width:100%;
+    margin-top: 10px; 
+    border-bottom: 3px solid #c2cfb6;
+     border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    background-color: #fff !important;
+}
+
+.bookinfo_tab .bookinfo_wrapper .bookinfo_img{
+    float:left;
+    padding:10px 20px;
+}
+
+.bookinfo_tab .bookinfo_wrapper .bookinfo_detail{    
+    padding:10px 20px;
+}
+.bookinfo_tab .bookinfo_wrapper .bookinfo_detail p.book_title{
     font-size: 0.9em;
-    text-align:left;
+    text-transform: uppercase;
+    color: #768963;
+    font-weight: bold;
+    margin-bottom:10px;
 }
-.bookmark_tab_table .paragraph_title i{  
-    font-size: 1.5em;
+.bookinfo_tab .bookinfo_wrapper .bookinfo_detail p.author_name{
+    font-size: 0.8em;
+    color: #787975;
+    margin-bottom:10px;
+    line-height: 1.5em;
 }
-.bookmark_tab_table td{
+.bookinfo_tab .bookinfo_wrapper .bookinfo_detail p.description{
+   text-align: justify;
+   font-size: 0.8em;
+   color: #393a37;
+   line-height: 1.8em;
+}
+
+
+/************ BookMark Tab **********/
+.bookmark_tab {
+   margin: 5px 10px 10px 10px; 
+}
+
+.bookmark_tab .bookmark_wrapper {
+    float:left;
+    width:100%;
+    margin-top: 10px; 
+    border-bottom: 3px solid #c2cfb6;
+     border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    background-color: #fff !important;
+    padding-bottom:10px;
+}
+
+.bookmark_tab .bookmark_wrapper .bookmark_img{
+    float:left;
+    padding:10px;
+}
+
+.bookmark_tab .bookmark_wrapper .bookmark_info{    
+    padding:10px;
+    float:left;
+}
+.bookmark_tab .bookmark_wrapper .bookmark_info p.book_title{
     font-size: 0.9em;
-    padding:5px 0px;
+    text-transform: uppercase;
+    color: #768963;
+    font-weight: bold;
+    margin-bottom:5px;
 }
-.bookmark_tab_table .paragraph_no {   
+.bookmark_tab .bookmark_wrapper .bookmark_info p.author_name{
+    font-size: 0.8em;
+    color: #393a37;
+    margin-bottom:5px;
+    line-height: 1.5em;
+}
+
+.bookmark_tab .bookmark_wrapper .book_chapter{
+    border-top: 1px solid #c2c9ba;
+    float:left;
+    font-size: 0.8em;
+    padding:8px 10px;
+    color: #000;
     width:100%;
 }
-.bookmark_tab_table .paragraph_no .paragraph_image{ 
-    padding-left:10px;
-    padding-right:5px;
+
+.bookmark_tab .bookmark_wrapper .paragraph_no{
+    border: none;
+    border-top: 1px solid #c2c9ba;
+    font-size: 0.8em;
     float:left;
-    width:5%;     
+    color: #637254;
+    width:100%;
+    background-color: #d6decf; 
 }
-.bookmark_tab_table .paragraph_no .paragraph_contnt{
+
+.bookmark_tab .bookmark_wrapper .paragraph_no .paragraph_image{
     float:left;
-    padding-left:10px;
-    padding-right:5px;
-    width:95%;      
+    padding:7px 10px;
 }
+
+.bookmark_tab .bookmark_wrapper .paragraph_no .paragraph_contnt{
+    width: 430px;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding:8px 10px;
+    float:left; 
+}
+
 
  /*************** Named Tages Tag ******************/
 
+
 .namedtags_tab {
-    border: 1px solid #ddd;
-    padding:10px 0px 10px 10px;    
+   margin: 5px 10px 10px 10px; 
 }
-.namedtag_tab_table .paragraph_title{
+
+.namedtags_tab .namedtags_wrapper {
+    float:left;
+    width:100%;
+    margin-top: 10px; 
+    border-bottom: 3px solid #c2cfb6;
+     border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    background-color: #fff !important;
+    padding-bottom:10px;
+}
+
+.namedtags_tab .namedtags_wrapper .namedtags_img{
+    float:left;
+    padding:10px;
+}
+
+.namedtags_tab .namedtags_wrapper .namedtags_info{    
+    padding:10px;
+    float:left;
+}
+.namedtags_tab .namedtags_wrapper .namedtags_info p.book_title{
     font-size: 0.9em;
-    text-align:left;
+    text-transform: uppercase;
+    color: #768963;
+    font-weight: bold;
+    margin-bottom:5px;
 }
-.namedtag_tab_table .paragraph_title{  
-    font-size: 1.3em;
+.namedtags_tab .namedtags_wrapper .namedtags_info p.author_name{
+    font-size: 0.8em;
+    color: #393a37;
+    margin-bottom:5px;
+    line-height: 1.5em;
 }
-.namedtag_tab_table .paragraph_title i{  
-    font-size: 0.7em;
-}
-.namedtag_tab_table .tag_title{
-    padding:10px 0px;   
-}
-.namedtag_tab_table .tag_title img{
-    padding-right:10px;
-}
-.namedtag_tab_table td{
-    font-size: 0.9em;
-    padding:5px 0px;
-}
-.namedtag_tab_table .paragraph_no {   
+
+.namedtags_tab .namedtags_wrapper .book_chapter{
+    border-top: 1px solid #c2c9ba;
+    float:left;
+    font-size: 0.8em;
+    padding:8px 10px;
+    color: #000;
     width:100%;
 }
-.namedtag_tab_table .paragraph_no .paragraph_image{ 
-    padding-left:10px;
+
+.namedtags_tab .namedtags_wrapper .book_chapter .tag_color{
     padding-right:5px;
-    float:left;
-    width:5%;     
 }
-.namedtag_tab_table .paragraph_no .paragraph_contnt{
+
+.namedtags_tab .namedtags_wrapper .paragraph_no{
+    border: none;
+    border-top: 1px solid #c2c9ba;
+    font-size: 0.8em;
     float:left;
-    padding-left:10px;
-    padding-right:5px;
-    width:95%;      
+    padding-left:20px;
+    color: #637254;
+    width:100%;
+    background-color: #d6decf; 
+}
+
+.namedtags_tab .namedtags_wrapper .paragraph_no .paragraph_image{
+    float:left;
+    padding:7px 10px;
+}
+
+.namedtags_tab .namedtags_wrapper .paragraph_no .paragraph_contnt{
+    width: 420px;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding:8px 10px;
+    float:left; 
 }
 
 /*************** Notes Tag ******************/
 
 .notes_tab {
-    border: 1px solid #ddd;
-    padding:10px 0px 10px 10px;    
+   margin: 5px 10px 10px 10px; 
 }
-.notes_tab_table .paragraph_title{
-    font-size: 0.9em;
-    text-align:left;
+
+.notes_tab .notes_wrapper {
+    float:left;
+    width:100%;
+    margin-top: 10px; 
+    border-bottom: 3px solid #c2cfb6;
+     border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    background-color: #fff !important;
+    padding-bottom:10px;
 }
-.notes_tab_table .paragraph_title{  
-    font-size: 1.3em;
+
+.notes_tab .notes_wrapper .notes_img{
+    float:left;
+    padding:10px;
 }
-.notes_tab_table .paragraph_title i{  
-    font-size: 0.7em;
+
+.notes_tab .notes_wrapper .notes_info{    
+    padding:10px;
+    float:left;
 }
-.notes_tab_table .tag_title{
-    padding:10px 0px;
+.notes_tab .notes_wrapper .notes_info p.book_title{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #768963;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+.notes_tab .notes_wrapper .notes_info p.author_name{
+    font-size: 0.8em;
+    color: #393a37;
+    margin-bottom:5px;
+    line-height: 1.5em;
+}
+
+.notes_tab .notes_wrapper .book_chapter{
+    border-top: 1px solid #c2c9ba;
+    float:left;
+    font-size: 0.8em;
+    padding:8px 10px;
+    color: #000;
+    width:100%;
+}
+
+.notes_tab .notes_wrapper .paragraph_wrapper{
+    border-top: 1px solid #c2c9ba;  
+    font-size: 0.8em;
+    float:left;
+    width:100%;
+    background-color: #d6decf;
+    padding:5px 0px; 
+}
+
+.notes_tab .notes_wrapper .paragraph_wrapper .paragraph_no .paragraph_image{
+    float:left;
+    padding:5px 5px 5px 10px;
    
 }
-.notes_tab_table .tag_title img{
-    padding-right:10px;
-}
-.notes_tab_table td{
-    font-size: 0.9em;
-    padding:5px 0px;
-}
-.notes_tab_table .paragraph_no {   
-    width:100%;
-}
-.notes_tab_table .paragraph_no .paragraph_contnt{
+
+.notes_tab .notes_wrapper .paragraph_wrapper .paragraph_no .paragraph_contnt{
+    width: 400px;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding:8px 5px;
     float:left;
-    padding-left:10px;
-    padding-right:5px;
-    width:95%;      
+    color: #637254; 
 }
-.notes_tab_table .notes_desc {   
-    width:100%;
-     padding:10px 0px 10px 25px;
+
+.notes_tab .notes_wrapper .paragraph_wrapper .notes_desc{
+   
+    padding:8px 10px 8px 38px;
+    float:right;
+    color:#393a37; 
 }
-.notes_tab_table .notes_desc .paragraph_image{ 
-    padding-right:5px;
-    float:left;
-    width:5%;     
-}
-.notes_tab_table .notes_desc .paragraph_contnt{
-    float:left;
-    padding-left:10px;
-    padding-right:5px;
-    width:95%;      
-}
+
 
   
 /*************** Summaries Tag ******************/
 
+
 .summaries_tab {
-    border: 1px solid #ddd;
-    padding:10px 0px 10px 10px;    
-}
-.summaries_tab_table .paragraph_title{
-    font-size: 0.9em;
-    text-align:left;
-}
-.summaries_tab_table .paragraph_title{  
-    font-size: 1.3em;
-}
-.summaries_tab_table .paragraph_title span{  
-    font-size: 0.7em;
-}
-.summaries_tab_table .paragraph_title i{  
-    font-size: 0.7em;
-}
-.summaries_tab_table .tag_title{
-    padding:10px 0px;   
-}
-.summaries_tab_table td{
-    font-size: 0.9em;
-    padding:5px 0px;
-}
-.summaries_tab_table .paragraph_no .paragraph_contnt{
-    float:left;
-    padding-left:10px;
-    padding-right:5px;
-   
+   margin: 5px 10px 10px 10px; 
 }
 
+.summaries_tab .bookmark_wrapper {
+    float:left;
+    width:100%;
+    margin-top: 10px; 
+    border-bottom: 1px solid #c2cfb6;
+    
+    background-color: #fff !important;
+    padding-bottom:10px;
+}
+
+.summaries_tab .bookmark_wrapper .bookmark_img{
+    float:left;
+    padding:10px;
+}
+
+.summaries_tab .bookmark_wrapper .bookmark_info{    
+    padding:10px;
+    float:left;
+}
+.summaries_tab .bookmark_wrapper .bookmark_info p.book_title{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #768963;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+.summaries_tab .bookmark_wrapper .bookmark_info p.author_name{
+    font-size: 0.8em;
+    color: #393a37;
+    margin-bottom:5px;
+    line-height: 1.5em;
+}
+.summaries_tab .x-list{
+  
+  border-bottom: 3px solid #c2cfb6;
+     border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+}
+
+.summaries_tab .x-list-normal .x-list-item.x-list-item-tpl.x-list-header-wrap {
+   border-top: 1px solid #c2cfb6;
+    background-color: #fff;
+    border-bottom : none; 
+    background-image:none;
+    color:#000;
+    font-size: 0.8em;   
+    
+}
+.summaries_tab .x-list-normal .x-list-item.x-list-item-tpl.x-list-header-wrap .active_img{ 
+    background-image:none;
+}
+.summaries_tab .x-list-normal .x-list-item.x-list-item-tpl {
+    font-size: 0.8em;
+    color:#637254; 
+}
+.summaries_tab .x-list-normal .x-list-item.x-item-selected.x-list-item-tpl{
+   font-size: 0.8em;
+    color:#fff; 
+}
+.summaries_tab .x-list-normal .x-list-item.x-list-item-tpl .active_img{
+    
+     background-image: url(../images/tab_highlights_icon.png);
+     width:11px;
+     height:15px;
+     float:left;
+     margin-right:10px; 
+}
+.summaries_tab .x-list-normal .x-list-item.x-item-selected.x-list-item-tpl .active_img{
+    
+     background-image: url(../images/tab_highlights_select_icon.png);
+     width:11px;
+     height:15px;
+     float:left;
+     margin-right:10px; 
+}
+
+/********* End of Tabs *********/
 .sharesub_Menu .x-button{
     border-radius: 0px;
     border: none;
     border-top-color: none;
 }
+
+
+
+
 
 .lookup_menu{
 
