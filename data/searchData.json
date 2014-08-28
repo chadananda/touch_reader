@@ -1,53 +1,24 @@
 {
     "items": [
         {
-            "text": "Stockman, The Great Deformation",
-            "open_book_icon": "resources/images/book_open_icon.png",
-            "year": true,
-            "items": [
-                {
-                    "text": "2.7 \"The Greenspan Fed did the just opposite,however, and thereby contradicted every gold standard speech that Alan Greenspan had everdelivered.\"",
-                    "leaf" : true
-                },
-                 {
-                    "text": "2.7 The Greenspan Fed did the just opposite,however, and thereby contradicted every gold standard speech that Alan Greenspan had ever delivered. The result was an artificial domestic borrowing boom unprecedented in peacetime history. Between 1993 and 2001, credit market debt outstanding soared from $16 trillion to $29 trillion. Representing an 8 percent annual growth rate. <br><br>2.8 By late 1998, the US economy worked up a massive head of borrowed steam, and the nearly maniacal stock market finally faltered due to the Russian default and the LTCM crises.",
-                    "leaf" : true
-                }
-            ]
-        },
-         {
-            "text": "Twain, Huckleberry Finn",
-            "open_book_icon": "resources/images/book_open_icon.png",
-            "year": true,
-            "items": [
-                {
-                    "text": "2.7 \"The Greenspan Fed did the just opposite,however, and thereby contradicted every gold standard speech that Alan Greenspan had ever delivered.\"",
-                    "leaf" : true
-                },
-                 {
-                    "text": "2.8 The Greenspan Fed did the just opposite,however, and thereby contradicted every gold standard speech that Alan Greenspan had ever delivered.",
-                    "leaf" : true
-                },
-                {
-                    "text": "2.9 The result was an artificial domestic borrowing boom unprecedented in peacetime history.",
-                    "leaf" : true
-                },
-                {
-                    "text": "3.1 Between 1993 and 2001, credit market debt outstanding soared from $16 trillion to $29 trillion. Representing an 8 percent annual growth rate.",
-                    "leaf" : true
-                }
-            ]
+            "search_by": " Open Books",
+            "text": "Lee, To Kill a Mockingbird",
         },
         {
-            "text": "Dickens, A Tale of Two Cities",
-            "open_book_icon": "resources/images/book_open_icon.png",
-            "year": true,
-            "items": [
-                {
-                    "text": "2.7 \"The Greenspan Fed did the just opposite,however, and thereby contradicted every gold standard speech that Alan Greenspan had everdelivered.\"",
-                    "leaf" : true
-                }
-            ]
+            "search_by": " Open Books",
+            "text": "Austin, Pride and Prejudice",
+        },
+        {
+            "search_by": " Open Books",
+            "text": "Salinger, Catcher in the Rye",
+        },
+         {
+            "search_by": " Study Guides",
+            "text": "Lee, To Kill a Mockingbird",
+        },
+        {
+            "search_by": " Library",
+            "text": "Lee, To Kill a Mockingbird",
         }
     ]
 }

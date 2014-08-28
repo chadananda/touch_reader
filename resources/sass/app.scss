@@ -30,9 +30,11 @@ $btn-bottom-border-color:#63784d;
     color: $white-font-color;
 }
 
-//.x-panel.x-floating .x-panel-inner{
-//    background-color: $page-bg-color;
-//}
+.x-panel.x-floating .x-panel-inner{
+    background-color: $page-bg-color;
+    border-bottom: 3px solid $page-border-color;
+     @include border-radius(5px); 
+}
 
 .x-scroll-indicator.rounded>:nth-child(2){
     background: $list-select-color;

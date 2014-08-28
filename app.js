@@ -17,7 +17,7 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList',
-        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList', 'book.store.SSearchScreen', 'book.store.SDiscussMenu', 'Ext.ux.AudioPlayer', 'book.ux.PanelAction'
+        'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList','book.store.SDiscussMenu', 'Ext.ux.AudioPlayer', 'book.ux.PanelAction'
         
     ],
     
@@ -26,11 +26,11 @@ Ext.application({
     ],
     
     models: [
-        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList', 'MSettingAccordionList', 'MSearchScreen', 'MBookInfoTab'
+        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList', 'MSettingAccordionList', 'MSearchScreen', 'MBookInfoTab', 'MListSelecrSearchResult'
     ],
     
     stores: [
-        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList', 'SSettingAccordionList', 'SSearchScreen', 'SBookInfoTab'
+        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList', 'SSettingAccordionList', 'SSearchScreen', 'SBookInfoTab', 'SListSelecrSearchResult'
     ],
 
     views: [
@@ -47,7 +47,8 @@ Ext.application({
         'book.view.journal.JournalingAssignment', 'ListPopUp', 'book.view.audiovideo.AudioVideoLectureContainer', 'book.view.audiovideo.AudioVideoLecture', 'book.view.exerciseindicator.DiscussionQueExerciseContainer',
         'book.view.exerciseindicator.DiscussionQueExercise', 'book.view.exerciseindicator.AssessmentQuizExerciseContainer', 'book.view.exerciseindicator.AssessmentQuizExercise',
         'book.view.exerciseindicator.MemorizationAssignmentContainer', 'book.view.exerciseindicator.MemorizationAssignment', 'book.view.memorization.MemorizationEnginePopupDrillingScreenContainer',
-        'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling', 'book.view.BookSliderItem'
+        'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling', 'book.view.BookSliderItem',
+        'ListSelecrSearchResult'
     ],
 
     icon: {

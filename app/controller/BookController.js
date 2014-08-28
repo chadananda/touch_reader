@@ -65,8 +65,8 @@ config: {
             selector: '#info_screen',
             xtype: 'studyprojectinfoscreen'
         },
-        'topsearchfield': 'topsearchfield accordionlist',
-        'searchresult': 'topsearchfield #search_result',
+        'topsearchfield': 'topsearchfield list',
+        'searchresult': 'topsearchfield #right_search_panel',
         'topsearchfieldpopup': 'topsearchfield',
         
         'mainbookcontainer': 'mainbookcontainer',
@@ -76,7 +76,8 @@ config: {
         'selectionmenu': 'selectionmenu',
         'extractmenu': 'extractmenu',
         'bookinformationscreen': 'bookinformationscreen',
-        'mainnavigationpop': 'mainnavigation'
+        'mainnavigationpop': 'mainnavigation',
+        'listselecrsearchresult': 'listselecrsearchresult'
         
     },
 
@@ -114,6 +115,9 @@ config: {
             clearicontap : 'onClearSearch',
             keyup: 'onSearchKeyUp'
         },
+        'topsearchfield': {
+            'itemtap': 'onSearchResultListItemtap'    
+        },
         'list_button': {
             'tap': 'toggleNav'
         },
@@ -126,6 +130,9 @@ config: {
         },
         'bookslider': {
             'itemtap': 'onBooksliderItemtap'
+        },
+        'listselecrsearchresult': {
+         //   'show': 'onShowListSelecrSearchResult'
         }
        
     }    
@@ -430,14 +437,17 @@ config: {
     onSearchKeyUp: function(searchField) {
       
         var seach_field = this.getSearchPopView();    
-            seach_field.setHeight('60%');
-        this.getTopsearchfield().setHeight('78%');        
+            seach_field.setHeight('70%');
+        this.getTopsearchfield().setHeight('96%');        
         var store = this.getTopsearchfield().getStore();      
         store.removeAll();
-        this.getSearchresult().setHtml('<div class="search_result"> 10 Matching Sentences from 3 Books</div>');
+        this.getSearchresult().setHidden(false);
         store.load({
             callback: function(records, operation, success) {
                 console.log(records);
+                 this.getTopsearchfield().select(2);
+                 this.onShowListSelecrSearchResult(); 
+                
             },
             scope: this
         });
@@ -446,7 +456,7 @@ config: {
     onClearSearch: function() {    
         var store = this.getTopsearchfield().getStore();
             store.removeAll();
-        this.getSearchresult().setHtml('');
+        this.getSearchresult().setHidden(true);
         this.getTopsearchfield().setHeight('');
         var seach_field = this.getSearchPopView();    
         seach_field.setHeight('');
@@ -533,6 +543,35 @@ config: {
         this.setImg_id(img_id);    
         this.onLoadBookData(img_id, book_url);
         
-    }
+    },
+    onSearchResultListItemtap: function(list, index, target, record, e, eOpts){
+      
+       this.getSearchresult().setHidden(false);
+       this.onShowListSelecrSearchResult(); 
+    },
+    onShowListSelecrSearchResult:function(){
+      
+        var url = searchbookresult;
+        var params = {};
+            
+        Ext.Viewport.setMasked({ xtype: 'loadmask', 'message': 'Loading Book Info...' });
+        Ext.Ajax.request({
+			url : url,
+            params: params,
+			success : function(response, options) {
+                Ext.Viewport.setMasked(false);
+               
+                response = response.responseText;
+                response = Ext.JSON.decode(response);               
+                this.getListselecrsearchresult().setData(response.items[0]);                 
+            },
+            
+            failuer: function() {
+              
+                Ext.Viewport.setMasked(false);
+            },
+            scope: this
+        })
+    } 
     
 });

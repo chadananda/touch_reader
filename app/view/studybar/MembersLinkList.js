@@ -7,10 +7,7 @@ Ext.define('book.view.studybar.MembersLinkList', {
         cls: 'member_list_view',
         height:135,
         itemTpl: [  
-                    '<div class="member_list_wrapper">',
-                        '<div class="members_icon">',
-                            '<img src="resources/images/members_icon.png">',
-                        '</div>',
+                    '<div class="member_list_wrapper">',                        
                         '<div class="members_title">',
                             '{title}',
                         '</div>',

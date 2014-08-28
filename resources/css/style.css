@@ -10,31 +10,6 @@
     right: 0.3em;
 }
 
-.recently_read{
-    margin-top: 10px;
-    border-bottom: 1px solid #d9d9d9;
-    padding-bottom:5px;
-    font-size: 1.3em; 
-}
-
-/*.h-line {
-    background: none repeat scroll 0 0 #1abc9c;
-    bottom: -2px;
-    height: 3px;
-    left: 0;
-    position: absolute;
-    width: 50px;
-}
-*/
-.right_cat_title{
-    margin-top: 10px;
-    border-bottom: 1px solid #d9d9d9;
-    font-size: 1.3em;
-    padding-bottom:5px;
-    margin-left: 10px;
-}
-
-
 .search_book_container{
     margin-top: 10px;    
     height:52px;
@@ -338,6 +313,9 @@
 }
 /******** End Of my-titlebar ************/
 
+
+/********** Top SearchPanel ***********/
+
 .top_search_panel .x-field .x-input-el{  
     min-height: 2.0em !important;
     padding: 0.3em 0.3em 0.3em 2.0em;
@@ -354,12 +332,41 @@
 }
 .top_search_panel .x-field{
     min-height: 2.65em !important;
-    background: #7f8084;
+    background: none;
     padding-top:5px;
 }
 .top_search_panel .x-field-search .x-field-input .x-form-field{
     margin-left:0.4em;
 }
+
+.top_search_panel .x-list{
+    background:#fff;
+     margin:5px 0px 5px 10px;
+     font-size: 0.8em;
+}
+.top_search_panel .x-list-normal .x-list-header{
+    padding: 0.9em 1.02em;
+    color:#000;
+    border-bottom:none;
+    background-image:none;
+}
+.top_search_panel .x-list-normal .x-list-item.x-list-item-tpl{
+    margin-left:38px;
+    background:#fff;
+    background-image:none;
+    color:#637254;
+    
+}
+.top_search_panel .x-list-normal .x-list-item.x-item-selected.x-list-item-tpl{
+    background:#d6decf;
+    color: #393a38;
+    border-top-color: #bcc9b1;
+}
+.top_search_panel .x-list .x-list-item.x-list-item-tpl .x-innerhtml{
+    padding: 3px 0px;
+}
+
+/******************* End Of Top Search Panel *******************/ 
 
 .category_accordion_list .x-list-normal .x-list-item.x-list-item-tpl {
      border-top: none;
@@ -448,29 +455,52 @@
     border-bottom : none;     
 }
 
-
+/************  StudyNav InfoScreen *****************/
+ 
+.info_screen{
+  
+    border-bottom: 3px solid #c2cfb6;
+     border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    background-color: #fff !important;
+    margin-bottom:10px;
+}
 .info_screen_wrapper {
     width:100%;
-}
-.info_screen_image{
-    width:10%;
+    padding:10px;
     float:left;
 }
-.info_screen_contnt{
-    width:90%;
+.info_screen_wrapper .info_screen_image{
+    padding:0px 10px;
+    float:left;
+    width:7%;
+}
+.info_screen_wrapper .info_screen_contnt{  
+    padding:0px 10px;
     float:right;
-    padding-left:10px;
+    width:93%;
 }
-.info_screen_contnt .stdy_projct_name{
+.info_screen_wrapper .info_screen_contnt p.stdy_projct_name{
     font-weight: bold;
+    line-height: 1.5em;
 }
-.info_screen_contnt .stdy_projct_desc{
+.info_screen_wrapper .info_screen_contnt p.stdy_projct_desc b{
+   color:#637254;
+}
+.info_screen_wrapper .info_screen_contnt p.stdy_projct_desc{
     font-size: 0.8em;
     line-height: 1.5em;
-    margin-left: 15px;
+    line-height: 1.5em;
+    color: #393a38;
 }
+
+/************  End Of StudyNav InfoScreen *****************/
+
 .member_list_view{
-    margin-left: 70px;
+    margin-left: 40px;
 }
 .member_list_view.x-list .x-list-item.x-list-item-tpl{
     border-bottom: 1px solid #dedede;
@@ -488,9 +518,27 @@
     margin-right:10px;
     float:left;
 }
-.members_title{
-   
+.memmsgall_btn{
+    margin-right:25px;  
+}
+.memmsgall_btn .x-button{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #c2cfb6;
+    color: #393a37;
+    font-size: 0.8em; 
+}
+.member_list_view.x-list-normal .x-list-item.x-list-item-tpl .members_title{
+    font-size: 0.8em;
     float:left;
+    color:#637254;
+    font-weight: bold;
+}
+.member_list_view.x-list-normal .x-list-item.x-item-selected.x-list-item-tpl .members_title{
+    font-size: 0.8em;
+    float:left;
+    color:#fff;
+    font-weight: bold;
 }
 .memmsg_icon{
    
@@ -498,7 +546,7 @@
     margin-right:20px;
 }
 
-
+/*
 .top_search_panel .x-list .x-list-item.x-list-item-tpl .x-innerhtml{
     padding:1px 9px;
  }
@@ -527,6 +575,7 @@
 .top_search_panel .search_result{
     margin: 0em 0em 0.3em 0.4em;
 }
+*/
 
 /************** BOOK INFO TAB **********/
  
@@ -1602,4 +1651,53 @@
 .book_text{      
      margin-left:10px;
      float:right;         
+}
+
+/************* Search Result List ************/
+.book_list_result {
+   margin: 5px 10px 10px 10px; 
+}
+
+.book_list_result .bookinfo_wrapper {
+    float:left;
+    width:100%;
+    background-color: #fff !important;
+}
+
+.book_list_result .bookinfo_wrapper .bookinfo_img{
+    float:left;
+    padding:10px 10px;
+}
+
+.book_list_result .bookinfo_wrapper .bookinfo_detail{    
+    padding:10px 10px;
+}
+.book_list_result .bookinfo_wrapper .bookinfo_detail p.book_title{
+    font-size: 0.8em;
+    color: #393a38;
+    font-weight: bold;
+    margin-bottom:5px;
+     line-height: 1.5em;
+}
+.book_list_result .bookinfo_wrapper .bookinfo_detail p.author_name{
+    font-size: 0.8em;
+    color: #768963;
+    margin-bottom:5px;
+    line-height: 1.5em;
+}
+.book_list_result .bookinfo_wrapper .bookinfo_detail p.difficulty{
+    font-size: 0.7em;
+    color: #635c42;
+    margin-bottom:5px;
+    line-height: 1.5em;
+}
+.book_list_result .bookinfo_wrapper .bookinfo_detail p.description{
+   text-align: justify;
+   font-size: 0.8em;
+   color: #393a37;
+   line-height: 1.5em;
+}
+.search_result.x-list-normal .x-list-item.x-list-item-tpl{
+    margin-left:10px;
+    line-height: 1.5em;
 }
