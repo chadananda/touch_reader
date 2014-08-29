@@ -46,7 +46,18 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
   "Ext.draw.engine.SvgContext.Gradient": "touch/src/draw/engine/SvgContext.js",
-  "book": "app"
+  "book": "app",
+  "book.view.book.AnnotationMenu": "app/view/book/AnnotationMenu.js",
+  "book.view.book.CompileSubMenu": "app/view/book/CompileSubMenu.js",
+  "book.view.book.DiscussMenu": "app/view/book/DiscussMenu.js",
+  "book.view.book.ExtractMenu": "app/view/book/ExtractMenu.js",
+  "book.view.book.ListItem": "app/view/book/ListItem.js",
+  "book.view.book.LookupMenu": "app/view/book/LookupMenu.js",
+  "book.view.book.MarkSubMenu": "app/view/book/MarkSubMenu.js",
+  "book.view.book.NoteSubMenu": "app/view/book/NoteSubMenu.js",
+  "book.view.book.SelectionMenu": "app/view/book/SelectionMenu.js",
+  "book.view.book.ShareSubMenu": "app/view/book/ShareSubMenu.js",
+  "book.view.book.TagSubMenu": "app/view/book/TagSubMenu.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
   "Ext.AbstractComponent": [],
@@ -636,6 +647,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.fx.runner.Css": [],
   "Ext.fx.runner.CssAnimation": [],
   "Ext.fx.runner.CssTransition": [],
+  "Ext.grid.Grid": [],
+  "Ext.grid.Row": [],
+  "Ext.grid.column.Column": [],
   "Ext.layout.Abstract": [],
   "Ext.layout.Box": [],
   "Ext.layout.Card": [],
@@ -745,9 +759,15 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.util.translatable.CssTransform": [],
   "Ext.util.translatable.Dom": [],
   "Ext.util.translatable.ScrollPosition": [],
+  "Ext.ux.AccordionList": [
+    "Ext.AccordionList"
+  ],
+  "Ext.ux.AccordionListItem": [],
   "Ext.ux.ActionOverFlowMenuButton": [],
   "Ext.ux.ApplicationMenu": [],
+  "Ext.ux.AudioPlayer": [],
   "Ext.ux.ContextMenu": [],
+  "Ext.ux.Iframe": [],
   "Ext.ux.MenuButton": [],
   "Ext.ux.TabMenuButton": [],
   "Ext.ux.device.Analytics": [],
@@ -772,7 +792,104 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "book.view.Main": []
+  "book.controller.BookController": [],
+  "book.controller.BookRoutesController": [],
+  "book.controller.BookTimer": [],
+  "book.model.MBookInfoTab": [],
+  "book.model.MBookSlider": [],
+  "book.model.MCategoryAccordionList": [],
+  "book.model.MDiscussMenu": [],
+  "book.model.MListSelecrSearchResult": [],
+  "book.model.MOwnedBookList": [],
+  "book.model.MReadBookPageList": [],
+  "book.model.MSearchScreen": [],
+  "book.model.MSettingAccordionList": [],
+  "book.store.SBookInfoTab": [],
+  "book.store.SBookSlider": [],
+  "book.store.SCategoryAccordionList": [],
+  "book.store.SDiscussMenu": [],
+  "book.store.SListSelecrSearchResult": [],
+  "book.store.SOwnedBookList": [],
+  "book.store.SReadBookPageList": [],
+  "book.store.SSearchScreen": [],
+  "book.store.SSettingAccordionList": [],
+  "book.ux.PanelAction": [],
+  "book.view.AddBookView": [],
+  "book.view.AudioPlayer": [],
+  "book.view.BookSlider": [],
+  "book.view.BookSliderContainer": [],
+  "book.view.BookSliderItem": [],
+  "book.view.BookTitlebar": [],
+  "book.view.CategoryAccordionList": [],
+  "book.view.CategoryListContainer": [],
+  "book.view.CategoryMainContainer": [],
+  "book.view.CurrentBookPopUp": [],
+  "book.view.LibrarybyLanguage": [],
+  "book.view.ListPopUp": [],
+  "book.view.ListSelecrSearchResult": [],
+  "book.view.ListSelecrSearchResultContainer": [],
+  "book.view.Main": [],
+  "book.view.MainBookContainer": [],
+  "book.view.MainContainer": [],
+  "book.view.MainNavigation": [],
+  "book.view.OwnedBookEconomicsList": [],
+  "book.view.OwnedBookHistoryList": [],
+  "book.view.OwnedBookList": [],
+  "book.view.ReadBookPageList": [],
+  "book.view.RecentlyReadTitle": [],
+  "book.view.RightCategoryTitle": [],
+  "book.view.RightSidebarContainer": [],
+  "book.view.SearchBooksView": [],
+  "book.view.SettingAccordionList": [],
+  "book.view.TabPanel": [],
+  "book.view.TopSearchField": [],
+  "book.view.TopSettingPopUp": [],
+  "book.view.VideoPlayer": [],
+  "book.view.audiovideo.AudioVideoLecture": [],
+  "book.view.audiovideo.AudioVideoLectureContainer": [],
+  "book.view.book.AnnotationMenu": [],
+  "book.view.book.CompileSubMenu": [],
+  "book.view.book.DiscussMenu": [],
+  "book.view.book.ExtractMenu": [],
+  "book.view.book.ListItem": [],
+  "book.view.book.LookupMenu": [],
+  "book.view.book.MarkSubMenu": [],
+  "book.view.book.NoteSubMenu": [],
+  "book.view.book.SelectionMenu": [],
+  "book.view.book.ShareSubMenu": [],
+  "book.view.book.TagSubMenu": [],
+  "book.view.bookinfoscreen.BookInfoTab": [],
+  "book.view.bookinfoscreen.BookInformationScreen": [],
+  "book.view.bookinfoscreen.BookmarkTab": [],
+  "book.view.bookinfoscreen.ColoredHighlightsTab": [],
+  "book.view.bookinfoscreen.NamedTagsTab": [],
+  "book.view.bookinfoscreen.NotesTab": [],
+  "book.view.bookinfoscreen.ParagraphSummariesTab": [],
+  "book.view.exerciseindicator.AssessmentQuizExercise": [],
+  "book.view.exerciseindicator.AssessmentQuizExerciseContainer": [],
+  "book.view.exerciseindicator.DiscussionQueExercise": [],
+  "book.view.exerciseindicator.DiscussionQueExerciseContainer": [],
+  "book.view.exerciseindicator.MemorizationAssignment": [],
+  "book.view.exerciseindicator.MemorizationAssignmentContainer": [],
+  "book.view.journal.JournalingAssignment": [],
+  "book.view.journal.JournalingAssignmentContainer": [],
+  "book.view.journal.MicroJournaling": [],
+  "book.view.journal.MicroJournalingContainer": [],
+  "book.view.memorization.MemorizationDeck": [],
+  "book.view.memorization.MemorizationDeckContainer": [],
+  "book.view.memorization.MemorizationEnginePopupDrillingScreen": [],
+  "book.view.memorization.MemorizationEnginePopupDrillingScreenContainer": [],
+  "book.view.quizscreen.AssessmentQuiz": [],
+  "book.view.quizscreen.AssessmentQuizContainer": [],
+  "book.view.studybar.CompletedStudeyProjectList": [],
+  "book.view.studybar.CurrentOpenStudeyProjectList": [],
+  "book.view.studybar.CurrentStudyProjectPopUp": [],
+  "book.view.studybar.MembersLinkList": [],
+  "book.view.studybar.ReadingConfigOptionsPopUp": [],
+  "book.view.studybar.StudyProjectInfoScreen": [],
+  "book.view.studybar.StudyProjectNavBar": [],
+  "book.view.vocabularyassessment.VocabularyAssessment": [],
+  "book.view.vocabularyassessment.VocabularyAssessmentContainer": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1547,6 +1664,15 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.fx.runner.Css": [],
   "Ext.fx.runner.CssAnimation": [],
   "Ext.fx.runner.CssTransition": [],
+  "Ext.grid.Grid": [
+    "widget.grid"
+  ],
+  "Ext.grid.Row": [
+    "widget.gridrow"
+  ],
+  "Ext.grid.column.Column": [
+    "widget.column"
+  ],
   "Ext.layout.Abstract": [],
   "Ext.layout.Box": [
     "layout.tablebox"
@@ -1683,9 +1809,21 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.util.translatable.CssTransform": [],
   "Ext.util.translatable.Dom": [],
   "Ext.util.translatable.ScrollPosition": [],
+  "Ext.ux.AccordionList": [
+    "widget.accordionlist"
+  ],
+  "Ext.ux.AccordionListItem": [
+    "widget.accordionlistitem"
+  ],
   "Ext.ux.ActionOverFlowMenuButton": [],
   "Ext.ux.ApplicationMenu": [],
+  "Ext.ux.AudioPlayer": [
+    "widget.audioplayer"
+  ],
   "Ext.ux.ContextMenu": [],
+  "Ext.ux.Iframe": [
+    "widget.iframe"
+  ],
   "Ext.ux.MenuButton": [],
   "Ext.ux.TabMenuButton": [],
   "Ext.ux.device.Analytics": [],
@@ -1716,8 +1854,255 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "book.controller.BookController": [],
+  "book.controller.BookRoutesController": [],
+  "book.controller.BookTimer": [],
+  "book.model.MBookInfoTab": [],
+  "book.model.MBookSlider": [],
+  "book.model.MCategoryAccordionList": [],
+  "book.model.MDiscussMenu": [],
+  "book.model.MListSelecrSearchResult": [],
+  "book.model.MOwnedBookList": [],
+  "book.model.MReadBookPageList": [],
+  "book.model.MSearchScreen": [],
+  "book.model.MSettingAccordionList": [],
+  "book.store.SBookInfoTab": [],
+  "book.store.SBookSlider": [],
+  "book.store.SCategoryAccordionList": [],
+  "book.store.SDiscussMenu": [],
+  "book.store.SListSelecrSearchResult": [],
+  "book.store.SOwnedBookList": [],
+  "book.store.SReadBookPageList": [],
+  "book.store.SSearchScreen": [],
+  "book.store.SSettingAccordionList": [],
+  "book.ux.PanelAction": [],
+  "book.view.AddBookView": [
+    "widget.addbookview"
+  ],
+  "book.view.AudioPlayer": [
+    "widget.audioplayerview"
+  ],
+  "book.view.BookSlider": [
+    "widget.bookslider"
+  ],
+  "book.view.BookSliderContainer": [
+    "widget.bookslidercontainer"
+  ],
+  "book.view.BookSliderItem": [
+    "widget.bookslideritem"
+  ],
+  "book.view.BookTitlebar": [
+    "widget.booktitlebar"
+  ],
+  "book.view.CategoryAccordionList": [
+    "widget.categoryaccordionlist"
+  ],
+  "book.view.CategoryListContainer": [
+    "widget.categorylistcontainer"
+  ],
+  "book.view.CategoryMainContainer": [
+    "widget.categorymaincontainer"
+  ],
+  "book.view.CurrentBookPopUp": [
+    "widget.currentbookpopup"
+  ],
+  "book.view.LibrarybyLanguage": [
+    "widget.librarybylanguage"
+  ],
+  "book.view.ListPopUp": [
+    "widget.listpopup"
+  ],
+  "book.view.ListSelecrSearchResult": [
+    "widget.listselecrsearchresult"
+  ],
+  "book.view.ListSelecrSearchResultContainer": [
+    "widget.listselecrsearchresultcontainer"
+  ],
   "book.view.Main": [
     "widget.main"
+  ],
+  "book.view.MainBookContainer": [
+    "widget.mainbookcontainer"
+  ],
+  "book.view.MainContainer": [
+    "widget.maincontainer"
+  ],
+  "book.view.MainNavigation": [
+    "widget.mainnavigation"
+  ],
+  "book.view.OwnedBookEconomicsList": [
+    "widget.ownedbookeconomicslist"
+  ],
+  "book.view.OwnedBookHistoryList": [
+    "widget.ownedbookhistorylist"
+  ],
+  "book.view.OwnedBookList": [
+    "widget.ownedbooklist"
+  ],
+  "book.view.ReadBookPageList": [
+    "widget.readbookpagelist"
+  ],
+  "book.view.RecentlyReadTitle": [
+    "widget.recentlyreadtitle"
+  ],
+  "book.view.RightCategoryTitle": [
+    "widget.rightcategorytitle"
+  ],
+  "book.view.RightSidebarContainer": [
+    "widget.rightsidebarcontainer"
+  ],
+  "book.view.SearchBooksView": [
+    "widget.searchbooksview"
+  ],
+  "book.view.SettingAccordionList": [
+    "widget.settingaccordionlist"
+  ],
+  "book.view.TabPanel": [
+    "widget.tabpanel"
+  ],
+  "book.view.TopSearchField": [
+    "widget.topsearchfield"
+  ],
+  "book.view.TopSettingPopUp": [
+    "widget.topsettingpopup"
+  ],
+  "book.view.VideoPlayer": [
+    "widget.videoplayer"
+  ],
+  "book.view.audiovideo.AudioVideoLecture": [
+    "widget.audiovideolecture"
+  ],
+  "book.view.audiovideo.AudioVideoLectureContainer": [
+    "widget.audiovideolecturecontainer"
+  ],
+  "book.view.book.AnnotationMenu": [
+    "widget.annotationmenu"
+  ],
+  "book.view.book.CompileSubMenu": [
+    "widget.compilesubmenu"
+  ],
+  "book.view.book.DiscussMenu": [
+    "widget.discussmenu"
+  ],
+  "book.view.book.ExtractMenu": [
+    "widget.extractmenu"
+  ],
+  "book.view.book.ListItem": [
+    "widget.examplelistitem"
+  ],
+  "book.view.book.LookupMenu": [
+    "widget.lookupmenu"
+  ],
+  "book.view.book.MarkSubMenu": [
+    "widget.marksubmenu"
+  ],
+  "book.view.book.NoteSubMenu": [
+    "widget.notesubmenu"
+  ],
+  "book.view.book.SelectionMenu": [
+    "widget.selectionmenu"
+  ],
+  "book.view.book.ShareSubMenu": [
+    "widget.sharesubmenu"
+  ],
+  "book.view.book.TagSubMenu": [
+    "widget.tagsubmenu"
+  ],
+  "book.view.bookinfoscreen.BookInfoTab": [
+    "widget.bookinfotab"
+  ],
+  "book.view.bookinfoscreen.BookInformationScreen": [
+    "widget.bookinformationscreen"
+  ],
+  "book.view.bookinfoscreen.BookmarkTab": [
+    "widget.bookmarktab"
+  ],
+  "book.view.bookinfoscreen.ColoredHighlightsTab": [
+    "widget.coloredhighlightstab"
+  ],
+  "book.view.bookinfoscreen.NamedTagsTab": [
+    "widget.namedtagstab"
+  ],
+  "book.view.bookinfoscreen.NotesTab": [
+    "widget.notestab"
+  ],
+  "book.view.bookinfoscreen.ParagraphSummariesTab": [
+    "widget.paragraphsummariestab"
+  ],
+  "book.view.exerciseindicator.AssessmentQuizExercise": [
+    "widget.assessmentquizexercise"
+  ],
+  "book.view.exerciseindicator.AssessmentQuizExerciseContainer": [
+    "widget.assessmentquizexercisecontainer"
+  ],
+  "book.view.exerciseindicator.DiscussionQueExercise": [
+    "widget.discussionqueexercise"
+  ],
+  "book.view.exerciseindicator.DiscussionQueExerciseContainer": [
+    "widget.discussionqueexercisecontainer"
+  ],
+  "book.view.exerciseindicator.MemorizationAssignment": [
+    "widget.memorizationassignment"
+  ],
+  "book.view.exerciseindicator.MemorizationAssignmentContainer": [
+    "widget.memorizationassignmentcontainer"
+  ],
+  "book.view.journal.JournalingAssignment": [
+    "widget.jaournalingassignment"
+  ],
+  "book.view.journal.JournalingAssignmentContainer": [
+    "widget.jaournalingassignmentcontainer"
+  ],
+  "book.view.journal.MicroJournaling": [
+    "widget.microjournaling"
+  ],
+  "book.view.journal.MicroJournalingContainer": [
+    "widget.microjournalingcontainer"
+  ],
+  "book.view.memorization.MemorizationDeck": [
+    "widget.memorizationdeck"
+  ],
+  "book.view.memorization.MemorizationDeckContainer": [
+    "widget.memorizationdeckcontainer"
+  ],
+  "book.view.memorization.MemorizationEnginePopupDrillingScreen": [
+    "widget.memorizationpopupdrillingscreen"
+  ],
+  "book.view.memorization.MemorizationEnginePopupDrillingScreenContainer": [
+    "widget.memorizationpopupdrillingscreencontainer"
+  ],
+  "book.view.quizscreen.AssessmentQuiz": [
+    "widget.assessmentquiz"
+  ],
+  "book.view.quizscreen.AssessmentQuizContainer": [
+    "widget.assessmentquizcontainer"
+  ],
+  "book.view.studybar.CompletedStudeyProjectList": [
+    "widget.completedstudeyprojectlist"
+  ],
+  "book.view.studybar.CurrentOpenStudeyProjectList": [
+    "widget.currentppenstudeyprojectlist"
+  ],
+  "book.view.studybar.CurrentStudyProjectPopUp": [
+    "widget.currentstudyprojectpopup"
+  ],
+  "book.view.studybar.MembersLinkList": [
+    "widget.memberslinklist"
+  ],
+  "book.view.studybar.ReadingConfigOptionsPopUp": [
+    "widget.readingconfigpptionspopup"
+  ],
+  "book.view.studybar.StudyProjectInfoScreen": [
+    "widget.studyprojectinfoscreen"
+  ],
+  "book.view.studybar.StudyProjectNavBar": [
+    "widget.studyprojectnavbar"
+  ],
+  "book.view.vocabularyassessment.VocabularyAssessment": [
+    "widget.vocabularyassessment"
+  ],
+  "book.view.vocabularyassessment.VocabularyAssessmentContainer": [
+    "widget.vocabularyassessmentContainer"
   ]
 });
 

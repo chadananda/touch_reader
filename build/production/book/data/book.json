@@ -1,0 +1,46 @@
+[
+    {
+        "img_id":"1","url":"resources/images/pt.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Paris%20Talks%2C%20en.html", "book_title":"Paris Talks", "author_name":"Abdul-Baha"
+    },
+    {
+        "img_id":"2","url":"resources/images/adj.png", "book_url": "resources/Library/Shoghi%20Effendi%2C%20The%20Advent%20of%20Divine%20Justice%2C%20en.html", "book_title":"The Advent of Divine Justice", "author_name":"Shoghi Effendi"
+    },
+    {
+        "img_id":"3","url":"resources/images/ki.png", "book_url": "resources/Library/Baha%27u%27llah%2C%20The%20Kitab-i-Iqan%2C%20en.html", "book_title":"The Kitab-I-Iqan", "author_name":"Bahaullah" 
+    },
+    {
+        "img_id":"4","url":"resources/images/pdc.png", "book_url": "resources/Library/Shoghi%20Effendi%2C%20The%20Promised%20Day%20is%20Come%2C%20en.html", "book_title":"The Promised Day is Come", "author_name":"Shoghi Effendi" 
+    },
+    {
+        "img_id":"5","url":"resources/images/pup.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Promulgation%20of%20Universal%20Peace%2C%20en.html", "book_title":"The Promulgation of Universal Peace", "author_name":"Abdul-Baha" 
+    },
+    {
+        "img_id":"6","url":"resources/images/tdp.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Tablets%20of%20the%20Divine%20Plan%2C%20en.html", "book_title":"Tablets of the Divine Plan", "author_name":"Abdula-Baha"
+    },
+    {
+        "img_id":"7","url":"resources/images/pup.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Promulgation%20of%20Universal%20Peace%2C%20en.html", "book_title":"The Promulgation of Universal Peace", "author_name":"Abdul-Baha"    },
+    {
+        "img_id":"8","url":"resources/images/pt.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Paris%20Talks%2C%20en.html", "book_title":"Paris Talks", "author_name":"Abdul-Baha"
+    },
+    {
+        "img_id":"9","url":"resources/images/pdc.png", "book_url": "resources/Library/Shoghi%20Effendi%2C%20The%20Promised%20Day%20is%20Come%2C%20en.html", "book_title":"The Promised Day is Come", "author_name":"Shoghi Effendi"
+    },
+    {
+        "img_id":"10","url":"resources/images/pdc.png", "book_url": "resources/Library/Shoghi%20Effendi%2C%20The%20Promised%20Day%20is%20Come%2C%20en.html", "book_title":"The Promised Day is Come", "author_name":"Shoghi Effendi"
+    },
+    {
+        "img_id":"11","url":"resources/images/pup.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Promulgation%20of%20Universal%20Peace%2C%20en.html", "book_title":"The Promulgation of Universal Peace", "author_name":"Abdul-Baha"
+    },
+    {
+        "img_id":"12","url":"resources/images/pt.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Paris%20Talks%2C%20en.html", "book_title":"Paris Talks", "author_name":"Abdul-Baha"
+    },
+    {
+        "img_id":"13","url":"resources/images/adj.png", "book_url": "resources/Library/Shoghi%20Effendi%2C%20The%20Advent%20of%20Divine%20Justice%2C%20en.html", "book_title":"The Advent of Divine Justice", "author_name":"Shoghi Effendi"
+    },
+    {
+        "img_id":"14","url":"resources/images/ki.png", "book_url": "resources/Library/Baha%27u%27llah%2C%20The%20Kitab-i-Iqan%2C%20en.html", "book_title":"The Kitab-I-Iqan", "author_name":"Bahaullah" 
+    },
+    {
+        "img_id":"15","url":"resources/images/pup.png", "book_url": "resources/Library/Abdu%27l-Baha%2C%20Promulgation%20of%20Universal%20Peace%2C%20en.html", "book_title":"The Promulgation of Universal Peace", "author_name":"Abdul-Baha" 
+    }
+]

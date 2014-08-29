@@ -1,42 +1,31 @@
 
 
 Ext.define('book.view.book.ShareSubMenu', {
-    extend: 'Ext.Container',
+    extend: 'Ext.Panel',
     xtype: 'sharesubmenu',
     requires: [],
     
     config: { 
         //allowMultiple: true,
         width:70,
-        height: 150,
+        height: 165,
         top: 450,
         left: 200,
         modal:true,
         hideOnMaskTap: true,
         cls: 'sharesub_Menu',
+        layout: 'vbox',
         items: [
-            {
-               
-                flex:1,
-                xtype: 'button',
-                text: '<img src="resources/images/facebook-icon.png">',
-                ui: 'normal',
-            },
-            {
-               
-                flex:1,
-                xtype: 'button',
-                text: '<img src="resources/images/twitter-icon.png">',
-                //pressed: true
-                ui: 'normal',
-            },
-            {
-               
-                flex:1,
-                xtype: 'button',
-                text: '<img src="resources/images/googleplus_icon.png">',
-                ui: 'normal',
-            }
+          
+          {
+            html:'<img src="resources/images/facebook-icon.png">'
+          },
+          {
+            html: '<img src="resources/images/twitter-icon.png">'
+          },
+          {
+            html: '<img src="resources/images/googleplus_icon.png">'  
+          }
         ]
          
     }

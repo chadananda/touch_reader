@@ -5,8 +5,9 @@ Ext.define('book.view.ListSelecrSearchResult', {
     xtype: 'listselecrsearchresult',
     requires: [],
     config: { 
-        cls: 'book_list_result',
+        //cls: 'book_list_result',
         //scrollable: true,
+       
         tpl: [
         
             '<div class="bookinfo_wrapper">',
@@ -19,26 +20,8 @@ Ext.define('book.view.ListSelecrSearchResult', {
                     '<p class="difficulty">{difficulty}</p>',
                     '<p class="description">{description}</p>',
                 '</div>',
-                '<div style="float:left;margin:10px;">12 Results Found</div>',
             '</div>',
-        ],
-        items:[
-            
-            {
-                cls:'search_result',
-                height:200,
-                style:'margin:0px;',
-                xtype: 'list',
-                docked: 'bottom',
-                itemTpl: ['<div class="active_img"></div> {title}'],
-                data: [
-                    { title: 'America\'s macroeconomic policy raised up this spectacular subur' },
-                    { title: 'America\'s macroeconomic policy raised up this spectacular subur' }
-                ]
-            }
-        ] 
-        
-         
+        ]
     }
 })
 

@@ -44,11 +44,15 @@ $btn-bottom-border-color:#63784d;
     background: $list-select-color;
 }
 
-@include sencha-button-ui('segment', #1a1a1a, matte);
+@include sencha-button-ui('segment', #b9bcb7, flat);
 @include sencha-button-ui('study',#9aad86,'flat');
 @include sencha-button-ui('bluenav',#768963,'flat');
 
+// Segment Button
 
+
+
+//end Of segment button
 .my-titlebar.x-toolbar .x-button{ 
      
     border: none;    

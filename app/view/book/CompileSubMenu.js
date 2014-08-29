@@ -16,12 +16,12 @@ Ext.define('book.view.book.CompileSubMenu', {
         itemId: 'compile_sub_menu',
         itemTpl: '{title}',
             data: [
-                { title: '<img src="resources/images/compile_sub_icon.png"> Monetary vs. Fiscal Stimulus' },
-                { title: '<img src="resources/images/compile_sub_icon.png"> Compilation #2 Name' },
-                { title: '<img src="resources/images/compile_sub_icon.png"> Compilation #3 Name' },
-                { title: '<img src="resources/images/compile_sub_icon.png"> Compilation #4 Name' },
-                { title: '<img src="resources/images/compile_sub_add_icon.png"> Create New Compilation' }
-            ]
+                { title: '<img src="resources/images/book_icon.png"> Monetary vs. Fiscal Stimulus' },
+                { title: '<img src="resources/images/book_icon.png"> Compilation #2 Name' },
+                { title: '<img src="resources/images/book_icon.png"> Compilation #3 Name' },
+                { title: '<img src="resources/images/book_icon.png"> Compilation #4 Name' },
+                { title: '<img src="resources/images/book_add_icon.png"> Create New Compilation' }
+            ],
          
     }
 })

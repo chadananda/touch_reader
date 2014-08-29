@@ -16,7 +16,7 @@ Ext.application({
     name: 'book',
 
     requires: [
-        'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select', 'book.store.SCategoryAccordionList',
+        'Ext.MessageBox', 'Ext.data.proxy.JsonP', 'Ext.Img', 'Ext.ux.AccordionList', 'Ext.ux.AccordionListItem', 'Ext.field.Search', 'Ext.field.Select',
         'Ext.field.Slider', 'Ext.ux.Iframe', 'book.store.SSettingAccordionList','book.store.SDiscussMenu', 'Ext.ux.AudioPlayer', 'book.ux.PanelAction'
         
     ],
@@ -48,7 +48,7 @@ Ext.application({
         'book.view.exerciseindicator.DiscussionQueExercise', 'book.view.exerciseindicator.AssessmentQuizExerciseContainer', 'book.view.exerciseindicator.AssessmentQuizExercise',
         'book.view.exerciseindicator.MemorizationAssignmentContainer', 'book.view.exerciseindicator.MemorizationAssignment', 'book.view.memorization.MemorizationEnginePopupDrillingScreenContainer',
         'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling', 'book.view.BookSliderItem',
-        'ListSelecrSearchResult'
+        'ListSelecrSearchResult', 'OwnedBookHistoryList', 'OwnedBookEconomicsList', 'ListSelecrSearchResultContainer'
     ],
 
     icon: {

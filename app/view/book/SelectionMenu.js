@@ -7,30 +7,29 @@ Ext.define('book.view.book.SelectionMenu', {
     
     config: { 
         //allowMultiple: true,
-        width:150,
+        width:348,
         height: 50,
         top: 130,
         left: 200,
         modal:true,
         hideOnMaskTap: true,
-        
+        cls: 'selection_menu',
         items: [
             {
-                text: 'Extract',
-                ui: 'segment',
+                text: 'EXTRACT',
+                ui: 'segment'
             },
             {
-                text: 'Note',
-                //pressed: true
-                ui: 'segment',
+                text: 'NOTE',
+                ui: 'segment'
             },
             {
-                text: 'Lookup',
-                ui: 'segment',
+                text: 'LOOKUP',
+                ui: 'segment'
             },
             {
-                text: 'Discuss',
-                ui: 'segment',
+                text: 'DISCUSS',
+                ui: 'segment'
             }
         ]
          

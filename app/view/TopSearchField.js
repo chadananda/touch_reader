@@ -30,12 +30,12 @@ Ext.define('book.view.TopSearchField', {
                 layout: 'hbox',
                 items:[
                     {
+                        cls:'search_left_panel',
                         width:335,
-                        height:300,
                         height: '', 
                         xtype: 'list',
                         store: Ext.create('book.store.SSearchScreen'),
-                        itemTpl: '<div> <img src="resources/images/book_icon.png"> {text}</div>',
+                        itemTpl: '<div class="list_book_icon"> <img src="resources/images/book_icon.png"></div><div class="list_book_text"> {text}</div>',
                         grouped: true,
                     },
                     {
@@ -43,7 +43,7 @@ Ext.define('book.view.TopSearchField', {
                         width:335,
                         itemId:'right_search_panel',                        
                         hidden:true,
-                        xtype: 'listselecrsearchresult'
+                        xtype: 'listselecrsearchresultcontainer'
                     }                    
                 ]
             }

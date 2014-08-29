@@ -140,6 +140,15 @@ config: {
 
     launch : function(app) {
         //this.setHistory(this.getApplication().getHistory());      
+        
+        if (Ext.isDefined(this.selectionmenu) == false) {
+            this.selectionmenu = Ext.create('book.view.book.SelectionMenu');
+        }         
+        var selectionmenu = this.selectionmenu;
+
+        var panel = Ext.Viewport.add(selectionmenu);
+        panel.hide();             
+        
     },
     
   
@@ -242,7 +251,7 @@ config: {
       
     },
     ontapIframe: function(view, eOpts){
-          
+        
         var readbookpagelist = this.getReadbookpagelist();
         
          if (Ext.isDefined(this.selectionmenu) == false) {
@@ -299,7 +308,12 @@ config: {
        
         var iframe = document.getElementById("book_iframe");
         var selText = '';
-                     
+        
+        
+        var panel = selectionmenu;
+        //panel.hide();             
+        
+        
         setTimeout(function() {
             console.log('it is in setTimeout function');
             var myiframe = document.getElementById("book_iframe");
@@ -314,11 +328,12 @@ config: {
                 
                 if (selText != '') {
                     console.log('selText = ' + selText);
-                    selectionmenu.show();
+                    //var panel = Ext.Viewport.add(selectionmenu); 
+                    panel.show();
                     selectionmenu.on({
             		    toggle: function(segBtn, btn, isPressed) { 
                           var txt = btn.getText();
-                          if(txt == 'Extract'){
+                          if(txt == 'EXTRACT'){
                             extractmenu.showBy(btn);
                             annotationmenu.hide();
                             lookupmenu.hide();
@@ -340,7 +355,7 @@ config: {
                                             compilesubmenu.on({
                                               itemtap: function(list, index, item, e) {
                                                    var store = compilesubmenu.getStore();                                                   
-                                                   var records = ({title: '<img src="resources/images/compile_sub_icon.png"> Compilation #'+[index+1]+' Name' });
+                                                   var records = ({title: '<img src="resources/images/book_icon.png"> Compilation #'+[index+1]+' Name' });
                                                    store.insert( index, records )
                                                    compilesubmenu.element.setHeight(compilesubmenu.element.getHeight()*2.1 -230)
                                                 }
@@ -350,7 +365,7 @@ config: {
                                 }
                             })
                             
-                          }else if(txt == 'Note'){
+                          }else if(txt == 'NOTE'){
                             annotationmenu.showBy(btn);
                             extractmenu.hide();
                             lookupmenu.hide();
@@ -374,12 +389,12 @@ config: {
                                         }
                                 }
                             })
-                          }else if(txt == 'Lookup'){
+                          }else if(txt == 'LOOKUP'){
                             lookupmenu.showBy(btn);  
                             extractmenu.hide();
                             annotationmenu.hide();
                             discussmenu.hide();
-                          }else if(txt == 'Discuss'){
+                          }else if(txt == 'DISCUSS'){
                             discussmenu.showBy(btn);
                             
                             extractmenu.hide();
@@ -547,7 +562,7 @@ config: {
     onSearchResultListItemtap: function(list, index, target, record, e, eOpts){
       
        this.getSearchresult().setHidden(false);
-       this.onShowListSelecrSearchResult(); 
+      // this.onShowListSelecrSearchResult(); 
     },
     onShowListSelecrSearchResult:function(){
       

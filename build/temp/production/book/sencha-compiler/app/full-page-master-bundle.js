@@ -1,2 +1,2 @@
 // @tag full-page
-// @require e:\repository\touch_reader\app.js
+// @require E:\xampp\htdocs\touch_reader\app.js

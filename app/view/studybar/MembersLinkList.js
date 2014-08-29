@@ -3,7 +3,7 @@ Ext.define('book.view.studybar.MembersLinkList', {
     xtype: 'memberslinklist',
     requires: [],
     config: {
-        scrollable: false,
+        //scrollable: false,
         cls: 'member_list_view',
         height:135,
         itemTpl: [  

@@ -7,22 +7,23 @@ Ext.define('book.view.book.AnnotationMenu', {
     
     config: { 
         //allowMultiple: true,
-        width:150,
+        width:167,
         height: 50,      
         modal:true,
-        hideOnMaskTap: true,        
+        hideOnMaskTap: true,
+        cls: 'extract_menu',        
         items: [
             {
                 text: 'Mark',
-                ui: 'normal',
+                ui: 'study'
             },
             {
                 text: 'Tag',
-                ui: 'normal',
+                ui: 'study'
             },
             {
                 text: 'Note',
-                ui: 'normal',
+                ui: 'study'
             }
         ]
          

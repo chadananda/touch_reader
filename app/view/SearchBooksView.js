@@ -7,6 +7,10 @@ Ext.define('book.view.SearchBooksView', {
         cls: 'search_book_container',
         items: [
             {
+                html:'<div class="filter_icon"><img src="resources/images/filter_icon.png"></div>'
+            },
+            
+            {
                 flex: 2,
                 xtype: 'selectfield',
                 //label: '&nbsp;',

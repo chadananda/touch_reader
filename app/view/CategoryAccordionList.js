@@ -1,38 +1,29 @@
-
+Ext.require(['book.store.SCategoryAccordionList'], function() {
 Ext.define('book.view.CategoryAccordionList', {
     extend: 'Ext.Panel',
     xtype: 'categoryaccordionlist',
   
     requires: [
-        'Ext.ux.AccordionList'
+        
     ],     
     config: {
         flex: 1,
         layout: 'vbox',
-        cls: 'category_accordion_list',
+        //cls: 'book_list_result',
            
         items: [{
-                xtype: 'rightcategorytitle'
+                style:'background-color:#fff;padding:10px;',
+                html: '12 Result Found'
             },
-            {
-                
-                style:'margin-top:10px',
-                xtype: 'accordionlist',
-                store: Ext.create('book.store.SCategoryAccordionList'),
-                 flex: 1,
-                singleMode: true,
-                animation: true,
-                //disableSelection: true,
-                animationDuration: 500,
-                indent: true,
-                itemId: 'decorate',
-                listeners: {
-                    initialize: function() {
-                        this.load();
-                    }
-                }  
-        }]
+            {                
+                flex: 1,               
+                xtype:'list',  
+                itemTpl:['<div class="search_list_container"><div class="search_list_id">{result_id}</div>','<div class="search_list_text">{text}</div></div>'],
+                store: Ext.create('book.store.SCategoryAccordionList')
+            }
+        ]
     }
         
+})
 })
 

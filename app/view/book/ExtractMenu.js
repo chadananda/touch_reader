@@ -7,29 +7,28 @@ Ext.define('book.view.book.ExtractMenu', {
     
     config: { 
         //allowMultiple: true,
-        width:150,
+        width:345,
         height: 50,
       
         modal:true,
         hideOnMaskTap: true,
-        
+        cls: 'extract_menu',
         items: [
             {
                 text: 'Share',
-                ui: 'normal',
+                ui: 'study'
             },
             {
                 text: 'Copy',
-                //pressed: true
-                ui: 'normal',
+                ui: 'study'
             },
             {
                 text: 'Compile',
-                ui: 'normal',
+                ui: 'study'
             },
             {
                 text: 'Memorize',
-                ui: 'normal',
+                ui: 'study'
             }
         ]
          

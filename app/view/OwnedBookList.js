@@ -1,58 +1,26 @@
 
-Ext.require(['book.store.SOwnedBookList'], function() {
-    Ext.define('book.view.OwnedBookList', {
+
+Ext.define('book.view.OwnedBookList', {
         extend: 'Ext.Container',
         xtype: 'ownedbooklist',
        
-        requires: [
-            'Ext.TitleBar'
-        ],     
+        requires: [],     
        
         config: {
-        //flex:1,
-        cls: 'ownedbooklist',
-        items: [
-            {
-                xtype: 'dataview', 
-                height: '100%',
-               // styleHtmlContent: true,
-                width: '100%',
-                
-                inline: {
-                    wrap: true
+            cls: 'ownedbooklist',
+            layout:'vbox',
+            items: [
+                {
+                    height:'61.5%',
+                    xtype: 'ownedbookhistorylist',
+                    //style: 'border: 1px solid red',
                 },
-                scrollable: {
-                    direction: 'vertical',
-                    directionLock: true
-                },
-                itemCls: 'dataview-item',
-                itemTpl: [
-            
-                '<table>',
-                    '<tr>',
-                        '<td class="ownedbook_img">',
-                            '<img src="{url}">',
-                        '</td>',
-                        
-                        '<td class="ownedbook_detail" valign="top">',    
-                            '<table>',
-                                '<tr>',
-                                    '<td valign="top">{book_title}</td>',
-                                '</tr>',
-                                '<tr>',
-                                    '<td valign="top" style="font-size:12px;">{author_name}</td>',
-                                '</tr>',
-                            '</table>',
-                        '</td>',
-                    '</tr>',
-                '</table>' 
-            
-            ],
-            store: Ext.create('book.store.SOwnedBookList'),
-            }
-        ]
+                {
+                   height:'38.5%',
+                    xtype: 'ownedbookeconomicslist',
+                    //style: 'border: 1px solid red',
+                }  
+            ]
     }
-         
-        
-    })
+ 
 })

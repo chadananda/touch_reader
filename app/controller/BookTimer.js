@@ -73,8 +73,8 @@ Ext.define('book.controller.BookTimer', {
     hideToolbar: function() {
         var booktitlebar = this.getBooktitlebar();
         var studyprojectnavbar = this.getStudyprojectnavbar();
-        //booktitlebar.hide();
-        //studyprojectnavbar.hide();
+        booktitlebar.hide();
+        studyprojectnavbar.hide();
     },
     
     documentClickHandler: function() {
