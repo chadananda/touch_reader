@@ -77,7 +77,10 @@ config: {
         'extractmenu': 'extractmenu',
         'bookinformationscreen': 'bookinformationscreen',
         'mainnavigationpop': 'mainnavigation',
-        'listselecrsearchresult': 'listselecrsearchresult'
+        'listselecrsearchresult': 'listselecrsearchresult',
+        'compilesubmenulist': 'compilesubmenu list',
+        'tagsubmenu': 'tagsubmenu #tag_color',
+        'colorpicker': 'colorpicker dataview'
         
     },
 
@@ -133,6 +136,15 @@ config: {
         },
         'listselecrsearchresult': {
          //   'show': 'onShowListSelecrSearchResult'
+        },
+        'compilesubmenulist': {
+            'itemtap': 'onCompilesubmenuItemtap'
+        },
+        'tagsubmenu': {
+            'tap': 'onTapTagtextColorchange'
+        },
+        'colorpicker': {
+            'itemtap': 'onColorpickerItemtap'
         }
        
     }    
@@ -147,7 +159,15 @@ config: {
         var selectionmenu = this.selectionmenu;
 
         var panel = Ext.Viewport.add(selectionmenu);
-        panel.hide();             
+        panel.hide();
+        
+        if (Ext.isDefined(this.colorpicker) == false) {
+            this.colorpicker = Ext.create('book.view.ColorPicker');
+        }         
+        var colorpicker = this.colorpicker;
+
+        var color_picker = Ext.Viewport.add(colorpicker);
+        color_picker.hide();                          
         
     },
     
@@ -351,15 +371,16 @@ config: {
                                              
                                         } else if(txt == 'Compile') {
                                             compilesubmenu.showBy(btn);
-                                          
+                                           /*
                                             compilesubmenu.on({
-                                              itemtap: function(list, index, item, e) {
+                                              itemtap: function(list, index, item, e) {  
                                                    var store = compilesubmenu.getStore();                                                   
                                                    var records = ({title: '<img src="resources/images/book_icon.png"> Compilation #'+[index+1]+' Name' });
                                                    store.insert( index, records )
                                                    compilesubmenu.element.setHeight(compilesubmenu.element.getHeight()*2.1 -230)
                                                 }
                                             });
+                                            */
                                             sharesubmenu.hide();
                                         }
                                 }
@@ -409,6 +430,15 @@ config: {
             }, false);                    
         
         }, 1500)        
+    },
+    
+    onCompilesubmenuItemtap: function(list, index, item, e){
+      
+       var store = list.getStore();                                                   
+       var records = ({title: '<img src="resources/images/book_icon.png"> Compilation #'+[index+1]+' Name' });
+       store.insert( index, records )
+       list.element.setHeight(list.element.getHeight()*2.1 -230)
+            
     },
   
     getIframeSelectionText: function(iframe) {
@@ -587,6 +617,26 @@ config: {
             },
             scope: this
         })
+    },
+    onTapTagtextColorchange: function(button, e, options){
+      
+      if (Ext.isDefined(this.colorpicker) == false) {
+            this.colorpicker = Ext.create('book.view.ColorPicker');
+        }         
+        var colorpicker = this.colorpicker;
+
+        var color_picker = colorpicker
+        if(color_picker.isHidden()){
+            color_picker.showBy(button);
+            
+        }else {
+            color_picker.hide();
+        }
+    },
+    
+    onColorpickerItemtap: function(list, index, item, e){
+        //var store = list.getStore();                                                   
+        //console.log(list.getItems())
     } 
     
 });

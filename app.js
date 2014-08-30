@@ -48,7 +48,7 @@ Ext.application({
         'book.view.exerciseindicator.DiscussionQueExercise', 'book.view.exerciseindicator.AssessmentQuizExerciseContainer', 'book.view.exerciseindicator.AssessmentQuizExercise',
         'book.view.exerciseindicator.MemorizationAssignmentContainer', 'book.view.exerciseindicator.MemorizationAssignment', 'book.view.memorization.MemorizationEnginePopupDrillingScreenContainer',
         'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling', 'book.view.BookSliderItem',
-        'ListSelecrSearchResult', 'OwnedBookHistoryList', 'OwnedBookEconomicsList', 'ListSelecrSearchResultContainer'
+        'ListSelecrSearchResult', 'OwnedBookHistoryList', 'OwnedBookEconomicsList', 'ListSelecrSearchResultContainer', 'ColorPicker'
     ],
 
     icon: {

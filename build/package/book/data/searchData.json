@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "search_by": " Open Books",
+            "text": "Lee, To Kill a Mockingbird",
+        },
+        {
+            "search_by": " Open Books",
+            "text": "Austin, Pride and Prejudice",
+        },
+        {
+            "search_by": " Open Books",
+            "text": "Salinger, Catcher in the Rye",
+        },
+         {
+            "search_by": " Study Guides",
+            "text": "Lee, To Kill a Mockingbird",
+        },
+        {
+            "search_by": " Library",
+            "text": "Lee, To Kill a Mockingbird",
+        }
+    ]
+}

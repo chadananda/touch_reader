@@ -18,7 +18,7 @@ Ext.require(['book.model.MBookSlider'], function() {
             defaultRootProperty: 'items',
             proxy: {
                 type: 'ajax',
-                url: lodsliderImages
+                url: 'data/book.json'
             },
             autoLoad: true
         }

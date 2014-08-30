@@ -1,28 +1,55 @@
 
 
 Ext.define('book.view.book.TagSubMenu', {
-    extend: 'Ext.List',
+    extend: 'Ext.Panel',
     xtype: 'tagsubmenu',
     requires: ['Ext.data.Store'],
     
     config: { 
-        //allowMultiple: true,
         width:300,
-        height: 250,
-       
+        height: 250,       
         modal:true,
         hideOnMaskTap: true,
-        //scrollable: false,
-        itemId: 'compile_sub_menu',
-        itemTpl: '{title}',
-            data: [
-                { title: '<img src="resources/images/tages_list_icon.png"> Tag Text 1' },
-                { title: '<img src="resources/images/tages_list_icon.png"> Tag Text 2' },
-                { title: '<img src="resources/images/tages_list_icon.png"> Tag Text 3' },
-                { title: '<img src="resources/images/tages_list_icon.png"> Tag Text 4' },
-                { title: '<img src="resources/images/tages_list_icon.png"> Tag Text 5' }
-            ]
-         
+        layout: 'vbox',
+        cls: 'tagsub_menu',
+        items: [
+           {
+                layout: 'hbox',
+                items: [
+                    {
+                        margin: 10,
+                        xtype: 'textfield',
+                        width:250,
+                        clearIcon: false,
+                    },
+                    {
+                        
+                        xtype: 'button',
+                        height: 32,
+                        itemId: 'edit_tag_text',
+                        html: '<span><img src="resources/images/book_add_icon.png"></span>',
+                    }
+                ]    
+            },
+            {
+                layout: 'hbox',
+                items: [
+                    {
+                        margin: 10,
+                        xtype: 'textfield',
+                        width:250,
+                        clearIcon: false,
+                    },
+                    {
+                        
+                        xtype: 'button',
+                        height: 32,
+                        itemId: 'tag_color',
+                        html: '<span><img src="resources/images/book_add_icon.png"></span>',
+                    }
+                ]    
+            }
+        ]
     }
 })
 

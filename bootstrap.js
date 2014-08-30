@@ -46,6 +46,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
   "Ext.draw.engine.SvgContext.Gradient": "touch/src/draw/engine/SvgContext.js",
+  "Ext.field.Div": "touch/src/ux/ColorPickerField.js",
   "book": "app",
   "book.view.book.AnnotationMenu": "app/view/book/AnnotationMenu.js",
   "book.view.book.CompileSubMenu": "app/view/book/CompileSubMenu.js",
@@ -551,6 +552,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.field.DatePickerNative": [
     "Ext.form.DatePickerNative"
   ],
+  "Ext.field.Div": [],
   "Ext.field.Email": [
     "Ext.form.Email"
   ],
@@ -766,6 +768,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.ux.ActionOverFlowMenuButton": [],
   "Ext.ux.ApplicationMenu": [],
   "Ext.ux.AudioPlayer": [],
+  "Ext.ux.ColorPickerField": [],
   "Ext.ux.ContextMenu": [],
   "Ext.ux.Iframe": [],
   "Ext.ux.MenuButton": [],
@@ -823,6 +826,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.view.CategoryAccordionList": [],
   "book.view.CategoryListContainer": [],
   "book.view.CategoryMainContainer": [],
+  "book.view.ColorPicker": [],
   "book.view.CurrentBookPopUp": [],
   "book.view.LibrarybyLanguage": [],
   "book.view.ListPopUp": [],
@@ -1521,6 +1525,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.field.DatePickerNative": [
     "widget.datepickernativefield"
   ],
+  "Ext.field.Div": [
+    "widget.div"
+  ],
   "Ext.field.Email": [
     "widget.emailfield"
   ],
@@ -1820,6 +1827,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.AudioPlayer": [
     "widget.audioplayer"
   ],
+  "Ext.ux.ColorPickerField": [
+    "widget.colorpickerfield"
+  ],
   "Ext.ux.ContextMenu": [],
   "Ext.ux.Iframe": [
     "widget.iframe"
@@ -1902,6 +1912,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "book.view.CategoryMainContainer": [
     "widget.categorymaincontainer"
+  ],
+  "book.view.ColorPicker": [
+    "widget.colorpicker"
   ],
   "book.view.CurrentBookPopUp": [
     "widget.currentbookpopup"

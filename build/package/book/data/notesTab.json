@@ -1,0 +1,55 @@
+{
+    "items": [
+        {
+            "title": "Embedded Notes: \"The Great Deformation\"",
+            "book_img": "resources/images/tab_notes_icon.png",
+            "note_desc": "37 embedded notes",
+            "chapter": [
+                {
+                    "chapter_title": "Chapter 4, The Reagan Revolution: Repudiations and Deformations",
+                    "paragraph": [
+                        {
+                            "paragraph_no": "4.8 \"Yet the real culprit behind the fiscal profligacy which descended...\"",
+                                 "notes": [
+                                    {
+                                        "notes_desc": "Successive leadership of all political persuasion are guilty of the same fiscal profligacy which suggests that the system encourages such behavior.",
+                                    }
+                                ]
+                         
+                        },
+                        {
+                            "paragraph_no": "4.14 \"The first spell of false prosperity was the unacknowledged yet...\"",
+                                "notes": [
+                                    {
+                                        "notes_desc": "The problem with the whole idea of borrowing prosperity from a future generation is that the so-called prosperity is only theoretical. It amounts to the prosperity of more government projects. However, if these projects are in fact inefficient allocations of productive capacity, the result is not only a loss to the future but also a loss in prosperity right now.",
+                                    }
+                                ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_title": "Chapter 8, New Deal Myths of Recovery",
+                    "paragraph": [
+                        {
+                            "paragraph_no": "8.8 \"The United States needed to take bold action to rejuvenate its...\"",
+                                "notes": [
+                                    {
+                                        "notes_desc": "I think this bold action idea is based on the Keynesian idea of animal spirits directing market action. In other words, the government is responsible to boost consumer confidence by taking big bold steps. What steps it takes really doesn’t matter",
+                                    }
+                                ]
+                        },
+                        {
+                            "paragraph_no": "8.19 \"In truth, the New Deal was a Chinese menu with little rhyme or...\"",
+                                "notes": [
+                                    {
+                                        "notes_desc": "This is the most racist description of public policy ever. What did the Chinese ever do wrong with food to be slandered in this way?.",
+                                    }
+                                ]
+                        }
+                    ]
+                }
+            ]
+            
+        }
+    ]
+}
