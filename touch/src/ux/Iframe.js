@@ -1,4 +1,4 @@
-Ext.define('Ext.ux.Iframe', {
+ Ext.define('Ext.ux.Iframe', {
     extend: 'Ext.Component',
     xtype: 'iframe',
     
@@ -9,8 +9,9 @@ Ext.define('Ext.ux.Iframe', {
          * @cfg {String} url URL to load
          */
         url     : null,
-       style: 'height: 100%; border:none',
-       width: null,
+       //style: 'height: 100%; border:none',
+       style: '-webkit-overflow-scrolling: touch; height: 100%; overflow: auto; width: 100%;',
+       width: '300',
         /**
          * @cfg
          * @inheritdoc
@@ -31,14 +32,11 @@ Ext.define('Ext.ux.Iframe', {
             tag   : 'iframe',
             //src   : this.getUrl(),
             src   : this.getUrl(),
-            style : 'height: 100%;border:none',
+            //style : 'height: 100%;border:none',
+            //style: '-webkit-overflow-scrolling: touch; height: 100%; overflow: hidden; height: 300px;',
+            style: 'height: 100%; border: 0;',
             width : this.getWidth()
         })
-        /*
-        iframe.on('tap', function() {
-            alert('iframe tap')
-        })
-        */
         
                  
         me.iframe = iframe;
