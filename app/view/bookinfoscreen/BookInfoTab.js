@@ -28,7 +28,7 @@ Ext.define('book.view.bookinfoscreen.BookInfoTab', {
                 '</tpl>',
                 '</div>',
             '</div>',
-        ],
+        ], 
          
     }
 })

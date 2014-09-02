@@ -8,17 +8,15 @@ Ext.define('book.view.OwnedBookList', {
        
         config: {
             cls: 'ownedbooklist',
-            layout:'vbox',
+            scrollable: true,
+            layout: 'vbox',
+            flex:1,
             items: [
                 {
-                    height:'61.5%',
                     xtype: 'ownedbookhistorylist',
-                    //style: 'border: 1px solid red',
                 },
                 {
-                   height:'38.5%',
                     xtype: 'ownedbookeconomicslist',
-                    //style: 'border: 1px solid red',
                 }  
             ]
     }

@@ -9,30 +9,24 @@ Ext.require(['book.store.SOwnedBookList'], function() {
         ],     
        
         config: {
-        //flex:1,
-        //cls: 'ownedbooklist',
+      
         items: [
             {
                 html: '<div class="display_by_cat"> Economics </div>'
             },{
                 xtype: 'dataview', 
-                height:'74%',
-               // styleHtmlContent: true,
-                width: '100%',
-                
+                height:250,
+              
                 inline: {
                     wrap: true
                 },
-                scrollable: {
-                    direction: 'vertical',
-                    directionLock: true
-                },
+                scrollable: false,
                 itemCls: 'dataview-item',
                 itemTpl: [
             
-                '<table>',
+                '<table width="100%">',
                     '<tr>',
-                        '<td class="ownedbook_img">',
+                        '<td class="ownedbook_img" width="10%">',
                             '<img src="{url}">',
                         '</td>',
                         
@@ -49,7 +43,7 @@ Ext.require(['book.store.SOwnedBookList'], function() {
                                 '</tr>',
                             '</table>',
                         '</td>',
-                        '<td class="downlod_icon">',
+                        '<td class="downlod_icon" width="10%">',
                             '<img src="resources/images/download-icon.png">',
                         '</td>',
                     '</tr>',

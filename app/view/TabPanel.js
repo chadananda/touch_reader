@@ -11,19 +11,22 @@ Ext.define('book.view.TabPanel', {
         items: [
             {
                 title: 'Owned',
-                iconCls: 'home',
+                iconCls: 'owned',
+                iconMask: true,
                 xtype: 'ownedbooklist',
                 badgeText: '580'
             },
             {
                 title: 'Bookstore',
-                iconCls: 'list',
+                iconCls: 'bookstore',
+                iconMask: true,
                 html: 'Bookstore Tab',
                 badgeText: '256'
             },
             {
                 title: 'Free',
-                iconCls: 'action',
+                iconCls: 'free',
+                iconMask: true,
                 html: 'Free Book',
                 badgeText: '64'
             }

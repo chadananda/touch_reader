@@ -2,30 +2,20 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
     extend: 'Ext.TitleBar',
     xtype: 'studyprojectnavbar',
     requires: ['Ext.Img'],
-    config: { 
-        
+    config: {        
         layout:'hbox',
-        //xtype: 'titlebar',
         cls:'study-titlebar',
         docked: 'top',
         title: '',
         ui: 'bluenav',
         items: [
-                
             {
                 xtype: 'button',
                 html: '<img src="resources/images/course_logo.png">',
                 align: 'left',
                 style:'border-left: none;'
             },
-            {
-                xtype: 'button',
-                text: '',               
-                align: 'left',
-                style:'padding:0px;'
-            },
-            {                
-                    
+            {   
                 cls:'resume',
                 xtype: 'button',
                 text: 'Current Study Project Title',
@@ -54,9 +44,8 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
                 align: 'left',
                 ui: 'study',
                 badgeText: '12'
-          
             },
-            
+            /*
             {               
                 xtype: 'button',
                 html: '<div class="main_btn"><div class="image"><img src="resources/images/vocab_quiz_icon.png"></div><div class="text">Vocab Quiz</div></div>',
@@ -65,29 +54,27 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
                 badgeText: '2'
           
             },
+            */
             {               
                 xtype: 'button',
                 html: '<div class="main_btn"><div class="image"><img src="resources/images/discuss_icon.png"></div><div class="text">Discuss</div></div>',
                 align: 'left',
                 ui: 'study',
                 badgeText: '10'
-          
             },
-            
-            
             {               
                 xtype: 'button',
                 html: '<div class="main_btn"><div class="image"><img src="resources/images/assignment_icon.png"></div><div class="text">Assignment</div></div>',
                 align: 'left',
                 ui: 'study',
-                badgeText: '1'
-          
+                badgeText: '1',
+                style: 'border-right:1px solid #768963;',
             },
-            
             {
                 xtype: 'button',                
                 html: '<div class="resume"><div class="resume_img"><img src="resources/images/resume_icon.png"></div><div class="resume_text">Resume</div></div>',
-                align: 'left',
+                align: 'right',
+                 style: 'border-left:none;',
             } 
         ]
     }

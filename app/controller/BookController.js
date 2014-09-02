@@ -20,6 +20,8 @@ config: {
         'selectfield_button': 'booktitlebar #top_select_field',
         'settingfield_button': 'booktitlebar #top_setting_field',
         'resume_button': 'booktitlebar #resume',
+        //'bor_btn': 'booktitlebar #bor_btn',
+        //'bor_btn2': 'booktitlebar #bor_btn2',
         listPopUpView: {
             autoCreate: true,
             selector: '#list_popup',
@@ -80,7 +82,9 @@ config: {
         'listselecrsearchresult': 'listselecrsearchresult',
         'compilesubmenulist': 'compilesubmenu list',
         'tagsubmenu': 'tagsubmenu #tag_color',
-        'colorpicker': 'colorpicker dataview'
+        'colorpicker': 'colorpicker dataview',
+        'ownedbookhistorylist': 'ownedbookhistorylist dataview',
+        'ownedbookeconomicslist': 'ownedbookeconomicslist dataview'         
         
     },
 
@@ -207,8 +211,28 @@ config: {
         this.getTitlebar_dropdown().setUi('');
         this.getTitlebar_dropdown().setCls('');        
         //this.getStudyprojectnavbar().setHidden(true);
+        //this.getBor_btn().setHidden(true);
+        //this.getBor_btn2().setHidden(true);
         
         this.getResume_button().setHidden(true);
+        /*var list = this.getOwnedbookhistorylist();
+        this.getOwnedbookhistorylist().setHeight('300px');
+        this.getOwnedbookeconomicslist().setHeight('300px');
+        var store = list.getStore();
+        
+        store.load({
+            callback: function(records, operation, success) {
+                console.log(records);
+                var height = list.getItemHeight(); 
+                console.log(height)
+                 list.setHeight(height * records.length);
+                   console.log(list.getVariableHeights());
+                  
+            },
+            scope: this
+        });
+        */
+        
   },
   
  
@@ -244,6 +268,8 @@ config: {
         this.getResume_button().setHidden(false);
         this.getTitlebar_dropdown().setUi('bluenav');
         this.getTitlebar_dropdown().setCls('resume');
+        //this.getBor_btn().setHidden(false);
+        //this.getBor_btn2().setHidden(false);
        
     },
     
@@ -570,7 +596,8 @@ config: {
         this.getTitlebar_dropdown().setUi('bluenav');
         this.getTitlebar_dropdown().setCls('resume');
         //this.getStudyprojectnavbar().setHidden(false);
-        
+        //this.getBor_btn().setHidden(false);
+        //this.getBor_btn2().setHidden(false);
         this.getResume_button().setHidden(true);
 
         var img_id = record.img_id;

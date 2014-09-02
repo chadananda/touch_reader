@@ -37,52 +37,6 @@
     left: 85%;    
 }
 
-.ownedbooklist{
-   border-top: none;
-   margin-bottom:0px;    
-}
-.ownedbooklist .display_by_cat{
-  padding: 5px 0px 5px 10px;
-  font-size: 0.7em;
-  font-weight: bold;
-}
-
-.ownedbooklist .ownedbook_img{   
-    text-align: center;
-}
-
-.ownedbooklist .ownedbook_img img{
-   height:60px;
-   margin:5px;
-}
-
-.ownedbooklist .ownedbook_detail td.book_title{
-    padding:8px 5px 0px 0px;
-    font-size:0.7em;
-    font-weight: bold;
-    width:250px;
-}
-
-.ownedbooklist .ownedbook_detail td.author_name{
-    padding:5px 5px 0px 0px;
-    font-size:0.6em;
-    width:250px;
-}
-
-.ownedbooklist .ownedbook_detail td.category{
-    padding:5px 5px 0px 0px;
-    font-size:0.6em;
-    width:250px;
-    color:#000;
-}
-.ownedbooklist .downlod_icon img{
-    padding:0px 5px 35px 5px;
-}
-
-.ownedbooklist.x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal {
-    border-top: none;
-    border-bottom: 1px solid #dedede;
-}
 
 .slider .x-innerhtml{
     border: 1px solid #fff;    
@@ -149,7 +103,10 @@
 }
 
 .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label {
-    top: 0.12em;
+    top: 0.0em;
+}
+.x-tabbar.x-docked-top .x-tab.x-tab-icon{
+    padding: 0.5em 0.5em;
 }
 
 .x-hasbadge .x-badge {
@@ -204,29 +161,138 @@
     width:100%;    
 } 
 .ownedbooklist .dataview-item{
-   width : 17.49em;
+   width : 17.49em; 
    height : 72px;
    float:left;  
-   margin:10px 0px 0px 10px
+   margin:10px 0px 0px 10px;    
+}
+
+.ownedbooklist{
+   border-top: none;
+   margin-bottom:0px;    
+}
+.ownedbooklist .display_by_cat{
+  padding: 5px 0px 5px 10px;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.ownedbooklist .ownedbook_img{   
+    text-align: center;
+}
+
+.ownedbooklist .ownedbook_img img{
+   height:60px;
+   margin:5px;
+}
+
+.ownedbooklist .ownedbook_detail td.book_title{
+    padding:8px 5px 0px 0px;
+    font-size:0.7em;
+    font-weight: bold;
+    width: 225px;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ownedbooklist .ownedbook_detail td.author_name{
+    padding:5px 5px 0px 0px;
+    font-size:0.6em;
+    width:250px;
+}
+
+.ownedbooklist .ownedbook_detail td.category{
+    padding:5px 5px 0px 0px;
+    font-size:0.6em;
+    width:250px;
+    color:#000;
+}
+.ownedbooklist .downlod_icon img{
+    padding:0px 5px 35px 5px;
+}
+
+.ownedbooklist.x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal {
+    border-top: none;
+    border-bottom: 1px solid #dedede;
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
     .ownedbooklist .dataview-item {
-        width : 18.55em;
+        width : 14.28em;
+    }
+    .ownedbooklist .ownedbook_detail td.book_title{       
+        width: 178px;
+        white-space: nowrap;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
     .ownedbooklist .dataview-item {
         width : 19.15em;
+        
+    }
+    .ownedbooklist .ownedbook_detail td.book_title{       
+        width: 260px;
+        white-space: nowrap;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .study-titlebar.x-toolbar .resume.x-button{      
+        width: 127px;
+        white-space: nowrap;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
+    }
+    .study-titlebar.x-toolbar .x-button{
+        padding-left:6px !important;
+        padding-right:5px !important;  
+    }
+    .my-titlebar.x-toolbar .resume.x-button{
+        margin-left:10px !important;
+        margin-right:10px !important;
+    }
+    .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label {
+        top: -0.5em;
     }
 }
 
-@media (min-width: 980px) and (max-width: 1280px) {
+@media (min-width: 980px) and (max-width: 1024px){
     .ownedbooklist .dataview-item {
-        width : 17.25em;
+         width : 17.25em;
     }
-}    
+    .ownedbooklist .ownedbook_detail td.book_title{      
+        width: 224px;
+        white-space: nowrap;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label {
+        top: -0.5em;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .ownedbooklist .dataview-item {
+        width : 16.03em;
+    }
+    .ownedbooklist .ownedbook_detail td.book_title{      
+        width: 209px;
+        white-space: nowrap;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}     
 
 /****************************************/
 
@@ -410,34 +476,21 @@
 
 /******************* End Of Top Search Panel *******************/ 
 
-.setting_wrapper{
-    border: 1px solid #000;
-    padding:5px;
-    margin-bottom:8px;
-    border-radius: 5px !important;
-    -webkit-border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
-    -ms-border-radius: 5px !important;
-    -o-border-radius: 5px !important; 
-     background-image: none;
-    background-color: #f3f5f6; 
-    background-image: -webkit-linear-gradient(top, #f3f5f6, #f3f5f6 3%, #f3f5f6); 
-    background-image: -moz-linear-gradient(top, #f3f5f6, #f3f5f6 3%, #f3f5f6);
-    background-image: -o-linear-gradient(top, #f3f5f6, #f3f5f6 3%, #f3f5f6);
-    background-image: linear-gradient(top, #f3f5f6, #f3f5f6 3%, #f3f5f6);
+/************** Top Setting Accordian List *******************/
+.setting_wrapper{    
 }
 
 .setting_badge_bckgrnd{        
     color:#fff;
-    border: 1px solid #000;
-    background-color:#bfbfc0;
+    border: 1px solid #fe3f36;
+    background-color:#fe3f36;
     text-align: center;
-    border-radius: 10px !important;
-    -webkit-border-radius: 10px !important;
-    -moz-border-radius: 10px !important;
-    -ms-border-radius: 10px !important;
-    -o-border-radius: 10px !important;     
+    font-size: 0.9em;
+    width:1.5em;
+    height:1.5em;     
 }
+
+/************** End Of Top Setting Accordian List *******************/
 
 .reader_option{
     border: 1px solid #000;
@@ -1677,11 +1730,15 @@
     margin-bottom: 0px !important;
     border-radius: 0px; 
     padding: 0px 20px;
-    min-height:2.6em;
+   /* min-height:2.6em; */
+    min-height:1.95em; 
     margin: 6px 0.0em;
    
 }
 /************* my_titlebar *****************/
+.x-toolbar{
+    min-height: 1.95em;
+}
 .x-toolbar .x-button{
    background:none;
 }
@@ -1693,9 +1750,13 @@
 .my-titlebar.x-toolbar .resume.x-button{
     margin-left:20px;
     margin-right:20px;  
-    min-height:1.9em;
-    text-transform:uppercase; 
+    min-height:1.5em;
+    text-transform:uppercase;
+    padding: 2px 10px  0px 10px;
 }
+.my-titlebar.x-toolbar .list_nav.x-button{
+        padding: 0px 5px;
+    }
 
 /************* study_project_titlebar *****************/
 
@@ -1703,8 +1764,8 @@
     margin-top: 0px !important;
     margin-bottom: 0px !important;
     border-radius: 0px;
-    padding: 0em 0.5em;
-    min-height:2.6em;
+    padding: 0.14em 0.5em;
+    min-height:1.95em;
     margin: 6em 0.0em;
 }
 
@@ -1716,9 +1777,15 @@
 }
 
 .study-titlebar.x-toolbar .resume.x-button{
-    min-height:1.9em;
+    min-height:1.5em;
     text-transform:uppercase;
     margin: 6em 0.2em;
+    padding:2px 10px 0px 10px;
+   
+}
+.x-toolbar .resume.x-button .x-button-label{
+     font-weight:bold;
+     font-size: 0.7em;
 }
 
 .study-titlebar .progress_assemnt{
@@ -1753,7 +1820,7 @@
      margin-top:5px;
      margin-left:5px;
      float:right; 
-     color:#637254   
+     color:#637254;   
 }
 
 .study-titlebar .x-hasbadge .x-badge{
@@ -1767,6 +1834,8 @@
 
 .x-toolbar .x-button.x-button-study.x-button-pressing{
     border:none;
+    border-left: 1px solid #63784d;
+    border-right: 1px solid #63784d;
     border-bottom: 3px solid #63784d;
     background-color: #768963;
     background-image:none;
@@ -1775,8 +1844,11 @@
 .study-titlebar.x-toolbar .x-button.study_info{
     -webkit-text-fill-color: #fff;
     padding:0px;
-    top:-12px;
+    top:-5px;
     left:-5px;
+}
+.x-toolbar .x-button.x-button-pressing{
+    border-left: 1px solid #768963;
 }
 
 .popup_panel .recent_open_book{
@@ -1858,4 +1930,64 @@
     background:none;
     margin-top:15px;
     padding:0em;
+}
+
+/********** Custom Tabs Icons **********/
+
+.x-tab .x-button-icon.bookstore, .x-button .x-button-icon.x-icon-mask.bookstore {
+    background-image: url(../images/bookstore-tab-icon.png);
+    width:25px !important;
+    height: 25px !important;
+    padding-top:5px;    
+}
+
+.x-tab .x-button-icon.owned, .x-button .x-button-icon.x-icon-mask.owned {
+    background-image: url(../images/home-tab-icon.png);
+    width:25px !important;
+    height: 24px !important;
+    padding-top:5px;    
+}
+
+.x-tab .x-button-icon.free, .x-button .x-button-icon.x-icon-mask.free {
+    background-image: url(../images/free-tab-icon.png);
+    width:25px !important;
+    height: 25px !important;
+    padding-top:5px;    
+}
+
+.x-tab .x-button-icon.bookinfo, .x-button .x-button-icon.x-icon-mask.bookinfo {
+    background-image: url(../images/tab_info_icon.png);
+    width:24px !important;
+    height: 23px !important;
+    margin-top: 3px !important;
+    margin-left: 18px !important;
+}
+.x-tab .x-button-icon.bookmark, .x-button .x-button-icon.x-icon-mask.bookmark {
+    background-image: url(../images/tab_bookmark_icon.png);
+    width:21px !important;
+    height: 24px !important;
+    margin-top: 3px !important;
+    margin-left: 18px !important;
+}
+
+.x-tab .x-button-icon.namedtags, .x-button .x-button-icon.x-icon-mask.namedtags {
+    background-image: url(../images/tabs_tags_icon.png);
+    width:21px !important;
+    height: 21px !important;
+    margin-top: 3px !important;
+    margin-left: 18px !important;
+}
+.x-tab .x-button-icon.notes, .x-button .x-button-icon.x-icon-mask.notes {
+    background-image: url(../images/tab_notes_icon.png);
+    width:21px !important;
+    height: 21px !important;
+    margin-top: 3px !important;
+    margin-left: 18px !important;
+}
+.x-tab .x-button-icon.highlights, .x-button .x-button-icon.x-icon-mask.highlights {
+    background-image: url(../images/tab_highlights_icon.png);
+    width:11px !important;
+    height: 15px !important;
+    margin-top: 3px !important;
+    margin-left: 18px !important;
 }

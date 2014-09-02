@@ -7,27 +7,28 @@ Ext.define('book.view.bookinfoscreen.BookInformationScreen', {
         cls: 'book_info',
         items: [
             {
-                title: '<img src="resources/images/tab_info_icon.png">',
+                iconCls: 'bookinfo',
+                iconMask: true,
                 xtype: 'bookinfotab'
             },
             {
-                title: '<img src="resources/images/tab_bookmark_icon.png">',
+                iconCls: 'bookmark',
+                iconMask: true,
                 xtype: 'bookmarktab',
             },
             {
-                title: '<img src="resources/images/tabs_tags_icon.png">',
+                iconCls: 'namedtags',
+                iconMask: true,
                 xtype: 'namedtagstab'
             },
             {
-                title: '<img src="resources/images/tab_notes_icon.png">',
+                iconCls: 'notes',
+                iconMask: true,
                 xtype: 'notestab'
             },
-           // {
-           //     title: '<img src="resources/images/tab_highlights_icon.png">',
-           //     xtype: 'coloredhighlightstab'
-           // },
             {
-                title: '<img src="resources/images/tab_highlights_icon.png">',
+                iconCls: 'highlights',
+                iconMask: true,
                 xtype: 'paragraphsummariestab'
             }
         ]
