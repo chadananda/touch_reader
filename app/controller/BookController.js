@@ -99,7 +99,7 @@ config: {
             'show': 'onShowMainHideShowIcon'
         },
         'readbookpagelist': {
-            'show': 'ontapIframe'
+            'show': 'onShowIframe'
         },
         'searchfield_button': {
             'tap': 'onTapTopSearchIcon'
@@ -171,7 +171,12 @@ config: {
         var colorpicker = this.colorpicker;
 
         var color_picker = Ext.Viewport.add(colorpicker);
-        color_picker.hide();                          
+        color_picker.hide();    
+        
+        var viewport = Ext.Viewport;
+        viewport.resize = function() {
+            alert('viewport is resized');
+        }                              
         
     },
     
@@ -296,7 +301,7 @@ config: {
         book_iframe.width = width;
       
     },
-    ontapIframe: function(view, eOpts){
+    onShowIframe: function(view, eOpts){
         
         var readbookpagelist = this.getReadbookpagelist();
         
@@ -360,102 +365,105 @@ config: {
         //panel.hide();             
         
         
-        setTimeout(function() {
+        //var interval = setTimeout(function() {
             console.log('it is in setTimeout function');
             var myiframe = document.getElementById("book_iframe");
-            var doc = myiframe.contentDocument || myiframe.contentWindow.document;
-             
-            doc.addEventListener('click', function(event) {
+            
+            
+            myiframe.onload = function() {
                 
-                console.log('it is addEventListener click function ');
-                selText = me.getIframeSelectionText(iframe);
-                
-                me.getApplication().getController('BookTimer').showToolbar();
-                
-                if (selText != '') {
-                    console.log('selText = ' + selText);
-                    //var panel = Ext.Viewport.add(selectionmenu); 
-                    panel.show();
-                    selectionmenu.on({
-            		    toggle: function(segBtn, btn, isPressed) { 
-                          var txt = btn.getText();
-                          if(txt == 'EXTRACT'){
-                            extractmenu.showBy(btn);
-                            annotationmenu.hide();
-                            lookupmenu.hide();
-                            discussmenu.hide();
-                            extractmenu.on({
-                                toggle: function(segBtn, btn, isPressed) { 
-                                    var txt = btn.getText();
-                                        if(txt == 'Share'){
-                                            sharesubmenu.showBy(btn);
-                                            compilesubmenu.hide();
-                                            
-                                        } else if(txt == 'Copy'){
-                                            sharesubmenu.showBy(btn);
-                                            compilesubmenu.hide();
-                                             
-                                        } else if(txt == 'Compile') {
-                                            compilesubmenu.showBy(btn);
-                                           /*
-                                            compilesubmenu.on({
-                                              itemtap: function(list, index, item, e) {  
-                                                   var store = compilesubmenu.getStore();                                                   
-                                                   var records = ({title: '<img src="resources/images/book_icon.png"> Compilation #'+[index+1]+' Name' });
-                                                   store.insert( index, records )
-                                                   compilesubmenu.element.setHeight(compilesubmenu.element.getHeight()*2.1 -230)
-                                                }
-                                            });
-                                            */
-                                            sharesubmenu.hide();
-                                        }
-                                }
-                            })
-                            
-                          }else if(txt == 'NOTE'){
-                            annotationmenu.showBy(btn);
-                            extractmenu.hide();
-                            lookupmenu.hide();
-                            discussmenu.hide();
-                            annotationmenu.on({
-                                toggle: function(segBtn, btn, isPressed) { 
-                                    var txt = btn.getText();
-                                        if(txt == 'Mark'){
-                                            marksubmenu.showBy(btn);
-                                            extractmenu.hide();
-                                            tagsubmenu.hide();
-                                            notesubmenu.hide();
-                                        }else if(txt == 'Tag') {
-                                            tagsubmenu.showBy(btn);
-                                            marksubmenu.hide();
-                                            notesubmenu.hide();
-                                        }else if(txt == 'Note'){
-                                            notesubmenu.showBy(btn);
-                                            marksubmenu.hide();
-                                            tagsubmenu.hide();
-                                        }
-                                }
-                            })
-                          }else if(txt == 'LOOKUP'){
-                            lookupmenu.showBy(btn);  
-                            extractmenu.hide();
-                            annotationmenu.hide();
-                            discussmenu.hide();
-                          }else if(txt == 'DISCUSS'){
-                            discussmenu.showBy(btn);
-                            
-                            extractmenu.hide();
-                            annotationmenu.hide();
-                            lookupmenu.hide();
-                          }    
-                        }
-                     
-                    });
-                }                                 
-                                                        
-            }, false);                    
+                var doc = myiframe.contentDocument || myiframe.contentWindow.document;                
+
+                doc.addEventListener('click', function(event) {
+                    
+                    console.log('it is addEventListener click function ');
+                    selText = me.getIframeSelectionText(iframe);
+                    
+                    me.getApplication().getController('BookTimer').showToolbar();
+                    
+                    if (selText != '') {
+                        console.log('selText = ' + selText);
+                        //var panel = Ext.Viewport.add(selectionmenu); 
+                        panel.show();
+                        selectionmenu.on({
+                		    toggle: function(segBtn, btn, isPressed) { 
+                              var txt = btn.getText();
+                              if(txt == 'EXTRACT'){
+                                extractmenu.showBy(btn);
+                                annotationmenu.hide();
+                                lookupmenu.hide();
+                                discussmenu.hide();
+                                extractmenu.on({
+                                    toggle: function(segBtn, btn, isPressed) { 
+                                        var txt = btn.getText();
+                                            if(txt == 'Share'){
+                                                sharesubmenu.showBy(btn);
+                                                compilesubmenu.hide();
+                                                
+                                            } else if(txt == 'Copy'){
+                                                sharesubmenu.showBy(btn);
+                                                compilesubmenu.hide();
+                                                 
+                                            } else if(txt == 'Compile') {
+                                                compilesubmenu.showBy(btn);
+                                                sharesubmenu.hide();
+                                            }
+                                    }
+                                })
+                                
+                              }else if(txt == 'NOTE'){
+                                annotationmenu.showBy(btn);
+                                extractmenu.hide();
+                                lookupmenu.hide();
+                                discussmenu.hide();
+                                annotationmenu.on({
+                                    toggle: function(segBtn, btn, isPressed) { 
+                                        var txt = btn.getText();
+                                            if(txt == 'Mark'){
+                                                marksubmenu.showBy(btn);
+                                                extractmenu.hide();
+                                                tagsubmenu.hide();
+                                                notesubmenu.hide();
+                                            }else if(txt == 'Tag') {
+                                                tagsubmenu.showBy(btn);
+                                                marksubmenu.hide();
+                                                notesubmenu.hide();
+                                            }else if(txt == 'Note'){
+                                                notesubmenu.showBy(btn);
+                                                marksubmenu.hide();
+                                                tagsubmenu.hide();
+                                            }
+                                    }
+                                })
+                              }else if(txt == 'LOOKUP'){
+                                lookupmenu.showBy(btn);  
+                                extractmenu.hide();
+                                annotationmenu.hide();
+                                discussmenu.hide();
+                              }else if(txt == 'DISCUSS'){
+                                discussmenu.showBy(btn);
+                                
+                                extractmenu.hide();
+                                annotationmenu.hide();
+                                lookupmenu.hide();
+                              }    
+                            }
+                         
+                        });
+                    } // end of selText                                
+                    
+                    //console.log('clearInterval should call');
+                    //clearInterval(interval);
+                                                            
+                }, false);   
+
+
+            }  //end of iframe load event
+            
+            /*                            
+            */                 
         
-        }, 1500)        
+        //}, 1500);        
     },
     
     onCompilesubmenuItemtap: function(list, index, item, e){
