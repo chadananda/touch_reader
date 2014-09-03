@@ -173,10 +173,15 @@ config: {
         var color_picker = Ext.Viewport.add(colorpicker);
         color_picker.hide();    
         
-        var viewport = Ext.Viewport;
-        viewport.resize = function() {
-            alert('viewport is resized');
-        }                              
+        /** resize the iframe when window resize **/
+        window.addEventListener("resize", function() {
+            var iframe = document.getElementById("book_iframe");
+            
+            if (Ext.isEmpty(iframe) === false) {
+                iframe.width = Ext.Viewport.getWindowWidth();
+            }
+        });
+        /** end of resize **/
         
     },
     
