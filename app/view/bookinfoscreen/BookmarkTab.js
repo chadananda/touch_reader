@@ -1,7 +1,7 @@
 
 
 Ext.define('book.view.bookinfoscreen.BookmarkTab', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'bookmarktab',
     requires: [],
     config: { 

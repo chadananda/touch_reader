@@ -1,7 +1,7 @@
 
 
 Ext.define('book.view.bookinfoscreen.NotesTab', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'notestab',
     requires: [],
     config: { 

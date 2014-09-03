@@ -32,20 +32,43 @@ Ext.define('book.view.book.TagSubMenu', {
                 ]    
             },
             {
-                layout: 'hbox',
+                layout: 'vbox',
                 items: [
-                    {
-                        margin: 10,
-                        xtype: 'textfield',
-                        width:250,
-                        clearIcon: false,
+                    
+                     {
+                         layout: 'hbox',
+                        items:[
+                            {
+                                 width:20,
+                                 height:20,
+                                 itemId: 'chnage_color_btn',
+                                 style: 'background-color:#000;border:3px solid #fff;-webkit-border-radius:10px 10px;'
+                            },
+                            {
+                                 html: 'Change Tag color'
+                            }
+                        ]
+                       
                     },
                     {
-                        
-                        xtype: 'button',
-                        height: 32,
-                        itemId: 'tag_color',
-                        html: '<span><img src="resources/images/book_add_icon.png"></span>',
+                        layout: 'hbox',
+                        items:[
+                            {
+                                margin: 10,
+                                xtype: 'textfield',
+                                width:250,
+                                value:'',
+                                clearIcon: false,
+                                itemId: 'text_fill'
+                            },
+                            {
+                                
+                                xtype: 'button',
+                                height: 32,
+                                itemId: 'tag_color',
+                                html: '<span><img src="resources/images/book_add_icon.png"></span>',
+                            }
+                        ]
                     }
                 ]    
             }

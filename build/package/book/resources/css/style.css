@@ -5,11 +5,9 @@
 .main_container{   
     padding: 0px 20px 0px 20px;
 }
-
 .x-webkit .x-selectmark-base, .x-webkit .x-field-select .x-component-outer:after, .x-field-select .x-webkit .x-component-outer:after{
     right: 0.3em;
 }
-
 .search_book_container{
     margin-top: 10px;    
     height:52px;
@@ -22,7 +20,6 @@
 .search_book_container .x-input-el {   
     min-height: 1.5em;  
 }
-
 .search_field .x-input-el {   
     min-height: 1.5em;
     width:90%;   
@@ -31,13 +28,10 @@
     padding: 0.4em; 
     background-color: #efefef;  
 }
-
 .search_book_container .x-field-search .x-field-input:before {
     top: 0.5em;
     left: 85%;    
 }
-
-
 .slider .x-innerhtml{
     border: 1px solid #fff;    
 }
@@ -46,12 +40,10 @@
     box-shadow: 2px 2px 2px #4e4e4e;
     margin: 10px 15px 10px 11px;   
 }
-
 .bx-controls-direction {
     right: 44px;
     top: -46px;
 }
-
 .bx-controls-direction a {
     height: 32px;
     margin-top: -11px;
@@ -95,7 +87,19 @@
 }
 .x-tabbar.x-docked-top .x-tab {
     height: 100%;
-    margin-left:10px;    
+    margin-left:10px;
+    -moz-border-radius-topright:5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;    
+    -moz-border-radius-bottomright: 0em;
+    -webkit-border-bottom-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+    -moz-border-radius-bottomleft: 0em;
+    -webkit-border-bottom-left-radius: 0em;
+    border-bottom-left-radius: 0em;       
 }
 .x-tabbar.x-docked-top {
     padding: 0 0;
@@ -125,7 +129,6 @@
 .x-tab {
     min-width: 9em; 
 }
-
 .x-title{
     font-size:0.9em;
 }
@@ -161,12 +164,14 @@
     width:100%;    
 } 
 .ownedbooklist .dataview-item{
-   width : 17.49em; 
-   height : 72px;
-   float:left;  
-   margin:10px 0px 0px 10px;    
+    width : 31.99%; 
+    height : 72px;
+    float:left;  
+    margin:1% 0% 0% 1%;    
 }
-
+.read_book_page.x-layout-card-item{
+    background:#fff;
+}
 .ownedbooklist{
    border-top: none;
    margin-bottom:0px;    
@@ -180,33 +185,29 @@
 .ownedbooklist .ownedbook_img{   
     text-align: center;
 }
-
 .ownedbooklist .ownedbook_img img{
    height:60px;
    margin:5px;
 }
-
 .ownedbooklist .ownedbook_detail td.book_title{
     padding:8px 5px 0px 0px;
     font-size:0.7em;
     font-weight: bold;
-    width: 225px;
+  
     white-space: nowrap;
     display: block;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-
 .ownedbooklist .ownedbook_detail td.author_name{
     padding:5px 5px 0px 0px;
     font-size:0.6em;
     width:250px;
 }
-
 .ownedbooklist .ownedbook_detail td.category{
     padding:5px 5px 0px 0px;
     font-size:0.6em;
-    width:250px;
+    
     color:#000;
 }
 .ownedbooklist .downlod_icon img{
@@ -217,11 +218,8 @@
     border-top: none;
     border-bottom: 1px solid #dedede;
 }
-
 @media (min-width: 600px) and (max-width: 767px) {
-    .ownedbooklist .dataview-item {
-        width : 14.28em;
-    }
+    
     .ownedbooklist .ownedbook_detail td.book_title{       
         width: 178px;
         white-space: nowrap;
@@ -232,12 +230,11 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-    .ownedbooklist .dataview-item {
-        width : 19.15em;
-        
-    }
+    
     .ownedbooklist .ownedbook_detail td.book_title{       
-        width: 260px;
+        width: 100%;
+        max-width: 130px;
+        min-width: 100px;
         white-space: nowrap;
         display: block;
         text-overflow: ellipsis;
@@ -248,26 +245,28 @@
         white-space: nowrap;
         display: block;
         text-overflow: ellipsis;
-        overflow: hidden;
-        
+        overflow: hidden;        
     }
     .study-titlebar.x-toolbar .x-button{
-        padding-left:6px !important;
+        padding-left:10px !important;
         padding-right:5px !important;  
     }
     .my-titlebar.x-toolbar .resume.x-button{
-        margin-left:10px !important;
-        margin-right:10px !important;
+        margin-left:5px !important;
+        margin-right:5px !important;
     }
     .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label {
         top: -0.5em;
     }
-}
-
-@media (min-width: 980px) and (max-width: 1024px){
-    .ownedbooklist .dataview-item {
-         width : 17.25em;
+    .my-titlebar.x-toolbar .x-button{
+        padding: 0px 11px !important;
     }
+    .my-titlebar .x-hasbadge .x-badge{
+        right: 0.7em !important; 
+    }    
+}
+@media (min-width: 980px) and (max-width: 1024px){
+   
     .ownedbooklist .ownedbook_detail td.book_title{      
         width: 224px;
         white-space: nowrap;
@@ -277,14 +276,10 @@
     }
     .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label {
         top: -0.5em;
-    }
+    }    
 }
-
-
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .ownedbooklist .dataview-item {
-        width : 16.03em;
-    }
+  
     .ownedbooklist .ownedbook_detail td.book_title{      
         width: 209px;
         white-space: nowrap;
@@ -292,7 +287,8 @@
         text-overflow: ellipsis;
         overflow: hidden;
     }
-}     
+} 
+  
 
 /****************************************/
 
@@ -330,7 +326,6 @@
 .my-titlebar .x-title{
   text-transform:uppercase;  
 }
-
 .my-titlebar .x-title ::first-letter {  
   font-variant: small-caps;
   font-size: 130%; 
@@ -346,14 +341,18 @@
 }
 
 .x-toolbar-bluenav .x-button.top_setting_field{
-    color: #fff;
+    color: #fff; 
 }
 
 .x-toolbar-bluenav .x-button.top_search_field{
     color: #fff;
 }
+
 .x-toolbar-bluenav .x-button.list_nav{
     color: #637254;
+}
+.x-toolbar .x-button .x-button-icon::before{
+    line-height:1.0em;
 }
 
 .x-toolbar .x-field-search .x-component-outer {
@@ -412,13 +411,11 @@
 .top_search_panel .x-field-search .x-field-input .x-form-field{
     margin-left:0.4em;
 }
-
 .top_search_panel .x-list{
     background:#fff;
      font-size: 0.8em;    
 }
-.top_search_panel .search_left_panel{ 
-    
+.top_search_panel .search_left_panel{     
      margin:5px 0px 5px 10px;
      border-bottom: 3px solid #c2cfb6;
      border-radius: 5px !important;
@@ -477,9 +474,6 @@
 /******************* End Of Top Search Panel *******************/ 
 
 /************** Top Setting Accordian List *******************/
-.setting_wrapper{    
-}
-
 .setting_badge_bckgrnd{        
     color:#fff;
     border: 1px solid #fe3f36;
@@ -491,7 +485,6 @@
 }
 
 /************** End Of Top Setting Accordian List *******************/
-
 .reader_option{
     border: 1px solid #000;
     border-radius: 10px !important;
@@ -506,13 +499,11 @@
     padding: 0px 20px 0px 10px;
     margin-bottom: -5px;    
 }
-
 .reader_config{
     margin-top: 10px;
     margin-left: 20px;
     padding: 10px;    
 }
-
 .reader_config .reader_config_title{   
     margin-top: 5px;
     margin-right: 10px;    
@@ -528,7 +519,6 @@
     font-size: 1.0em;
     font-weight: normal !important;   
 }
-
 .projct_list{
     margin-top:10px;
 }
@@ -574,7 +564,7 @@
     line-height: 1.5em;
 }
 .info_screen_wrapper .info_screen_contnt p.stdy_projct_desc b{
-   color:#637254;
+    color:#637254;
 }
 .info_screen_wrapper .info_screen_contnt p.stdy_projct_desc{
     font-size: 0.8em;
@@ -596,7 +586,6 @@
 .member_list_view.x-list{
     background-color: #fff;
 }
-
 .member_list_wrapper{
     width:100%;
 }
@@ -626,34 +615,41 @@
     color:#fff;
     font-weight: bold;
 }
-.memmsg_icon{
-   
+.memmsg_icon{   
     float:right;
     margin-right:20px;
 }
 
 /************** BOOK INFO TAB **********/
  
-.book_info .x-tabbar.x-docked-top .x-tab {
-    
+.book_info .x-tabbar.x-docked-top .x-tab {    
     margin-left:0px;
     margin-right:5px;     
 }  
-
 .book_info{
     margin:0px 10px 0px 0px;
     width:100%;
 }
 .book_info .x-tabbar-dark {
-   margin-left: 0px; 
+    margin-left: 0px;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important; 
 }
-
 .book_info .x-tab{
-    min-width: 3.5em;
-    width:15%;
+    min-width: 2.5em;
+    width:3%;             
 }
 .book_info_tab{
     border: 1px solid #ddd;
+}
+.book_info .x-tabbar.x-docked-top{
+    height: 2em;
+}
+.book_info .x-tabbar.x-docked-top .x-tab.x-tab-icon{
+    padding: 0.4em 0.5em;
 }
 
 /**************  END OF BOOK INFO TAB **********/
@@ -666,7 +662,7 @@
 .bookinfo_tab .bookinfo_wrapper {
     float:left;
     width:100%;
-    margin-top: 10px; 
+    margin-bottom: 10px; 
     border-bottom: 3px solid #c2cfb6;
      border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
@@ -675,12 +671,10 @@
     -o-border-radius: 5px !important;
     background-color: #fff !important;
 }
-
 .bookinfo_tab .bookinfo_wrapper .bookinfo_img{
     float:left;
     padding:10px 20px;
 }
-
 .bookinfo_tab .bookinfo_wrapper .bookinfo_detail{    
     padding:10px 20px;
 }
@@ -704,16 +698,13 @@
    line-height: 1.8em;
 }
 
-
 /************ BookMark Tab **********/
 .bookmark_tab {
    margin: 5px 10px 10px 10px; 
 }
-
 .bookmark_tab .bookmark_wrapper {
     float:left;
     width:100%;
-    margin-top: 10px; 
     border-bottom: 3px solid #c2cfb6;
      border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
@@ -723,12 +714,10 @@
     background-color: #fff !important;
     padding-bottom:10px;
 }
-
 .bookmark_tab .bookmark_wrapper .bookmark_img{
     float:left;
     padding:10px;
 }
-
 .bookmark_tab .bookmark_wrapper .bookmark_info{    
     padding:10px;
     float:left;
@@ -746,7 +735,6 @@
     margin-bottom:5px;
     line-height: 1.5em;
 }
-
 .bookmark_tab .bookmark_wrapper .book_chapter{
     border-top: 1px solid #c2c9ba;
     float:left;
@@ -755,7 +743,6 @@
     color: #000;
     width:100%;
 }
-
 .bookmark_tab .bookmark_wrapper .paragraph_no{
     border: none;
     border-top: 1px solid #c2c9ba;
@@ -765,12 +752,10 @@
     width:100%;
     background-color: #d6decf; 
 }
-
 .bookmark_tab .bookmark_wrapper .paragraph_no .paragraph_image{
     float:left;
     padding:7px 10px;
 }
-
 .bookmark_tab .bookmark_wrapper .paragraph_no .paragraph_contnt{
     width: 430px;
     white-space: nowrap;
@@ -780,19 +765,14 @@
     padding:8px 10px;
     float:left; 
 }
-
-
  /*************** Named Tages Tag ******************/
-
-
+ 
 .namedtags_tab {
    margin: 5px 10px 10px 10px; 
 }
-
 .namedtags_tab .namedtags_wrapper {
     float:left;
     width:100%;
-    margin-top: 10px; 
     border-bottom: 3px solid #c2cfb6;
      border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
@@ -807,7 +787,6 @@
     float:left;
     padding:10px;
 }
-
 .namedtags_tab .namedtags_wrapper .namedtags_info{    
     padding:10px;
     float:left;
@@ -838,7 +817,6 @@
 .namedtags_tab .namedtags_wrapper .book_chapter .tag_color{
     padding-right:5px;
 }
-
 .namedtags_tab .namedtags_wrapper .paragraph_no{
     border: none;
     border-top: 1px solid #c2c9ba;
@@ -849,12 +827,10 @@
     width:100%;
     background-color: #d6decf; 
 }
-
 .namedtags_tab .namedtags_wrapper .paragraph_no .paragraph_image{
     float:left;
     padding:7px 10px;
 }
-
 .namedtags_tab .namedtags_wrapper .paragraph_no .paragraph_contnt{
     width: 420px;
     white-space: nowrap;
@@ -866,7 +842,6 @@
 }
 
 /*************** Notes Tag ******************/
-
 .notes_tab {
    margin: 5px 10px 10px 10px; 
 }
@@ -874,7 +849,6 @@
 .notes_tab .notes_wrapper {
     float:left;
     width:100%;
-    margin-top: 10px; 
     border-bottom: 3px solid #c2cfb6;
      border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
@@ -884,7 +858,6 @@
     background-color: #fff !important;
     padding-bottom:10px;
 }
-
 .notes_tab .notes_wrapper .notes_img{
     float:left;
     padding:10px;
@@ -925,13 +898,10 @@
     background-color: #d6decf;
     padding:5px 0px; 
 }
-
 .notes_tab .notes_wrapper .paragraph_wrapper .paragraph_no .paragraph_image{
     float:left;
     padding:5px 5px 5px 10px;
-   
 }
-
 .notes_tab .notes_wrapper .paragraph_wrapper .paragraph_no .paragraph_contnt{
     width: 400px;
     white-space: nowrap;
@@ -943,39 +913,29 @@
     color: #637254; 
 }
 
-.notes_tab .notes_wrapper .paragraph_wrapper .notes_desc{
-   
+.notes_tab .notes_wrapper .paragraph_wrapper .notes_desc{   
     padding:8px 10px 8px 38px;
     float:right;
     color:#393a37; 
 }
-
-
-  
+ 
 /*************** Summaries Tag ******************/
-
-
 .summaries_tab {
    margin: 5px 10px 10px 10px; 
 }
-
 .summaries_tab .bookmark_wrapper {
     float:left;
     width:100%;
-    margin-top: 10px; 
     border-bottom: 1px solid #c2cfb6;
-    
     background-color: #fff !important;
     padding-bottom:10px;
 }
-
 .summaries_tab .bookmark_wrapper .bookmark_img{
     float:left;
     padding:10px;
 }
-
 .summaries_tab .bookmark_wrapper .bookmark_info{    
-    padding:10px;
+    padding:10px 10px 0px 10px;
     float:left;
 }
 .summaries_tab .bookmark_wrapper .bookmark_info p.book_title{
@@ -993,44 +953,43 @@
 }
 .summaries_tab .x-list{
   
-  border-bottom: 3px solid #c2cfb6;
-     border-radius: 5px !important;
+    border-bottom: 3px solid #c2cfb6;
+    border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;
+    background-color: #fff;
 }
 
 .summaries_tab .x-list-normal .x-list-item.x-list-item-tpl.x-list-header-wrap {
-   border-top: 1px solid #c2cfb6;
-    background-color: #fff;
-    border-bottom : none; 
+    border-top: 1px solid #c2cfb6;
     background-image:none;
+    background-color: #fff;
+    border-bottom : none;    
     color:#000;
-    font-size: 0.8em;   
-    
+    font-size: 0.8em;       
 }
 .summaries_tab .x-list-normal .x-list-item.x-list-item-tpl.x-list-header-wrap .active_img{ 
     background-image:none;
 }
 .summaries_tab .x-list-normal .x-list-item.x-list-item-tpl {
     font-size: 0.8em;
-    color:#637254; 
+    color:#637254;
+    background-color: #d6decf; 
 }
 .summaries_tab .x-list-normal .x-list-item.x-item-selected.x-list-item-tpl{
-   font-size: 0.8em;
+    font-size: 0.8em;
     color:#fff; 
 }
-.summaries_tab .x-list-normal .x-list-item.x-list-item-tpl .active_img{
-    
+.summaries_tab .x-list-normal .x-list-item.x-list-item-tpl .active_img{    
      background-image: url(../images/tab_highlights_icon.png);
      width:11px;
      height:15px;
      float:left;
      margin-right:10px; 
 }
-.summaries_tab .x-list-normal .x-list-item.x-item-selected.x-list-item-tpl .active_img{
-    
+.summaries_tab .x-list-normal .x-list-item.x-item-selected.x-list-item-tpl .active_img{    
      background-image: url(../images/tab_highlights_select_icon.png);
      width:11px;
      height:15px;
@@ -1053,31 +1012,28 @@
 
 /************ NoteSub Menu ************/
 
-.notesub_menu{
-  
-}
 .notesub_menu .x-field-textarea textarea{
-   margin: 15px;
-   min-height:14em;
+    margin: 15px 15px 0px 15px;
+    min-height:14em;
 }
 .notesub_menu .x-field .x-input-el{
     width: 90% !important;
-     border-left: 1px solid #768963;
-     border-top: 1px solid #768963;
-     border-right: 3px solid #768963;
-     border-bottom: 3px solid #768963;
+    border-left: 1px solid #768963;
+    border-top: 1px solid #768963;
+    border-right: 3px solid #768963;
+    border-bottom: 3px solid #768963;
 }
 .notesub_menu .x-field{
     background: #e5eae1 !important;
+}
+.notesub_menu .x-field .x-field-input{
+     padding-top:1px;
 }
 
 /*********** End Of NoteSub Menu ********/
 
 /******** Marksub Menu ***************/
 
-.marksub_menu{
-    
-}
 .marksub_menu .tag_color{
     float:left;
     margin-right:10px;
@@ -1102,7 +1058,6 @@
 .marksub_menu .x-field{
     min-height: 1.5em;
 }
-
 
 /******** End Of Mark Sub Menu ********/
 
@@ -1147,8 +1102,6 @@
 /***** End Of Selection Menu ***********/
 
 /***** EXTRACT MENU *******************/
-
-
 .extract_menu.x-segmentedbutton .x-button.x-first{
     -moz-border-radius-topleft: 0px;
     -webkit-border-top-left-radius: 0px;
@@ -1168,8 +1121,7 @@
     font-size: 0.9em;
     color:#fff;    
 }
-.extract_menu .x-button.x-button-study.x-button-pressing{
-   
+.extract_menu .x-button.x-button-study.x-button-pressing{   
     border: none;
     border-bottom: 3px solid #63784d;
     background-color: #768963;
@@ -1180,8 +1132,7 @@
     -ms-border-radius: 0px;
     -o-border-radius: 0px; 
 }
-.extract_menu .x-button.x-button-study.x-button-pressed{
-   
+.extract_menu .x-button.x-button-study.x-button-pressed{   
     border: none;
     border-bottom: 3px solid #63784d;
     background-color: #768963;
@@ -1241,10 +1192,7 @@
     color: #787975;
     line-height: 1.6em;  
 }
-
-
 /******* End Of LookUp Menu ***********/
-
 .discuss_menu .discussion_window{
     float: left;
     padding:5px 0px;
@@ -1306,42 +1254,35 @@
     background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
     background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
-
 .discuss_menu .discussion_window .discussion_description .title{  
     font-size: 0.8em;   
 }
-
 .discuss_menu .discussion_window .discussion_description .text{  
     padding-left:5px; 
     font-size: 0.7em;
 }
-
 .deck_panel{
     width:480px;
     height:510px;
     margin-top:5%;
-     border: 2px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;     
 }
-
 .card_question{
     padding:20px 0px 10px 10px;
 }
-
 .answers_btn{
      padding-top:5px;
 }
-
 .answers_btn .btn_main{
     float: left;
     padding:5px 0px;
     width: 100%; 
 }
-
 .answers_btn .btn_main .question_no{
     width: 5%;
     float:left;
@@ -1372,7 +1313,6 @@
 }
 
 /********** VocabularyAssessment *************/
-
 .vocabulary_assessment_panel{
     width:450px;
     height:350px;
@@ -1384,28 +1324,23 @@
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;     
 }
-
 .vocabulary_assessment_panel .x-toolbar .x-button{
     -webkit-text-fill-color: #000000;
 }
-
 .vocabulary_assessment_panel .card_question{
     padding:20px 0px 10px 10px;
     text-align: center;
     font-weight: bold;
-     font-size: 1.5em;
+    font-size: 1.5em;
 }
-
 .vocabulary_assessment_panel .answers_btn{
      padding-top:5px;
 }
-
 .vocabulary_assessment_panel .answers_btn .btn_main{
     float: left;
     padding:5px 0px;
     width: 100%; 
 }
-
 .vocabulary_assessment_panel .answers_btn .btn_main .question_no{
     width: 2%;
     float:left;
@@ -1433,11 +1368,9 @@
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;     
 }
-
 .quiz_panel .x-toolbar .x-button{
     -webkit-text-fill-color: #000000;
 }
-
 .quiz_panel .card_question{
     padding:20px 0px 10px 10px;
 }
@@ -1445,13 +1378,11 @@
 .quiz_panel .answers_btn{
      padding-top:5px;
 }
-
 .quiz_panel .answers_btn .btn_main{
     float: left;
     padding:5px 0px;
     width: 100%; 
 }
-
 .quiz_panel .answers_btn .btn_main .question_no{
     width: 5%;
     float:left;
@@ -1519,7 +1450,6 @@
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important; 
-
 }
 .jaournal_panel .journal_bottom.x-toolbar .x-button{
     border: 1px solid #999;
@@ -1546,14 +1476,12 @@
     -webkit-border-radius: 50% 50% !important;
     border: 2px solid #D5D5D7 !important;
 }
-
 .audio_panel .audioplayer .playbutton.play .x-button-icon{
     background: url(http://doc.developerextensions.com/ux/ext.ux.audioplayer/css/img/play.png) no-repeat center ;
     background-size: 85px 85px;
     width: 100% !important;
     height: 100% !important;
 }
-
 .audio_panel .audioplayer .playbutton.pause .x-button-icon{
     background: url(http://doc.developerextensions.com/ux/ext.ux.audioplayer/css/img/pause.png) no-repeat centers
     background-size: 85px 85px;
@@ -1578,18 +1506,16 @@
     -o-border-radius: 5px !important;   
     height:300px;  
 }
-
 .discussionque_panel{
-      margin-top:5%;
-     height:160px;
-     border: 2px solid #ddd;
+    margin-top:5%;
+    height:160px;
+    border: 2px solid #ddd;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;   
 }
-
 .discussionque_panel .x-input-checkbox:checked  + .x-field-mask:after  {
     content: "";
     height: 66px;
@@ -1601,7 +1527,6 @@
     background-size: contain;
     display: block;
 }
-
 .discussionque_panel .x-input-checkbox  + .x-field-mask:after {
     content: "";
     height: 66px;
@@ -1613,35 +1538,31 @@
     background-size: contain;
     display: block;
 }
-
 .discussionque_panel .left_icon{
-   padding:10px;
+    padding:10px;
 }
 .discussionque_panel .title{
-   font-weight: bold;
-   font-size:1.0em;
-   margin-bottom:5px;
-   padding-left:10px;
+    font-weight: bold;
+    font-size:1.0em;
+    margin-bottom:5px;
+    padding-left:10px;
     padding-top:10px;
 }
-
 .discussionque_panel .question{
-   font-weight: bold;
-   font-size:0.7em;
+    font-weight: bold;
+    font-size:0.7em;
     padding-left:10px;
 }
-
 .assessment_quiz_panel{
-      margin-top:5%;
-     height:160px;
-     border: 2px solid #ddd;
+    margin-top:5%;
+    height:160px;
+    border: 2px solid #ddd;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;   
 }
-
 .assessment_quiz_panel .x-input-checkbox:checked  + .x-field-mask:after  {
     content: "";
     height: 40px;
@@ -1653,7 +1574,6 @@
     background-size: contain;
     display: block;
 }
-
 .assessment_quiz_panel .x-input-checkbox  + .x-field-mask:after {
     content: "";
     height: 35px;
@@ -1665,7 +1585,6 @@
     background-size: contain;
     display: block;
 }
-
 .assessment_quiz_panel .left_icon{
    padding:10px;
 }
@@ -1676,13 +1595,11 @@
    padding-left:10px;
     padding-top:10px;
 }
-
 .assessment_quiz_panel .question{
    font-weight: bold;
    font-size:0.7em;
     padding-left:10px;
 }
-
 .assessment_quiz_panel .checkbox_bckgrnd{
     border: 2px solid #000;
     border-radius: 5px !important;
@@ -1732,8 +1649,7 @@
     padding: 0px 20px;
    /* min-height:2.6em; */
     min-height:1.95em; 
-    margin: 6px 0.0em;
-   
+    margin: 6px 0.0em;   
 }
 /************* my_titlebar *****************/
 .x-toolbar{
@@ -1746,17 +1662,16 @@
 .my-titlebar{
     padding-left:0px;
 }
-
 .my-titlebar.x-toolbar .resume.x-button{
-    margin-left:20px;
-    margin-right:20px;  
+    margin-left:10px;
+    margin-right:10px;  
     min-height:1.5em;
     text-transform:uppercase;
     padding: 2px 10px  0px 10px;
 }
 .my-titlebar.x-toolbar .list_nav.x-button{
-        padding: 0px 5px;
-    }
+        padding: 0px 5px !important;
+}
 
 /************* study_project_titlebar *****************/
 
@@ -1764,35 +1679,34 @@
     margin-top: 0px !important;
     margin-bottom: 0px !important;
     border-radius: 0px;
-    padding: 0.14em 0.5em;
+    /*padding: 0.14em 0.5em;  */
     min-height:1.95em;
     margin: 6em 0.0em;
+    padding: 0px 10px;
 }
-
 .study-titlebar{
     padding-left:0px;
+}
+.study-titlebar .course_logo img{
+    margin-top:5px;
 }
 .study-titlebar .x-button-label{
     font-weight:normal;
 }
-
 .study-titlebar.x-toolbar .resume.x-button{
     min-height:1.5em;
     text-transform:uppercase;
-    margin: 6em 0.2em;
-    padding:2px 10px 0px 10px;
-   
+    margin: 6em 0.3em;
+    padding:2px 10px 0px 10px;   
 }
 .x-toolbar .resume.x-button .x-button-label{
      font-weight:bold;
      font-size: 0.7em;
 }
-
 .study-titlebar .progress_assemnt{
     font-size: 0.8em;   
     margin-bottom:5px;    
 }
-
 .x-toolbar .progress_assemnt.x-button .x-button-label{
     color:#000;
 }
@@ -1808,7 +1722,6 @@
      margin-left:5px;
      float:right;    
 }
-
 .study-titlebar.x-toolbar .x-button .resume{   
     float:left;   
 }
@@ -1822,16 +1735,13 @@
      float:right; 
      color:#637254;   
 }
-
 .study-titlebar .x-hasbadge .x-badge{
     min-width: 2em;
     line-height: 1.2em;
     font-size: 0.7em;
-    right: 6.5em;
-    left:1.25em;
-    top:0.4em;
+    right: 0em;
+    top:0em;
 }
-
 .x-toolbar .x-button.x-button-study.x-button-pressing{
     border:none;
     border-left: 1px solid #63784d;
@@ -1840,21 +1750,16 @@
     background-color: #768963;
     background-image:none;
 }
-
 .study-titlebar.x-toolbar .x-button.study_info{
     -webkit-text-fill-color: #fff;
-    padding:0px;
-    top:-5px;
-    left:-5px;
+    padding:0px !important;
 }
 .x-toolbar .x-button.x-button-pressing{
     border-left: 1px solid #768963;
 }
-
 .popup_panel .recent_open_book{
     margin:10px 20px;    
 }
-
 .book_list{   
     float:left;   
 }
@@ -1870,19 +1775,15 @@
 .book_list_result {
    margin: 5px 10px 10px 10px;
 }
-
-
 .book_list_result .bookinfo_wrapper {
     float:left;
     width:100%;
     background-color: #fff !important; 
 }
-
 .book_list_result .bookinfo_wrapper .bookinfo_img{
     float:left;
     padding:10px 10px;
 }
-
 .book_list_result .bookinfo_wrapper .bookinfo_detail{    
     padding:10px 10px;
 }
@@ -1915,13 +1816,11 @@
     margin-left:10px;
     line-height: 1.5em;
 }
-
 .color-dataview-item{
     width : 2em;
    height : 2em;
    float:left;  
-   margin:2px 0px 0px 2px;
-   
+   margin:2px 0px 0px 2px;  
 }
 .tagsub_menu .x-button{
     border: none;
@@ -1940,54 +1839,45 @@
     height: 25px !important;
     padding-top:5px;    
 }
-
 .x-tab .x-button-icon.owned, .x-button .x-button-icon.x-icon-mask.owned {
     background-image: url(../images/home-tab-icon.png);
     width:25px !important;
     height: 24px !important;
     padding-top:5px;    
 }
-
 .x-tab .x-button-icon.free, .x-button .x-button-icon.x-icon-mask.free {
     background-image: url(../images/free-tab-icon.png);
     width:25px !important;
     height: 25px !important;
     padding-top:5px;    
 }
-
 .x-tab .x-button-icon.bookinfo, .x-button .x-button-icon.x-icon-mask.bookinfo {
     background-image: url(../images/tab_info_icon.png);
     width:24px !important;
-    height: 23px !important;
-    margin-top: 3px !important;
-    margin-left: 18px !important;
+    height: 23px !important;   
+    margin-left: 3px !important;
 }
 .x-tab .x-button-icon.bookmark, .x-button .x-button-icon.x-icon-mask.bookmark {
     background-image: url(../images/tab_bookmark_icon.png);
     width:21px !important;
     height: 24px !important;
-    margin-top: 3px !important;
-    margin-left: 18px !important;
+    margin-left: 3px !important;
 }
-
 .x-tab .x-button-icon.namedtags, .x-button .x-button-icon.x-icon-mask.namedtags {
     background-image: url(../images/tabs_tags_icon.png);
     width:21px !important;
-    height: 21px !important;
-    margin-top: 3px !important;
-    margin-left: 18px !important;
+    height: 21px !important; 
+    margin-left: 3px !important;
 }
 .x-tab .x-button-icon.notes, .x-button .x-button-icon.x-icon-mask.notes {
     background-image: url(../images/tab_notes_icon.png);
     width:21px !important;
-    height: 21px !important;
-    margin-top: 3px !important;
-    margin-left: 18px !important;
+    height: 21px !important;  
+    margin-left: 3px !important;
 }
 .x-tab .x-button-icon.highlights, .x-button .x-button-icon.x-icon-mask.highlights {
     background-image: url(../images/tab_highlights_icon.png);
     width:11px !important;
     height: 15px !important;
-    margin-top: 3px !important;
-    margin-left: 18px !important;
+    margin-left: 8px !important;
 }

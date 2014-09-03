@@ -24,6 +24,7 @@ $btn-bottom-border-color:#63784d;
 
 // Examples of using the icon mixin:
 // @include icon('user');
+@include icon('mail');
 
 @include sencha-toolbar-ui('bluenav', #aebf9d,'flat');
 .x-toolbar .x-toolbar-title {
@@ -150,7 +151,7 @@ $btn-bottom-border-color:#63784d;
     color: $green-font-color;
     border: 1px solid $page-border-color;
     border-bottom: none;
-    @include border-radius(0em !important);
+    //@include border-radius(0em !important);
 }
 
 .x-hasbadge .x-badge {

@@ -11,7 +11,7 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
         items: [
             {
                 xtype: 'button',
-                html: '<img src="resources/images/course_logo.png">',
+                html: '<div class="course_logo"><img src="resources/images/course_logo.png"></div>',
                 align: 'left',
                 style:'border-left: none;'
             },
@@ -41,7 +41,7 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
             {               
                 xtype: 'button',                
                 html: '<div class="main_btn"><div class="image"><img src="resources/images/memorize_icon.png"></div><div class="text">Memorize</div></div>',
-                align: 'left',
+                align: 'right',
                 ui: 'study',
                 badgeText: '12'
             },
@@ -58,14 +58,14 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
             {               
                 xtype: 'button',
                 html: '<div class="main_btn"><div class="image"><img src="resources/images/discuss_icon.png"></div><div class="text">Discuss</div></div>',
-                align: 'left',
+                align: 'right',
                 ui: 'study',
                 badgeText: '10'
             },
             {               
                 xtype: 'button',
                 html: '<div class="main_btn"><div class="image"><img src="resources/images/assignment_icon.png"></div><div class="text">Assignment</div></div>',
-                align: 'left',
+                align: 'right',
                 ui: 'study',
                 badgeText: '1',
                 style: 'border-right:1px solid #768963;',

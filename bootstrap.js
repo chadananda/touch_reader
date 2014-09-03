@@ -800,8 +800,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.controller.BookTimer": [],
   "book.model.MBookInfoTab": [],
   "book.model.MBookSlider": [],
+  "book.model.MBookStoreList": [],
   "book.model.MCategoryAccordionList": [],
   "book.model.MDiscussMenu": [],
+  "book.model.MFreeBookList": [],
   "book.model.MListSelecrSearchResult": [],
   "book.model.MOwnedBookList": [],
   "book.model.MReadBookPageList": [],
@@ -809,8 +811,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.model.MSettingAccordionList": [],
   "book.store.SBookInfoTab": [],
   "book.store.SBookSlider": [],
+  "book.store.SBookStoreList": [],
   "book.store.SCategoryAccordionList": [],
   "book.store.SDiscussMenu": [],
+  "book.store.SFreeBookList": [],
   "book.store.SListSelecrSearchResult": [],
   "book.store.SOwnedBookList": [],
   "book.store.SReadBookPageList": [],
@@ -822,12 +826,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.view.BookSlider": [],
   "book.view.BookSliderContainer": [],
   "book.view.BookSliderItem": [],
+  "book.view.BookStoreList": [],
   "book.view.BookTitlebar": [],
   "book.view.CategoryAccordionList": [],
   "book.view.CategoryListContainer": [],
   "book.view.CategoryMainContainer": [],
   "book.view.ColorPicker": [],
   "book.view.CurrentBookPopUp": [],
+  "book.view.FreeBookList": [],
   "book.view.LibrarybyLanguage": [],
   "book.view.ListPopUp": [],
   "book.view.ListSelecrSearchResult": [],
@@ -1869,8 +1875,10 @@ Ext.ClassManager.addNameAliasMappings({
   "book.controller.BookTimer": [],
   "book.model.MBookInfoTab": [],
   "book.model.MBookSlider": [],
+  "book.model.MBookStoreList": [],
   "book.model.MCategoryAccordionList": [],
   "book.model.MDiscussMenu": [],
+  "book.model.MFreeBookList": [],
   "book.model.MListSelecrSearchResult": [],
   "book.model.MOwnedBookList": [],
   "book.model.MReadBookPageList": [],
@@ -1878,8 +1886,10 @@ Ext.ClassManager.addNameAliasMappings({
   "book.model.MSettingAccordionList": [],
   "book.store.SBookInfoTab": [],
   "book.store.SBookSlider": [],
+  "book.store.SBookStoreList": [],
   "book.store.SCategoryAccordionList": [],
   "book.store.SDiscussMenu": [],
+  "book.store.SFreeBookList": [],
   "book.store.SListSelecrSearchResult": [],
   "book.store.SOwnedBookList": [],
   "book.store.SReadBookPageList": [],
@@ -1901,6 +1911,9 @@ Ext.ClassManager.addNameAliasMappings({
   "book.view.BookSliderItem": [
     "widget.bookslideritem"
   ],
+  "book.view.BookStoreList": [
+    "widget.bookstorelist"
+  ],
   "book.view.BookTitlebar": [
     "widget.booktitlebar"
   ],
@@ -1918,6 +1931,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "book.view.CurrentBookPopUp": [
     "widget.currentbookpopup"
+  ],
+  "book.view.FreeBookList": [
+    "widget.freebooklist"
   ],
   "book.view.LibrarybyLanguage": [
     "widget.librarybylanguage"

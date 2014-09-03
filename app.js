@@ -27,11 +27,11 @@ Ext.application({
     ],
     
     models: [
-        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList', 'MSettingAccordionList', 'MSearchScreen', 'MBookInfoTab', 'MListSelecrSearchResult'
+        'MOwnedBookList', 'MBookSlider', 'MCategoryAccordionList', 'MReadBookPageList', 'MSettingAccordionList', 'MSearchScreen', 'MBookInfoTab', 'MListSelecrSearchResult', 'MBookStoreList', 'MFreeBookList'
     ],
     
     stores: [
-        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList', 'SSettingAccordionList', 'SSearchScreen', 'SBookInfoTab', 'SListSelecrSearchResult'
+        'SOwnedBookList', 'SBookSlider', 'SCategoryAccordionList', 'SReadBookPageList', 'SSettingAccordionList', 'SSearchScreen', 'SBookInfoTab', 'SListSelecrSearchResult', 'SBookStoreList', 'SFreeBookList'
     ],
 
     views: [
@@ -49,7 +49,7 @@ Ext.application({
         'book.view.exerciseindicator.DiscussionQueExercise', 'book.view.exerciseindicator.AssessmentQuizExerciseContainer', 'book.view.exerciseindicator.AssessmentQuizExercise',
         'book.view.exerciseindicator.MemorizationAssignmentContainer', 'book.view.exerciseindicator.MemorizationAssignment', 'book.view.memorization.MemorizationEnginePopupDrillingScreenContainer',
         'book.view.memorization.MemorizationEnginePopupDrillingScreen', 'VideoPlayer', 'AudioPlayer', 'book.view.journal.MicroJournalingContainer', 'book.view.journal.MicroJournaling', 'book.view.BookSliderItem',
-        'ListSelecrSearchResult', 'OwnedBookHistoryList', 'OwnedBookEconomicsList', 'ListSelecrSearchResultContainer', 'ColorPicker'
+        'ListSelecrSearchResult', 'OwnedBookHistoryList', 'OwnedBookEconomicsList', 'ListSelecrSearchResultContainer', 'ColorPicker', 'BookStoreList', 'FreeBookList'
     ],
 
     icon: {

@@ -1,7 +1,7 @@
 
 
 Ext.define('book.view.bookinfoscreen.BookInfoTab', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'bookinfotab',
     requires: [],
     config: { 

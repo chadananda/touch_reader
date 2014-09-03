@@ -9,7 +9,7 @@ Ext.define('book.view.ReadBookPageList', {
     
     config: { 
         flex:1,
-        cls: 'ownedbooklist',
+        cls: 'read_book_page',
         layout: 'hbox',
         
         items: [

@@ -83,6 +83,8 @@ config: {
         'compilesubmenulist': 'compilesubmenu list',
         'tagsubmenu': 'tagsubmenu #tag_color',
         'colorpicker': 'colorpicker dataview',
+        'colortextfill': 'tagsubmenu #text_fill',
+        'chnagedcolorbtn': 'tagsubmenu #chnage_color_btn',
         'ownedbookhistorylist': 'ownedbookhistorylist dataview',
         'ownedbookeconomicslist': 'ownedbookeconomicslist dataview'         
         
@@ -149,6 +151,9 @@ config: {
         },
         'colorpicker': {
             'itemtap': 'onColorpickerItemtap'
+        },
+        'colortextfill': {
+            'change': 'onChnageFillTextColor'
         }
        
     }    
@@ -197,9 +202,9 @@ config: {
         
         var chat_icon = this.getChat_icon();
         if(chat_icon.getBadgeText() != ''){
-                chat_icon.setHtml('<img src="resources/images/chat.png">');
+                chat_icon.setText('<img src="resources/images/chat.png">');
             }else {
-               chat_icon.setHtml('<img src="resources/images/chat_stamp_icon.png">');
+               chat_icon.setText('<img src="resources/images/chat.png">');
             }
     },
   
@@ -617,11 +622,15 @@ config: {
         var book_url = record.book_url;
         var book_title = record.book_title;
         var author_name = record.author_name; 
-
+        
         this.setBook_title(book_title);
         
+        if (book_title.length > 30) {
+        		book_title = book_title.substring(0, 27) + " ...";
+        }
+        
         var dropdown_title = this.getTitlebar_dropdown(); 
-            dropdown_title.setText(book_title, author_name);
+            dropdown_title.setText(book_title + ', ' + author_name + ' <img src="resources/images/down_arrow.png">');
         var booktitlebar = this.getBooktitlebar();
             booktitlebar.setTitle('') 
             
@@ -674,9 +683,19 @@ config: {
         }
     },
     
-    onColorpickerItemtap: function(list, index, item, e){
-        //var store = list.getStore();                                                   
-        //console.log(list.getItems())
+    onColorpickerItemtap: function(color, index, target, record, e, eOpts){
+      
+        alert(record.data.color)
+        this.getChnagedcolorbtn().setStyle('background-color:#' + record.data.color);
+        console.log({backgroundColor:'# '+record.data.color+' !important' })
+        this.getColortextfill().setValue(record.data.color);
+        
+       
+    },
+    onChnageFillTextColor: function(text, newValue, oldValue, eOpts){
+        console.log(newValue)
+        console.log(oldValue)
+       this.getChnagedcolorbtn().setStyle('background-color:#' + newValue);
     } 
     
 });

@@ -1,27 +1,29 @@
 
-Ext.require(['book.store.SOwnedBookList'], function() {
-    Ext.define('book.view.OwnedBookHistoryList', {
+Ext.require(['book.store.SBookStoreList'], function() {
+    Ext.define('book.view.BookStoreList', {
         extend: 'Ext.Container',
-        xtype: 'ownedbookhistorylist',
+        xtype: 'bookstorelist',
        
         requires: [
             'Ext.TitleBar'
         ],     
       
         config: {
-    
+        cls: 'ownedbooklist',
         items: [
-            {
-             html: '<div class="display_by_cat">History</div>'
-            },
+            
             {
                xtype: 'dataview', 
-               height:250,
+               height:'100%',
+               width: '100%',
                
                 inline: {
                     wrap: true
                 },
-                scrollable: false,
+                scrollable: {
+                    direction: 'vertical',
+                    directionLock: true
+                },
                 itemCls: 'dataview-item',
                 itemTpl: [
           
@@ -51,7 +53,7 @@ Ext.require(['book.store.SOwnedBookList'], function() {
                 '</table>' 
            
             ],
-            store: Ext.create('book.store.SOwnedBookList'),
+            store: Ext.create('book.store.SBookStoreList'),
             }
         ]
     }

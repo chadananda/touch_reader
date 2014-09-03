@@ -11,7 +11,7 @@ Ext.define('book.view.BookTitlebar', {
         items: [
             {
                 xtype: 'button',
-                html: '<img src="resources/images/logo.png">',               
+                html: '<img src="resources/images/logo.png" width="18" height="30">',               
                 align: 'left',
                 style:'border: none;padding:0px 10px;'
             },
@@ -63,7 +63,7 @@ Ext.define('book.view.BookTitlebar', {
             },
             {
                 xtype: 'button',
-                html: '',
+                text: '',
                 itemId: 'chat_icon',                
                 align: 'right',
                 hidden:false,
@@ -72,7 +72,8 @@ Ext.define('book.view.BookTitlebar', {
             {
                 cls:'top_setting_field',
                 xtype: 'button',
-                html: '<img src="resources/images/setting_icon.png">',
+                //text: '<img src="resources/images/setting_icon.png">',
+                iconCls: 'settings',
                 itemId: 'top_setting_field',
                 align: 'right',
                 hidden:false
@@ -81,7 +82,8 @@ Ext.define('book.view.BookTitlebar', {
                 cls:'top_search_field',
                 xtype: 'button',
                 itemId: 'top_search_field',
-                html: '<img src="resources/images/search_icon.png">',
+                //html: '<img src="resources/images/search_icon.png">', 
+                iconCls: 'search',                
                 align: 'right',
                 hidden:false,
                 style:'margin-right:10px;',

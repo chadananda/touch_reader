@@ -20,14 +20,14 @@ Ext.define('book.view.TabPanel', {
                 title: 'Bookstore',
                 iconCls: 'bookstore',
                 iconMask: true,
-                html: 'Bookstore Tab',
+                xtype: 'bookstorelist',
                 badgeText: '256'
             },
             {
                 title: 'Free',
                 iconCls: 'free',
                 iconMask: true,
-                html: 'Free Book',
+                xtype: 'freebooklist',
                 badgeText: '64'
             }
         ]

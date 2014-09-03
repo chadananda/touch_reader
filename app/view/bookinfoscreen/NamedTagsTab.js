@@ -1,7 +1,7 @@
 
 
 Ext.define('book.view.bookinfoscreen.NamedTagsTab', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'namedtagstab',
     requires: [],
     config: { 
