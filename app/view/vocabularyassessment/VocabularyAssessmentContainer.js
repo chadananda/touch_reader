@@ -10,15 +10,13 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessmentContainer', {
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
-                xtype: 'vocabularyassessment',
+                xtype: 'vocabularyassessment'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

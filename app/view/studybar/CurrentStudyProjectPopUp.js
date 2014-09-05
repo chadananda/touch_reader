@@ -10,7 +10,6 @@ Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
         id: 'current_std_projct',              
         width: 450,
         height: 350,
-        //centered: true,
         modal: true,
         hideMode: 'close',
         hideOnMaskTap: true,
@@ -22,9 +21,7 @@ Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
                 html: '<div class="recent_open_book">CURRENT</div>'
             },
             {
-                
                 flex:1,
-               
                 xtype: 'currentppenstudeyprojectlist'
             },
            
@@ -33,9 +30,7 @@ Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
                 html: '<div class="recent_open_book"> COMPLETED</div>'
             },
             {
-                
                 flex:1,
-               
                 xtype: 'completedstudeyprojectlist'
             },
           
@@ -43,7 +38,7 @@ Ext.define('book.view.studybar.CurrentStudyProjectPopUp', {
             showAnimation: {
                 type: 'slide',
                 duration: 1,
-                direction: 'up',
+                direction: 'up'
             },
             plugins: [new Ext.create('book.ux.PanelAction',{
                 iconClass: 'x-panel-action-icon-close',

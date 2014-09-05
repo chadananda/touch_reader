@@ -4,10 +4,8 @@ Ext.define('book.view.CategoryMainContainer', {
     requires: [],
     config: { 
         layout:'vbox',
-        //cls: 'search_book_container',
         flex:1,
         items: [
-            
             {
               xtype: 'searchbooksview'
             },

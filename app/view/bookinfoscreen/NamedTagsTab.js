@@ -27,10 +27,8 @@ Ext.define('book.view.bookinfoscreen.NamedTagsTab', {
                     '</div>',
                 '</tpl>',
             '</tpl>', 
-            '</div>',
-             
-        ],
-         
+            '</div>'
+        ]
     }
 })
 

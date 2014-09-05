@@ -10,15 +10,13 @@ Ext.define('book.view.exerciseindicator.MemorizationAssignmentContainer', {
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
-                xtype: 'memorizationassignment',
+                xtype: 'memorizationassignment'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

@@ -9,14 +9,13 @@ Ext.define('book.view.memorization.MemorizationEnginePopupDrillingScreen', {
         flex:1,
         layout: 'hbox',       
         items: [
-            
             {
                 flex:1,
                 xtype: 'videoplayer'
             },
             {
                 flex:1,
-                xtype: 'memorizationdeck',
+                xtype: 'memorizationdeck'
             }           
         ]
     }

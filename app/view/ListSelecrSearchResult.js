@@ -5,11 +5,7 @@ Ext.define('book.view.ListSelecrSearchResult', {
     xtype: 'listselecrsearchresult',
     requires: [],
     config: { 
-        //cls: 'book_list_result',
-        //scrollable: true,
-       
         tpl: [
-        
             '<div class="bookinfo_wrapper">',
                 '<div class="bookinfo_img">',
                     '<img src="{book_img}" width="80" height="108">',
@@ -20,7 +16,7 @@ Ext.define('book.view.ListSelecrSearchResult', {
                     '<p class="difficulty">{difficulty}</p>',
                     '<p class="description">{description}</p>',
                 '</div>',
-            '</div>',
+            '</div>'
         ]
     }
 })

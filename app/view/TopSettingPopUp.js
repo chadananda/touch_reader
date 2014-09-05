@@ -3,7 +3,6 @@ Ext.define('book.view.TopSettingPopUp', {
     xtype: 'topsettingpopup',
     requires: [],
     config: {
-       // height: '30%',
         id: 'top_setting',
         left: '5%',
         padding: 10,

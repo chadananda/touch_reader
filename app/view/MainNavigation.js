@@ -6,10 +6,8 @@ Ext.define('book.view.MainNavigation', {
     config: {
         navigationBar: false,
         type: 'card', 
-        
         items:[
             {
-                //title: 'Owned',
                 xtype: 'booktitlebar' 
             },
             {

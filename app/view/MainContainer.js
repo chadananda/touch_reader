@@ -4,20 +4,12 @@ Ext.define('book.view.MainContainer', {
     requires: [],
     config: { 
         layout:'hbox',
-        //cls: 'search_book_container',
         flex:1,
         items: [
-            
             {
               flex:1,
               xtype: 'categorymaincontainer'
-            },
-            /*
-            {
-              flex:1,
-              xtype: 'rightsidebarcontainer'
             }
-            */
         ]
     }
 });

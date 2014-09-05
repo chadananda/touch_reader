@@ -10,16 +10,14 @@ Ext.define('book.view.memorization.MemorizationEnginePopupDrillingScreenContaine
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
                 flex:5,
-                xtype: 'memorizationpopupdrillingscreen',
+                xtype: 'memorizationpopupdrillingscreen'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

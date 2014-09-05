@@ -46,7 +46,7 @@ Ext.define('book.controller.BookRoutesController', {
         routes: {
             'reading_configuration_options/:2.2.1.2': 'showConfigOption',
             
-            'book_information_screen/:2.2.7': 'showBookInforationScreen',
+            //'book_information_screen/:2.2.7': 'showBookInforationScreen',
             
             'memorization_deck_clearing_drill/:2.3.2.1': 'showMemorizationDeckClearingDrill',
             
@@ -112,13 +112,13 @@ Ext.define('book.controller.BookRoutesController', {
         mainnavigation.push({xtype: 'readingconfigpptionspopup'});
        
     },
-    
+    /*
     showBookInforationScreen: function(){
          var mainnavigation = this.getMainnavigation(); 
         mainnavigation.push({xtype: 'bookinformationscreen'});
         
     },
-    
+    */
     onBookinfotabshow: function(){
       var url = bookInfotabdata;
         var params = {};

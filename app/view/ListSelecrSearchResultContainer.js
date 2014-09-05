@@ -8,7 +8,6 @@ Ext.define('book.view.ListSelecrSearchResultContainer', {
         cls: 'book_list_result',
         layout: 'vbox',
         items:[
-            
             {   height:150,
                 xtype: 'listselecrsearchresult'   
             },
@@ -16,9 +15,7 @@ Ext.define('book.view.ListSelecrSearchResultContainer', {
                 flex:2,
                 xtype: 'categoryaccordionlist'
             }
-        ] 
-        
-         
+        ]
     }
 })
 

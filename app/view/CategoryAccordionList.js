@@ -1,6 +1,6 @@
 Ext.require(['book.store.SCategoryAccordionList'], function() {
 Ext.define('book.view.CategoryAccordionList', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'categoryaccordionlist',
   
     requires: [
@@ -8,9 +8,7 @@ Ext.define('book.view.CategoryAccordionList', {
     ],     
     config: {
         flex: 1,
-        layout: 'vbox',
-        //cls: 'book_list_result',
-           
+        layout: 'vbox',        
         items: [{
                 style:'background-color:#fff;padding:10px;',
                 html: '12 Result Found'

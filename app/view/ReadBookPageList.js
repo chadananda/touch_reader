@@ -1,42 +1,18 @@
 
 Ext.define('book.view.ReadBookPageList', {
     extend: 'Ext.Panel',
-    xtype: 'readbookpagelist',
-    
-    requires: [
-        'Ext.TitleBar'
-    ],     
-    
+    xtype: 'readbookpagelist',    
+    requires: [],         
     config: { 
         flex:1,
         cls: 'read_book_page',
         layout: 'hbox',
-        
         items: [
-            /*
             {
-                xtype: 'sidebarmenu',
-                //hidden: true
-            },
-            */
-                        
-          /*  {            
-                xtype: 'bookinformationscreen',
-                itemId: 'toggle',
-                showAnimation: {
-                    type: 'slide',
-                    direction: 'right',
-                    duration: 600
-                }, 
-            },
-            */
-            {
-                xtype   : 'iframe',
+                xtype: 'iframe',
                 flex:1,
                 itemId: 'iframe'
             }
         ]
     }
-
-
 })

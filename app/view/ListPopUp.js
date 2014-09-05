@@ -10,16 +10,12 @@ Ext.define('book.view.ListPopUp', {
         id: 'list_popup',              
         width: 500,
         height: 400,
-        //padding: 10,
         left: '5%',
         top: '0%',
-        //centered: true,
         modal: true,
         hideMode: 'close',
         hideOnMaskTap: true,
         layout: 'vbox',
-        
-        
         items: [
             {
                 flex:1,

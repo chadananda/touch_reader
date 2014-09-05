@@ -9,14 +9,13 @@ Ext.define('book.view.audiovideo.AudioVideoLecture', {
         flex:1,
         layout: 'hbox',       
         items:[
-            
             {
                 flex:1,
-                xtype: 'audioplayerview',    
+                xtype: 'audioplayerview'    
             },
             {
                 flex:1,
-                xtype: 'videoplayer', 
+                xtype: 'videoplayer' 
             }
         ]
     }

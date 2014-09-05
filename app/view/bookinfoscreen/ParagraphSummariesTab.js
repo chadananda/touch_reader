@@ -17,7 +17,7 @@ Ext.define('book.view.bookinfoscreen.ParagraphSummariesTab', {
                 '<p class="book_title">{title}</p>',
                 '<p class="author_name">{author_name}</p>',                    
             '</div>',
-            '</div>',
+            '</div>'
         ],
         items:[
             

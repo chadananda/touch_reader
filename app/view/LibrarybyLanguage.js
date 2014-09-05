@@ -5,7 +5,6 @@ Ext.define('book.view.LibrarybyLanguage', {
     config: { 
         layout:'hbox',
         cls: 'sel_lib_language',
-       // flex: 0.2,
         items: [
             {
                 flex: 1,

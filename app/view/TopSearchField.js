@@ -22,6 +22,7 @@ Ext.define('book.view.TopSearchField', {
             {
                 xtype: 'searchfield',
                 placeHolder: 'As-you-type search results',
+                clearIcon: false,
                 name: 'search',
                 itemId: 'searchBox',
             },

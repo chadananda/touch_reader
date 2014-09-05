@@ -6,7 +6,6 @@ Ext.define('book.view.book.SelectionMenu', {
     requires: [],
     
     config: { 
-        //allowMultiple: true,
         width:348,
         height: 50,
         top: 130,

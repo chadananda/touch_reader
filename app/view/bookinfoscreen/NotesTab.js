@@ -35,10 +35,8 @@ Ext.define('book.view.bookinfoscreen.NotesTab', {
                         '</tpl>',
                 '</tpl>',
             '</tpl>', 
-            '</div>',
-             
-        ],
-         
+            '</div>'
+        ]
     }
 })
 

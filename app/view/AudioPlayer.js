@@ -18,7 +18,7 @@ Ext.define('book.view.AudioPlayer', {
                         xtype:'titlebar',
                         title:'A Brief Introduction to Fractional<br> Exchange Money Creation',
                         height:70,
-                        ui: 'normal' ,
+                        ui: 'bluenav'
                     },
                     {
                         xtype:'fieldset',

@@ -10,15 +10,13 @@ Ext.define('book.view.journal.MicroJournalingContainer', {
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
-                xtype: 'microjournaling',
+                xtype: 'microjournaling'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

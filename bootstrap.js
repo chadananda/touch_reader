@@ -821,7 +821,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.store.SSearchScreen": [],
   "book.store.SSettingAccordionList": [],
   "book.ux.PanelAction": [],
-  "book.view.AddBookView": [],
   "book.view.AudioPlayer": [],
   "book.view.BookSlider": [],
   "book.view.BookSliderContainer": [],
@@ -829,7 +828,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.view.BookStoreList": [],
   "book.view.BookTitlebar": [],
   "book.view.CategoryAccordionList": [],
-  "book.view.CategoryListContainer": [],
   "book.view.CategoryMainContainer": [],
   "book.view.ColorPicker": [],
   "book.view.CurrentBookPopUp": [],
@@ -846,9 +844,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.view.OwnedBookHistoryList": [],
   "book.view.OwnedBookList": [],
   "book.view.ReadBookPageList": [],
-  "book.view.RecentlyReadTitle": [],
-  "book.view.RightCategoryTitle": [],
-  "book.view.RightSidebarContainer": [],
   "book.view.SearchBooksView": [],
   "book.view.SettingAccordionList": [],
   "book.view.TabPanel": [],
@@ -1896,9 +1891,6 @@ Ext.ClassManager.addNameAliasMappings({
   "book.store.SSearchScreen": [],
   "book.store.SSettingAccordionList": [],
   "book.ux.PanelAction": [],
-  "book.view.AddBookView": [
-    "widget.addbookview"
-  ],
   "book.view.AudioPlayer": [
     "widget.audioplayerview"
   ],
@@ -1919,9 +1911,6 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "book.view.CategoryAccordionList": [
     "widget.categoryaccordionlist"
-  ],
-  "book.view.CategoryListContainer": [
-    "widget.categorylistcontainer"
   ],
   "book.view.CategoryMainContainer": [
     "widget.categorymaincontainer"
@@ -1970,15 +1959,6 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "book.view.ReadBookPageList": [
     "widget.readbookpagelist"
-  ],
-  "book.view.RecentlyReadTitle": [
-    "widget.recentlyreadtitle"
-  ],
-  "book.view.RightCategoryTitle": [
-    "widget.rightcategorytitle"
-  ],
-  "book.view.RightSidebarContainer": [
-    "widget.rightsidebarcontainer"
   ],
   "book.view.SearchBooksView": [
     "widget.searchbooksview"

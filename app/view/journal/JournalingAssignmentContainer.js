@@ -10,15 +10,13 @@ Ext.define('book.view.journal.JournalingAssignmentContainer', {
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
-                xtype: 'jaournalingassignment',
+                xtype: 'jaournalingassignment'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

@@ -2,11 +2,8 @@
 Ext.require(['book.store.SBookStoreList'], function() {
     Ext.define('book.view.BookStoreList', {
         extend: 'Ext.Container',
-        xtype: 'bookstorelist',
-       
-        requires: [
-            'Ext.TitleBar'
-        ],     
+        xtype: 'bookstorelist',       
+        requires: [],     
       
         config: {
         cls: 'ownedbooklist',

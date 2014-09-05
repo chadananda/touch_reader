@@ -8,12 +8,10 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
         cls: 'vocabulary_assessment_panel',
         flex:1,       
         items: [
-            
             {
                 xtype: 'toolbar',
                 title:'Vocabulary Assessment',
-                ui: 'normal',
-                
+                ui: 'bluenav',
                 items:[
                     {
                         xtype: 'image',
@@ -22,7 +20,7 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
                         width: 40 
                     },
                     {
-                        xtype: 'spacer',
+                        xtype: 'spacer'
                     },
                     {
                         text: '7/40'
@@ -32,7 +30,7 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
             },
             {
                 cls: 'card_question',
-                html: 'Lucid',
+                html: 'Lucid'
             },
             {
                 cls: 'answers_btn',
@@ -40,6 +38,7 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
                 items:[
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -48,13 +47,12 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
                                 '<div class="question_ans">',
                                     'Changeable.',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     },
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -63,13 +61,12 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
                                 '<div class="question_ans">',
                                     'Damaged',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     },
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -78,13 +75,12 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
                                 '<div class="question_ans">',
                                     'Clear',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     },
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -93,9 +89,7 @@ Ext.define('book.view.vocabularyassessment.VocabularyAssessment', {
                                 '<div class="question_ans">',
                                     'Forgotten',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     }
                 ]

@@ -31,7 +31,7 @@ Ext.define('book.controller.BookTimer', {
             
             var defaultTimeout = me.getDefaultTimeout();
             var counter = me.getCounter();
-            if (counter > defaultTimeout) {
+            if (counter > defaultTimeout) { 
                 me.hideToolbar();
             }
             me.incrementCounter();

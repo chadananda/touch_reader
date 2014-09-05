@@ -10,15 +10,13 @@ Ext.define('book.view.memorization.MemorizationDeckContainer', {
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
-                xtype: 'memorizationdeck',
+                xtype: 'memorizationdeck'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

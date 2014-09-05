@@ -1,10 +1,7 @@
 Ext.define('book.view.TabPanel', {
     extend: 'Ext.tab.Panel',
     xtype: 'tabpanel',
-    requires: [
-        'Ext.TitleBar',
-        'Ext.Video'
-    ],
+    requires: ['Ext.TitleBar'],
     config: { 
         tabBarPosition: 'top',
         style: 'margin-top:10px',

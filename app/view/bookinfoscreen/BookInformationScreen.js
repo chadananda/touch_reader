@@ -14,7 +14,7 @@ Ext.define('book.view.bookinfoscreen.BookInformationScreen', {
             {
                 iconCls: 'bookmark',
                 iconMask: true,
-                xtype: 'bookmarktab',
+                xtype: 'bookmarktab'
             },
             {
                 iconCls: 'namedtags',

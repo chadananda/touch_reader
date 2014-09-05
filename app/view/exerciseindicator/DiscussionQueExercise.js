@@ -9,18 +9,17 @@ Ext.define('book.view.exerciseindicator.DiscussionQueExercise', {
         width:350,
         layout:'hbox',       
         items: [
-            
             {
                layout:'vbox',
                cls: 'left_icon',
                items:[
                     {
-                        html: '<img src="resources/images/discussion_icon.png">',
+                        html: '<img src="resources/images/discussion_icon.png">'
                     },
                     {
                         xtype: 'checkboxfield',
                         name : 'completed',
-                        checked: false
+                        checked: true
                     }
                 ]
             },
@@ -32,7 +31,7 @@ Ext.define('book.view.exerciseindicator.DiscussionQueExercise', {
                         width:240,                        
                         html: [
                             '<div class="title">Money vs. Wealth</div>',
-                            '<div class="question">When money supply is increased, where does the recipient\'s new wealth come from?</div>',
+                            '<div class="question">When money supply is increased, where does the recipient\'s new wealth come from?</div>'
                         ].join("")
                     },
                     {
@@ -41,21 +40,18 @@ Ext.define('book.view.exerciseindicator.DiscussionQueExercise', {
                         items:[
                             {
                                 xtype:'spacer',
-                            },{
-                                width:80,
-                                height:40,
+                            },
+                            {
+                                width:50,
+                                height:30,
                                 xtype: 'button',
-                                iconCls:'arrow_right',
-                                text: '&nbsp;&nbsp;&nbsp;&nbsp;',
+                                html: '<img src="resources/images/resume_icon.png">',
                                 iconAlign: 'right',
-                                align: 'right',
+                                align: 'right'
                             }
                         ]
-                        
-                        
                     }
                 ]
-                
             }
         ]
     }

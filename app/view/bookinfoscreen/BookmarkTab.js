@@ -8,7 +8,6 @@ Ext.define('book.view.bookinfoscreen.BookmarkTab', {
         cls: 'bookmark_tab',
         scrollable: true,
         tpl: [
-              
             '<div class="bookmark_wrapper">',
                 '<div class="bookmark_img">',
                     '<img src="{book_img}" width="40" height="48">',
@@ -28,10 +27,8 @@ Ext.define('book.view.bookinfoscreen.BookmarkTab', {
                 '</div>',
                 '</tpl>',
             '</tpl>', 
-            '</div>',
-            
-        ],
-         
+            '</div>'
+        ]
     }
 })
 

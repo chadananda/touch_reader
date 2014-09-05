@@ -10,15 +10,13 @@ Ext.define('book.view.exerciseindicator.DiscussionQueExerciseContainer', {
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
-                xtype: 'discussionqueexercise',
+                xtype: 'discussionqueexercise'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

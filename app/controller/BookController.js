@@ -82,6 +82,7 @@ config: {
         'listselecrsearchresult': 'listselecrsearchresult',
         'compilesubmenulist': 'compilesubmenu list',
         'tagsubmenu': 'tagsubmenu #tag_color',
+        'colorpickerpanel': 'colorpicker',
         'colorpicker': 'colorpicker dataview',
         'colortextfill': 'tagsubmenu #text_fill',
         'chnagedcolorbtn': 'tagsubmenu #chnage_color_btn',
@@ -554,7 +555,7 @@ config: {
     toggleNav: function(btn) {
         var me = this;
         var list = me.getListPopUpView();
-        list.showBy(btn);
+        list.showBy(btn); 
     },
     
     onTapRsumebtn:function(btn, event){
@@ -630,7 +631,7 @@ config: {
         }
         
         var dropdown_title = this.getTitlebar_dropdown(); 
-            dropdown_title.setText(book_title + ', ' + author_name + ' <img src="resources/images/down_arrow.png">');
+            dropdown_title.setText(book_title + ', ' + author_name + '<span class="dropdown_down_arrow"><img src="resources/images/down_arrow.png"></span>');
         var booktitlebar = this.getBooktitlebar();
             booktitlebar.setTitle('') 
             
@@ -685,16 +686,17 @@ config: {
     
     onColorpickerItemtap: function(color, index, target, record, e, eOpts){
       
-        alert(record.data.color)
         this.getChnagedcolorbtn().setStyle('background-color:#' + record.data.color);
-        console.log({backgroundColor:'# '+record.data.color+' !important' })
+        //console.log({backgroundColor:'# '+record.data.color+' !important' })
         this.getColortextfill().setValue(record.data.color);
+        var color_picker_panel = this.getColorpickerpanel();
+        color_picker_panel.hide();
         
        
     },
     onChnageFillTextColor: function(text, newValue, oldValue, eOpts){
-        console.log(newValue)
-        console.log(oldValue)
+        //console.log(newValue)
+        //console.log(oldValue)
        this.getChnagedcolorbtn().setStyle('background-color:#' + newValue);
     } 
     

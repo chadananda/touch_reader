@@ -3,7 +3,6 @@ Ext.define('book.view.studybar.ReadingConfigOptionsPopUp', {
     xtype: 'readingconfigpptionspopup',
     requires: [],
     config: {
-       // height: '30%',
         id: 'popup',
         left: '5%',
         padding: 10,
@@ -11,10 +10,9 @@ Ext.define('book.view.studybar.ReadingConfigOptionsPopUp', {
         width: '50%',
         hideOnMaskTap: true,
         modal: true ,
-        //cls: 'popup_panel',
         items: [
             {                
-                html: '<div class="reader_option"><img src="resources/images/reader_view_icon.png">Reader View Options</div>',
+                html: '<div class="reader_option"><img src="resources/images/reader_view_icon.png">Reader View Options</div>'
                
             },
             {                
@@ -22,17 +20,17 @@ Ext.define('book.view.studybar.ReadingConfigOptionsPopUp', {
                 cls: 'reader_config',
                 items: [
                     {                    
-                        html: '<div class="reader_config_title">Font Size</div>',                    
+                        html: '<div class="reader_config_title">Font Size</div>'                    
                     },
                     {
                         xtype: 'button',
                         text: 'Aa',
-                        ui: 'round',
+                        ui: 'round'
                     },
                     {
                         xtype: 'button',
                         text: 'Aa',
-                        ui: 'round',
+                        ui: 'round'
                     }
                 ]
                
@@ -42,17 +40,17 @@ Ext.define('book.view.studybar.ReadingConfigOptionsPopUp', {
                 cls: 'reader_config',
                 items: [
                     {                    
-                        html: '<div class="reader_config_title">Line Height</div>',                    
+                        html: '<div class="reader_config_title">Line Height</div>'                    
                     },
                     {
                         xtype: 'button',
                         html: '<img src="resources/images/line_height_sicon.png">',
-                        ui: 'round',
+                        ui: 'round'
                     },
                     {
                         xtype: 'button',
                         html: '<img src="resources/images/line_height_licon.png">',
-                        ui: 'round',
+                        ui: 'round'
                     }
                 ]
                
@@ -62,22 +60,22 @@ Ext.define('book.view.studybar.ReadingConfigOptionsPopUp', {
                 cls: 'reader_config',
                 items: [
                     {                    
-                        html: '<div class="reader_config_title">Theme</div>',                    
+                        html: '<div class="reader_config_title">Theme</div>'                    
                     },
                     {
                         xtype: 'button',
                         html: '<img src="resources/images/day_theme_icon.png">',
-                        ui: 'round',
+                        ui: 'round'
                     },
                     {
                         xtype: 'button',
                         html: '<img src="resources/images/night_theme_icon.png">',
-                        ui: 'round',
+                        ui: 'round'
                     },
                     {
                         xtype: 'button',
                         html: '<img src="resources/images/sepia_theme_icon.png">',
-                        ui: 'round',
+                        ui: 'round'
                     }
                 ]
                
@@ -93,7 +91,7 @@ Ext.define('book.view.studybar.ReadingConfigOptionsPopUp', {
                         value: 10,
                         minValue: 0,
                         maxValue: 100,
-                        html: '<table width="100%" align="left"><tr><td width="50%">Slow</td><td width="50%" align="right">Fast</td></tr></table>',        
+                        html: '<table width="100%" align="left"><tr><td width="50%">Slow</td><td width="50%" align="right">Fast</td></tr></table>'        
                     }
                 ]
                

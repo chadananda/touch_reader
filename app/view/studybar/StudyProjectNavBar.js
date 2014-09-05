@@ -21,7 +21,7 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
                 text: 'Current Study Project Title',
                 itemId: 'study_project_book',
                 align: 'left',
-                ui: 'bluenav', 
+                ui: 'bluenav' 
             },
             {               
                 cls:'study_info',
@@ -68,13 +68,13 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
                 align: 'right',
                 ui: 'study',
                 badgeText: '1',
-                style: 'border-right:1px solid #768963;',
+                style: 'border-right:1px solid #768963;'
             },
             {
                 xtype: 'button',                
                 html: '<div class="resume"><div class="resume_img"><img src="resources/images/resume_icon.png"></div><div class="resume_text">Resume</div></div>',
                 align: 'right',
-                 style: 'border-left:none;',
+                 style: 'border-left:none;'
             } 
         ]
     }

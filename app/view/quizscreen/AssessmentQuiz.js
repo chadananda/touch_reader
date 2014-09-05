@@ -8,12 +8,10 @@ Ext.define('book.view.quizscreen.AssessmentQuiz', {
         cls: 'quiz_panel',
         flex:1,       
         items: [
-            
             {
                 xtype: 'toolbar',
                 title:'Basic Banking Terminology',
-                ui: 'normal',
-                
+                ui: 'bluenav',
                 items:[
                     {
                         xtype: 'image',
@@ -22,17 +20,16 @@ Ext.define('book.view.quizscreen.AssessmentQuiz', {
                         width: 30 
                     },
                     {
-                        xtype: 'spacer',
+                        xtype: 'spacer'
                     },
                     {
                         text: '7/15'
                     }
                 ]
-              
             },
             {
                 cls: 'card_question',
-                html: 'Define the banking term "Redlining"',
+                html: 'Define the banking term "Redlining"'
             },
             {
                 cls: 'answers_btn',
@@ -40,6 +37,7 @@ Ext.define('book.view.quizscreen.AssessmentQuiz', {
                 items:[
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -48,13 +46,12 @@ Ext.define('book.view.quizscreen.AssessmentQuiz', {
                                 '<div class="question_ans">',
                                     'The practice of making risky loans in order to maximize profit. The lender goes up to the “red line”',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     },
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -63,13 +60,12 @@ Ext.define('book.view.quizscreen.AssessmentQuiz', {
                                 '<div class="question_ans">',
                                     'The practice of color coding bundles of money in order to avoid recounting during cash transactions.',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     },
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -78,13 +74,12 @@ Ext.define('book.view.quizscreen.AssessmentQuiz', {
                                 '<div class="question_ans">',
                                     'The practice of not making mortgage, home improvement,and small business loans in neighborhoods that are considered by the lender to be poor investments.',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     },
                     {
                         xtype: 'button',
+                        ui: 'segment',
                         html: [
                             '<div class="btn_main">',
                                 '<div class="question_no">',
@@ -93,9 +88,7 @@ Ext.define('book.view.quizscreen.AssessmentQuiz', {
                                 '<div class="question_ans">',
                                     'When a bank lends more than the total FDIC insured amount thus putting the bank in danger of default.',
                                 '</div>',
-                            '</div>',
-                                
-                        
+                            '</div>'
                         ].join("")
                     }
                 ]

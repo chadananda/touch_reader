@@ -27,6 +27,7 @@ Ext.define('book.view.SearchBooksView', {
                 xtype: 'searchfield',
                 placeHolder: 'Text Field',
                 name: 'query',
+                clearIcon: false,                
             },            
             {
                     

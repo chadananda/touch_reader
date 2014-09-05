@@ -67,12 +67,11 @@ Ext.define('book.view.BookTitlebar', {
                 itemId: 'chat_icon',                
                 align: 'right',
                 hidden:false,
-                badgeText: '5',
+                badgeText: '5'
             },
             {
                 cls:'top_setting_field',
                 xtype: 'button',
-                //text: '<img src="resources/images/setting_icon.png">',
                 iconCls: 'settings',
                 itemId: 'top_setting_field',
                 align: 'right',
@@ -82,11 +81,9 @@ Ext.define('book.view.BookTitlebar', {
                 cls:'top_search_field',
                 xtype: 'button',
                 itemId: 'top_search_field',
-                //html: '<img src="resources/images/search_icon.png">', 
                 iconCls: 'search',                
                 align: 'right',
-                hidden:false,
-                style:'margin-right:10px;',
+                hidden:false
             } 
         ]
     }

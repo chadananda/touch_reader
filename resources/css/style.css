@@ -30,7 +30,11 @@
 }
 .search_book_container .x-field-search .x-field-input:before {
     top: 0.5em;
-    left: 85%;    
+    left: 85%;
+    color: #8a9a79;    
+}
+.x-field-select .x-component-outer:after{
+    background-color: #8a9a79;
 }
 .slider .x-innerhtml{
     border: 1px solid #fff;    
@@ -231,6 +235,7 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
     
+   
     .ownedbooklist .ownedbook_detail td.book_title{       
         width: 100%;
         max-width: 130px;
@@ -254,19 +259,16 @@
     .my-titlebar.x-toolbar .resume.x-button{
         margin-left:5px !important;
         margin-right:5px !important;
+        margin-top:0.01em !important;  
     }
     .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label {
         top: -0.5em;
     }
     .my-titlebar.x-toolbar .x-button{
         padding: 0px 11px !important;
-    }
-    .my-titlebar .x-hasbadge .x-badge{
-        right: 0.7em !important; 
-    }    
+    }  
 }
-@media (min-width: 980px) and (max-width: 1024px){
-   
+@media (min-width: 980px) and (max-width: 1024px){   
     .ownedbooklist .ownedbook_detail td.book_title{      
         width: 224px;
         white-space: nowrap;
@@ -278,8 +280,7 @@
         top: -0.5em;
     }    
 }
-@media (min-width: 1025px) and (max-width: 1280px) {
-  
+@media (min-width: 1025px) and (max-width: 1280px) {  
     .ownedbooklist .ownedbook_detail td.book_title{      
         width: 209px;
         white-space: nowrap;
@@ -289,7 +290,6 @@
     }
 } 
   
-
 /****************************************/
 
 .popup_panel .x-button{
@@ -299,7 +299,6 @@
 .popup_panel .x-button-label {  
     text-align: left;
 }
-
 .dataview-item-read{
     width : 50%;
    float:left;  
@@ -311,8 +310,7 @@
     float:left;
     padding:15px;    
 }
-.page_no{
-   
+.page_no{   
     width:auto;
     float:left;
 }
@@ -335,26 +333,19 @@
     font-size: 0.7em;
 }
 .my-titlebar .x-hasbadge .x-badge{
-    min-width: 1.0em;
-    right: 1.4em;
-    top:0.2em;
+    min-width: 2em;
+    right: 0em;
+    top:0em;
 }
-
 .x-toolbar-bluenav .x-button.top_setting_field{
     color: #fff; 
 }
-
 .x-toolbar-bluenav .x-button.top_search_field{
     color: #fff;
 }
-
 .x-toolbar-bluenav .x-button.list_nav{
     color: #637254;
 }
-.x-toolbar .x-button .x-button-icon::before{
-    line-height:1.0em;
-}
-
 .x-toolbar .x-field-search .x-component-outer {
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -367,19 +358,16 @@
 }
 .x-toolbar .x-button.x-button-pressing{
     background:none;
-    border: none;
 }
 .x-toolbar .x-form-field{
     background:#fff !important;
 }
-
 .x-toolbar-bluenav .dropdown_menu.x-button{
     background:none !important;
     background: transparent;
     border: none;
     margin-left: 0px;
 }
-
 .x-toolbar .x-button .x-button-label{
     font-size: 0.8em;
     line-height: 1.2em;
@@ -391,7 +379,7 @@
 
 .top_search_panel .x-field .x-input-el{  
     min-height: 2.0em !important;
-    padding: 0.3em 0.3em 0.3em 2.0em;
+    padding: 0.3em 0.3em 0.3em 0.3em;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
@@ -400,8 +388,21 @@
     width:98%;
 }
 .top_search_panel .x-field-search .x-field-input:before{
-    top: 0.5em;
-    left: 1.2em;
+    top: 0.2em;
+    left: 32.77em;
+    background-image: url(../images/search_field_icon.png);
+    width:27px;
+    height:29px;
+    text-align: right;
+    float:right;
+    content: "";
+}
+.top_search_panel .x-field-input .x-clear-icon{
+    background: url(../images/search_field_icon.png);
+    width:27px;
+    height:29px;
+    margin-top: -0.8em;
+    right:0.4em;
 }
 .top_search_panel .x-field{
     min-height: 2.65em !important;
@@ -624,7 +625,11 @@
  
 .book_info .x-tabbar.x-docked-top .x-tab {    
     margin-left:0px;
-    margin-right:5px;     
+    margin-right:5px;  
+}
+.book_info .x-tabbar.x-docked-top{
+    height: 2.3em;
+    padding-top: 5px;
 }  
 .book_info{
     margin:0px 10px 0px 0px;
@@ -632,11 +637,17 @@
 }
 .book_info .x-tabbar-dark {
     margin-left: 0px;
-    border-radius: 5px !important;
-    -webkit-border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
-    -ms-border-radius: 5px !important;
-    -o-border-radius: 5px !important; 
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;     
+     -moz-border-radius-bottomright: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 .book_info .x-tab{
     min-width: 2.5em;
@@ -644,9 +655,6 @@
 }
 .book_info_tab{
     border: 1px solid #ddd;
-}
-.book_info .x-tabbar.x-docked-top{
-    height: 2em;
 }
 .book_info .x-tabbar.x-docked-top .x-tab.x-tab-icon{
     padding: 0.4em 0.5em;
@@ -1261,19 +1269,60 @@
     padding-left:5px; 
     font-size: 0.7em;
 }
+
+/*********** TagSub Menu**************/
+.tagsub_menu .tag_wrapper{
+    margin-top:5px;
+    border-top: 1px solid #c2c9ba;
+    border-bottom: 1px solid #c2c9ba;
+    background-color: #d6decf;
+    padding:10px;
+}
+.tagsub_menu .tag_wrapper .tag_lable{
+   color: #637254;
+}
+.tagsub_menu .x-input-el{
+    border-width: 1px;
+    border: 1px solid #768963;
+    
+}
+.tagsub_menu .x-field .x-input-el{
+    min-height:2em;
+}
+.tagsub_menu .x-button{
+    border: none;
+    background-color: none !important;
+    background-image: none !important;
+    background:none;
+    margin-top:15px;
+    padding:0em;
+}
+.color-dataview-item{
+    width : 1.2em;
+    height : 1.2em;
+    float:left;  
+    margin:3px 0px 0px 2px;  
+}
+
+/********** End Of TagSub Menu  **************/
+
+/**********  Memorization Deck Panel *********/
+
 .deck_panel{
     width:480px;
     height:510px;
     margin-top:5%;
-    border: 2px solid #ddd;
+    border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;     
 }
+
 .card_question{
     padding:20px 0px 10px 10px;
+    color: #637254;
 }
 .answers_btn{
      padding-top:5px;
@@ -1294,11 +1343,14 @@
     padding-left:20px;
     width: 95%;
     text-align:left;
-    font-size: 0.7em;   
+    font-size: 0.7em; 
 }
 .answers_btn .x-button{
     min-height: 4.0em;
     margin:5px 10px 5px 10px;
+}
+.answers_btn .x-button.x-button-segment.x-button-pressing{
+    border: 1px solid #986062;
 }
 .answers_btn .x-button-label{
     white-space: normal !important;
@@ -1308,25 +1360,25 @@
     color: #5e5f5e; 
 }
 .cmpile_progress .x-button{
-   border: none;
+    border: none;
     background: none;
 }
+
+/*********   End Of Memorization Deck Panel *******/
 
 /********** VocabularyAssessment *************/
 .vocabulary_assessment_panel{
     width:450px;
-    height:350px;
+    height:450px;
     margin-top:5%;
-     border: 2px solid #ddd;
+     border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;     
 }
-.vocabulary_assessment_panel .x-toolbar .x-button{
-    -webkit-text-fill-color: #000000;
-}
+
 .vocabulary_assessment_panel .card_question{
     padding:20px 0px 10px 10px;
     text-align: center;
@@ -1361,20 +1413,16 @@
     width:480px;
     height:460px;
     margin-top:5%;
-     border: 2px solid #ddd;
+     border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;     
 }
-.quiz_panel .x-toolbar .x-button{
-    -webkit-text-fill-color: #000000;
-}
 .quiz_panel .card_question{
     padding:20px 0px 10px 10px;
 }
-
 .quiz_panel .answers_btn{
      padding-top:5px;
 }
@@ -1410,20 +1458,18 @@
     width:300px;
     height:100px;
     margin-top:5%;
-    border: 2px solid #ddd;
+    border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important; 
 }
-
 .jaournal_panel .assignment_cntnr .btn_main{
     float: left;
     padding:5px 0px;
     width: 100%; 
 }
-
 .jaournal_panel .assignment_cntnr .assignment_img{
     width: 15%;
     float:left;
@@ -1439,29 +1485,36 @@
     text-align:left;
     font-size: 0.7em;   
 }
-
 .jaournal_panel .journal_editor{
     width:400px;
-    height:500px;
+    height:400px;
     margin-top:5%;
-    border: 2px solid #ddd;
+    border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important; 
 }
-.jaournal_panel .journal_bottom.x-toolbar .x-button{
-    border: 1px solid #999;
-    border-top-color: #a6a6a6;
-    background-color: #ccc;
-    color: #000;
-    -webkit-text-fill-color: #000;
-    margin:6px .2em;
-    padding: 0 .6em;
+.jaournal_panel .x-toolbar-bluenav .x-button{
+    margin: 0.3em 0.24em;
+    padding: 0 .3em;
 }
+.jaournal_panel .x-toolbar.x-docked-bottom{
+    border-top: none !important;
+}
+.jaournal_panel .journal_bottom.x-toolbar .x-button{
+    margin:0.3em .2em !important;
+    padding: 0 .4em !important;
+}
+.jaournal_panel .journal_bottom .chat_btn{
+  padding-top:0.5em;
+}
+
+/***************  End Of JournalingAssignment  ***************/
+
 .video_panel{
-     margin-top:5%;
+    margin-top:5%;
     width:400px;
     height:500px;
 }
@@ -1471,16 +1524,22 @@
     height:500px;
 }
 .audio_panel .audioplayer .playbutton{
-    background: url(http://doc.developerextensions.com/ux/ext.ux.audioplayer/css/img/circle.png) no-repeat center !important ;
+    /*background: url(http://doc.developerextensions.com/ux/ext.ux.audioplayer/css/img/circle.png) no-repeat center !important ;*/
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #92C47E),color-stop(1, #768963));
+    background-image: -o-linear-gradient(bottom, #92C47E 0%, #768963 100%);
+    background-image: -moz-linear-gradient(bottom, #92C47E 0%, #768963 100%);
+    background-image: -webkit-linear-gradient(bottom, #92C47E 0%, #768963 100%);
+    background-image: -ms-linear-gradient(bottom, #92C47E 0%, #768963 100%);
+    background-image: linear-gradient(to bottom, #92C47E 0%, #768963 100%); 
     background-size: 85px 85px;
     -webkit-border-radius: 50% 50% !important;
     border: 2px solid #D5D5D7 !important;
 }
 .audio_panel .audioplayer .playbutton.play .x-button-icon{
-    background: url(http://doc.developerextensions.com/ux/ext.ux.audioplayer/css/img/play.png) no-repeat center ;
+    background: url(http://doc.developerextensions.com/ux/ext.ux.audioplayer/css/img/play.png) no-repeat center ; 
     background-size: 85px 85px;
     width: 100% !important;
-    height: 100% !important;
+    height: 100% !important; 
 }
 .audio_panel .audioplayer .playbutton.pause .x-button-icon{
     background: url(http://doc.developerextensions.com/ux/ext.ux.audioplayer/css/img/pause.png) no-repeat centers
@@ -1488,8 +1547,9 @@
     width: 100% !important;
     height: 100% !important; 
 }
+
 .audio_panel .audio_panel{
-    border: 2px solid #ddd;
+    border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
@@ -1498,7 +1558,7 @@
     height:240px; 
 }
 .video_panel .video_panel{
-    border: 2px solid #ddd;
+    border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
@@ -1506,10 +1566,15 @@
     -o-border-radius: 5px !important;   
     height:300px;  
 }
+.audio_panel .x-form-fieldset .x-form-fieldset-inner{
+    background: #d6decf;
+    border: 1px solid #c2c9ba; 
+}
+/********* Discussion Questions Inline Exercise Panel ********/
 .discussionque_panel{
     margin-top:5%;
-    height:160px;
-    border: 2px solid #ddd;
+    height:170px;
+    border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
@@ -1541,6 +1606,14 @@
 .discussionque_panel .left_icon{
     padding:10px;
 }
+.discussionque_panel .left_icon img{
+    border: 2px solid #768963;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;   
+}
 .discussionque_panel .title{
     font-weight: bold;
     font-size:1.0em;
@@ -1552,11 +1625,37 @@
     font-weight: bold;
     font-size:0.7em;
     padding-left:10px;
+    line-height: 1.5em;
 }
+.discussionque_panel .x-field{
+    min-height:3.84em;
+    background:none;
+    border: 2px solid #768963;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;   
+}
+.discussionque_panel .x-button{
+    background-color: #aebf9d;
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;   
+    
+}
+/********* End Of Discussion Questions Inline Exercise Panel ********/
+
+/********  Assessment Quiz Panel  ************/
+
 .assessment_quiz_panel{
     margin-top:5%;
-    height:160px;
-    border: 2px solid #ddd;
+    height:165px;
+    border: 2px solid #768963;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
@@ -1588,6 +1687,15 @@
 .assessment_quiz_panel .left_icon{
    padding:10px;
 }
+.assessment_quiz_panel .left_icon img{
+    border: 2px solid #768963;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;   
+}
+
 .assessment_quiz_panel .title{
    font-weight: bold;
    font-size:1.0em;
@@ -1599,105 +1707,120 @@
    font-weight: bold;
    font-size:0.7em;
     padding-left:10px;
+    line-height: 1.5em;
 }
 .assessment_quiz_panel .checkbox_bckgrnd{
-    border: 2px solid #000;
+    border: 2px solid #637254;
     border-radius: 5px !important;
-    -webkit-border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -ms-border-radius: 6px !important;
-    -o-border-radius: 6px !important; 
-    background: #dfdfe2;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important; 
+    background: #aebf9d;
     height: 66px;
-    width: 70px;
+    width: 73px;
 }
 .assessment_quiz_panel .checkbox_bckgrnd .x-field{
-    background: #dfdfe2;
+    background: #aebf9d;
 }
 .assessment_quiz_panel .checkbox_bckgrnd .exercise_score{
     font-size:0.6em;
     text-align: center;
     font-weight: bold;
+    color: #fff;
 }
+.assessment_quiz_panel .x-button{
+    background-color: #aebf9d;
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;   
+    
+}
+
+/********  End Of Assessment Quiz Panel  ************/
 
 .micro_jaournal_panel{
     width:300px;
-    height:300px;
+    height:310px;
     margin-top:5%;
-    border: 2px solid #ddd;
+    border: 2px solid #637254;
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important; 
 }
-
-.micro_jaournal_panel .x-toolbar .x-button{
-    border: 1px solid #999;
-    border-top-color: #a6a6a6;
-    background-color: #ccc;
-    color: #000;
-    -webkit-text-fill-color: #000;
+.micro_jaournal_panel .x-toolbar .x-button{   
+    border: none; 
+    background-color: #637254;
+    background-image: none;
     margin:6px .2em;
     padding: 0 .6em;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;   
+}
+.micro_jaournal_panel .x-toolbar-bluenav.x-docked-bottom{
+    border-top: 0px;
 }
 
-.my-titlebar.x-toolbar .x-button{ 
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-    border-radius: 0px; 
-    padding: 0px 20px;
-   /* min-height:2.6em; */
-    min-height:1.95em; 
-    margin: 6px 0.0em;   
-}
+
 /************* my_titlebar *****************/
 .x-toolbar{
     min-height: 1.95em;
 }
 .x-toolbar .x-button{
    background:none;
+   border:none;
 }
-
-.my-titlebar{
-    padding-left:0px;
+.my-titlebar.x-toolbar .x-button{ 
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border-radius: 0px; 
+    padding: 0px 20px;
+    min-height:1.95em; 
+    margin: 6em 0.0em;   
 }
 .my-titlebar.x-toolbar .resume.x-button{
     margin-left:10px;
-    margin-right:10px;  
+    margin-right:10px;
+    margin-top:0.01em !important;  
     min-height:1.5em;
     text-transform:uppercase;
-    padding: 2px 10px  0px 10px;
+    padding: 2px 10px 0px 10px;
 }
 .my-titlebar.x-toolbar .list_nav.x-button{
-        padding: 0px 5px !important;
+    padding: 0px 5px !important;
 }
 
-/************* study_project_titlebar *****************/
+
+/************* StudyTitleBar *****************/
 
 .study-titlebar.x-toolbar .x-button{ 
     margin-top: 0px !important;
     margin-bottom: 0px !important;
     border-radius: 0px;
-    /*padding: 0.14em 0.5em;  */
     min-height:1.95em;
     margin: 6em 0.0em;
     padding: 0px 10px;
-}
-.study-titlebar{
-    padding-left:0px;
-}
-.study-titlebar .course_logo img{
-    margin-top:5px;
-}
-.study-titlebar .x-button-label{
-    font-weight:normal;
 }
 .study-titlebar.x-toolbar .resume.x-button{
     min-height:1.5em;
     text-transform:uppercase;
     margin: 6em 0.3em;
     padding:2px 10px 0px 10px;   
+}
+.study-titlebar .course_logo img{
+    margin-top:5px;
+}
+.study-titlebar .x-button-label{
+    font-weight:normal;
 }
 .x-toolbar .resume.x-button .x-button-label{
      font-weight:bold;
@@ -1753,10 +1876,14 @@
 .study-titlebar.x-toolbar .x-button.study_info{
     -webkit-text-fill-color: #fff;
     padding:0px !important;
+     top: -2px;
 }
-.x-toolbar .x-button.x-button-pressing{
-    border-left: 1px solid #768963;
+.dropdown_down_arrow{
+    margin-left:10px;
 }
+
+/****** End Of StudyTitleBar ******/
+
 .popup_panel .recent_open_book{
     margin:10px 20px;    
 }
@@ -1816,20 +1943,8 @@
     margin-left:10px;
     line-height: 1.5em;
 }
-.color-dataview-item{
-    width : 2em;
-   height : 2em;
-   float:left;  
-   margin:2px 0px 0px 2px;  
-}
-.tagsub_menu .x-button{
-    border: none;
-    background-color: none !important;
-    background-image: none !important;
-    background:none;
-    margin-top:15px;
-    padding:0em;
-}
+
+
 
 /********** Custom Tabs Icons **********/
 

@@ -8,23 +8,12 @@ Ext.define('book.view.Main', {
     config: { 
         layout:'vbox',
         cls: 'main_container',
-        items: [
-           /* {
-            
-                xtype: 'librarybylanguage'
-            },
-            
-            {
-             
-                xtype: 'recentlyreadtitle'
-            },
-            */            
+        items: [ 
             {
                 height:165,
                 xtype: 'bookslidercontainer'
             },
             {
-             
                 xtype: 'maincontainer'
             }
         ]

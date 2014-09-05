@@ -10,7 +10,6 @@ Ext.define('book.view.studybar.StudyProjectInfoScreen', {
         id: 'info_screen',              
         width: 540,
         height: 495,
-        //centered: true,
         padding: 10,
         modal: true,
         hideMode: 'close',
@@ -53,10 +52,10 @@ Ext.define('book.view.studybar.StudyProjectInfoScreen', {
                                     '<p class="stdy_projct_name">OTHER PARTICIPANTS: (3) — <span style="color:#393a38;">Invite Code: farlan32</span></p>',
                                 '</div>',
                             '</div>'
-                        ].join(""),
+                        ].join("")
                     },
                     {
-                        xtype: 'memberslinklist',
+                        xtype: 'memberslinklist'
                     },
                     {
                         layout: 'hbox',
@@ -70,7 +69,7 @@ Ext.define('book.view.studybar.StudyProjectInfoScreen', {
                                 xtype: 'button',
                                 text: 'Message All <img src="resources/images/members_list_allmsg_icon.png">',
                                 width:130,
-                                align:'right',
+                                align:'right'
                             }
                         ]
                     }
@@ -96,7 +95,7 @@ Ext.define('book.view.studybar.StudyProjectInfoScreen', {
         showAnimation: {
             type: 'slide',
             duration: 1,
-            direction: 'up',
+            direction: 'up'
         },
         plugins: [new Ext.create('book.ux.PanelAction',{
             iconClass: 'x-panel-action-icon-close',

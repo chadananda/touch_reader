@@ -10,15 +10,13 @@ Ext.define('book.view.quizscreen.AssessmentQuizContainer', {
         layout: 'hbox',        
         items: [
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             },
             {
-                xtype: 'assessmentquiz',
+                xtype: 'assessmentquiz'
             },
             {
-                xtype: 'spacer',
-               
+                xtype: 'spacer'
             }
         ]
     }

@@ -1,5 +1,4 @@
 
-
 Ext.define('book.view.book.TagSubMenu', {
     extend: 'Ext.Panel',
     xtype: 'tagsubmenu',
@@ -7,44 +6,65 @@ Ext.define('book.view.book.TagSubMenu', {
     
     config: { 
         width:300,
-        height: 250,       
+        height: 220,       
         modal:true,
         hideOnMaskTap: true,
         layout: 'vbox',
         cls: 'tagsub_menu',
         items: [
            {
-                layout: 'hbox',
-                items: [
+                cls: 'tag_wrapper',
+                layout: 'vbox',
+                items:[
                     {
-                        margin: 10,
-                        xtype: 'textfield',
-                        width:250,
-                        clearIcon: false,
+                        layout: 'hbox',
+                        items: [
+                            {
+                                margin: '0 10 0 10',
+                                html: '<div class="tag_lable_img"><img src="resources/images/note_tags_list_icon.png"></div>'
+                            },
+                            {   cls: 'tag_lable',
+                                html: 'Edit tag text'
+                            }
+                        ]
                     },
                     {
-                        
-                        xtype: 'button',
-                        height: 32,
-                        itemId: 'edit_tag_text',
-                        html: '<span><img src="resources/images/book_add_icon.png"></span>',
+                        layout: 'hbox',
+                        height:50,
+                        items: [
+                            {
+                                margin: 10,
+                                xtype: 'textfield',
+                                width:235,
+                                clearIcon: false,
+                            },
+                            {
+                                xtype: 'button',
+                                height: 32,
+                                itemId: 'edit_tag_text',
+                                html: '<span><img src="resources/images/book_add_icon.png"></span>',
+                            }
+                        ]
                     }
-                ]    
+                ]
             },
             {
+                cls: 'tag_wrapper',
                 layout: 'vbox',
                 items: [
                     
                      {
-                         layout: 'hbox',
+                        layout: 'hbox',
                         items:[
                             {
+                                 margin: '0 10 0 10',
                                  width:20,
                                  height:20,
                                  itemId: 'chnage_color_btn',
                                  style: 'background-color:#000;border:3px solid #fff;-webkit-border-radius:10px 10px;'
                             },
                             {
+                                 cls: 'tag_lable',
                                  html: 'Change Tag color'
                             }
                         ]
@@ -52,11 +72,12 @@ Ext.define('book.view.book.TagSubMenu', {
                     },
                     {
                         layout: 'hbox',
+                        height:50,
                         items:[
                             {
                                 margin: 10,
                                 xtype: 'textfield',
-                                width:250,
+                                width:235,
                                 value:'',
                                 clearIcon: false,
                                 itemId: 'text_fill'
