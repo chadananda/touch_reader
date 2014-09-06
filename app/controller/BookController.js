@@ -13,6 +13,7 @@ config: {
         'main': 'main',
         'bookslider': 'bookslider dataview',
         'booktitlebar': 'booktitlebar',
+        'branding_logo': 'booktitlebar #branding_logo',
         'library_button': 'booktitlebar #lib_button',
         'titlebar_dropdown': 'booktitlebar #current_book',
         'list_button': 'booktitlebar #list_nav',
@@ -20,6 +21,7 @@ config: {
         'selectfield_button': 'booktitlebar #top_select_field',
         'settingfield_button': 'booktitlebar #top_setting_field',
         'resume_button': 'booktitlebar #resume',
+        'container_book_title': 'booktitlebar #container_book_title',
         //'bor_btn': 'booktitlebar #bor_btn',
         //'bor_btn2': 'booktitlebar #bor_btn2',
         listPopUpView: {
@@ -27,7 +29,6 @@ config: {
             selector: '#list_popup',
             xtype: 'listpopup'
         },
-        
                         
         'message_icon': 'booktitlebar #message_icon',
         'chat_icon': 'booktitlebar #chat_icon',
@@ -162,7 +163,7 @@ config: {
 
     launch : function(app) {
         //this.setHistory(this.getApplication().getHistory());      
-        
+        var me = this;
         if (Ext.isDefined(this.selectionmenu) == false) {
             this.selectionmenu = Ext.create('book.view.book.SelectionMenu');
         }         
@@ -186,13 +187,35 @@ config: {
             if (Ext.isEmpty(iframe) === false) {
                 iframe.width = Ext.Viewport.getWindowWidth();
             }
+            me.setBookContainerWidth();
         });
         /** end of resize **/
         
+       
+        setTimeout(function() {
+            me.setBookContainerWidth();
+        }, 300);
+        
     },
     
+    setBookContainerWidth: function() {
+            var viewportWidth = Ext.Viewport.getWindowWidth();
+            var logo_width = this.getBranding_logo().element.getWidth();
+            var library_btn_width = this.getLibrary_button().element.getWidth();
+            var resume_btn_width = this.getResume_button().element.getWidth();
+            var list_btn_width = this.getList_button().element.getWidth();
+            var msg_btn_width = this.getMessage_icon().element.getWidth();
+            var chat_btn_width = this.getChat_icon().element.getWidth();
+            var setting_btn_width = this.getSettingfield_button().element.getWidth();
+            var search_btn_width = this.getSearchfield_button().element.getWidth();
+          
+            var container_book_title = this.getContainer_book_title();
+            
+            var sum_component_width = logo_width + library_btn_width + resume_btn_width + list_btn_width + msg_btn_width + chat_btn_width + setting_btn_width + search_btn_width;
+            container_book_title.setWidth( viewportWidth - sum_component_width - 20);
+    },
   
-    onBookTitlebarShow: function(view, eOpts){
+    onBookTitlebarShow: function(view, eOpts) {
          var message_icon = this.getMessage_icon();         
             console.log(message_icon.getBadgeText());
             if(message_icon.getBadgeText() != ''){
@@ -555,7 +578,7 @@ config: {
     toggleNav: function(btn) {
         var me = this;
         var list = me.getListPopUpView();
-        list.showBy(btn); 
+        list.showBy(btn);
     },
     
     onTapRsumebtn:function(btn, event){
@@ -637,6 +660,8 @@ config: {
             
         this.setImg_id(img_id);    
         this.onLoadBookData(img_id, book_url);
+        var me = this;
+        me.setBookContainerWidth();
         
     },
     onSearchResultListItemtap: function(list, index, target, record, e, eOpts){

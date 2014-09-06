@@ -25,7 +25,7 @@ Ext.define('book.view.ListPopUp', {
         showAnimation: {
             type: 'slide',
             duration: 1,
-            direction: 'up',
+            direction: 'up'
         },
         plugins: [new Ext.create('book.ux.PanelAction',{
             iconClass: 'x-panel-action-icon-close',

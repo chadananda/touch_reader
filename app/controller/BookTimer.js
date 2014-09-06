@@ -2,6 +2,7 @@ Ext.define('book.controller.BookTimer', {
     extend: 'Ext.app.Controller',
     requires: [],
     config: {
+        popup_counter: 0,
         book_title: '',
         defaultTimeout: 20,
         timer: '',
@@ -9,9 +10,40 @@ Ext.define('book.controller.BookTimer', {
         refs: {
             'booktitlebar': 'booktitlebar',
             'studyprojectnavbar': 'studyprojectnavbar',
-            'mainnavigation': 'mainnavigation'        
+            'mainnavigation': 'mainnavigation',
+            'listpopup': 'listpopup',
+            'currentbookpopup': 'currentbookpopup',
+            'settingaccordionlist': 'settingaccordionlist',
+            'topsearchfield': 'topsearchfield',
+            'currentstudyprojectpopup': 'currentstudyprojectpopup',
+            'readingconfigpptionspopup': 'readingconfigpptionspopup'        
+        
         },
         control: {
+            'listpopup': {
+                'show': 'onListPopupShow',
+                'hide': 'onListPopupHide'
+            },
+            'currentbookpopup': {
+                'show': 'onCurrentBookPopupShow',
+                'hide': 'onCurrentBookPopupHide'
+            },
+            'settingaccordionlist': {
+                'show': 'onSettingBookPopupShow',
+                'hide': 'onSettingBookPopupHide'
+            },
+            'topsearchfield': {
+                'show': 'onSearchBookPopupShow',
+                'hide': 'onSearchBookPopupHide'
+            },
+            'currentstudyprojectpopup': {
+                'show': 'onCurrentStudyBookPopupShow',
+                'hide': 'onCurrentStudyBookPopupHide'
+            },
+            'readingconfigpptionspopup': {
+                'show': 'onReadingConfigBookPopupShow',
+                'hide': 'onReadingConfigBookPopupHide'
+            }
         
         }
     },
@@ -31,9 +63,15 @@ Ext.define('book.controller.BookTimer', {
             
             var defaultTimeout = me.getDefaultTimeout();
             var counter = me.getCounter();
-            if (counter > defaultTimeout) { 
-                me.hideToolbar();
+            
+            if(me.getPopup_counter() == 0){
+                if (counter > defaultTimeout) { 
+                    me.hideToolbar();
+                }
+            } else if(me.getPopup_counter()==1){
+            
             }
+            
             me.incrementCounter();
                 
         }, 1000);           
@@ -53,6 +91,15 @@ Ext.define('book.controller.BookTimer', {
   
     resetTimeoutCounter: function() {
         this.setCounter(0);
+        this.setPopup_counter(0);
+    },
+    
+    incrementPopupCounter: function() {
+        this.setPopup_counter(this.getPopup_counter() + 1);
+    },
+    
+    decrementPopupCounter: function() {
+        this.setPopup_counter(this.getPopup_counter() - 1);
     },
     
     showToolbar: function() {
@@ -81,5 +128,62 @@ Ext.define('book.controller.BookTimer', {
         this.resetTimeoutCounter();
         this.showToolbar();
     },
+    
+    onListPopupShow: function() {
+       // alert('it is in ListBook');
+        this.incrementPopupCounter();
+    },
+    
+    onListPopupHide: function() {
+       // alert('it is in hide ListBook');
+        this.decrementPopupCounter();
+    },
+    onCurrentBookPopupShow: function() {
+        //alert('it is in show currentBook');
+        this.incrementPopupCounter();
+    },
+    
+    onCurrentBookPopupHide: function() {
+       // alert('it is in hide currentBook');
+        this.decrementPopupCounter();
+    },
+    onSettingBookPopupShow: function() {
+        //alert('it is in show SettingBook');
+        this.incrementPopupCounter();
+    },
+    
+    onSettingBookPopupHide: function() {
+       // alert('it is in hide SettingBook');
+        this.decrementPopupCounter();
+    },
+    onSearchBookPopupShow: function() {
+        //alert('it is in show SearchBook');
+        this.incrementPopupCounter();
+    },
+    
+    onSearchBookPopupHide: function() {
+        //alert('it is in hide SearchBook');
+        this.decrementPopupCounter();
+    },
+    
+    onCurrentStudyBookPopupShow: function() {
+        //alert('it is in show CurrentStudyBook');
+        this.incrementPopupCounter();
+    },
+    
+    onCurrentStudyBookPopupHide: function() {
+       // alert('it is in hide CurrentStudyBook');
+        this.decrementPopupCounter();
+    },
+    
+    onReadingConfigBookPopupShow: function() {
+        //alert('it is in show ReadingConfigBook');
+        this.incrementPopupCounter();
+    },
+    
+    onReadingConfigBookPopupHide: function() {
+        //alert('it is in hide ReadingConfigBook');
+        this.decrementPopupCounter();
+    }
 
 })    
