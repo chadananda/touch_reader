@@ -823,7 +823,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.ux.PanelAction": [],
   "book.view.AudioPlayer": [],
   "book.view.BookSlider": [],
-  "book.view.BookSliderContainer": [],
   "book.view.BookSliderItem": [],
   "book.view.BookStoreList": [],
   "book.view.BookTitlebar": [],
@@ -1896,9 +1895,6 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "book.view.BookSlider": [
     "widget.bookslider"
-  ],
-  "book.view.BookSliderContainer": [
-    "widget.bookslidercontainer"
   ],
   "book.view.BookSliderItem": [
     "widget.bookslideritem"

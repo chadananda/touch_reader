@@ -11,7 +11,7 @@ Ext.define('book.view.Main', {
         items: [ 
             {
                 height:165,
-                xtype: 'bookslidercontainer'
+                xtype: 'bookslider'
             },
             {
                 xtype: 'maincontainer'

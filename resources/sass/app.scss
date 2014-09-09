@@ -8,28 +8,88 @@ $page-bg-color: #e5eae1 !default;
 $page-border-color: #c2cfb6;
 $green-font-color: #637254;
 $white-font-color: #ffffff;
+$black-font-color: #000;
 $white-bg-color: #ffffff;
 $tab-icon-color: #808d74;
 $tab-badge-color: #fe3f36;
 $list-select-color: #768963;
 $btn-border-color: #768963;
+$btn-bg-color: #768963;
 $btn-bottom-border-color:#63784d;
-//$study-btn-color: #9aad86;
+$btn-font-color:#fff;
+$btn-black-font-color:#000;
+$webkit-text-fill-color: #ffffff;
+$selection-menu-bottom-border: #d0d1cf;
+$selection-menu-btn-left-border: #969994;
+$container-bottom-border: #dae1d4;
+$page-title-color: #768963;
+$bookinfo-tab-border-color:#c2c9ba;
+$gray-title-color:#393a37;
 
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
 
-
-// Custom code goes here..
-
-// Examples of using the icon mixin:
-// @include icon('user');
 @include icon('mail');
 
-@include sencha-toolbar-ui('bluenav', #aebf9d,'flat');
-.x-toolbar .x-toolbar-title {
-    color: $white-font-color;
+
+.main_container{   
+    padding: 0px 20px 0px 20px;
+    &.x-layout-card-item{
+        background: $white-bg-color;
+    }
 }
+
+@include sencha-toolbar-ui('bluenav', #aebf9d,'flat');
+.x-toolbar{
+    min-height: 1.95em;
+    .x-toolbar-title {
+        color: $white-font-color;
+    }
+    .x-field-search .x-component-outer {
+        @include border-radius(5px); 
+        -webkit-box-shadow:none !important;
+        box-shadow: none !important;
+        -moz-box-shadow: none !important;   
+    }
+    .x-button{
+       background:none;
+       border:none;
+        .x-button-label{
+            font-size: 0.8em;
+            line-height: 1.2em;
+            color:$btn-font-color; 
+        }
+        &.x-button-pressing {
+            background: none;
+        }
+        &.x-button-study.x-button-pressing{
+            border:none;
+            border-left: 1px solid $btn-bottom-border-color;
+            border-right: 1px solid $btn-bottom-border-color;
+            border-bottom: 3px solid $btn-bottom-border-color;
+            background-color: $btn-bg-color !important;
+            background-image:none !important;
+        }
+    }
+    &.x-docked-top{
+        border-bottom-color: $btn-border-color; 
+    }
+}
+
+.x-toolbar-bluenav { 
+    .x-button {
+        &.top_setting_field {
+            color: #fff;
+        }
+        &.top_search_field{
+            color: #fff;
+        }
+        &.list_nav{
+            color: $green-font-color;
+        }
+    } 
+}
+
 
 .x-panel.x-floating .x-panel-inner{
     background-color: $page-bg-color;
@@ -49,117 +109,650 @@ $btn-bottom-border-color:#63784d;
 @include sencha-button-ui('study',#9aad86,'flat');
 @include sencha-button-ui('bluenav',#768963,'flat');
 
-// Segment Button
-
-
-
-//end Of segment button
-.my-titlebar.x-toolbar .x-button{ 
-     
-    border: none;    
-    border-left: 1px solid $btn-border-color;   
+.x-hasbadge .x-badge {
+    color: $white-font-color;
+    background-image: none;
+    background-color: $tab-badge-color;
+    border-color: $tab-badge-color;
+    min-width:3em;
+    right:0.5em;
 }
 
-.my-titlebar.x-toolbar .resume.x-button{
-     border:none;
-    border-bottom: 3px solid $btn-bottom-border-color;
-     @include border-radius(5px);     
+
+.my-titlebar{
+    &.x-toolbar {
+        .x-button{      
+            border: none;    
+            border-left: 1px solid $btn-border-color;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-radius: 0px; 
+            padding: 0px 20px;
+            min-height:1.95em; 
+            margin: 6em 0.0em;
+            &.x-hasbadge .x-badge{
+                min-width: 2em;
+                right: 0em;
+                top:0em;
+                line-height: 1.2em;
+                font-size: 0.7em;
+            }
+            &.list_nav.x-button{
+                padding: 0px 5px !important;
+            }  
+        }
+        .resume.x-button{
+            border:none;
+            border-bottom: 3px solid $btn-bottom-border-color;
+            @include border-radius(5px);
+            margin-left:10px;
+            margin-right:10px;
+            margin-top:0.01em !important;  
+            min-height:1.5em;
+            text-transform:uppercase;
+            padding: 2px 10px 0px 10px;
+            .x-button-label{
+                 font-weight:bold;
+                 font-size: 0.7em;
+            }     
+        }
+    }    
 }
 
-.study-titlebar.x-toolbar .x-button{
-   
-    border: none;    
-    border-left: 1px solid $btn-border-color;   
+.dropdown_down_arrow{
+    margin-left:10px;
+}
+.study-titlebar{
+    &.x-toolbar {
+        .x-button {
+            border: none;    
+            border-left: 1px solid $btn-border-color;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-radius: 0px;
+            min-height:1.95em;
+            margin: 6em 0.0em;
+            padding: 0px 10px;
+            .x-button-label{
+                font-size: 0.7em;
+            }
+            &.study_info{
+                -webkit-text-fill-color: $webkit-text-fill-color;
+                padding:0px !important;
+                top: -2px;
+            }
+            .main_btn{float:left;}
+            .image{float:left;margin-top:5px;}
+            .text{margin-top:8px;margin-left:5px;float:right;}
+            .resume{float:left;}
+            .resume_img{float:left;margin-top:5px;}
+            .resume_text{margin-top:5px;margin-left:5px;float:right;color:$green-font-color;} 
+        }
+        .resume.x-button{
+            border:none;
+            border-bottom: 3px solid $btn-bottom-border-color;
+            @include border-radius(5px);
+            min-height:1.5em;
+            text-transform:uppercase;
+            margin: 6em 0.3em;
+            padding:2px 10px 0px 10px;
+            .x-button-label{
+                 font-weight:bold;
+                 font-size: 0.7em;
+            }
+        }
+        .progress_assemnt {
+            font-size: 0.9em;   
+            margin-bottom:5px;  
+            &.x-button .x-button-label{
+                color:$black-font-color;
+            }
+        }
+    }
+    .x-hasbadge .x-badge{
+        min-width: 2em;
+        line-height: 1.2em;
+        font-size: 0.7em;
+        right: 0em;
+        top:0em;
+    }
+    .course_logo img{
+        margin-top:5px;
+    }   
 }
 
-.study-titlebar.x-toolbar .resume.x-button{
-     border:none;
-    border-bottom: 3px solid $btn-bottom-border-color;
-     @include border-radius(5px);     
+// STUDY NAV INFOSCREEN
+.info_screen{  
+    border-bottom: 3px solid $page-border-color;
+    @include border-radius(5px);
+    background-color: $white-bg-color !important;
+    margin-bottom:10px;
 }
+
+.info_screen_wrapper {
+    width:100%;
+    padding:10px;
+    float:left;
+    .info_screen_image{padding:0px 10px;float:left;width:7%;}
+    .info_screen_contnt{  
+        padding:0px 10px;
+        float:right;
+        width:93%;
+        p {
+            &.stdy_projct_name{
+                font-weight: bold;
+                line-height: 1.5em;
+            }
+            &.stdy_projct_desc{
+                font-size: 0.8em;
+                line-height: 1.5em;
+                line-height: 1.5em;
+                color: #393a38;
+                b{color:$green-font-color;}
+            }
+        }
+    }
+}
+
 
 .slider {
-    background-color : $page-bg-color;
     border-bottom:3px solid $page-border-color;
-    @include border-radius(5px); 
-}
-.slider .slider_image {    
-    border-right: 2px solid $page-border-color;       
+    @include border-radius(5px);
+    background-color : $page-bg-color;
+    margin-top: 10px;
+    height: 400px;
+    .slider_image {    
+        border-right: 2px solid $page-border-color;
+        a img{
+            box-shadow: 2px 2px 2px #4e4e4e;
+            margin: 10px 15px 10px 11px; 
+        }       
+    }
 }
 
 .search_book_container {
     background: none repeat scroll 0 0 $page-bg-color;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     border-bottom:3px solid $page-border-color;
-    @include border-radius(5px); 
+    @include border-radius(5px);
+    margin-top: 10px;    
+    height:52px;
+    padding:5px 10px;
+    .filter_icon{
+        margin-right:10px;
+        padding-top:5px;
+    }
+    .x-input-el {   
+        min-height: 1.5em;
+        border: 1px solid $page-border-color;
+    }
+    .x-field-search .x-field-input:before {
+        top: 0.5em;
+        left: 85%;
+        color: #8a9a79;    
+    }
+    .x-field-select .x-component-outer:after{
+        background-color: #8a9a79;
+    }
+    .x-field {background: $page-bg-color;}
+    .search_field .x-input-el {   
+        min-height: 1.5em;
+        width:90%;
+        border: 1px solid $page-border-color;  
+    }
 }
-
-.search_book_container .x-field {
-    background: $page-bg-color;
-}
-
-.search_book_container .x-input-el {   
-    border: 1px solid $page-border-color;   
-}
-
-.search_book_container .search_field .x-input-el {   
-    border: 1px solid $page-border-color;
-}
-
 .ownedbooklist{
     border-bottom:3px solid $page-border-color;
     @include border-radius(5px);
-}
-
-.ownedbooklist.x-layout-card-item{
-    background: $page-bg-color;
-}
-.ownedbooklist .dataview-item{
-    border-bottom:3px solid $page-border-color;
-    @include border-radius(5px);
-    background: $white-bg-color;
-    color: $green-font-color;    
-}
-
-.ownedbooklist .ownedbook_detail td{
-   color: $green-font-color; 
+    border-top: none;
+    margin-bottom:0px;
+    .dataview-item{
+        border-bottom:3px solid $page-border-color;
+        @include border-radius(5px);
+        background: $white-bg-color;
+        color: $green-font-color;
+        width : 31.99%; 
+        height : 72px;
+        float:left;  
+        margin:1% 0% 0% 1%;      
+    }
+    .display_by_cat{
+        padding: 5px 0px 5px 10px;
+        font-size: 0.7em;
+        font-weight: bold;
+    }
+    .downlod_icon img{padding:0px 5px 35px 5px;}
+    .ownedbook_img{   
+        text-align: center;
+        img{
+           height:60px;
+           margin:5px;
+        }
+    }
+    .ownedbook_detail td {
+        color: $green-font-color;
+        &.book_title{
+            padding:8px 5px 0px 0px;
+            font-size:0.7em;
+            font-weight: bold;  
+            white-space: nowrap;
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &.author_name{
+            padding:5px 5px 0px 0px;
+            font-size:0.6em;
+            width:250px;
+        }
+        &.category{
+            padding:5px 5px 0px 0px;
+            font-size:0.6em;
+            color:$black-font-color;
+        }
+    }
 }
 
 .x-tabbar-dark {    
+    margin-left: 10px;
     border-top-color: $page-bg-color;
     border-bottom-color: $page-bg-color;
     background-image: none;
     background-color: $white-bg-color;      
 }
 
+<<<<<<< .mine
 .x-toolbar.x-docked-top{
     border-bottom-color: #768963; 
+=======
+// MAIN BOOK TAB
+.x-tabbar {
+    .x-tab {
+        color: $green-font-color;
+        border: 1px solid $page-border-color !important;
+        border-bottom: 0px !important;
+        @include border-radius(0.3em !important);
+        -moz-border-radius-bottomright: 0em !important;
+        -webkit-border-bottom-right-radius: 0em !important;
+        border-bottom-right-radius: 0em !important;
+        -moz-border-radius-bottomleft: 0em !important;
+        -webkit-border-bottom-left-radius: 0em !important;
+        border-bottom-left-radius: 0em !important;     
+        min-width: 9em;
+        height: 100% !important;
+        margin-left:10px;
+        &.x-tab-icon {
+             padding: 0.5em 0.5em !important; 
+            .x-button-label {
+                top: 0em !important;
+            }
+            .x-badge {
+                top:1.2em !important;
+                background-color:#808d74;
+                border:none;
+            }
+        }
+        &.x-tab-active {
+            color: $green-font-color;
+            background-color:$page-bg-color;
+            background-image: -webkit-linear-gradient(top, $page-bg-color, $page-bg-color 10%, $page-bg-color 65%, $page-bg-color);
+            border: none !important; 
+            .x-button-icon:before{
+                color: $tab-icon-color;
+            }  
+        }
+    }
+>>>>>>> .r64
 }
 
-.x-tabbar-dark.x-docked-top .x-tab-active {
-    color: $page-border-color;
-    background-color:$page-bg-color;
-    background-image: -webkit-linear-gradient(top, $page-bg-color, $page-bg-color 10%, $page-bg-color 65%, $page-bg-color);
-    border: none !important;   
+//BOOK INFO TABPANEL
+.book_info{
+    margin:0px 10px 0px 0px;
+    width:100%;
+    .x-tabbar{
+        &.x-docked-top{
+            height: 2.3em;
+            padding-top: 5px;
+            .x-tab {    
+                margin-left:0px;
+                margin-right:5px;
+                min-width: 2.5em;
+                width:3%; 
+                &.x-tab-icon{
+                    padding: 0.4em 0.5em;
+                }
+            }
+        }
+    }
+    .x-tabbar-dark {
+        margin-left: 0px;
+        @include border-radius(5px);
+         -moz-border-radius-bottomright: 0px;
+        -webkit-border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        -moz-border-radius-bottomleft: 0px;
+        -webkit-border-bottom-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }  
 }
 
-.x-tabbar-dark .x-tab-active .x-button-icon:before {
-    color: $tab-icon-color;
+//BookMark Tab
+.bookmark_tab {
+   margin: 5px 10px 10px 10px;
+    .bookmark_wrapper {
+        float:left;
+        width:100%;
+        border-bottom: 3px solid $page-border-color;
+        @include border-radius(5px !important);
+        background-color: $white-bg-color !important;
+        padding-bottom:10px;
+        .bookmark_img{float:left;padding:10px;}
+        .bookmark_info{    
+            padding:10px;
+            float:left;
+            p {
+                &.book_title{
+                    font-size: 0.9em;
+                    text-transform: uppercase;
+                    color: $page-title-color;
+                    font-weight: bold;
+                    margin-bottom:5px;
+                }
+                &.author_name{
+                    font-size: 0.8em;
+                    color: $gray-title-color;
+                    margin-bottom:5px;
+                    line-height: 1.5em;
+                }
+            }
+        }
+        .book_chapter{
+            border-top: 1px solid $bookinfo-tab-border-color;
+            float:left;
+            font-size: 0.8em;
+            padding:8px 10px;
+            color: $btn-black-font-color;
+            width:100%;
+        }
+        .paragraph_no{
+            border: none;
+            border-top: 1px solid $bookinfo-tab-border-color;
+            font-size: 0.8em;
+            float:left;
+            color: $green-font-color;
+            width:100%;
+            background-color: $base-color;
+            .paragraph_image{
+                float:left;
+                padding:7px 10px;
+            }
+            .paragraph_contnt{
+                width: 430px;
+                white-space: nowrap;
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding:8px 10px;
+                float:left; 
+            } 
+        }
+    } 
+}
+//  Book Info Tab
+
+.bookinfo_tab {
+    margin: 5px 10px 10px 10px;
+    .bookinfo_wrapper {
+        float:left;
+        width:100%;
+        margin-bottom: 10px; 
+        border-bottom: 3px solid $page-border-color;
+        @include border-radius(5px !important);
+        background-color: $white-bg-color !important;
+        .bookinfo_img{float:left;padding:10px 20px;}
+        .bookinfo_detail{    
+            padding:10px 20px;
+            p {
+                &.book_title{
+                    font-size: 0.9em;
+                    text-transform: uppercase;
+                    color: $page-title-color;
+                    font-weight: bold;
+                    margin-bottom:10px;
+                }
+                &.author_name{
+                    font-size: 0.8em;
+                    color: #787975;
+                    margin-bottom:10px;
+                    line-height: 1.5em;
+                }
+                &.description{
+                   text-align: justify;
+                   font-size: 0.8em;
+                   color: $gray-title-color;
+                   line-height: 1.8em;
+                }
+            }
+        }
+    } 
 }
 
-.x-tabbar.x-docked-top .x-tab {
-    color: $green-font-color;
-    border: 1px solid $page-border-color;
-    border-bottom: none;
-    //@include border-radius(0em !important);
+//Named Tages Tag
+
+.namedtags_tab {
+    margin: 5px 10px 10px 10px;
+    .namedtags_wrapper {
+        float:left;
+        width:100%;
+        border-bottom: 3px solid $page-border-color;
+        @include border-radius(5px !important);
+        background-color: $white-bg-color !important;
+        padding-bottom:10px;
+        .namedtags_img{float:left;padding:10px;}
+        .namedtags_info{    
+            padding:10px;
+            float:left;
+            p {
+                &.book_title{
+                    font-size: 0.9em;
+                    text-transform: uppercase;
+                    color: $page-title-color;
+                    font-weight: bold;
+                    margin-bottom:5px;
+                }
+                &.author_name{
+                    font-size: 0.8em;
+                    color: $gray-title-color;
+                    margin-bottom:5px;
+                    line-height: 1.5em;
+                }
+            }
+        }
+        .book_chapter{
+            border-top: 1px solid $bookinfo-tab-border-color;
+            float:left;
+            font-size: 0.8em;
+            padding:8px 10px;
+            color: $black-font-color;
+            width:100%;
+            .tag_color{
+                padding-right:5px;
+            }
+        }
+        .paragraph_no{
+            border: none;
+            border-top: 1px solid $bookinfo-tab-border-color;
+            font-size: 0.8em;
+            float:left;
+            padding-left:20px;
+            color: $green-font-color;
+            width:100%;
+            background-color: $base-color;
+            .paragraph_image{
+                float:left;
+                padding:7px 10px;
+            }
+            .paragraph_contnt{
+                width: 420px;
+                white-space: nowrap;
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding:8px 10px;
+                float:left; 
+            } 
+        }
+    } 
 }
 
-.x-hasbadge .x-badge {
-    color: $white-font-color;
-    background-image: none;
-    background-color: $tab-badge-color;
-    border-color: $tab-badge-color;   
+//Notes Tag
+
+.notes_tab {
+    margin: 5px 10px 10px 10px;
+    .notes_wrapper {
+        float:left;
+        width:100%;
+        border-bottom: 3px solid $page-border-color;
+        @include border-radius(5px !important);
+        background-color: $white-bg-color !important;
+        padding-bottom:10px;
+        .notes_img{float:left;padding:10px;}
+        .notes_info{    
+            padding:10px;
+            float:left;
+            p {
+                &.book_title{
+                    font-size: 0.8em;
+                    text-transform: uppercase;
+                    color: $page-title-color;
+                    font-weight: bold;
+                    margin-bottom:5px;
+                }
+                &.author_name{
+                    font-size: 0.8em;
+                    color: $gray-title-color;
+                    margin-bottom:5px;
+                    line-height: 1.5em;
+                }
+            }
+        }
+        .book_chapter{
+            border-top: 1px solid $bookinfo-tab-border-color;
+            float:left;
+            font-size: 0.8em;
+            padding:8px 10px;
+            color: $black-font-color;
+            width:100%;
+        }
+        .paragraph_wrapper{
+            border-top: 1px solid $bookinfo-tab-border-color;  
+            font-size: 0.8em;
+            float:left;
+            width:100%;
+            background-color: $base-color;
+            padding:5px 0px;
+            .paragraph_no {
+                .paragraph_image{
+                    float:left;
+                    padding:5px 5px 5px 10px;
+                }
+                .paragraph_contnt{
+                    width: 400px;
+                    white-space: nowrap;
+                    display: block;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    padding:8px 5px;
+                    float:left;
+                    color: $green-font-color; 
+                }
+            }
+            .notes_desc{   
+                padding:8px 10px 8px 38px;
+                float:right;
+                color:$gray-title-color; 
+            } 
+        }
+    } 
 }
+
+//Summaries Tag
+.summaries_tab {
+    margin: 5px 10px 10px 10px;
+    .bookmark_wrapper {
+        float:left;
+        width:100%;
+        border-bottom: 1px solid $page-border-color;
+        background-color: $white-bg-color !important;
+        padding-bottom:10px;
+        .bookmark_img{float:left;padding:10px;}
+        .bookmark_info{    
+            padding:10px 10px 0px 10px;
+            float:left;
+            p {
+                &.book_title{
+                    font-size: 0.9em;
+                    text-transform: uppercase;
+                    color: $page-title-color;
+                    font-weight: bold;
+                    margin-bottom:5px;
+                }
+                &.author_name{
+                    font-size: 0.8em;
+                    color: $gray-title-color;
+                    margin-bottom:5px;
+                    line-height: 1.5em;
+                }
+            }
+        }
+    }
+    .x-list{  
+        border-bottom: 3px solid $page-border-color;
+        @include border-radius(5px !important);
+        background-color: $white-bg-color !important;
+    }
+    .x-list-normal {
+        .x-list-item {
+            &.x-list-item-tpl {
+                font-size: 0.8em;
+                color:$green-font-color;
+                background-color: $list-bg-color;
+                .active_img{    
+                     background-image: url(../images/tab_highlights_icon.png);
+                     width:11px;
+                     height:15px;
+                     float:left;
+                     margin-right:10px; 
+                } 
+                &.x-list-header-wrap {
+                    border-top: 1px solid $page-border-color;
+                    background-image:none;
+                    background-color: $white-bg-color;
+                    border-bottom : none;    
+                    color:$black-font-color;
+                    font-size: 0.8em;
+                    .active_img{ 
+                        background-image:none;
+                    }       
+                }
+            }
+            &.x-item-selected {
+                &.x-list-item-tpl{
+                    font-size: 0.8em;
+                    color:$black-font-color;
+                    .active_img{    
+                         background-image: url(../images/tab_highlights_select_icon.png);
+                         width:11px;
+                         height:15px;
+                         float:left;
+                         margin-right:10px; 
+                    } 
+                }
+            }
+        }
+    } 
+}
+
 
 .x-list .x-list-item.x-item-selected.x-list-item-tpl {
     background-color:$list-select-color; 
@@ -172,3 +765,329 @@ $btn-bottom-border-color:#63784d;
     border-top-color: $list-select-color;
 }
 
+// Frame All Select Menus
+// Selection Menu
+.selection_menu{
+    border-bottom: 3px solid $selection-menu-bottom-border;
+    @include border-radius(5px);
+    .x-button {
+        &.x-button-segment{
+            color: $btn-font-color;
+            border:none;
+            font-size: 0.9em;
+            border-left: 1px solid $selection-menu-btn-left-border;
+            &.x-button-pressing{    
+                color: $btn-black-font-color;
+                background-image:none;
+            }
+            &.x-button-pressed{    
+                color: $btn-black-font-color;
+                background-color: #b9bcb7;
+                background-image:none;
+            }
+            
+        } 
+    }
+    &.x-segmentedbutton {
+        .x-button {
+            &.x-first{   
+                border-bottom-left-radius: 0px;
+                -webkit-border-bottom-left-radius: 0px;
+                border-left: none;
+            }
+            &.x-last{   
+                border-bottom-right-radius: 0px;
+                -webkit-border-bottom-right: 0px;
+            }
+        }
+    }
+}
+
+// EXTRACT MENU
+.extract_menu {
+    .x-button {
+        &.x-button-study{
+            font-size: 0.9em;
+            color:$btn-font-color;
+            &.x-button-pressing{   
+                border: none;
+                border-bottom: 3px solid $btn-bottom-border-color;
+                background-color: $btn-bg-color;
+                background-image: none;
+                @include border-radius(0px);
+            }
+            &.x-button-pressed{   
+                border: none;
+                border-bottom: 3px solid $btn-bottom-border-color;
+                background-color: $btn-bg-color;
+                background-image: none;
+                @include border-radius(0px);
+            }    
+        }
+    }
+    &.x-segmentedbutton {
+        .x-button {
+            &.x-first{   
+                @include border-radius(0px);
+            }
+            &.x-last{   
+               @include border-radius(0px);
+            }
+        }
+    }
+}
+
+// LookUp Menu
+.lookup_menu {
+    .lookup_menu_wrapper{
+        padding: 10px;
+        h1{
+            text-align: left;
+            margin:5px 5px 5px 20px;
+            font-weight: bold;
+            font-size: 1em;
+            color: $page-title-color;
+            text-transform: uppercase;
+        }
+        .content{
+            float: left;
+            margin-top:10px;
+            padding:15px;
+            width: 100%;
+            background-color:$white-bg-color;
+            border-bottom: 3px solid $container-bottom-border;
+            @include border-radius(5px);
+        }
+        .content_img{
+            width: 10%;
+            float:left;   
+        }
+        .content_txt{
+            font-size: 0.9em;
+            font-weight: bold;
+            float:left;
+            padding-left:10px;
+            width: 90%;
+            .text{
+                font-size: 0.8em;
+                color: #787975;
+                line-height: 1.6em;  
+            }   
+        }
+        
+    }
+}
+// Shared Sub Menu
+.sharesub_Menu{
+    text-align: center;
+    img{margin:10px;}
+}
+
+//NoteSub Menu
+.notesub_menu {
+    .x-field{
+        background: $page-bg-color !important;
+        .x-field-input{padding-top:1px;}
+        .x-input-el{
+            width: 90% !important;
+            border-left: 1px solid $btn-border-color;
+            border-top: 1px solid $btn-border-color;
+            border-right: 3px solid $btn-border-color;
+            border-bottom: 3px solid $btn-border-color;
+        }
+    }
+    .x-field-textarea textarea{
+        margin: 15px 15px 0px 15px;
+        min-height:14em;
+    }
+}
+
+//Marksub Menu
+.marksub_menu {
+    .tag_color{float:left;margin-right:10px;}
+    .tag_list_icon{float:left;margin-right:10px;}
+    .tag_title{float:left;margin-right:10px;width:170px;}
+    .tag_edit_icon{float:left;margin-right:10px;}
+    .x-input-el{min-height: 1.5em;border: 1px solid $btn-border-color;}
+    .x-field{min-height: 1.5em;}
+}
+
+//TagSub Menu
+
+.tagsub_menu {
+    .tag_wrapper{
+        margin-top:5px;
+        border-top: 1px solid $bookinfo-tab-border-color;
+        border-bottom: 1px solid $bookinfo-tab-border-color;
+        background-color: $base-color;
+        padding:10px;
+        .tag_lable{
+           color: $green-font-color;
+        }
+    }
+    .x-input-el{
+        border-width: 1px;
+        border: 1px solid $btn-border-color;
+    }
+    .x-field {
+        .x-input-el{
+            min-height:2em;
+        }
+    }
+    .x-button{
+        border: none;
+        background-color: none !important;
+        background-image: none !important;
+        background:none;
+        margin-top:15px;
+        padding:0em;
+    }
+}
+
+//Discuss Menu
+
+.discuss_menu {
+    .discussion_window{
+        float: left;
+        padding:5px 0px;
+        width: 100%;
+        .discussion_img{
+            width: 6%;
+            float:left;   
+        }
+        .discussion_description{
+            float:left;
+            padding-left:10px;
+            padding-top:5px;
+            width: 94%;
+            background-color: #f2f4f5;
+            border: 2px solid #ddd;
+            @include border-radius(5px);
+            .title{  
+                font-size: 0.8em;   
+            }
+            .text{  
+                padding-left:5px; 
+                font-size: 0.7em;
+            }
+        }
+    }
+    .x-list-normal {
+        .x-list-item {
+            &.x-list-item-tpl {
+                border-top: none;
+                background: none;
+                border-bottom : none; 
+                &.x-list-footer-wrap{
+                    border-top: none;
+                    background: none;
+                    border-bottom : none;    
+                    min-height: 100px;
+                    height:100%;  
+                }
+                &.x-list-header-wrap {
+                    border-top: none;
+                    background: none;
+                    border-bottom : none;    
+                    min-height: 137px;
+                    height:100%;  
+                }
+            }
+        }
+    }
+}
+
+//Top SearchPanel
+
+.top_search_panel {
+    .x-field {
+        min-height: 2.65em !important;
+        background: none;
+        padding-top:5px;
+        .x-input-el{  
+            min-height: 2.0em !important;
+            padding: 0.3em 0.3em 0.3em 0.3em;
+            @include border-radius(5px);
+            width:98%;
+        }
+    }
+    .x-field-search {
+        .x-field-input{
+            .x-form-field{
+                margin-left:0.4em;
+            }
+            &:before{
+                top: 0.2em;
+                left: 32.77em;
+                background-image: url(../images/search_field_icon.png);
+                width:27px;
+                height:29px;
+                text-align: right;
+                float:right;
+                content: "";
+            }
+        }
+    }
+    .x-list{
+        background:$white-bg-color;
+         font-size: 0.8em;
+         &.x-list-item {
+             &.x-item-selected {
+                 &.x-list-item-tpl{
+                    background-color: $list-bg-color;
+                    background-image:none;
+                    color:#393a38;
+                    border-top:$bookinfo-tab-border-color;
+                }
+            }
+         }    
+    }
+    .search_left_panel{     
+        border-bottom: 3px solid $page-border-color;
+        @include border-radius(5px);
+        margin:5px 0px 5px 10px;
+        &.x-list-normal {
+            .x-list-header{
+                padding: 0.9em 1.02em;
+                color:#000;
+                border-bottom:none;
+                background-image:none;
+            }
+            .x-list-item{
+                &.x-list-item-tpl{
+                    margin-left:38px;
+                    background:$white-bg-color;
+                    background-image:none;
+                    color:#637254;   
+                }
+                &.x-item-selected {
+                    &.x-list-item-tpl{
+                        background:$list-bg-color;
+                        color: #393a38;
+                        border-top-color: #bcc9b1;
+                    }
+                }
+            }
+        }
+        .list_book_icon img{  
+            float:left;
+            margin-right:10px;
+        }
+        .list_book_text{
+             padding-top:3px;        
+        }
+    }
+    .search_list_container{   
+        width:100%;    
+    }
+    .search_list_id{
+        width:20px;
+        font-weight:bold;
+        font-size: 1.3em;
+        color:$page-title-color;
+        float:left;   
+    }
+    .search_list_text{
+       margin-left:30px;
+    }
+}

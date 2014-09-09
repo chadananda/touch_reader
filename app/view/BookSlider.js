@@ -5,7 +5,6 @@ Ext.require(['book.store.SBookSlider'], function() {
         requires: [],
         config: {
             layout: 'fit',
-            flex:1,
             cls: 'slider',
             items: [
                 {

@@ -74,7 +74,7 @@ Ext.define('book.view.studybar.StudyProjectNavBar', {
                 xtype: 'button',                
                 html: '<div class="resume"><div class="resume_img"><img src="resources/images/resume_icon.png"></div><div class="resume_text">Resume</div></div>',
                 align: 'right',
-                 style: 'border-left:none;'
+                style: 'border-left:none;'
             } 
         ]
     }
