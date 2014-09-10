@@ -9,7 +9,14 @@ Ext.require(['book.store.SBookSlider'], function() {
             items: [
                 {
                     xtype: 'dataview',
-                    scrollable: 'horizontal',
+                    scrollable: {
+                        direction: 'horizontal',
+                        indicators: {
+                            x: {
+                                autoHide: false
+                            }
+                        }
+                    },
                     inline: {
                         wrap: false
                     },

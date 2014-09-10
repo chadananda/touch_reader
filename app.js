@@ -37,7 +37,7 @@ Ext.application({
     views: [
         'TabPanel', 'MainNavigation', 'Main', 'BookSlider', 'OwnedBookList', 'LibrarybyLanguage', 'SearchBooksView',
         'CategoryMainContainer', 'MainContainer', 'CategoryAccordionList',
-        'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList', 'TopSearchField', 'TopSettingPopUp' , 'SettingAccordionList', 'book.view.studybar.ReadingConfigOptionsPopUp',
+        'MainBookContainer', 'BookTitlebar', 'CurrentBookPopUp', 'ReadBookPageList', 'TopSearchField', 'SettingAccordionList', 'book.view.studybar.ReadingConfigOptionsPopUp',
         'book.view.studybar.StudyProjectNavBar', 'book.view.studybar.CurrentStudyProjectPopUp', 'book.view.studybar.CurrentOpenStudeyProjectList', 'book.view.studybar.CompletedStudeyProjectList',
         'book.view.studybar.StudyProjectInfoScreen', 'book.view.studybar.MembersLinkList', 'book.view.bookinfoscreen.BookInformationScreen', 'book.view.bookinfoscreen.BookInfoTab',
         'book.view.bookinfoscreen.BookmarkTab', 'book.view.bookinfoscreen.NamedTagsTab', 'book.view.bookinfoscreen.NotesTab', 'book.view.bookinfoscreen.ParagraphSummariesTab',

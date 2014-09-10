@@ -5,7 +5,7 @@ Ext.define('book.view.AudioPlayer', {
     xtype: 'audioplayerview',
     requires: ['Ext.Audio'],
     config: {         
-        cls: 'audio_panel',
+        //cls: 'audio_panel',
         flex:1,       
         items: [
            {

@@ -34,12 +34,10 @@ Ext.define('book.view.studybar.StudyProjectInfoScreen', {
                             '<p class="stdy_projct_desc">This study course is owned by you and was started on July 12, 2013 Of the 372 pages of reading in this course, you have completed 14.2%</p>',
                         '</div>',
                     '</div>'
-                
                 ].join("")
             },
             {
                 cls:'info_screen',
-                
                 items:[
                     {
                         html: [
@@ -88,7 +86,6 @@ Ext.define('book.view.studybar.StudyProjectInfoScreen', {
                             '<p class="stdy_projct_desc"><img src="resources/images/study_reporting_list_icon.png"> An Introduction to Financial Literature, by David Stockman</p>',
                         '</div>',
                     '</div>'
-                
                 ].join("")
             }
         ],

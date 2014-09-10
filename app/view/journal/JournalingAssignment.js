@@ -18,7 +18,7 @@ Ext.define('book.view.journal.JournalingAssignment', {
                             '<p>Write 300 words describing the monetary policies which created and prolonged the Great Depression</p>',
                         '</div>',
                     '</div>'
-                ].join(""),
+                ].join("")
             },
             {
                 cls: 'journal_editor',
@@ -55,12 +55,14 @@ Ext.define('book.view.journal.JournalingAssignment', {
                                 text: '<img src="resources/images/editor_no_icon.png">'
                             }
                         ]
-                    },{
+                    },
+                    {
                          xtype: 'textareafield',
                          maxRows: 4,
                          clearIcon:false, 
                          height: 307
-                    },{
+                    },
+                    {
                         cls: 'journal_bottom',
                         xtype: 'titlebar',
                         docked: 'bottom',
@@ -70,12 +72,11 @@ Ext.define('book.view.journal.JournalingAssignment', {
                                 xtype:'button',
                                 html:'<span class="chat_btn"><img src="resources/images/chat_button.png"></span> Post Journal',
                                 align: 'right',
-                                ui: 'bluenav',
+                                ui: 'bluenav'
                             }
                         ]
                     }
                 ]
-                
             }
         ]
     }

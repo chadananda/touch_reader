@@ -6,7 +6,16 @@ Ext.define('book.view.OwnedBookList', {
     requires: [],
     config: {
         cls: 'ownedbooklist',
-        scrollable: true,
+        //scrollable: true,
+        scrollable: {
+            direction: 'vertical',
+            indicators: {
+                y: {
+                    autoHide: false
+                }
+            }
+        },
+        
         layout: 'vbox',
         flex:1,
         items: [

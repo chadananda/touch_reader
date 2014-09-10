@@ -847,7 +847,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "book.view.SettingAccordionList": [],
   "book.view.TabPanel": [],
   "book.view.TopSearchField": [],
-  "book.view.TopSettingPopUp": [],
   "book.view.VideoPlayer": [],
   "book.view.audiovideo.AudioVideoLecture": [],
   "book.view.audiovideo.AudioVideoLectureContainer": [],
@@ -1967,9 +1966,6 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "book.view.TopSearchField": [
     "widget.topsearchfield"
-  ],
-  "book.view.TopSettingPopUp": [
-    "widget.topsettingpopup"
   ],
   "book.view.VideoPlayer": [
     "widget.videoplayer"

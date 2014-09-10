@@ -14,10 +14,21 @@ Ext.require(['book.store.SFreeBookList'], function() {
                     inline: {
                         wrap: true
                     },
+                    /*
                     scrollable: {
                         direction: 'vertical',
                         directionLock: true
                     },
+                    */
+                    scrollable: {
+                        direction: 'vertical',
+                        indicators: {
+                            y: {
+                                autoHide: false
+                            }
+                        }
+                    },
+                    
                     itemCls: 'dataview-item',
                     itemTpl: [
                         '<table width="100%">',

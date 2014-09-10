@@ -50,13 +50,12 @@ Ext.define('book.view.SettingAccordionList', {
                         this.load();
                     }
                 }
-           
             }
         ],
         showAnimation: {
             type: 'slide',
             duration: 1,
-            direction: 'up',
+            direction: 'up'
         },
         plugins: [new Ext.create('book.ux.PanelAction',{
             iconClass: 'x-panel-action-icon-close',

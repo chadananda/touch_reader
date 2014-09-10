@@ -17,10 +17,21 @@ Ext.require(['book.store.SBookStoreList'], function() {
                 inline: {
                     wrap: true
                 },
+                /*
                 scrollable: {
                     direction: 'vertical',
                     directionLock: true
                 },
+                */
+                scrollable: {
+                    direction: 'vertical',
+                    indicators: {
+                        y: {
+                            autoHide: false
+                        }
+                    }
+                },
+                
                 itemCls: 'dataview-item',
                 itemTpl: [
           

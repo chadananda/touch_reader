@@ -48,7 +48,7 @@ Ext.define('book.view.exerciseindicator.AssessmentQuizExercise', {
                         margin: '20px 0px 0px 0px',
                         items:[
                             {
-                                xtype:'spacer',
+                                xtype:'spacer'
                             },
                             {
                                 width:50,

@@ -5,7 +5,7 @@ Ext.define('book.view.VideoPlayer', {
     xtype: 'videoplayer',
     requires: [],
     config: {         
-        cls: 'video_panel',
+        //cls: 'video_panel',
         flex:1,       
         items: [
            {
